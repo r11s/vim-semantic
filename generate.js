@@ -100,7 +100,7 @@ async function main() {
           'vimHighlight.vimPath': { type: 'string', default: 'vim', scope: 'machine-overridable', description: 'Pfad zu Vim' },
           'vimHighlight.maxLines': { type: 'number', default: 3000, description: 'Groessere Dateien bleiben ungefaerbt' },
           'vimHighlight.backgroundGroups': {
-            type: 'array', items: { type: 'string' }, default: ['Todo'],
+            type: 'array', items: { type: 'string' }, default: ['Todo', 'Error'],
             description: 'Vim-Gruppen, deren Hintergrundfarbe angezeigt wird',
           },
         },

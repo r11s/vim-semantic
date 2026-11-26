@@ -418,7 +418,8 @@
             "type": "string"
           },
           "default": [
-            "Todo"
+            "Todo",
+            "Error"
           ],
           "description": "Vim-Gruppen, deren Hintergrundfarbe angezeigt wird"
         }
