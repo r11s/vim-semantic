@@ -1,0 +1,428 @@
+{
+  "name": "vim-highlight",
+  "displayName": "Vim Highlight (Prototyp)",
+  "publisher": "local",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "main": "./extension.js",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": "limited",
+      "restrictedConfigurations": [
+        "vimHighlight.vimPath"
+      ]
+    }
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "Vim blue (dark)",
+        "uiTheme": "vs-dark",
+        "path": "./themes/vim-blue-dark-color-theme.json"
+      },
+      {
+        "label": "Vim default (light)",
+        "uiTheme": "vs",
+        "path": "./themes/vim-color-theme.json"
+      },
+      {
+        "label": "Vim elflord (dark)",
+        "uiTheme": "vs-dark",
+        "path": "./themes/vim-elflord-dark-color-theme.json"
+      }
+    ],
+    "semanticTokenTypes": [
+      {
+        "id": "vim_Added",
+        "description": "Vim: Added"
+      },
+      {
+        "id": "vim_Bold",
+        "description": "Vim: Bold"
+      },
+      {
+        "id": "vim_BoldItalic",
+        "description": "Vim: BoldItalic"
+      },
+      {
+        "id": "vim_Changed",
+        "description": "Vim: Changed"
+      },
+      {
+        "id": "vim_ColorColumn",
+        "description": "Vim: ColorColumn"
+      },
+      {
+        "id": "vim_Comment",
+        "description": "Vim: Comment"
+      },
+      {
+        "id": "vim_Conceal",
+        "description": "Vim: Conceal"
+      },
+      {
+        "id": "vim_Constant",
+        "description": "Vim: Constant"
+      },
+      {
+        "id": "vim_Cursor",
+        "description": "Vim: Cursor"
+      },
+      {
+        "id": "vim_CursorColumn",
+        "description": "Vim: CursorColumn"
+      },
+      {
+        "id": "vim_CursorIM",
+        "description": "Vim: CursorIM"
+      },
+      {
+        "id": "vim_CursorLine",
+        "description": "Vim: CursorLine"
+      },
+      {
+        "id": "vim_CursorLineNr",
+        "description": "Vim: CursorLineNr"
+      },
+      {
+        "id": "vim_DiffAdd",
+        "description": "Vim: DiffAdd"
+      },
+      {
+        "id": "vim_DiffChange",
+        "description": "Vim: DiffChange"
+      },
+      {
+        "id": "vim_DiffDelete",
+        "description": "Vim: DiffDelete"
+      },
+      {
+        "id": "vim_DiffText",
+        "description": "Vim: DiffText"
+      },
+      {
+        "id": "vim_Directory",
+        "description": "Vim: Directory"
+      },
+      {
+        "id": "vim_EndOfBuffer",
+        "description": "Vim: EndOfBuffer"
+      },
+      {
+        "id": "vim_Error",
+        "description": "Vim: Error"
+      },
+      {
+        "id": "vim_ErrorMsg",
+        "description": "Vim: ErrorMsg"
+      },
+      {
+        "id": "vim_FoldColumn",
+        "description": "Vim: FoldColumn"
+      },
+      {
+        "id": "vim_Folded",
+        "description": "Vim: Folded"
+      },
+      {
+        "id": "vim_Function",
+        "description": "Vim: Function"
+      },
+      {
+        "id": "vim_Identifier",
+        "description": "Vim: Identifier"
+      },
+      {
+        "id": "vim_Ignore",
+        "description": "Vim: Ignore"
+      },
+      {
+        "id": "vim_IncSearch",
+        "description": "Vim: IncSearch"
+      },
+      {
+        "id": "vim_Italic",
+        "description": "Vim: Italic"
+      },
+      {
+        "id": "vim_Label",
+        "description": "Vim: Label"
+      },
+      {
+        "id": "vim_LineNr",
+        "description": "Vim: LineNr"
+      },
+      {
+        "id": "vim_MatchParen",
+        "description": "Vim: MatchParen"
+      },
+      {
+        "id": "vim_ModeMsg",
+        "description": "Vim: ModeMsg"
+      },
+      {
+        "id": "vim_MoreMsg",
+        "description": "Vim: MoreMsg"
+      },
+      {
+        "id": "vim_NonText",
+        "description": "Vim: NonText"
+      },
+      {
+        "id": "vim_Normal",
+        "description": "Vim: Normal"
+      },
+      {
+        "id": "vim_Operator",
+        "description": "Vim: Operator"
+      },
+      {
+        "id": "vim_Pmenu",
+        "description": "Vim: Pmenu"
+      },
+      {
+        "id": "vim_PmenuBorder",
+        "description": "Vim: PmenuBorder"
+      },
+      {
+        "id": "vim_PmenuMatch",
+        "description": "Vim: PmenuMatch"
+      },
+      {
+        "id": "vim_PmenuMatchSel",
+        "description": "Vim: PmenuMatchSel"
+      },
+      {
+        "id": "vim_PmenuSbar",
+        "description": "Vim: PmenuSbar"
+      },
+      {
+        "id": "vim_PmenuSel",
+        "description": "Vim: PmenuSel"
+      },
+      {
+        "id": "vim_PmenuShadow",
+        "description": "Vim: PmenuShadow"
+      },
+      {
+        "id": "vim_PmenuThumb",
+        "description": "Vim: PmenuThumb"
+      },
+      {
+        "id": "vim_PreProc",
+        "description": "Vim: PreProc"
+      },
+      {
+        "id": "vim_Question",
+        "description": "Vim: Question"
+      },
+      {
+        "id": "vim_QuickFixLine",
+        "description": "Vim: QuickFixLine"
+      },
+      {
+        "id": "vim_Removed",
+        "description": "Vim: Removed"
+      },
+      {
+        "id": "vim_Repeat",
+        "description": "Vim: Repeat"
+      },
+      {
+        "id": "vim_Search",
+        "description": "Vim: Search"
+      },
+      {
+        "id": "vim_SignColumn",
+        "description": "Vim: SignColumn"
+      },
+      {
+        "id": "vim_Special",
+        "description": "Vim: Special"
+      },
+      {
+        "id": "vim_SpecialKey",
+        "description": "Vim: SpecialKey"
+      },
+      {
+        "id": "vim_SpellBad",
+        "description": "Vim: SpellBad"
+      },
+      {
+        "id": "vim_SpellCap",
+        "description": "Vim: SpellCap"
+      },
+      {
+        "id": "vim_SpellLocal",
+        "description": "Vim: SpellLocal"
+      },
+      {
+        "id": "vim_SpellRare",
+        "description": "Vim: SpellRare"
+      },
+      {
+        "id": "vim_Statement",
+        "description": "Vim: Statement"
+      },
+      {
+        "id": "vim_StatusLine",
+        "description": "Vim: StatusLine"
+      },
+      {
+        "id": "vim_StatusLineNC",
+        "description": "Vim: StatusLineNC"
+      },
+      {
+        "id": "vim_StatusLineTerm",
+        "description": "Vim: StatusLineTerm"
+      },
+      {
+        "id": "vim_StatusLineTermNC",
+        "description": "Vim: StatusLineTermNC"
+      },
+      {
+        "id": "vim_TabLine",
+        "description": "Vim: TabLine"
+      },
+      {
+        "id": "vim_TabLineFill",
+        "description": "Vim: TabLineFill"
+      },
+      {
+        "id": "vim_TabLineSel",
+        "description": "Vim: TabLineSel"
+      },
+      {
+        "id": "vim_Terminal",
+        "description": "Vim: Terminal"
+      },
+      {
+        "id": "vim_Title",
+        "description": "Vim: Title"
+      },
+      {
+        "id": "vim_TitleBar",
+        "description": "Vim: TitleBar"
+      },
+      {
+        "id": "vim_TitleBarNC",
+        "description": "Vim: TitleBarNC"
+      },
+      {
+        "id": "vim_Todo",
+        "description": "Vim: Todo"
+      },
+      {
+        "id": "vim_ToolbarButton",
+        "description": "Vim: ToolbarButton"
+      },
+      {
+        "id": "vim_ToolbarLine",
+        "description": "Vim: ToolbarLine"
+      },
+      {
+        "id": "vim_Type",
+        "description": "Vim: Type"
+      },
+      {
+        "id": "vim_Underlined",
+        "description": "Vim: Underlined"
+      },
+      {
+        "id": "vim_VertSplit",
+        "description": "Vim: VertSplit"
+      },
+      {
+        "id": "vim_VertSplitNC",
+        "description": "Vim: VertSplitNC"
+      },
+      {
+        "id": "vim_Visual",
+        "description": "Vim: Visual"
+      },
+      {
+        "id": "vim_VisualNOS",
+        "description": "Vim: VisualNOS"
+      },
+      {
+        "id": "vim_WarningMsg",
+        "description": "Vim: WarningMsg"
+      },
+      {
+        "id": "vim_WildMenu",
+        "description": "Vim: WildMenu"
+      },
+      {
+        "id": "vim_debugBreakpoint",
+        "description": "Vim: debugBreakpoint"
+      },
+      {
+        "id": "vim_debugPC",
+        "description": "Vim: debugPC"
+      },
+      {
+        "id": "vim_htmlBold",
+        "description": "Vim: htmlBold"
+      },
+      {
+        "id": "vim_htmlBoldItalic",
+        "description": "Vim: htmlBoldItalic"
+      },
+      {
+        "id": "vim_htmlBoldUnderline",
+        "description": "Vim: htmlBoldUnderline"
+      },
+      {
+        "id": "vim_htmlBoldUnderlineItalic",
+        "description": "Vim: htmlBoldUnderlineItalic"
+      },
+      {
+        "id": "vim_htmlItalic",
+        "description": "Vim: htmlItalic"
+      },
+      {
+        "id": "vim_htmlStrike",
+        "description": "Vim: htmlStrike"
+      },
+      {
+        "id": "vim_htmlUnderline",
+        "description": "Vim: htmlUnderline"
+      },
+      {
+        "id": "vim_htmlUnderlineItalic",
+        "description": "Vim: htmlUnderlineItalic"
+      }
+    ],
+    "configuration": {
+      "title": "Vim Highlight",
+      "properties": {
+        "vimHighlight.vimPath": {
+          "type": "string",
+          "default": "vim",
+          "scope": "machine-overridable",
+          "description": "Pfad zu Vim"
+        },
+        "vimHighlight.maxLines": {
+          "type": "number",
+          "default": 3000,
+          "description": "Groessere Dateien bleiben ungefaerbt"
+        },
+        "vimHighlight.backgroundGroups": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "Todo"
+          ],
+          "description": "Vim-Gruppen, deren Hintergrundfarbe angezeigt wird"
+        }
+      }
+    }
+  }
+}

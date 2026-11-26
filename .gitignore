@@ -1,0 +1,10 @@
+# Protokolle und Reste der Fehlersuche
+protokoll.txt
+fehler.txt
+vimlog.txt
+
+# Vim-Swapdateien
+*.swp
+
+# Zum Loeschen vorgemerkt
+_to_delete/
