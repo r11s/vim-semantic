@@ -7,7 +7,8 @@ let &runtimepath = $VIMRUNTIME
 set background=light
 set t_Co=256
 if has('termguicolors')
-  set termguicolors
+  " silent!: vim.exe unter Windows lehnt das ohne Konsole ab (E954)
+  silent! set termguicolors
 endif
 let c_comment_strings = 1
 let g:plugin_exec = 0

@@ -61,3 +61,13 @@ Ist aus den Tokens der Erweiterung und der Theme-Datei. Testdateien in `test/`,
 Abweichungen in `messung/<name>-<light|dark>.txt`.
 
 Rechnerisch: Was VS Code tatsaechlich anzeigt, wird damit nicht geprueft.
+
+## Lizenz
+
+VimSem steht unter der Vim-Lizenz, siehe [LICENSE](LICENSE).
+
+Themes und Syntaxdaten sind aus Dateien von [Vim](https://github.com/vim/vim) abgeleitet und
+dabei veraendert. Die Angaben zu diesen Dateien, auch zu solchen mit eigener Lizenz, stehen in
+[LIZENZEN.md](LIZENZEN.md). Neu erzeugen: `werkzeuge/lizenzen.js`.
+
+Kontakt (Abschnitt II 2a der Vim-Lizenz): <https://github.com/r11s/vim-semantic/issues>

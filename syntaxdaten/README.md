@@ -1,7 +1,7 @@
 # Syntaxdaten
 
 Erzeugt mit `node werkzeuge/syntaxdaten.js`, Gegenprobe mit `node werkzeuge/syntaxdaten-pruefen.js`.
-Nicht von Hand aendern. Abgeleitet aus den Syntaxdateien von Vim (Vim-Lizenz).
+Nicht von Hand aendern. Abgeleitet aus den Syntaxdateien von Vim; Lizenzen in ../LIZENZEN.md.
 
 Je Datei:
 

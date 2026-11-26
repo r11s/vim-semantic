@@ -7,3 +7,6 @@
 !scheme.json
 !vim/tokens.vim
 !themes/*.json
+!LICENSE
+!LIZENZEN.md
+!lizenzen/*.txt

@@ -8,7 +8,8 @@ let &background = $VH_BACKGROUND
 " farbarme Terminals und loesen dabei Verknuepfungen zwischen Gruppen auf.
 set t_Co=256
 if has('termguicolors')
-  set termguicolors
+  " silent!: vim.exe unter Windows lehnt das ohne Konsole ab (E954)
+  silent! set termguicolors
 endif
 " Wie defaults.vim: Zahlen und Zeichenketten in C-artigen Kommentaren faerben
 let c_comment_strings = 1

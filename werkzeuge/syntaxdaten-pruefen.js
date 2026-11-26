@@ -2,9 +2,11 @@
 // Gegenprobe: Reichen die gesammelten Befehle, um wie Vim zu faerben?
 // Je Testdatei: Gruppen mit Syntaxdateien (tokens.vim) gegen Gruppen nur aus syntaxdaten.
 //   node werkzeuge/syntaxdaten-pruefen.js
+// Abweichende Zeichen stehen danach in temp/unterschiede.txt.
 const fs = require('fs');
 const os = require('os');
 const path = require('path');
+const { execFileSync } = require('child_process');
 const { runVim, highlight, tokenType } = require('../vim');
 
 const ROOT = path.join(__dirname, '..');
@@ -71,7 +73,36 @@ const perChar = (tokens) => {
   return map;
 };
 
+// Welches Vim geprueft wird: die ersten Zeilen von "vim --version"
+function version() {
+  try {
+    return execFileSync(VIM, ['--version'], { encoding: 'utf8' }).split(/\r?\n/)
+      .filter((row) => /^(VIM - |Included patches|MS-Windows)/.test(row));
+  } catch (error) {
+    return [`Version nicht lesbar: ${error.message}`];
+  }
+}
+
+// Zusammenhaengende abweichende Zeichen als eine Zeile des Berichts
+function describe(test, text, wrong, want, got) {
+  const lines = text.split(/\r?\n/);
+  const cells = wrong.map((k) => {
+    const [line, column] = k.split(':').map(Number);
+    return { line, column, vim: want.get(k) ?? 'ohne Gruppe', data: got.get(k) ?? 'ohne Gruppe' };
+  }).sort((a, b) => a.line - b.line || a.column - b.column);
+  const runs = [];
+  for (const c of cells) {
+    const last = runs.at(-1);
+    if (last && last.line === c.line && last.end === c.column && last.vim === c.vim && last.data === c.data) last.end++;
+    else runs.push({ ...c, end: c.column + 1 });
+  }
+  return [`== ${test}`, ...runs.map((r) =>
+    `Zeile ${r.line + 1}, Spalte ${r.column + 1}: ${JSON.stringify(lines[r.line].slice(r.column, r.end))}` +
+    `  Vim ${r.vim}, aus den Daten ${r.data}  |  ${lines[r.line].trim()}`), ''];
+}
+
 async function main() {
+  const report = [...version(), ''];
   const dir = path.join(ROOT, 'syntaxdaten');
   let same = 0;
   let total = 0;
@@ -95,6 +126,7 @@ async function main() {
       wrongChars += wrong.length;
       if (!wrong.length) same++;
       else {
+        report.push(...describe(test, text, wrong, want, got));
         console.log(`${test}: ${wrong.length} von ${keys.size} Zeichen anders, z. B. Zeile ${+wrong[0].split(':')[0] + 1}: ` +
           `Vim ${want.get(wrong[0]) ?? 'ohne Gruppe'}, aus den Daten ${got.get(wrong[0]) ?? 'ohne Gruppe'}`);
         if (result.message) console.log(`  Letzte Meldung von Vim: ${result.message}`);
@@ -102,6 +134,10 @@ async function main() {
     }
   }
   console.log(`\n${same} von ${total} Testdateien gleich; ${wrongChars} von ${allChars} gefaerbten Zeichen anders`);
+  const target = path.join(ROOT, 'temp', 'unterschiede.txt');
+  fs.mkdirSync(path.dirname(target), { recursive: true });
+  fs.writeFileSync(target, report.join('\n') + '\n');
+  if (same < total) console.log('Alle abweichenden Zeichen: temp/unterschiede.txt');
 }
 
 main().catch((error) => { console.error(error.message); process.exit(1); });

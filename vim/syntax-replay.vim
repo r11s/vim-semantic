@@ -6,7 +6,8 @@ let &runtimepath = $VIMRUNTIME
 set background=light
 set t_Co=256
 if has('termguicolors')
-  set termguicolors
+  " silent!: vim.exe unter Windows lehnt das ohne Konsole ab (E954)
+  silent! set termguicolors
 endif
 colorscheme default
 execute 'noautocmd edit ' . fnameescape($VH_IN)

@@ -106,6 +106,7 @@ async function main() {
     publisher: 'r11s',
     version: '0.1.0',
     repository: { type: 'git', url: 'https://github.com/r11s/vim-semantic.git' },
+    license: 'SEE LICENSE IN LICENSE',
     categories: ['Themes'],
     engines: { vscode: '^1.80.0' },
     main: './extension.js',

@@ -146,7 +146,7 @@ async function main() {
   fs.writeFileSync(path.join(TARGET, 'README.md'), [
     '# Syntaxdaten', '',
     'Erzeugt mit `node werkzeuge/syntaxdaten.js`, Gegenprobe mit `node werkzeuge/syntaxdaten-pruefen.js`.',
-    'Nicht von Hand aendern. Abgeleitet aus den Syntaxdateien von Vim (Vim-Lizenz).', '',
+    'Nicht von Hand aendern. Abgeleitet aus den Syntaxdateien von Vim; Lizenzen in ../LIZENZEN.md.', '',
     'Je Datei:', '',
     '- `befehle`: alle ausgefuehrten `syntax`-Befehle in ihrer Reihenfolge, als [Herkunft, Befehl]',
     '- `gruppen`: Gruppe und die Gruppe, auf die sie verweist (`null` = keine)',

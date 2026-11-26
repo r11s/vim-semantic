@@ -7,7 +7,6 @@ cd "$(dirname "$0")/.."
 
 datei=$(node -p 'const p = require("./package.json"); `${p.name}-${p.version}.vsix`')
 
-# --skip-license: das Projekt hat noch keine Lizenzdatei
-npx --yes @vscode/vsce@3.9.2 package --skip-license --out "$datei"
+npx --yes @vscode/vsce@3.9.2 package --out "$datei"
 
 echo "Installieren: code --install-extension $datei --force"
