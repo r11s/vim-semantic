@@ -107,7 +107,7 @@
  ["syntax/zig.vim:247","match zigEscapeError   display contained /\\\\./"],
  ["syntax/zig.vim:248","match zigEscape        display contained /\\\\\\([nrt\\\\'\"]\\|x\\x\\{2}\\)/"],
  ["syntax/zig.vim:249","match zigEscapeUnicode display contained /\\\\\\(u\\x\\{4}\\|U\\x\\{6}\\)/"],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

@@ -253,7 +253,7 @@
  ["syntax/ada.vim:259","keyword adaTodo contained TODO FIXME XXX NOTE"],
  ["syntax/ada.vim:263","region  adaComment  oneline  contains=adaTodo,adaLineError,@Spell start=\"--\"  end=\"$\""],
  ["syntax/ada.vim:355","sync minlines=1 maxlines=1"],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

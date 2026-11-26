@@ -147,7 +147,7 @@
  ["syntax/ps1.vim:142","region ps1Block start=/{/ end=/}/ transparent fold"],
  ["syntax/ps1.vim:146","region ps1Region start=/#region/ end=/#endregion/ transparent fold keepend extend"],
  ["syntax/ps1.vim:150","region ps1Signature start=/# SIG # Begin signature block/ end=/# SIG # End signature block/ transparent fold"],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

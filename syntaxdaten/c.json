@@ -328,7 +328,7 @@
  ["syntax/c.vim:560","match\tcBitField\tdisplay \"^\\s*\\zs\\I\\i*\\s*:\\s*[1-9]\"me=e-1 contains=cType"],
  ["syntax/c.vim:561","match\tcBitField\tdisplay \";\\s*\\zs\\I\\i*\\s*:\\s*[1-9]\"me=e-1 contains=cType"],
  ["syntax/c.vim:583","sync ccomment cComment minlines=50"],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

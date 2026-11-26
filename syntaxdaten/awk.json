@@ -123,7 +123,7 @@
  ["syntax/awk.vim:169","match  awkArrayElement      contained \"[^][, \\t]\\+\""],
  ["syntax/awk.vim:170","region awkArray\t\ttransparent start=\"\\[\" end=\"\\]\" contains=awkArray,awkArrayElement,awkArrayArray,awkNumber,awkFloat"],
  ["syntax/awk.vim:174","sync ccomment awkArray maxlines=10"],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

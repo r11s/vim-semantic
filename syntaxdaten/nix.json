@@ -147,7 +147,7 @@
  ["syntax/nix.vim:148","keyword nixNamespacedBuiltin contained abort add addErrorContext all any attrNames attrValues baseNameOf catAttrs compareVersions concatLists concatStringsSep currentSystem currentTime deepSeq derivation derivationStrict dirOf div elem elemAt fetchGit fetchMercurial fetchTarball fetchurl filter \\ filterSource findFile foldl' fromJSON functionArgs genList \\ genericClosure getAttr getEnv hasAttr hasContext hashString head import intersectAttrs isAttrs isBool isFloat isFunction isInt isList isNull isString langVersion length lessThan listToAttrs map mapAttrs match mul nixPath nixVersion parseDrvName partition path pathExists placeholder readDir readFile removeAttrs replaceStrings scopedImport seq sort split splitVersion storeDir storePath stringLength sub substring tail throw toFile toJSON toPath toString toXML trace tryEval typeOf unsafeDiscardOutputDependency unsafeDiscardStringContext unsafeGetAttrPos valueSize fromTOML bitAnd bitOr bitXor floor ceil"],
  ["syntax/nix.vim:164","match nixBuiltin \"builtins\\.[a-zA-Z']\\+\"he=s+9 contains=nixComment,nixNamespacedBuiltin"],
  ["syntax/nix.vim:207","sync fromstart"],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

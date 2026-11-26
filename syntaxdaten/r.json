@@ -220,7 +220,7 @@
  ["syntax/r.vim:315","keyword rType array category character complex double function integer list logical matrix numeric vector data.frame"],
  ["syntax/r.vim:321","region rNameWSpace start=\"`\" end=\"`\" contains=rSpaceFun"],
  ["syntax/r.vim:333","sync minlines=40"],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

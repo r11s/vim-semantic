@@ -72,7 +72,7 @@
  ["syntax/st.vim:66","region stSet\ttransparent start='{' end='}' contains=ALLBUT,stSetError"],
  ["syntax/st.vim:67","match  stSetError\t\"}\""],
  ["syntax/st.vim:74","sync minlines=50"],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

@@ -185,7 +185,7 @@
  ["syntax/pascal.vim:330","keyword pascalFunction\tStrLIComp StrLower StrMove StrNew StrPas"],
  ["syntax/pascal.vim:331","keyword pascalFunction\tStrPCopy StrPLCopy StrPos StrRScan StrScan"],
  ["syntax/pascal.vim:332","keyword pascalFunction\tStrUpper"],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

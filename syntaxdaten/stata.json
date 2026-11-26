@@ -414,7 +414,7 @@
  ["syntax/stata.vim:420","match\tstataErrInParen\tcontained /[\\]}]/"],
  ["syntax/stata.vim:421","match\tstataErrInBracket\tcontained /[)}]/"],
  ["syntax/stata.vim:422","match\tstataErrInBrace\tcontained /[)\\]]/"],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

@@ -437,7 +437,7 @@
  ["syntax/scheme.vim:428","keyword schemeFunction write-string"],
  ["syntax/scheme.vim:429","keyword schemeFunction write-u8"],
  ["syntax/scheme.vim:430","keyword schemeFunction zero?"],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

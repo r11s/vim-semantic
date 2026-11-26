@@ -484,7 +484,7 @@
  ["syntax/cs.vim:256","region\tcsBraced\tmatchgroup=csParens start=+{+ end=+}+ extend contained transparent contains=@csAll,csBraced,csBracketed"],
  ["syntax/cs.vim:258","cluster\tcsAll\tcontains=@csLiteral,csClassType,@csComment,csEndColon,csIsType,csLabel,csLogicSymbols,csNewType,csOpSymbols,csParens,@csPreProcessor,csSummary,@csNamespaceAlias,csType,csUnicodeNumber,csUserType,csUserIdentifier,csUserInterface,csUserMethod"],
  ["syntax/cs.vim:261","match csIdentifier \"@\\h\\w*\""],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

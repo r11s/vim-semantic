@@ -742,7 +742,7 @@
  ["syntax/glsl.vim:719","keyword glslBuiltinFunction unpackUnorm2x16"],
  ["syntax/glsl.vim:720","keyword glslBuiltinFunction unpackUnorm4x8"],
  ["syntax/glsl.vim:721","keyword glslBuiltinFunction usubBorrow"],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

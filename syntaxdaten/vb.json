@@ -343,7 +343,7 @@
  ["syntax/vb.vim:342","region vbPreProc matchgroup=PreProc start=\"^#elseif\\>\" end=\"\\<then\\>\" transparent contains=TOP"],
  ["syntax/vb.vim:343","match  vbPreProc \"^#else\\>\""],
  ["syntax/vb.vim:344","match  vbPreProc \"^#end\\s*if\\>\""],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

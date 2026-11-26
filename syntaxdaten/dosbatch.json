@@ -116,7 +116,7 @@
  ["syntax/dosbatch.vim:117","keyword dosbatchImplicit    ren rename replace restore rmdir set setlocal shift"],
  ["syntax/dosbatch.vim:118","keyword dosbatchImplicit    sort start subst time title tree type ver verify"],
  ["syntax/dosbatch.vim:119","keyword dosbatchImplicit    vol xcopy"],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

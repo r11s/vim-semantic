@@ -169,7 +169,7 @@
  ["syntax/tcl.vim:227","case match"],
  ["syntax/tcl.vim:229","region  tclComment\t\tstart=\"^\\s*\\#\" skip=\"\\\\$\" end=\"$\" contains=tclTodo,@Spell"],
  ["syntax/tcl.vim:230","region  tclComment\t\tstart=/;\\s*\\#/hs=s+1 skip=\"\\\\$\" end=\"$\" contains=tclTodo,@Spell"],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

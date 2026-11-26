@@ -1,13 +1,13 @@
 # Testdateien
 
-77 Programme in verschiedenen Sprachen zum Vergleich der Farben in gVim und VS Code.
+75 Programme in verschiedenen Sprachen zum Vergleich der Farben in gVim und VS Code.
 Alle lösen dieselbe Aufgabe (Formen-Rechner) und enthalten alle Kommentararten und ein TODO.
 
 Erwartete Ausgabe: `expected.txt` (Assembly: `expected_assembly.txt`, Batch: `expected_batch.txt`).
 
 **\*** = nie ausgeführt (21 Dateien). Zum Vergleich der Farben genügt das.
 
-Rangliste der Sprachen: [SPRACHEN.md](../SPRACHEN.md)
+Rangliste der Sprachen: [SPRACHEN.md](../SPRACHEN.md). Fortran und Vim Script sind nicht dabei.
 
 | Datei | Sprache |
 |---|---|
@@ -34,7 +34,6 @@ Rangliste der Sprachen: [SPRACHEN.md](../SPRACHEN.md)
 | 21_visualbasic.vb | Visual Basic |
 | 22_lua.lua | Lua |
 | 23_ada.adb | Ada |
-| 24_fortran.f90 | Fortran |
 | 25_scala.scala | Scala |
 | 26_perl.pl | Perl |
 | 27_matlab.m | MATLAB |
@@ -59,7 +58,6 @@ Rangliste der Sprachen: [SPRACHEN.md](../SPRACHEN.md)
 | 49_tcl.tcl | Tcl |
 | 50_cuda.cu | CUDA |
 | 51_d.d | D |
-| 52_vimscript.vim | Vim Script |
 | 53_sas.sas \* | SAS |
 | 54_cython.pyx | Cython |
 | 55_tsql.sql \* | T-SQL |

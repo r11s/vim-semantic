@@ -435,7 +435,7 @@
  ["syntax/cuda.vim:40","keyword cudaConstant\t__CUDA_ARCH__"],
  ["syntax/cuda.vim:41","keyword cudaConstant\t__DEVICE_EMULATION__"],
  ["syntax/cuda.vim:44","keyword cudaConstant\tcudaSuccess"],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

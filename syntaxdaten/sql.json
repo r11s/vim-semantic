@@ -115,7 +115,7 @@
  ["syntax/sqloracle.vim:132","keyword sqlFunction\txmlcdata xmlcolattval xmlcomment xmlconcat xmldiff xmlelement xmlexists xmlforest"],
  ["syntax/sqloracle.vim:133","keyword sqlFunction\txmlparse xmlpatch xmlpi xmlquery xmlroot xmlsequence xmlserialize xmltable xmltransform"],
  ["syntax/sqloracle.vim:135","keyword sqlTodo TODO FIXME XXX DEBUG NOTE contained"],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

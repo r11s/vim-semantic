@@ -704,7 +704,7 @@
  ["syntax/nu.vim:690","match nuEscaped \"\\\\n\" display"],
  ["syntax/nu.vim:691","match nuEscaped \"\\\\t\" display"],
  ["syntax/nu.vim:692","match nuEscaped \"\\\\r\" display"],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

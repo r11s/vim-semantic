@@ -463,7 +463,7 @@
  ["syntax/lisp.vim:559","match   lispComment\t\t'^\\s*#+nil.*$'\t\t\tcontains=@lispCommentGroup"],
  ["syntax/lisp.vim:560","keyword lispTodo\t\tcontained\t\t\tcombak\t\t\tcombak:\t\t\ttodo\t\t\ttodo:"],
  ["syntax/lisp.vim:564","sync lines=100"],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

@@ -89,7 +89,7 @@
  ["syntax/gdscript.vim:73","match gdscriptNumber \"\\<\\d\\%(_\\=\\d\\)*\\.\\%(e[+-]\\=\\d\\%(_\\=\\d\\)*\\)\\=\\%(\\W\\|$\\)\\@=\""],
  ["syntax/gdscript.vim:74","match gdscriptNumber \"\\%(^\\|\\W\\)\\@1<=\\%(\\d\\%(_\\=\\d\\)*\\)\\=\\.\\d\\%(_\\=\\d\\)*\\%(e[+-]\\=\\d\\%(_\\=\\d\\)*\\)\\=\\>\""],
  ["syntax/gdscript.vim:77","keyword gdscriptTodo TODO XXX FIXME HACK NOTE BUG contained"],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

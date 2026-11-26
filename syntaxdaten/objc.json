@@ -697,7 +697,7 @@
  ["syntax/objc.vim:474","match objcClass /NSPointerFunctions\\s*\\*/me=s+18,he=s+18"],
  ["syntax/objc.vim:475","keyword objcEnum NSPointerFunctionsOptions"],
  ["syntax/objc.vim:476","keyword objcEnumValue NSPointerFunctionsStrongMemory NSPointerFunctionsZeroingWeakMemory NSPointerFunctionsOpaqueMemory NSPointerFunctionsMallocMemory NSPointerFunctionsMachVirtualMemory NSPointerFunctionsWeakMemory NSPointerFunctionsObjectPersonality NSPointerFunctionsOpaquePersonality NSPointerFunctionsObjectPointerPersonality NSPointerFunctionsCStringPersonality NSPointerFunctionsStructPersonality NSPointerFunctionsIntegerPersonality NSPointerFunctionsCopyIn"],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

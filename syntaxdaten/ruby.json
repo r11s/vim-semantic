@@ -530,7 +530,7 @@
  ["syntax/ruby.vim:473","match rubyDoubleQuoteSymbolDelimiter \"\\\"\" contained"],
  ["syntax/ruby.vim:474","match rubySymbol \"\\\"\\%(\\\\.\\|[^\\\"]\\)*\\\"::\\@!\"he=e-1 contains=@rubyStringSpecial,rubyDoubleQuoteSymbolDelimiter"],
  ["<SNR>11_run_syntax_fold:5","region rubyData matchgroup=rubyDataDirective start=\"^__END__$\" end=\"\\%$\" fold"],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

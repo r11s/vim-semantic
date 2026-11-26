@@ -2,58 +2,58 @@
 
 Wie genau trifft die Erweiterung die Darstellung von Vim? Stand 26.11.2026.
 
-- 77 Testprogramme aus `test/`, je ein Programm pro Sprache (siehe [SPRACHEN.md](SPRACHEN.md))
+- 75 Testprogramme aus `test/`, je ein Programm pro Sprache (siehe [SPRACHEN.md](SPRACHEN.md))
 - 34 Themes: alle 28 Farbschemata von Vim 9.2, sechs davon hell und dunkel
-- blue dark, default light und elflord dark sind deine Theme-Dateien, die uebrigen 31 sind mit dem Vim unten erzeugt
-- Vim 9.2, Patches 1-858, unter Linux aus den Quellen gebaut (nicht dein Windows-Vim)
+- blue dark, default light und elflord dark stammen vom Vim des Autors, die uebrigen 31 vom Vim unten
+- Vim 9.2, Patches 1-858, unter Linux aus den Quellen gebaut (nicht unter Windows)
 - Soll: `vim/reference.vim`. Ist: Tokens der Erweiterung und Theme-Datei.
 - **Rechnerisch.** Was VS Code tatsaechlich anzeigt, ist darin nicht geprueft.
 
 ## Ergebnis je Theme
 
-**Alle 34 Themes: keine Abweichungen** in den 77 Dateien.
+**Alle 34 Themes: keine Abweichungen** in den 75 Dateien.
 
 Anteil richtiger Zeichen in % (ohne Leerraum). Hg.Leer: hinterlegter Leerraum (- = keiner vorhanden).
 Hinterlegt und gemessen werden die voreingestellten Gruppen Todo, Error und Constant.
 
 | Theme | Zeichen | Farbe | Stil | Hintergrund | alles | Hg.Leer |
 |---|---:|---:|---:|---:|---:|---:|
-| blue dark | 245127 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
-| catppuccin dark | 245127 | 100.0 | 100.0 | 100.0 | 100.0 | - |
-| catppuccin light | 245127 | 100.0 | 100.0 | 100.0 | 100.0 | - |
-| darkblue dark | 245127 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
-| default light | 245127 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
-| delek light | 245127 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
-| desert dark | 245127 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
-| elflord dark | 245127 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
-| evening dark | 245127 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
-| habamax dark | 245127 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
-| industry dark | 245127 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
-| koehler dark | 245127 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
-| lunaperche dark | 245127 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
-| lunaperche light | 245127 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
-| morning light | 245127 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
-| murphy dark | 245127 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
-| novum dark | 245127 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
-| novum light | 245127 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
-| pablo dark | 245127 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
-| peachpuff light | 245127 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
-| quiet dark | 245127 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
-| quiet light | 245127 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
-| retrobox dark | 245127 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
-| retrobox light | 245127 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
-| ron dark | 245127 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
-| shine light | 245127 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
-| slate dark | 245127 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
-| sorbet dark | 245127 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
-| torte dark | 245127 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
-| unokai dark | 245127 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
-| wildcharm dark | 245127 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
-| wildcharm light | 245127 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
-| zaibatsu dark | 245127 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
-| zellner light | 245127 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
+| blue dark | 238321 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
+| catppuccin dark | 238321 | 100.0 | 100.0 | 100.0 | 100.0 | - |
+| catppuccin light | 238321 | 100.0 | 100.0 | 100.0 | 100.0 | - |
+| darkblue dark | 238321 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
+| default light | 238321 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
+| delek light | 238321 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
+| desert dark | 238321 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
+| elflord dark | 238321 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
+| evening dark | 238321 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
+| habamax dark | 238321 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
+| industry dark | 238321 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
+| koehler dark | 238321 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
+| lunaperche dark | 238321 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
+| lunaperche light | 238321 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
+| morning light | 238321 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
+| murphy dark | 238321 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
+| novum dark | 238321 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
+| novum light | 238321 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
+| pablo dark | 238321 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
+| peachpuff light | 238321 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
+| quiet dark | 238321 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
+| quiet light | 238321 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
+| retrobox dark | 238321 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
+| retrobox light | 238321 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
+| ron dark | 238321 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
+| shine light | 238321 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
+| slate dark | 238321 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
+| sorbet dark | 238321 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
+| torte dark | 238321 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
+| unokai dark | 238321 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
+| wildcharm dark | 238321 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
+| wildcharm light | 238321 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
+| zaibatsu dark | 238321 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
+| zellner light | 238321 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
 
-Gegenprobe: Mit absichtlich falscher Kommentarfarbe sinkt default auf 83,0 %, die Messung schlaegt also an.
+Gegenprobe: Mit absichtlich falscher Kommentarfarbe sinkt default auf 82,9 %, die Messung schlaegt also an.
 
 ## Offene Probleme, nach Wichtigkeit
 
@@ -61,11 +61,10 @@ Die Reihenfolge ist ein Vorschlag.
 
 | Nr | Problem | Stand |
 |---:|---|---|
-| 1 | Bei blue war der Error-Kasten rot (`#ff0000`) statt koralle (`#ff7f50`). Die Erweiterung hielt laut `protokoll.txt` ein anderes Theme fuer aktiv als VS Code anzeigte. | in VS Code gesehen, Ursache offen |
-| 2 | Die neuen Sprachen und die 31 neuen Themes wurden noch nie in VS Code angesehen. Andere Spracherweiterungen mit eigenen Semantic Tokens koennen Vorrang bekommen. | nur gerechnet |
-| 3 | Geschwindigkeit bei grossen Dateien. Vim startet bei jeder Aenderung neu; ueber 3000 Zeilen wird nicht gefaerbt. | nicht geprueft |
-| 4 | Cursorzeile, Zeilennummern, Auswahl und Suchtreffer haben die Farben von VS Code, nicht die von Vim. | nicht gebaut |
-| 5 | `.vimrc`, `_vimrc` und `.gvimrc` werden vermutlich nicht erfasst. | nicht gebaut |
+| 1 | Erst ein Teil der Sprachen und Themes wurde in VS Code angesehen. Andere Spracherweiterungen mit eigenen Semantic Tokens koennen Vorrang bekommen. | nur gerechnet |
+| 2 | Grosse Dateien: Dateien mit 10000 bis 17000 Zeilen brauchen unter Linux 3 bis 7 s (eine davon unter Windows rund 4,5 s). Vim startet bei jeder Aenderung neu; ueber `maxLines` (3000) wird nicht gefaerbt. | gemessen, nicht geloest |
+| 3 | Cursorzeile, Zeilennummern, Auswahl und Suchtreffer haben die Farben von VS Code, nicht die von Vim. | nicht gebaut |
+| 4 | `.vimrc`, `_vimrc` und `.gvimrc` werden vermutlich nicht erfasst. | nicht gebaut |
 
 ## Behobene Abweichungen
 
@@ -74,6 +73,23 @@ Die Reihenfolge ist ein Vorschlag.
 | Clojure 92,7 %, Scheme 96,0 %, Zig 99,6 %, ein `:` in Perl | Dateityp-Plugins fehlten; `tokens.vim` laedt sie jetzt wie gVim (ohne externe Programme) |
 | morning light 87,6 % (Hintergrund von Zahlen und Zeichenketten) | `Constant` zu den hinterlegten Gruppen genommen |
 | Prolog wurde als Perl erkannt | Vim entscheidet nach der ersten Zeile; Testdatei angepasst |
+| Mit der `vim.exe` aus gVim brach `tokens.vim` ab (E954) | `termguicolors` wird mit `silent!` gesetzt |
+| Bei blue war der Error-Kasten einmal rot statt koralle | spaeter korrekt koralle; Ursache nicht gefunden |
+
+## Syntaxdaten
+
+`syntaxdaten/` wird von der Erweiterung noch nicht benutzt. Gegenprobe: Faerbt Vim nur aus diesen
+Daten wie mit seinen eigenen Syntaxdateien?
+
+| Probe | Ergebnis |
+|---|---|
+| Linux, Vim 9.2.0858: 75 Testdateien | alle gleich (0 von 199048 Zeichen anders) |
+| Linux: json, html, css, markdown, yaml mit kurzen Beispielen, die nicht im Repository sind | alle gleich (0 von 2439 Zeichen anders) |
+| Neu erzeugt in einem anderen Ordner | gleicher Inhalt |
+| Windows, gVim (gebaut am 14.02.2026) | `08_shell.sh` weicht ab (265 Zeichen), die uebrigen Testdateien sind gleich |
+
+Bei gVim ist vermutlich der aeltere Stand von `syntax/sh.vim` die Ursache; geprueft ist das nicht.
+Die Regeln fuer Shell haengen ausserdem vom Inhalt der Datei ab.
 
 ## Grenzen der Aussage
 
@@ -115,7 +131,6 @@ Die Testdatei je Sprache steht in [SPRACHEN.md](SPRACHEN.md).
 | 21 | Lua | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
 | 22 | Perl | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
 | 23 | MATLAB | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
-| 24 | Fortran | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
 | 25 | Visual Basic | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
 | 26 | Scala | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
 | 27 | Nix | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
@@ -140,7 +155,6 @@ Die Testdatei je Sprache steht in [SPRACHEN.md](SPRACHEN.md).
 | 49 | Tcl | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
 | 50 | CUDA | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
 | 51 | D | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
-| 52 | Vim Script | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
 | 53 | SAS | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
 | 54 | Cython | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
 | 55 | T-SQL | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
@@ -197,7 +211,6 @@ Die Testdatei je Sprache steht in [SPRACHEN.md](SPRACHEN.md).
 | 21 | Lua | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
 | 22 | Perl | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
 | 23 | MATLAB | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
-| 24 | Fortran | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
 | 25 | Visual Basic | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
 | 26 | Scala | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
 | 27 | Nix | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
@@ -222,7 +235,6 @@ Die Testdatei je Sprache steht in [SPRACHEN.md](SPRACHEN.md).
 | 49 | Tcl | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
 | 50 | CUDA | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
 | 51 | D | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
-| 52 | Vim Script | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
 | 53 | SAS | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
 | 54 | Cython | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
 | 55 | T-SQL | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
@@ -279,7 +291,6 @@ Die Testdatei je Sprache steht in [SPRACHEN.md](SPRACHEN.md).
 | 21 | Lua | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
 | 22 | Perl | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
 | 23 | MATLAB | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
-| 24 | Fortran | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
 | 25 | Visual Basic | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
 | 26 | Scala | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
 | 27 | Nix | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
@@ -304,7 +315,6 @@ Die Testdatei je Sprache steht in [SPRACHEN.md](SPRACHEN.md).
 | 49 | Tcl | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
 | 50 | CUDA | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
 | 51 | D | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
-| 52 | Vim Script | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
 | 53 | SAS | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
 | 54 | Cython | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
 | 55 | T-SQL | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
@@ -361,7 +371,6 @@ Die Testdatei je Sprache steht in [SPRACHEN.md](SPRACHEN.md).
 | 21 | Lua | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
 | 22 | Perl | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
 | 23 | MATLAB | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
-| 24 | Fortran | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
 | 25 | Visual Basic | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
 | 26 | Scala | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
 | 27 | Nix | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
@@ -386,7 +395,6 @@ Die Testdatei je Sprache steht in [SPRACHEN.md](SPRACHEN.md).
 | 49 | Tcl | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
 | 50 | CUDA | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
 | 51 | D | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
-| 52 | Vim Script | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
 | 53 | SAS | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
 | 54 | Cython | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
 | 55 | T-SQL | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |

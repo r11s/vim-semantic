@@ -138,7 +138,7 @@
  ["syntax/mojo.vim:259","region mojoDoctest start=\"^\\s*>>>\\s\" end=\"^\\s*$\" contained contains=ALLBUT,mojoDoctest,mojoFunction,@Spell"],
  ["syntax/mojo.vim:262","region mojoDoctestValue start=+^\\s*\\%(>>>\\s\\|\\.\\.\\.\\s\\|\"\"\"\\|'''\\)\\@!\\S\\++ end=\"$\" contained"],
  ["syntax/mojo.vim:273","sync match mojoSync grouphere NONE \"^\\%(def\\|class\\)\\s\\+\\h\\w*\\s*[(:]\""],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

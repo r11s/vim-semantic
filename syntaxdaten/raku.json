@@ -666,7 +666,7 @@
  ["syntax/raku.vim:1721","region rakuPodFormatTwo matchgroup=rakuPodFormatCode start=\"X<<\" skip=\"<<[^>]*>>\" end=\">>\" contained contains=rakuPodFormatAnglesTwo,rakuPodFormatFrench,rakuPodFormatOne,rakuPodFormatTwo,rakuPodVerticalBar,rakuPodSemiColon,rakuPodComma"],
  ["syntax/raku.vim:1729","region rakuPodFormatThree matchgroup=rakuPodFormatCode start=\"X<<<\" skip=\"<<<[^>]*>>>\" end=\">>>\" contained contains=rakuPodFormatAnglesThree,rakuPodFormatFrench,rakuPodFormatOne,rakuPodFormatTwo,rakuPodFormatThree,rakuPodVerticalBar,rakuPodSemiColon,rakuPodComma"],
  ["syntax/raku.vim:1737","region rakuPodFormatFrench matchgroup=rakuPodFormatCode start=\"X«\" skip=\"«[^»]*»\" end=\"»\" contained contains=rakuPodFormatAnglesFrench,rakuPodFormatFrench,rakuPodFormatOne,rakuPodFormatTwo,rakuPodFormatThree,rakuPodVerticalBar,rakuPodSemiColon,rakuPodComma"],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

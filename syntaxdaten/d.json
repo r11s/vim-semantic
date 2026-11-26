@@ -425,7 +425,7 @@
  ["syntax/d.vim:568","keyword dAsmOpCode contained\tcrc32\t\tpcmpestri\tpcmpestrm\tpcmpgtq"],
  ["syntax/d.vim:569","keyword dAsmOpCode contained\tpcmpistri\tpcmpistrm\tpopcnt\t\tpi2fd"],
  ["syntax/d.vim:570","keyword dAsmOpCode contained\tadc"],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

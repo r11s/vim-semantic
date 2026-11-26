@@ -78,7 +78,7 @@
  ["syntax/prolog.vim:76","match   prologSpecialCharacter  \"-->\""],
  ["syntax/prolog.vim:77","match   prologQuestion          \"?-.*\\.\"  contains=prologNumber"],
  ["syntax/prolog.vim:82","sync maxlines=50"],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

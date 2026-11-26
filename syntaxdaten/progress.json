@@ -260,7 +260,7 @@
  ["syntax/progress.vim:273","keyword ProgressOperator\tyes-no-cancel"],
  ["syntax/progress.vim:275","keyword ProgressType\tchar[acter] int[eger] int64 dec[imal] log[ical] da[te] datetime datetime-tz"],
  ["syntax/progress.vim:277","sync lines=800"],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

@@ -151,7 +151,7 @@
  ["syntax/go.vim:534","region  goPackageComment    start=/\\v(\\/\\/.*\\n)+\\s*package\\s/ end=/\\v\\n\\s*package\\s/he=e-8,me=e-8,re=e-8 contains=@goCommentGroup,@Spell fold"],
  ["syntax/go.vim:538","region  goPackageComment    start=/\\v^\\s*\\/\\*.*\\n(.*\\n)*\\s*\\*\\/\\npackage\\s/ end=/\\v\\*\\/\\n\\s*package\\s/he=e-8,me=e-8,re=e-8 contains=@goCommentGroup,@Spell fold"],
  ["syntax/go.vim:553","sync minlines=500"],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

@@ -83,7 +83,7 @@
  ["syntax/scilab.vim:58","region scilabString\t\t\t\tstart=+\"+ end=+\"+\t\t\t\toneline"],
  ["syntax/scilab.vim:61","match scilabIdentifier\t\t\t\"\\<[A-Za-z?!_#$][A-Za-z0-9?!_#$]*\\>\""],
  ["syntax/scilab.vim:62","match scilabOverload\t\t\t\"%[A-Za-z0-9?!_#$]\\+_[A-Za-z0-9?!_#$]\\+\""],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

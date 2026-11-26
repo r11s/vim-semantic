@@ -95,7 +95,7 @@
  ["syntax/asm.vim:113","match asmMacro\t\t\"\\.endm\""],
  ["syntax/asm.vim:119","match asmDirective\t\t\"\\.[A-Za-z][0-9A-Za-z-_]*\""],
  ["syntax/asm.vim:121","case match"],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

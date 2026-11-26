@@ -431,7 +431,7 @@
  ["syntax/rust.vim:290","match rustCommentLineDocLeader \"^\\s*//\\%(//\\@!\\|!\\)\" contained"],
  ["syntax/rust.vim:382","sync minlines=200"],
  ["syntax/rust.vim:383","sync maxlines=500"],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

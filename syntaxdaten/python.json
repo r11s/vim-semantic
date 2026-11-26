@@ -171,7 +171,7 @@
  ["syntax/python.vim:388","region pythonDoctestValue start=+^\\s*\\%(>>>\\s\\|\\.\\.\\.\\s\\|\"\"\"\\|'''\\)\\@!\\S\\++ end=\"$\" contained contains=pythonEllipsis"],
  ["syntax/python.vim:391","match pythonEllipsis \"\\%(^\\s*\\)\\@<!\\.\\@1<!\\zs\\.\\.\\.\\ze\\.\\@!\" display contained containedin=pythonDoctest"],
  ["syntax/python.vim:401","sync match pythonSync grouphere NONE \"^\\%(def\\|class\\|async\\s\\+def\\)\\s\\+\\h\\w*\\s*[(:]\""],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

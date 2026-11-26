@@ -144,7 +144,7 @@
  ["syntax/swift.vim:226","match swiftCastOp skipwhite skipempty nextgroup=swiftType,swiftCoreTypes \"\\<as\\>[!?]\\?\""],
  ["syntax/swift.vim:229","match swiftNilOps \"??\""],
  ["syntax/swift.vim:232","region swiftReservedIdentifier oneline start=/`/ end=/`/"],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

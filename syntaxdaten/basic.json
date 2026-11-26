@@ -269,7 +269,7 @@
  ["syntax/basic.vim:332","region  basicMetaComment\t\t\t\t    start=\"'\\s*\\$\\@=\"\t  end=\"$\" contains=basicTodo"],
  ["syntax/basic.vim:334","cluster basicMetaComments contains=basicMetaComment,basicMetaRemStatement"],
  ["syntax/basic.vim:335","cluster basicComments     contains=basicComment,basicMetaComment"],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

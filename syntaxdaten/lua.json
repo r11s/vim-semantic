@@ -229,7 +229,7 @@
  ["syntax/lua.vim:401","match luaFunc /\\<debug\\.setuservalue\\>/"],
  ["syntax/lua.vim:402","match luaFunc /\\<debug\\.upvalueid\\>/"],
  ["syntax/lua.vim:403","match luaFunc /\\<debug\\.upvaluejoin\\>/"],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

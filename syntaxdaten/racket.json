@@ -453,7 +453,7 @@
  ["syntax/racket.vim:621","cluster racketComments contains=racketComment,racketBlockComment,racketMultilineComment"],
  ["syntax/racket.vim:622","cluster racketTop  add=racketQuote,racketUnquote,@racketComments"],
  ["syntax/racket.vim:625","sync match matchPlace grouphere NONE \"^[^ \\t]\""],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

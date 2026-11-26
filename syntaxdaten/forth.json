@@ -274,7 +274,7 @@
  ["syntax/forth.vim:403","keyword forthCharOps    EKEY>XCHAR X-WIDTH XC-WIDTH"],
  ["syntax/forth.vim:404","keyword forthConversion XHOLD"],
  ["syntax/forth.vim:405","keyword forthString     -TRAILING-GARBAGE"],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

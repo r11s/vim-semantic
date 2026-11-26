@@ -33,8 +33,11 @@ function readCommands(log, runtime) {
     if (command === 'include-end') depth--;
     // "syntax clear" ohne Namen verwirft alles Bisherige
     if (command === 'clear' && depth === 0) { commands = []; continue; }
-    const source = script.includes('/runtime/') ? script.slice(script.lastIndexOf('/runtime/') + 9)
-      : script.replace(runtime, '');
+    // Nur Pfade innerhalb von Vim bzw. diesem Projekt: keine Pfade des Rechners in den Daten
+    const full = slash(script);
+    const source = full.includes('/runtime/') ? full.slice(full.lastIndexOf('/runtime/') + 9)
+      : full.startsWith(slash(ROOT) + '/') ? full.slice(slash(ROOT).length + 1)
+        : full.replace(slash(runtime) + '/', '');
     commands.push([`${source}:${line}`, command]);
     if (/^include\s/.test(command)) depth++;
   }

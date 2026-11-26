@@ -2,6 +2,7 @@
 
 Rangliste der Programmiersprachen, aus der die Testprogramme in `test/` stammen.
 Die Testprogramme der 23 Sprachen ohne eigene Vim-Syntax sind entfernt (Spalte Testdatei).
+Ebenfalls entfernt sind Fortran und Vim Script: Ihre Syntaxregeln hingen vom Dateiinhalt ab.
 Eigene Zusammensetzung, keine TIOBE-Kopie.
 
 ## Methode
@@ -46,7 +47,7 @@ Einzelraenge der anderen Quellen sind nicht erfasst.
 
 Spalte Vim: bringt Vim 9.2.0858 ohne Plugins eine Syntax mit (geprueft an der Testdatei,
 26.11.2026)? "ja" heisst nur, dass eine passende Syntax geladen wird, nicht wie gut sie faerbt.
-Ergebnis: 77 ja, 23 ohne eigene Syntax. Die erste Zeile von `41_prolog.pl` wurde dafuer
+Ergebnis: 77 ja, 23 ohne eigene Syntax (von den 77 haben 75 noch eine Testdatei). Die erste Zeile von `41_prolog.pl` wurde dafuer
 angepasst (`%!` galt Vim als Perl).
 
 | Rang | Sprache | Score | GitHub | SO | TIOBE | Vim | Testdatei |
@@ -74,7 +75,7 @@ angepasst (`%!` galt Vim als Perl).
 | 21 | Lua | 34.7 | 19 | 15 | 32 | ja | `22_lua.lua` |
 | 22 | Perl | 33.5 | 23 | 25 | 15 | ja | `26_perl.pl` |
 | 23 | MATLAB | 32.1 | 28 | 26 | 16 | ja | `27_matlab.m` |
-| 24 | Fortran | 30.6 | 33 | 34 | 13 | ja | `24_fortran.f90` |
+| 24 | Fortran | 30.6 | 33 | 34 | 13 | ja | entfernt |
 | 25 | Visual Basic | 30.0 | 68 | 23 | 9 | ja | `21_visualbasic.vb` |
 | 26 | Scala | 29.5 | 42 | 32 | 38 | ja | `25_scala.scala` |
 | 27 | Nix | 28.6 | 21 | 21 |  | ja | `27_nix.nix` |
@@ -102,7 +103,7 @@ angepasst (`%!` galt Vim als Perl).
 | 49 | Tcl | 21.8 | 38 |  | 75 | ja | `49_tcl.tcl` |
 | 50 | CUDA | 21.7 | 29 |  |  | ja | `50_cuda.cu` |
 | 51 | D | 21.6 | 63 |  | 34 | ja | `51_d.d` |
-| 52 | Vim Script | 21.6 | 30 |  |  | ja | `52_vimscript.vim` |
+| 52 | Vim Script | 21.6 | 30 |  |  | ja | entfernt |
 | 53 | SAS | 21.5 | 84 |  | 22 | ja | `53_sas.sas` |
 | 54 | Cython | 21.4 | 31 |  |  | ja, verwandt: Pyrex | `54_cython.pyx` |
 | 55 | T-SQL | 21.2 | 32 |  |  | ja, verwandt: Oracle-SQL | `55_tsql.sql` |

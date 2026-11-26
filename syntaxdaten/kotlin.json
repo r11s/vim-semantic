@@ -147,7 +147,7 @@
  ["syntax/kotlin.vim:105","match ktArrow \"->\""],
  ["syntax/kotlin.vim:107","region ktFold start=\"{\" end=\"}\" transparent fold"],
  ["syntax/kotlin.vim:109","sync ccomment ktComment minlines=10"],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

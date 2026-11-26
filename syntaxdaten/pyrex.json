@@ -188,7 +188,7 @@
  ["syntax/pyrex.vim:32","keyword pythonInclude     import"],
  ["syntax/pyrex.vim:33","match   pythonInclude     \"from\""],
  ["syntax/pyrex.vim:37","match   pyrexForFrom        \"\\(for[^:]*\\)\\@<=from\""],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

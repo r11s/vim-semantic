@@ -70,7 +70,7 @@
  ["syntax/json.vim:92","keyword  jsonNull      null"],
  ["syntax/json.vim:95","region  jsonFold matchgroup=jsonBraces start=\"{\" end=/}\\(\\_s\\+\\ze\\(\"\\|{\\)\\)\\@!/ transparent fold"],
  ["syntax/json.vim:96","region  jsonFold matchgroup=jsonBraces start=\"\\[\" end=/]\\(\\_s\\+\\ze\"\\)\\@!/ transparent fold"],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

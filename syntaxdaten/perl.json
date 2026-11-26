@@ -420,7 +420,7 @@
  ["syntax/perl.vim:652","sync match perlSyncPOD\tgrouphere perlPOD \"^=head\""],
  ["syntax/perl.vim:653","sync match perlSyncPOD\tgrouphere perlPOD \"^=item\""],
  ["syntax/perl.vim:654","sync match perlSyncPOD\tgrouphere NONE \"^=cut\""],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

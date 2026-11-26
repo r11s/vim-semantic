@@ -181,7 +181,7 @@
  ["syntax/erlang.vim:286","keyword erlangBIF trunc tuple_size tuple_to_list unlink contained"],
  ["syntax/erlang.vim:287","keyword erlangBIF unregister whereis contained"],
  ["syntax/erlang.vim:293","sync match erlangSync grouphere NONE \"^[a-z]\\s*(\""],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

@@ -176,7 +176,7 @@
  ["syntax/solidity.vim:174","region  solLineComment       start=+\\/\\/+ end=+$+ contains=solCommentTodo,solNatSpec,@Spell"],
  ["syntax/solidity.vim:175","region  solLineComment       start=+^\\s*\\/\\/+ skip=+\\n\\s*\\/\\/+ end=+$+ contains=solCommentTodo,solNatSpec,@Spell fold"],
  ["syntax/solidity.vim:176","region  solComment           start=\"/\\*\"  end=\"\\*/\" contains=solCommentTodo,solNatSpec,@Spell fold"],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

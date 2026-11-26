@@ -356,7 +356,7 @@
  ["syntax/ocaml.vim:557","sync match ocamlStructSync  groupthere ocamlStruct  \"\\<end\\>\""],
  ["syntax/ocaml.vim:558","sync match ocamlSigSync     grouphere  ocamlSig     \"\\<sig\\>\""],
  ["syntax/ocaml.vim:559","sync match ocamlSigSync     groupthere ocamlSig     \"\\<end\\>\""],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

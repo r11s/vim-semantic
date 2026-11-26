@@ -136,7 +136,7 @@
  ["syntax/clojure.vim:155","region clojureMap    matchgroup=clojureParen start=\"{\"  end=\"}\" contains=@clojureTop fold"],
  ["syntax/clojure.vim:158","match clojureError \"]\\|}\\|)\""],
  ["syntax/clojure.vim:160","sync fromstart"],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

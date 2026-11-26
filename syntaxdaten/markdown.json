@@ -1387,7 +1387,7 @@
  ["syntax/markdown.vim:144","region markdownYamlHead start=\"\\%^---$\" end=\"^\\%(---\\|\\.\\.\\.\\)\\s*$\" keepend contains=@markdownYamlTop,@Spell"],
  ["syntax/markdown.vim:147","match markdownEscape \"\\\\[][\\\\`*_{}()<>#+.!-]\""],
  ["syntax/markdown.vim:148","match markdownError \"\\w\\@<=_\\w\\@=\""],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

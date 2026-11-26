@@ -919,7 +919,7 @@
  ["syntax/java.vim:864","match   javaParenError \"\\]\""],
  ["syntax/java.vim:905","cluster javaTop contains=TOP,javaTopEnumDeclaration"],
  ["syntax/java.vim:917","sync ccomment javaComment minlines=10"],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

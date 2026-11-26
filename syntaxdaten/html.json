@@ -1185,7 +1185,7 @@
  ["syntax/html.vim:323","sync match htmlHighlight groupthere javaScript \"<script\""],
  ["syntax/html.vim:324","sync match htmlHighlightSkip \"^.*['\\\"].*$\""],
  ["syntax/html.vim:325","sync minlines=250"],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

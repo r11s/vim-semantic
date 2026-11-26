@@ -454,7 +454,7 @@
  ["syntax/arduino.vim:74","keyword arduinoType      atomic_ullong atomic_ulong atomic_ushort boolean"],
  ["syntax/arduino.vim:75","keyword arduinoType      byte char16_t char32_t complex NULL null PROGMEM"],
  ["syntax/arduino.vim:76","keyword arduinoType      String word"],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

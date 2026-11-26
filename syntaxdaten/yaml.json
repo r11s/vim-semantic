@@ -124,7 +124,7 @@
  ["syntax/yaml.vim:198","match yamlAlias   '\\*[^,[\\]{}\\n\\r\\uFEFF \\t]\\+'"],
  ["syntax/yaml.vim:200","match yamlDocumentStart '^---\\ze\\%(\\s\\|$\\)'"],
  ["syntax/yaml.vim:201","match yamlDocumentEnd   '^\\.\\.\\.\\ze\\%(\\s\\|$\\)'"],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

@@ -103,7 +103,7 @@
  ["syntax/javascript.vim:94","sync fromstart"],
  ["syntax/javascript.vim:95","sync maxlines=100"],
  ["syntax/javascript.vim:97","sync ccomment javaScriptComment"],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

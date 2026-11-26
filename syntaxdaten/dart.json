@@ -79,7 +79,7 @@
  ["syntax/dart.vim:58","match dartParens        \"[()]\""],
  ["syntax/dart.vim:61","sync fromstart"],
  ["syntax/dart.vim:62","sync maxlines=100"],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

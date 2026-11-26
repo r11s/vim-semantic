@@ -405,7 +405,7 @@
  ["syntax/cpp.vim:118","match cppSpliceBracket\t\"\\[:\\|:\\]\""],
  ["syntax/cpp.vim:119","keyword cppStatement\tcontract_assert"],
  ["syntax/cpp.vim:123","match cppMinMax \"[<>]?\""],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

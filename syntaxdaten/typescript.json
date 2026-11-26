@@ -1562,7 +1562,7 @@
  ["syntax/shared/typescriptcommon.vim:1977","region typescriptGenericImpl matchgroup=typescriptTypeBrackets start=/</ end=/>/ skip=/\\s*,\\s*/ contains=typescriptTypeParameter nextgroup=typescriptParamImpl contained skipwhite"],
  ["syntax/shared/typescriptcommon.vim:1982","region typescriptParamImpl matchgroup=typescriptParens start=/(/ end=/)/ contains=typescriptDecorator,@typescriptParameterList,@typescriptComments nextgroup=typescriptReturnAnnotation,typescriptBlock contained skipwhite skipnl"],
  ["syntax/shared/typescriptcommon.vim:1988","match typescriptDecorator /@\\([_$a-zA-Z][_$a-zA-Z0-9]*\\.\\)*[_$a-zA-Z][_$a-zA-Z0-9]*\\>/ nextgroup=typescriptFuncCallArg,typescriptTypeArguments contains=@_semantic,typescriptDotNotation"],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

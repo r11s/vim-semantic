@@ -37,7 +37,6 @@ Zum Erzeugen ist ein Vim mit `werkzeuge/vim-synlog.patch` noetig.
 | elm | 6 | 18 | 9 | 0 | 0 |  | 98_elm.elm |
 | erlang | 35 | 55 | 11 | 1 | 0 |  | 48_erlang.erl |
 | forth | 147 | 44 | 11 | 0 | 0 |  | 77_forth.fth |
-| fortran | 59 | 103 | 4 | 1 | 0 | ja | 24_fortran.f90 |
 | gdscript | 18 | 20 | 2 | 0 | 0 |  | 36_gdscript.gd |
 | glsl | 665 | 11 | 8 | 0 | 0 |  | 47_glsl.glsl |
 | go | 22 | 34 | 12 | 3 | 0 |  | 12_go.go |
@@ -89,6 +88,5 @@ Zum Erzeugen ist ein Vim mit `werkzeuge/vim-synlog.patch` noetig.
 | vb | 271 | 17 | 5 | 0 | 0 |  | 21_visualbasic.vb, 61_vbscript.vbs, 90_vb6.bas, 94_vba.bas |
 | verilog | 28 | 29 | 6 | 0 | 0 |  | 59_verilog.v |
 | vhdl | 27 | 27 | 1 | 0 | 0 |  | 60_vhdl.vhd |
-| vim | 217 | 248 | 82 | 19 | 3 | ja | 52_vimscript.vim |
 | yaml | 3 | 37 | 7 | 7 | 0 |  |  |
 | zig | 17 | 15 | 5 | 0 | 0 |  | 37_zig.zig |

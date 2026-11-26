@@ -77,7 +77,7 @@ const perChar = (tokens) => {
 function version() {
   try {
     return execFileSync(VIM, ['--version'], { encoding: 'utf8' }).split(/\r?\n/)
-      .filter((row) => /^(VIM - |Included patches|MS-Windows)/.test(row));
+      .filter((row) => /^(VIM - |MS-Windows)|[Pp]atches/.test(row));
   } catch (error) {
     return [`Version nicht lesbar: ${error.message}`];
   }

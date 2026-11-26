@@ -93,7 +93,7 @@
  ["syntax/autohotkey.vim:272","match   autohotkeyComment display contains=@autohotkeyCommentGroup '\\%(^;\\|\\s\\+;\\).*$'"],
  ["syntax/autohotkey.vim:277","region  autohotkeyComment contains=@autohotkeyCommentGroup matchgroup=autohotkeyCommentStart start='^\\s*/\\*' end='^\\s*\\*/'"],
  ["syntax/autohotkey.vim:290","sync ccomment autohotkeyComment minlines=50"],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

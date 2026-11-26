@@ -455,7 +455,7 @@
  ["syntax/css.vim:545","region cssAtRule start=/@namespace\\>/ end=/\\ze;/ contains=cssStringQ,cssStringQQ,cssUnicodeEscape,cssComment,cssAtKeyword"],
  ["syntax/css.vim:549","region cssAtRule start=/@supports\\>/ end=/\\ze{/ skipwhite skipnl contains=cssAtRuleLogical,cssAttrRegion,css.*Prop,cssValue.*,cssVendor,cssAtKeyword,cssComment nextgroup=cssDefinition"],
  ["syntax/css.vim:553","sync minlines=10"],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

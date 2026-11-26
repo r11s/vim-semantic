@@ -100,7 +100,7 @@
  ["syntax/verilog.vim:90","region  verilogDirective   start=\"/\\*\\s*\\$s\\>\" end=\"\\*/\""],
  ["syntax/verilog.vim:91","region  verilogDirective   start=\"//\\s*\\$s dc_script_begin\\>\" end=\"//\\s*\\$s dc_script_end\\>\""],
  ["syntax/verilog.vim:95","sync minlines=50"],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

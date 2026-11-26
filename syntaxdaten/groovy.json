@@ -1329,7 +1329,7 @@
  ["syntax/groovy.vim:386","region  groovyParenT1 transparent matchgroup=groovyParen1 start=\"\\[\" end=\"\\]\" contains=@groovyTop,groovyParenT2 contained"],
  ["syntax/groovy.vim:387","region  groovyParenT2 transparent matchgroup=groovyParen2 start=\"\\[\" end=\"\\]\" contains=@groovyTop,groovyParenT  contained"],
  ["syntax/groovy.vim:388","match   groovyParenError       \"\\]\""],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

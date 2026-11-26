@@ -24,6 +24,17 @@ Danach VS Code neu starten. Wieder entfernen:
 ## Messen
 
     node measure.js blue               # Details in messung/
+    bash werkzeuge/themes.sh           # vorher: alle Themes neu erzeugen
+
+## Syntaxdaten prüfen
+
+    node werkzeuge/syntaxdaten-pruefen.js      # Abweichungen in temp/unterschiede.txt
+
+Mit dem Vim aus gVim:
+
+    VIM_PATH="C:/Program Files/Vim/vim92/vim.exe" node werkzeuge/syntaxdaten-pruefen.js
+
+Neu erzeugen geht nur mit dem ergänzten Vim, siehe `syntaxdaten/README.md`.
 
 ## Alles ist einfarbig
 
@@ -31,7 +42,7 @@ Danach VS Code neu starten. Wieder entfernen:
 - In settings.json: `"editor.semanticHighlighting.enabled": true`
 - Ansicht "Ausgabe", Kanal "VimSem" ansehen
 - Für `protokoll.txt`: `"vimHighlight.logFile": true`
-- Vim nicht gefunden: `"vimHighlight.vimPath"` setzen (Pfad: `cygpath -w "$(which vim)"`)
+- Vim nicht gefunden: `"vimHighlight.vimPath"` setzen (Vim aus Git: `cygpath -w "$(which vim)"`; gVim: `C:\Program Files\Vim\vim92\vim.exe`)
 
 ## Woher kommt eine Farbe?
 

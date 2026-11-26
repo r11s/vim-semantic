@@ -1615,7 +1615,7 @@
  ["syntax/php.vim:896","region phpDocTags start=\"{@\\(example\\|id\\|internal\\|inheritdoc\\|link\\|source\\|toc\\|tutorial\\)\" end=\"}\" containedin=phpComment"],
  ["syntax/php.vim:897","match phpDocTags \"@\\(abstract\\|access\\|api\\|author\\|category\\|copyright\\|deprecated\\|example\\|final\\|global\\|ignore\\|internal\\|license\\|link\\|method\\|name\\|package\\|param\\|property\\(-write\\|-read\\)\\?\\|return\\|see\\|since\\|source\\|static\\|staticvar\\|subpackage\\|tutorial\\|uses\\|used-by\\|var\\|version\\|contributor\\|modified\\|filename\\|description\\|filesource\\|throws\\)\\(\\s\\+\\)\\?\" containedin=phpComment"],
  ["syntax/php.vim:898","match phpDocTodo \"@\\(todo\\|fixme\\|xxx\\)\\(\\s\\+\\)\\?\" containedin=phpComment"],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

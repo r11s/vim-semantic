@@ -160,7 +160,7 @@
  ["syntax/cobol.vim:196","match   cobolString       /'[^']*\\('\\|$\\)/"],
  ["syntax/cobol.vim:199","match   cobolIndicator   \"\\%7c[D-]\" contained"],
  ["syntax/cobol.vim:212","match   cobolBadLine      \"\\%73c.*\" containedin=ALL,cobolInlineComment,cobolComment"],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

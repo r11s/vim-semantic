@@ -194,7 +194,7 @@
  ["syntax/vhdl.vim:236","match\tvhdlPreProc\t\"\\(^\\|\\s\\)--\\s*pragma\\s\\+synthesis_\\(on\\|off\\)\\s*\""],
  ["syntax/vhdl.vim:237","match\tvhdlPreProc\t\"\\(^\\|\\s\\)--\\s*synopsys\\s\\+translate_\\(on\\|off\\)\\s*\""],
  ["syntax/vhdl.vim:240","sync\tminlines=600"],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

@@ -181,7 +181,7 @@
  ["syntax/sml.vim:186","sync match smlStructSync  groupthere smlStruct  \"\\<end\\>\""],
  ["syntax/sml.vim:187","sync match smlSigSync     grouphere  smlSig     \"\\<sig\\>\""],
  ["syntax/sml.vim:188","sync match smlSigSync     groupthere smlSig     \"\\<end\\>\""],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

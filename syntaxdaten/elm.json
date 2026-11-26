@@ -94,7 +94,7 @@
  ["syntax/elm.vim:72","region elmCaseItemBlock start=\"^\\z\\(\\s\\+\\).\\+->$\" end=\"^\\z1\\@!\\W\\@=\" end=\"\\(\\n\\n\\z1\\@!\\)\\@=\" end=\"\\(\\n\\z1\\S\\)\\@=\" contains=ALL fold"],
  ["syntax/elm.vim:73","region elmLetBlock matchgroup=elmLetBlockDefinition start=\"\\<let\\>\" end=\"\\<in\\>\" contains=ALL fold"],
  ["syntax/elm.vim:103","sync minlines=500"],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

@@ -222,7 +222,7 @@
  ["syntax/sas.vim:205","region sasIML matchgroup=sasSectionKeyword start='\\v%(^|;)\\s*\\zsproc\\s+iml>' end='\\v%(^|;)\\s*%(quit|data|proc|endsas)>'me=s-1 fold contains=@sasBasicSyntax,sasIMLFunction,sasIMLControl,sasIMLStatement"],
  ["syntax/sas.vim:208","region sasMacro start='\\v\\%macro>' end='\\v\\%mend>' fold keepend contains=@sasBasicSyntax,@sasDataStepSyntax,sasDataStep,sasProc,sasODSGraphicsProc,sasGraphProc,sasAnalyticalProc,sasProcTemplate,sasProcSQL,sasDS2,sasIML"],
  ["syntax/sas.vim:260","sync fromstart"],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

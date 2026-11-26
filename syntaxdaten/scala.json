@@ -185,7 +185,7 @@
  ["syntax/scala.vim:221","match scalaAkkaFSM /whenUnhandled/"],
  ["syntax/scala.vim:222","match scalaAkkaFSMGotoUsing /\\<using\\>/"],
  ["syntax/scala.vim:223","match scalaAkkaFSMGotoUsing /\\<goto\\>/"],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

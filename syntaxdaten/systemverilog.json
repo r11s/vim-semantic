@@ -154,7 +154,7 @@
  ["syntax/systemverilog.vim:69","keyword systemverilogStatement   implements"],
  ["syntax/systemverilog.vim:70","keyword systemverilogStatement   interconnect soft nettype"],
  ["syntax/systemverilog.vim:73","region systemverilogBlockString start=+\"\"\"+ end=+\"\"\"+ contains=verilogEscape,@Spell"],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

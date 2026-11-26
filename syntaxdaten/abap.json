@@ -163,7 +163,7 @@
  ["syntax/abap.vim:166","match   abapComment  \"\\\".*\" contains=abapTodo"],
  ["syntax/abap.vim:167","keyword abapTodo     contained TODO NOTE"],
  ["syntax/abap.vim:168","match   abapTodo     \"\\#EC\\W\\+\\w\\+\""],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

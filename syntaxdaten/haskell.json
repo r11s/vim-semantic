@@ -126,7 +126,7 @@
  ["syntax/haskell.vim:134","match\tcCommentError\tdisplay \"\\*/\" contained"],
  ["syntax/haskell.vim:135","match\tcCommentStartError display \"/\\*\"me=e-1 contained"],
  ["syntax/haskell.vim:136","region\tcCppString\tstart=+L\\=\"+ skip=+\\\\\\\\\\|\\\\\"\\|\\\\$+ excludenl end=+\"+ end='$' contains=cSpecial contained"],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

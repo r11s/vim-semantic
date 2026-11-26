@@ -88,7 +88,7 @@
  ["syntax/matlab.vim:75","keyword matlabImplicit\t\tlog10 max min sign sin sinh sqrt tan reshape"],
  ["syntax/matlab.vim:77","match matlabError\t\"-\\=\\<\\d\\+\\.\\d\\+\\.[^*/\\\\^]\""],
  ["syntax/matlab.vim:78","match matlabError\t\"-\\=\\<\\d\\+\\.\\d\\+[eEdD][-+]\\=\\d\\+\\.\\([^*/\\\\^]\\)\""],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

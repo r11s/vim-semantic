@@ -122,7 +122,7 @@
  ["syntax/uc.vim:100","region  ucParen\t       transparent start=\"(\" end=\")\" contains=@ucTop,ucParen"],
  ["syntax/uc.vim:101","match   ucParenError       \")\""],
  ["syntax/uc.vim:107","sync ccomment ucComment minlines=10"],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",

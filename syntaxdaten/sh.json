@@ -473,7 +473,7 @@
  ["syntax/sh.vim:860","sync match shIfSync\tgroupthere\tshIf\t\"\\<fi\\>\""],
  ["syntax/sh.vim:861","sync match shUntilSync\tgrouphere\tshRepeat\t\"\\<until\\>\""],
  ["syntax/sh.vim:862","sync match shWhileSync\tgrouphere\tshRepeat\t\"\\<while\\>\""],
- ["/home/claude/sd/vim/syntax-data.vim:35","sync fromstart"]
+ ["vim/syntax-data.vim:36","sync fromstart"]
 ],
 "liste": [
  "--- Syntax items ---",
