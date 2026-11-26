@@ -10,7 +10,11 @@ const { runVim, tokenType } = require('./vim');
 const FILETYPES = ['python', 'javascript', 'typescript', 'sh', 'json', 'c', 'cpp',
   'vim', 'html', 'css', 'markdown', 'yaml', 'java', 'go', 'rust', 'sql', 'cs', 'php', 'r', 'ps1',
   'swift', 'kotlin', 'ruby', 'asm', 'dart', 'objc', 'vb', 'lua', 'ada', 'fortran', 'scala', 'perl',
-  'matlab', 'pascal', 'julia'];
+  'matlab', 'pascal', 'julia',
+  'nix', 'dosbatch', 'groovy', 'haskell', 'lisp', 'gdscript', 'zig', 'ocaml', 'cobol', 'prolog',
+  'solidity', 'clojure', 'glsl', 'erlang', 'tcl', 'cuda', 'd', 'sas', 'pyrex', 'awk', 'verilog',
+  'systemverilog', 'vhdl', 'abap', 'scheme', 'raku', 'sml', 'st', 'uc', 'stata', 'forth',
+  'scilab', 'autohotkey', 'arduino', 'nu', 'racket', 'mojo', 'progress', 'elm', 'basic'];
 
 async function main() {
   const scheme = process.argv[2] || 'default';
@@ -100,7 +104,7 @@ async function main() {
           'vimHighlight.vimPath': { type: 'string', default: 'vim', scope: 'machine-overridable', description: 'Pfad zu Vim' },
           'vimHighlight.maxLines': { type: 'number', default: 3000, description: 'Groessere Dateien bleiben ungefaerbt' },
           'vimHighlight.backgroundGroups': {
-            type: 'array', items: { type: 'string' }, default: ['Todo', 'Error'],
+            type: 'array', items: { type: 'string' }, default: ['Todo', 'Error', 'Constant'],
             description: 'Vim-Gruppen, deren Hintergrundfarbe angezeigt wird',
           },
         },

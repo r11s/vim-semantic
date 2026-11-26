@@ -1,0 +1,604 @@
+{
+  "name": "Vim quiet (light)",
+  "type": "light",
+  "semanticHighlighting": true,
+  "colors": {
+    "editor.background": "#d7d7d7",
+    "editor.foreground": "#000000"
+  },
+  "tokenColors": [],
+  "semanticTokenColors": {
+    "vim_Bold": {
+      "foreground": "#000000",
+      "bold": true,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_BoldItalic": {
+      "foreground": "#000000",
+      "bold": true,
+      "italic": true,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_ColorColumn": {
+      "foreground": "#000000",
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_Comment": {
+      "foreground": "#000000",
+      "bold": true,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_Constant": {
+      "foreground": "#000000",
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_CurSearch": {
+      "foreground": "#000000",
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_Cursor": {
+      "foreground": "#d7d7d7",
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_CursorColumn": {
+      "foreground": "#000000",
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_CursorIM": {
+      "foreground": "#000000",
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_CursorLine": {
+      "foreground": "#000000",
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_CursorLineNr": {
+      "foreground": "#000000",
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_DiffAdd": {
+      "foreground": "#000000",
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_DiffChange": {
+      "foreground": "#000000",
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_DiffDelete": {
+      "foreground": "#000000",
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_DiffText": {
+      "foreground": "#000000",
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_Directory": {
+      "foreground": "#000000",
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_EndOfBuffer": {
+      "foreground": "#626262",
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_Error": {
+      "foreground": "#000000",
+      "bold": true,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_ErrorMsg": {
+      "foreground": "#d7d7d7",
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_FoldColumn": {
+      "foreground": "#626262",
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_Folded": {
+      "foreground": "#626262",
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_Identifier": {
+      "foreground": "#000000",
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_Ignore": {
+      "foreground": "#000000",
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_IncSearch": {
+      "foreground": "#000000",
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_Italic": {
+      "foreground": "#000000",
+      "bold": false,
+      "italic": true,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_LineNr": {
+      "foreground": "#a8a8a8",
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_MatchParen": {
+      "foreground": "#ff00af",
+      "bold": true,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_ModeMsg": {
+      "foreground": "#000000",
+      "bold": true,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_MoreMsg": {
+      "foreground": "#000000",
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_NonText": {
+      "foreground": "#626262",
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_Normal": {
+      "foreground": "#000000",
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_Pmenu": {
+      "foreground": "#000000",
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_PmenuExtra": {
+      "foreground": "#000000",
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_PmenuExtraSel": {
+      "foreground": "#d7d7d7",
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_PmenuKind": {
+      "foreground": "#000000",
+      "bold": true,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_PmenuKindSel": {
+      "foreground": "#d7d7d7",
+      "bold": true,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_PmenuMatch": {
+      "foreground": "#d70000",
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_PmenuMatchSel": {
+      "foreground": "#d70000",
+      "bold": true,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_PmenuSbar": {
+      "foreground": "#000000",
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_PmenuSel": {
+      "foreground": "#d7d7d7",
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_PmenuShadow": {
+      "foreground": "#a9a9a9",
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_PmenuThumb": {
+      "foreground": "#000000",
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_PreProc": {
+      "foreground": "#000000",
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_Question": {
+      "foreground": "#000000",
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_QuickFixLine": {
+      "foreground": "#000000",
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_Search": {
+      "foreground": "#000000",
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_SignColumn": {
+      "foreground": "#000000",
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_Special": {
+      "foreground": "#000000",
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_SpecialKey": {
+      "foreground": "#626262",
+      "bold": true,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_SpellBad": {
+      "foreground": "#af0000",
+      "bold": false,
+      "italic": false,
+      "underline": true,
+      "strikethrough": false
+    },
+    "vim_SpellCap": {
+      "foreground": "#005faf",
+      "bold": false,
+      "italic": false,
+      "underline": true,
+      "strikethrough": false
+    },
+    "vim_SpellLocal": {
+      "foreground": "#870087",
+      "bold": false,
+      "italic": false,
+      "underline": true,
+      "strikethrough": false
+    },
+    "vim_SpellRare": {
+      "foreground": "#008787",
+      "bold": false,
+      "italic": false,
+      "underline": true,
+      "strikethrough": false
+    },
+    "vim_Statement": {
+      "foreground": "#000000",
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_StatusLine": {
+      "foreground": "#eeeeee",
+      "bold": true,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_StatusLineNC": {
+      "foreground": "#000000",
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_TabLine": {
+      "foreground": "#000000",
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_TabLineFill": {
+      "foreground": "#000000",
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_TabLineSel": {
+      "foreground": "#eeeeee",
+      "bold": true,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_TitleBar": {
+      "foreground": "#000000",
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_TitleBarNC": {
+      "foreground": "#626262",
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_Todo": {
+      "foreground": "#000000",
+      "bold": true,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_ToolbarButton": {
+      "foreground": "#000000",
+      "bold": true,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_ToolbarLine": {
+      "foreground": "#000000",
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_Type": {
+      "foreground": "#000000",
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_Underlined": {
+      "foreground": "#000000",
+      "bold": false,
+      "italic": false,
+      "underline": true,
+      "strikethrough": false
+    },
+    "vim_VertSplit": {
+      "foreground": "#626262",
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_Visual": {
+      "foreground": "#000000",
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_VisualNOS": {
+      "foreground": "#000000",
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_WarningMsg": {
+      "foreground": "#000000",
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_WildMenu": {
+      "foreground": "#000000",
+      "bold": true,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_htmlBold": {
+      "foreground": "#000000",
+      "bold": true,
+      "italic": false,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_htmlBoldItalic": {
+      "foreground": "#000000",
+      "bold": true,
+      "italic": true,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_htmlBoldUnderline": {
+      "foreground": "#000000",
+      "bold": true,
+      "italic": false,
+      "underline": true,
+      "strikethrough": false
+    },
+    "vim_htmlBoldUnderlineItalic": {
+      "foreground": "#000000",
+      "bold": true,
+      "italic": true,
+      "underline": true,
+      "strikethrough": false
+    },
+    "vim_htmlItalic": {
+      "foreground": "#000000",
+      "bold": false,
+      "italic": true,
+      "underline": false,
+      "strikethrough": false
+    },
+    "vim_htmlStrike": {
+      "foreground": "#000000",
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "strikethrough": true
+    },
+    "vim_htmlUnderline": {
+      "foreground": "#000000",
+      "bold": false,
+      "italic": false,
+      "underline": true,
+      "strikethrough": false
+    },
+    "vim_htmlUnderlineItalic": {
+      "foreground": "#000000",
+      "bold": false,
+      "italic": true,
+      "underline": true,
+      "strikethrough": false
+    }
+  },
+  "vimBackgrounds": {
+    "vim_ColorColumn": "#e4e4e4",
+    "vim_CurSearch": "#ff5fff",
+    "vim_Cursor": "#000000",
+    "vim_CursorColumn": "#eeeeee",
+    "vim_CursorIM": "#afff00",
+    "vim_CursorLine": "#eeeeee",
+    "vim_CursorLineNr": "#eeeeee",
+    "vim_DiffAdd": "#87d787",
+    "vim_DiffChange": "#afafd7",
+    "vim_DiffDelete": "#d78787",
+    "vim_DiffText": "#d787d7",
+    "vim_Error": "#ff005f",
+    "vim_ErrorMsg": "#000000",
+    "vim_IncSearch": "#ffaf00",
+    "vim_Pmenu": "#a8a8a8",
+    "vim_PmenuExtra": "#a8a8a8",
+    "vim_PmenuExtraSel": "#000000",
+    "vim_PmenuKind": "#a8a8a8",
+    "vim_PmenuKindSel": "#000000",
+    "vim_PmenuMatch": "#a8a8a8",
+    "vim_PmenuMatchSel": "#000000",
+    "vim_PmenuSbar": "#e4e4e4",
+    "vim_PmenuSel": "#000000",
+    "vim_PmenuShadow": "#000000",
+    "vim_PmenuThumb": "#000000",
+    "vim_QuickFixLine": "#ff5fff",
+    "vim_Search": "#00afff",
+    "vim_StatusLine": "#000000",
+    "vim_StatusLineNC": "#a8a8a8",
+    "vim_TabLine": "#a8a8a8",
+    "vim_TabLineSel": "#000000",
+    "vim_TitleBar": "#ececec",
+    "vim_TitleBarNC": "#e7e7e7",
+    "vim_Todo": "#00ffaf",
+    "vim_Visual": "#ffaf00",
+    "vim_VisualNOS": "#eeeeee",
+    "vim_WildMenu": "#eeeeee"
+  }
+}

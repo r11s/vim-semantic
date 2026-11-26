@@ -125,7 +125,7 @@ async function measure(file, current) {
 async function main() {
   const current = findTheme(process.argv[2], process.argv[3]);
   const files = fs.readdirSync(TESTDIR)
-    .filter((f) => /^\d\d_/.test(f) && !/\.(exe|o|swp)$/.test(f)).sort();
+    .filter((f) => /^\d{2,3}_/.test(f) && !/\.(exe|o|swp)$/.test(f)).sort();
   if (!files.length) throw new Error(`Keine Testdateien in ${TESTDIR}`);
 
   const report = [`${current.label}, Anteil richtiger Zeichen in % (ohne Leerraum)`,

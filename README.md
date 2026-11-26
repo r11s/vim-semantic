@@ -29,9 +29,9 @@ Unter Windows ggf. "vimHighlight.vimPath" auf vim.exe setzen.
 ## Hintergruende
 
 Semantic Tokens kennen keinen Hintergrund, deshalb setzt die Erweiterung Decorations.
-Welche Gruppen hinterlegt werden, steht in der Einstellung (Vorgabe Todo und Error):
+Welche Gruppen hinterlegt werden, steht in der Einstellung (Vorgabe Todo, Error und Constant):
 
-    "vimHighlight.backgroundGroups": ["Todo", "Error"]
+    "vimHighlight.backgroundGroups": ["Todo", "Error", "Constant"]
 
 Nach einem Update der Erweiterung alle Themes mit `generate.js` neu erzeugen.
 

@@ -1,4 +1,4 @@
-%!  Formen-Rechner - Testdatei fuer den Theme-Vergleich (gvim / VS Code)
+%   Formen-Rechner - Testdatei fuer den Theme-Vergleich (gvim / VS Code)
 %
 %   Eigener Code, frei verwendbar (CC0). Stand: 2026-11-26
 %   Start: swipl -q -g main -t halt 41_prolog.pl

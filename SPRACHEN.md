@@ -46,7 +46,8 @@ Einzelraenge der anderen Quellen sind nicht erfasst.
 
 Spalte Vim: bringt Vim 9.2.0858 ohne Plugins eine Syntax mit (geprueft an der Testdatei,
 26.11.2026)? "ja" heisst nur, dass eine passende Syntax geladen wird, nicht wie gut sie faerbt.
-Ergebnis: 76 ja, 1 vorhanden aber falsch erkannt, 23 ohne eigene Syntax.
+Ergebnis: 77 ja, 23 ohne eigene Syntax. Die erste Zeile von `41_prolog.pl` wurde dafuer
+angepasst (`%!` galt Vim als Perl).
 
 | Rang | Sprache | Score | GitHub | SO | TIOBE | Vim | Testdatei |
 |---:|---|---:|---:|---:|---:|---|---|
@@ -90,7 +91,7 @@ Ergebnis: 76 ja, 1 vorhanden aber falsch erkannt, 23 ohne eigene Syntax.
 | 38 | OCaml | 24.9 | 59 | 39 | 26 | ja | `38_ocaml.ml` |
 | 39 | COBOL | 24.7 | 79 | 41 | 16 | ja | `39_cobol.cob` |
 | 40 | Elixir | 24.2 | 48 | 29 | 75 | **nein** | entfernt |
-| 41 | Prolog | 24.2 | 57 | 42 | 31 | vorhanden, aber als Perl erkannt | `41_prolog.pl` |
+| 41 | Prolog | 24.2 | 57 | 42 | 31 | ja (`.pl`: Vim entscheidet nach der ersten Zeile) | `41_prolog.pl` |
 | 42 | Solidity | 24.0 | 34 | 43 | 75 | ja | `42_solidity.sol` |
 | 43 | PL/SQL | 23.5 | 47 |  | 30 | ja | `43_plsql.sql` |
 | 44 | Clojure | 22.7 | 51 | 37 | 75 | ja | `44_clojure.clj` |

@@ -26,14 +26,169 @@
         "path": "./themes/vim-blue-dark-color-theme.json"
       },
       {
+        "label": "Vim catppuccin (dark)",
+        "uiTheme": "vs-dark",
+        "path": "./themes/vim-catppuccin-dark-color-theme.json"
+      },
+      {
+        "label": "Vim catppuccin (light)",
+        "uiTheme": "vs",
+        "path": "./themes/vim-catppuccin-light-color-theme.json"
+      },
+      {
         "label": "Vim default (light)",
         "uiTheme": "vs",
         "path": "./themes/vim-color-theme.json"
       },
       {
+        "label": "Vim darkblue (dark)",
+        "uiTheme": "vs-dark",
+        "path": "./themes/vim-darkblue-dark-color-theme.json"
+      },
+      {
+        "label": "Vim delek (light)",
+        "uiTheme": "vs",
+        "path": "./themes/vim-delek-light-color-theme.json"
+      },
+      {
+        "label": "Vim desert (dark)",
+        "uiTheme": "vs-dark",
+        "path": "./themes/vim-desert-dark-color-theme.json"
+      },
+      {
         "label": "Vim elflord (dark)",
         "uiTheme": "vs-dark",
         "path": "./themes/vim-elflord-dark-color-theme.json"
+      },
+      {
+        "label": "Vim evening (dark)",
+        "uiTheme": "vs-dark",
+        "path": "./themes/vim-evening-dark-color-theme.json"
+      },
+      {
+        "label": "Vim habamax (dark)",
+        "uiTheme": "vs-dark",
+        "path": "./themes/vim-habamax-dark-color-theme.json"
+      },
+      {
+        "label": "Vim industry (dark)",
+        "uiTheme": "vs-dark",
+        "path": "./themes/vim-industry-dark-color-theme.json"
+      },
+      {
+        "label": "Vim koehler (dark)",
+        "uiTheme": "vs-dark",
+        "path": "./themes/vim-koehler-dark-color-theme.json"
+      },
+      {
+        "label": "Vim lunaperche (dark)",
+        "uiTheme": "vs-dark",
+        "path": "./themes/vim-lunaperche-dark-color-theme.json"
+      },
+      {
+        "label": "Vim lunaperche (light)",
+        "uiTheme": "vs",
+        "path": "./themes/vim-lunaperche-light-color-theme.json"
+      },
+      {
+        "label": "Vim morning (light)",
+        "uiTheme": "vs",
+        "path": "./themes/vim-morning-light-color-theme.json"
+      },
+      {
+        "label": "Vim murphy (dark)",
+        "uiTheme": "vs-dark",
+        "path": "./themes/vim-murphy-dark-color-theme.json"
+      },
+      {
+        "label": "Vim novum (dark)",
+        "uiTheme": "vs-dark",
+        "path": "./themes/vim-novum-dark-color-theme.json"
+      },
+      {
+        "label": "Vim novum (light)",
+        "uiTheme": "vs",
+        "path": "./themes/vim-novum-light-color-theme.json"
+      },
+      {
+        "label": "Vim pablo (dark)",
+        "uiTheme": "vs-dark",
+        "path": "./themes/vim-pablo-dark-color-theme.json"
+      },
+      {
+        "label": "Vim peachpuff (light)",
+        "uiTheme": "vs",
+        "path": "./themes/vim-peachpuff-light-color-theme.json"
+      },
+      {
+        "label": "Vim quiet (dark)",
+        "uiTheme": "vs-dark",
+        "path": "./themes/vim-quiet-dark-color-theme.json"
+      },
+      {
+        "label": "Vim quiet (light)",
+        "uiTheme": "vs",
+        "path": "./themes/vim-quiet-light-color-theme.json"
+      },
+      {
+        "label": "Vim retrobox (dark)",
+        "uiTheme": "vs-dark",
+        "path": "./themes/vim-retrobox-dark-color-theme.json"
+      },
+      {
+        "label": "Vim retrobox (light)",
+        "uiTheme": "vs",
+        "path": "./themes/vim-retrobox-light-color-theme.json"
+      },
+      {
+        "label": "Vim ron (dark)",
+        "uiTheme": "vs-dark",
+        "path": "./themes/vim-ron-dark-color-theme.json"
+      },
+      {
+        "label": "Vim shine (light)",
+        "uiTheme": "vs",
+        "path": "./themes/vim-shine-light-color-theme.json"
+      },
+      {
+        "label": "Vim slate (dark)",
+        "uiTheme": "vs-dark",
+        "path": "./themes/vim-slate-dark-color-theme.json"
+      },
+      {
+        "label": "Vim sorbet (dark)",
+        "uiTheme": "vs-dark",
+        "path": "./themes/vim-sorbet-dark-color-theme.json"
+      },
+      {
+        "label": "Vim torte (dark)",
+        "uiTheme": "vs-dark",
+        "path": "./themes/vim-torte-dark-color-theme.json"
+      },
+      {
+        "label": "Vim unokai (dark)",
+        "uiTheme": "vs-dark",
+        "path": "./themes/vim-unokai-dark-color-theme.json"
+      },
+      {
+        "label": "Vim wildcharm (dark)",
+        "uiTheme": "vs-dark",
+        "path": "./themes/vim-wildcharm-dark-color-theme.json"
+      },
+      {
+        "label": "Vim wildcharm (light)",
+        "uiTheme": "vs",
+        "path": "./themes/vim-wildcharm-light-color-theme.json"
+      },
+      {
+        "label": "Vim zaibatsu (dark)",
+        "uiTheme": "vs-dark",
+        "path": "./themes/vim-zaibatsu-dark-color-theme.json"
+      },
+      {
+        "label": "Vim zellner (light)",
+        "uiTheme": "vs",
+        "path": "./themes/vim-zellner-light-color-theme.json"
       }
     ],
     "semanticTokenTypes": [
@@ -50,8 +205,16 @@
         "description": "Vim: BoldItalic"
       },
       {
+        "id": "vim_Boolean",
+        "description": "Vim: Boolean"
+      },
+      {
         "id": "vim_Changed",
         "description": "Vim: Changed"
+      },
+      {
+        "id": "vim_Character",
+        "description": "Vim: Character"
       },
       {
         "id": "vim_ColorColumn",
@@ -66,8 +229,16 @@
         "description": "Vim: Conceal"
       },
       {
+        "id": "vim_Conditional",
+        "description": "Vim: Conditional"
+      },
+      {
         "id": "vim_Constant",
         "description": "Vim: Constant"
+      },
+      {
+        "id": "vim_CurSearch",
+        "description": "Vim: CurSearch"
       },
       {
         "id": "vim_Cursor",
@@ -88,6 +259,18 @@
       {
         "id": "vim_CursorLineNr",
         "description": "Vim: CursorLineNr"
+      },
+      {
+        "id": "vim_Debug",
+        "description": "Vim: Debug"
+      },
+      {
+        "id": "vim_Define",
+        "description": "Vim: Define"
+      },
+      {
+        "id": "vim_Delimiter",
+        "description": "Vim: Delimiter"
       },
       {
         "id": "vim_DiffAdd",
@@ -122,6 +305,14 @@
         "description": "Vim: ErrorMsg"
       },
       {
+        "id": "vim_Exception",
+        "description": "Vim: Exception"
+      },
+      {
+        "id": "vim_Float",
+        "description": "Vim: Float"
+      },
+      {
         "id": "vim_FoldColumn",
         "description": "Vim: FoldColumn"
       },
@@ -146,8 +337,16 @@
         "description": "Vim: IncSearch"
       },
       {
+        "id": "vim_Include",
+        "description": "Vim: Include"
+      },
+      {
         "id": "vim_Italic",
         "description": "Vim: Italic"
+      },
+      {
+        "id": "vim_Keyword",
+        "description": "Vim: Keyword"
       },
       {
         "id": "vim_Label",
@@ -156,6 +355,18 @@
       {
         "id": "vim_LineNr",
         "description": "Vim: LineNr"
+      },
+      {
+        "id": "vim_LineNrAbove",
+        "description": "Vim: LineNrAbove"
+      },
+      {
+        "id": "vim_LineNrBelow",
+        "description": "Vim: LineNrBelow"
+      },
+      {
+        "id": "vim_Macro",
+        "description": "Vim: Macro"
       },
       {
         "id": "vim_MatchParen",
@@ -178,6 +389,10 @@
         "description": "Vim: Normal"
       },
       {
+        "id": "vim_Number",
+        "description": "Vim: Number"
+      },
+      {
         "id": "vim_Operator",
         "description": "Vim: Operator"
       },
@@ -188,6 +403,22 @@
       {
         "id": "vim_PmenuBorder",
         "description": "Vim: PmenuBorder"
+      },
+      {
+        "id": "vim_PmenuExtra",
+        "description": "Vim: PmenuExtra"
+      },
+      {
+        "id": "vim_PmenuExtraSel",
+        "description": "Vim: PmenuExtraSel"
+      },
+      {
+        "id": "vim_PmenuKind",
+        "description": "Vim: PmenuKind"
+      },
+      {
+        "id": "vim_PmenuKindSel",
+        "description": "Vim: PmenuKindSel"
       },
       {
         "id": "vim_PmenuMatch",
@@ -212,6 +443,26 @@
       {
         "id": "vim_PmenuThumb",
         "description": "Vim: PmenuThumb"
+      },
+      {
+        "id": "vim_Popup",
+        "description": "Vim: Popup"
+      },
+      {
+        "id": "vim_PopupBorder",
+        "description": "Vim: PopupBorder"
+      },
+      {
+        "id": "vim_PopupTitle",
+        "description": "Vim: PopupTitle"
+      },
+      {
+        "id": "vim_PreCondit",
+        "description": "Vim: PreCondit"
+      },
+      {
+        "id": "vim_PreInsert",
+        "description": "Vim: PreInsert"
       },
       {
         "id": "vim_PreProc",
@@ -244,6 +495,14 @@
       {
         "id": "vim_Special",
         "description": "Vim: Special"
+      },
+      {
+        "id": "vim_SpecialChar",
+        "description": "Vim: SpecialChar"
+      },
+      {
+        "id": "vim_SpecialComment",
+        "description": "Vim: SpecialComment"
       },
       {
         "id": "vim_SpecialKey",
@@ -286,6 +545,18 @@
         "description": "Vim: StatusLineTermNC"
       },
       {
+        "id": "vim_StorageClass",
+        "description": "Vim: StorageClass"
+      },
+      {
+        "id": "vim_String",
+        "description": "Vim: String"
+      },
+      {
+        "id": "vim_Structure",
+        "description": "Vim: Structure"
+      },
+      {
         "id": "vim_TabLine",
         "description": "Vim: TabLine"
       },
@@ -296,6 +567,10 @@
       {
         "id": "vim_TabLineSel",
         "description": "Vim: TabLineSel"
+      },
+      {
+        "id": "vim_Tag",
+        "description": "Vim: Tag"
       },
       {
         "id": "vim_Terminal",
@@ -330,6 +605,10 @@
         "description": "Vim: Type"
       },
       {
+        "id": "vim_Typedef",
+        "description": "Vim: Typedef"
+      },
+      {
         "id": "vim_Underlined",
         "description": "Vim: Underlined"
       },
@@ -358,12 +637,128 @@
         "description": "Vim: WildMenu"
       },
       {
+        "id": "vim_csvCol0",
+        "description": "Vim: csvCol0"
+      },
+      {
+        "id": "vim_csvCol1",
+        "description": "Vim: csvCol1"
+      },
+      {
+        "id": "vim_csvCol2",
+        "description": "Vim: csvCol2"
+      },
+      {
+        "id": "vim_csvCol3",
+        "description": "Vim: csvCol3"
+      },
+      {
+        "id": "vim_csvCol4",
+        "description": "Vim: csvCol4"
+      },
+      {
+        "id": "vim_csvCol5",
+        "description": "Vim: csvCol5"
+      },
+      {
+        "id": "vim_csvCol6",
+        "description": "Vim: csvCol6"
+      },
+      {
+        "id": "vim_csvCol7",
+        "description": "Vim: csvCol7"
+      },
+      {
+        "id": "vim_csvCol8",
+        "description": "Vim: csvCol8"
+      },
+      {
         "id": "vim_debugBreakpoint",
         "description": "Vim: debugBreakpoint"
       },
       {
         "id": "vim_debugPC",
         "description": "Vim: debugPC"
+      },
+      {
+        "id": "vim_diffAdded",
+        "description": "Vim: diffAdded"
+      },
+      {
+        "id": "vim_diffChanged",
+        "description": "Vim: diffChanged"
+      },
+      {
+        "id": "vim_diffFile",
+        "description": "Vim: diffFile"
+      },
+      {
+        "id": "vim_diffIndexLine",
+        "description": "Vim: diffIndexLine"
+      },
+      {
+        "id": "vim_diffLine",
+        "description": "Vim: diffLine"
+      },
+      {
+        "id": "vim_diffNewFile",
+        "description": "Vim: diffNewFile"
+      },
+      {
+        "id": "vim_diffOldFile",
+        "description": "Vim: diffOldFile"
+      },
+      {
+        "id": "vim_diffRemoved",
+        "description": "Vim: diffRemoved"
+      },
+      {
+        "id": "vim_dirFilterMenuBookmarkPath",
+        "description": "Vim: dirFilterMenuBookmarkPath"
+      },
+      {
+        "id": "vim_dirFilterMenuHistoryPath",
+        "description": "Vim: dirFilterMenuHistoryPath"
+      },
+      {
+        "id": "vim_dirGroup",
+        "description": "Vim: dirGroup"
+      },
+      {
+        "id": "vim_dirLink",
+        "description": "Vim: dirLink"
+      },
+      {
+        "id": "vim_dirOwner",
+        "description": "Vim: dirOwner"
+      },
+      {
+        "id": "vim_dirPermissionGroup",
+        "description": "Vim: dirPermissionGroup"
+      },
+      {
+        "id": "vim_dirPermissionOther",
+        "description": "Vim: dirPermissionOther"
+      },
+      {
+        "id": "vim_dirPermissionUser",
+        "description": "Vim: dirPermissionUser"
+      },
+      {
+        "id": "vim_dirSize",
+        "description": "Vim: dirSize"
+      },
+      {
+        "id": "vim_dirSizeMod",
+        "description": "Vim: dirSizeMod"
+      },
+      {
+        "id": "vim_dirTime",
+        "description": "Vim: dirTime"
+      },
+      {
+        "id": "vim_dirType",
+        "description": "Vim: dirType"
       },
       {
         "id": "vim_htmlBold",
@@ -382,6 +777,10 @@
         "description": "Vim: htmlBoldUnderlineItalic"
       },
       {
+        "id": "vim_htmlH1",
+        "description": "Vim: htmlH1"
+      },
+      {
         "id": "vim_htmlItalic",
         "description": "Vim: htmlItalic"
       },
@@ -396,6 +795,82 @@
       {
         "id": "vim_htmlUnderlineItalic",
         "description": "Vim: htmlUnderlineItalic"
+      },
+      {
+        "id": "vim_lCursor",
+        "description": "Vim: lCursor"
+      },
+      {
+        "id": "vim_markdownCode",
+        "description": "Vim: markdownCode"
+      },
+      {
+        "id": "vim_markdownCodeBlock",
+        "description": "Vim: markdownCodeBlock"
+      },
+      {
+        "id": "vim_markdownH1",
+        "description": "Vim: markdownH1"
+      },
+      {
+        "id": "vim_markdownH1Delimiter",
+        "description": "Vim: markdownH1Delimiter"
+      },
+      {
+        "id": "vim_markdownH2",
+        "description": "Vim: markdownH2"
+      },
+      {
+        "id": "vim_markdownH2Delimiter",
+        "description": "Vim: markdownH2Delimiter"
+      },
+      {
+        "id": "vim_markdownH3",
+        "description": "Vim: markdownH3"
+      },
+      {
+        "id": "vim_markdownH3Delimiter",
+        "description": "Vim: markdownH3Delimiter"
+      },
+      {
+        "id": "vim_markdownH4",
+        "description": "Vim: markdownH4"
+      },
+      {
+        "id": "vim_markdownH4Delimiter",
+        "description": "Vim: markdownH4Delimiter"
+      },
+      {
+        "id": "vim_markdownH5",
+        "description": "Vim: markdownH5"
+      },
+      {
+        "id": "vim_markdownH5Delimiter",
+        "description": "Vim: markdownH5Delimiter"
+      },
+      {
+        "id": "vim_markdownH6",
+        "description": "Vim: markdownH6"
+      },
+      {
+        "id": "vim_markdownH6Delimiter",
+        "description": "Vim: markdownH6Delimiter"
+      },
+      {
+        "id": "vim_markdownHeadingDelimiter",
+        "description": "Vim: markdownHeadingDelimiter"
+      },
+      {
+        "id": "vim_markdownLinkText",
+        "description": "Vim: markdownLinkText"
+      },
+      {
+        "id": "vim_qfFileName",
+        "description": "Vim: qfFileName"
+      },
+      {
+        "id": "vim_qfLineNr",
+        "description": "Vim: qfLineNr"
       }
     ],
     "configuration": {
@@ -419,7 +894,8 @@
           },
           "default": [
             "Todo",
-            "Error"
+            "Error",
+            "Constant"
           ],
           "description": "Vim-Gruppen, deren Hintergrundfarbe angezeigt wird"
         }

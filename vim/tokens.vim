@@ -12,7 +12,10 @@ if has('termguicolors')
 endif
 " Wie defaults.vim: Zahlen und Zeichenketten in C-artigen Kommentaren faerben
 let c_comment_strings = 1
-filetype on
+" Wie gVim die Dateityp-Plugins laden: sie legen u. a. fest, was ein Wort ist, und
+" davon haengt die Faerbung ab. Externe Programme duerfen sie dabei nicht starten.
+let g:plugin_exec = 0
+filetype plugin on
 syntax on
 execute 'colorscheme ' . $VH_SCHEME
 execute 'edit ' . fnameescape($VH_IN)

@@ -9,13 +9,25 @@ const { themes, types } = require('./scheme.json');
 const LANGUAGES = ['python', 'javascript', 'typescript', 'shellscript', 'json', 'jsonc', 'c', 'cpp',
   'vim', 'viml', 'html', 'css', 'markdown', 'yaml', 'java', 'go', 'rust', 'sql', 'csharp', 'php',
   'r', 'powershell', 'swift', 'kotlin', 'ruby', 'asm', 'dart', 'objective-c', 'vb', 'lua', 'ada',
-  'fortran', 'scala', 'perl', 'matlab', 'pascal', 'julia'];
+  'fortran', 'scala', 'perl', 'matlab', 'pascal', 'julia',
+  // weitere Sprachen der Rangliste (siehe SPRACHEN.md); unbekannte Kennungen schaden nicht
+  'nix', 'bat', 'groovy', 'haskell', 'lisp', 'gdscript', 'zig', 'ocaml', 'cobol', 'prolog',
+  'solidity', 'plsql', 'clojure', 'glsl', 'erlang', 'tcl', 'cuda-cpp', 'd', 'sas', 'cython',
+  'awk', 'verilog', 'systemverilog', 'vhdl', 'abap', 'scheme', 'raku', 'standardml', 'smalltalk',
+  'unrealscript', 'stata', 'forth', 'scilab', 'ahk', 'processing', 'nushell', 'racket', 'mojo',
+  'elm'];
 // Ohne passende Spracherweiterung kennt VS Code den Typ nicht; dann zaehlt die Endung
 const EXTENSIONS = ['asm', 'swift', 'kt', 'dart', 'adb', 'ads', 'f90', 'scala', 'm', 'pas', 'jl',
-  'R', 'r', 'vb'];
-// Nur noetig, wenn Vim den Typ nicht am Dateinamen erkennt
+  'R', 'r', 'vb',
+  'nix', 'bat', 'cmd', 'groovy', 'hs', 'lisp', 'gd', 'zig', 'ml', 'cob', 'pl', 'sol', 'sql', 'clj',
+  'glsl', 'erl', 'tcl', 'cu', 'd', 'vim', 'sas', 'pyx', 'el', 'awk', 'v', 'vhd', 'vbs', 'abap',
+  'scm', 'raku', 'sv', 'sml', 'st', 'uc', 'do', 'fth', 'sce', 'ahk', 'pde', 'nu', 'rkt', 'mojo',
+  'bas', 'p', 'elm'];
+// Nur noetig, wenn Vim den Typ nicht am Dateinamen erkennt (etwa bei "Untitled")
 const FILETYPES = { shellscript: 'sh', viml: 'vim', csharp: 'cs', powershell: 'ps1',
-  'objective-c': 'objc', plaintext: '' };
+  'objective-c': 'objc', plaintext: '', bat: 'dosbatch', 'cuda-cpp': 'cuda', cython: 'pyrex',
+  standardml: 'sml', smalltalk: 'st', unrealscript: 'uc', ahk: 'autohotkey',
+  processing: 'arduino', nushell: 'nu' };
 
 function activate(context) {
   const legend = new vscode.SemanticTokensLegend(types);
