@@ -1,60 +1,68 @@
-# Spickzettel vim-semantic
+# Kochbuch vim-semantic
 
-Alle Befehle in **Git Bash**. Zuerst in den Ordner wechseln:
+Alles in **Git Bash**, im Ordner `~/work/vim-semantic`.
 
-    cd ~/work/vim-semantic
-
-## Starten
+## Testfenster starten
 
     code --extensionDevelopmentPath="$(pwd -W)"
 
-Vorher das alte Testfenster schließen.
+## Theme erzeugen
 
-## Themes
-
-    node generate.js default light
-    node generate.js elflord dark
-    node generate.js blue
-    node generate.js <name> [light|dark]    # weiteres Theme
+    node generate.js blue              # oder: <name> light|dark
 
 Danach das Testfenster neu starten.
 
 ## Messen
 
-    node measure.js default
-    node measure.js elflord
-    node measure.js blue
+    node measure.js blue               # Details in messung/
 
-Abweichungen im Einzelnen stehen in `messung/`.
+## Alles ist einfarbig
 
-## Tasten in VS Code
+- "Vim ..."-Farbschema wählen: Strg+K, Strg+T
+- In settings.json: `"editor.semanticHighlighting.enabled": true`
+- `protokoll.txt` ansehen
 
-| Taste / Befehl | Wirkung |
-|---|---|
-| Strg+K, Strg+T | Farbschema wählen |
-| Strg+Umschalt+P → "Developer: Inspect Editor Tokens and Scopes" | Woher kommt diese Farbe? |
-| Strg+Umschalt+P → "Preferences: Open User Settings (JSON)" | settings.json öffnen |
-| Strg+# | Zeile aus-/einkommentieren |
+## Woher kommt eine Farbe?
 
-## settings.json
+Strg+Umschalt+P → "Developer: Inspect Editor Tokens and Scopes"
 
-    "editor.semanticHighlighting.enabled": true,
-    "editor.bracketPairColorization.enabled": false,
-    "vimHighlight.backgroundGroups": ["Todo", "Error"],   // nur zum Abweichen von der Vorgabe
-    "vimHighlight.vimPath": "vim"                         // nur falls Vim nicht gefunden wird
+## Änderungen sichern und hochladen
 
-## Wenn alles nur einfarbig ist
+    git status
+    git add .
+    git commit -m "Nachricht"
+    git push
 
-1. Ist `editor.semanticHighlighting.enabled` auf `true`?
-2. Ist ein "Vim ..."-Farbschema gewählt?
-3. `protokoll.txt` ansehen (oder Ausgabe → "Vim Highlight").
+## Neuesten Stand holen
 
-## Git
+    git pull
 
-    git status                 # was hat sich geändert?
-    git diff                   # Änderungen ansehen (Ende mit q)
-    git add .                  # alles vormerken, auch neue Dateien
-    git commit -m "Nachricht"  # festhalten
-    git log --oneline          # Verlauf
+## Push wird abgelehnt
 
-`git commit -am` nimmt neue Dateien **nicht** mit, dafür erst `git add .`.
+    git pull --rebase
+    git push
+
+## Auf einem anderen Rechner einrichten
+
+    git clone https://github.com/r11s/vim-semantic.git
+
+## Neues Repository auf GitHub anlegen
+
+Einmal pro Rechner anmelden:
+
+    gh auth login
+
+Im Projektordner:
+
+    git init
+    git add .
+    git commit -m "Erster Stand"
+    gh repo create <name> --private --source=. --remote=origin --push
+
+### Beispiel: Projekt `farbtest`
+
+    cd ~/work/farbtest
+    git init
+    git add .
+    git commit -m "Erster Stand"
+    gh repo create farbtest --private --source=. --remote=origin --push
