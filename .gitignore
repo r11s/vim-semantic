@@ -8,3 +8,7 @@ vimlog.txt
 
 # Zum Loeschen vorgemerkt
 _to_delete/
+
+# Temp Dateien und Verzeichnisse
+temp
+
