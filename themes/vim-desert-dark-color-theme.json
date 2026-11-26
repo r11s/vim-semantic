@@ -1,5 +1,5 @@
 {
-  "name": "Vim desert (dark)",
+  "name": "VimSem desert",
   "type": "dark",
   "semanticHighlighting": true,
   "colors": {
@@ -627,5 +627,6 @@
     "vim_debugBreakpoint": "#ffa0a0",
     "vim_debugPC": "#666666",
     "vim_lCursor": "#ff0000"
-  }
+  },
+  "vimScheme": "desert"
 }

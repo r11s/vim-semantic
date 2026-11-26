@@ -1,5 +1,5 @@
 {
-  "name": "Vim habamax (dark)",
+  "name": "VimSem habamax",
   "type": "dark",
   "semanticHighlighting": true,
   "colors": {
@@ -704,5 +704,6 @@
     "vim_debugBreakpoint": "#d75f87",
     "vim_debugPC": "#5f87af",
     "vim_lCursor": "#5fff00"
-  }
+  },
+  "vimScheme": "habamax"
 }

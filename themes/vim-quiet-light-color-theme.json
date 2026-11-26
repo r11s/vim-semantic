@@ -1,5 +1,5 @@
 {
-  "name": "Vim quiet (light)",
+  "name": "VimSem quiet light",
   "type": "light",
   "semanticHighlighting": true,
   "colors": {
@@ -600,5 +600,6 @@
     "vim_Visual": "#ffaf00",
     "vim_VisualNOS": "#eeeeee",
     "vim_WildMenu": "#eeeeee"
-  }
+  },
+  "vimScheme": "quiet"
 }

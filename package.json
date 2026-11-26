@@ -21,172 +21,172 @@
   "contributes": {
     "themes": [
       {
-        "label": "Vim blue (dark)",
+        "label": "VimSem blue",
         "uiTheme": "vs-dark",
         "path": "./themes/vim-blue-dark-color-theme.json"
       },
       {
-        "label": "Vim catppuccin (dark)",
+        "label": "VimSem catppuccin dark",
         "uiTheme": "vs-dark",
         "path": "./themes/vim-catppuccin-dark-color-theme.json"
       },
       {
-        "label": "Vim catppuccin (light)",
+        "label": "VimSem catppuccin light",
         "uiTheme": "vs",
         "path": "./themes/vim-catppuccin-light-color-theme.json"
       },
       {
-        "label": "Vim default (light)",
+        "label": "VimSem default",
         "uiTheme": "vs",
         "path": "./themes/vim-color-theme.json"
       },
       {
-        "label": "Vim darkblue (dark)",
+        "label": "VimSem darkblue",
         "uiTheme": "vs-dark",
         "path": "./themes/vim-darkblue-dark-color-theme.json"
       },
       {
-        "label": "Vim delek (light)",
+        "label": "VimSem delek",
         "uiTheme": "vs",
         "path": "./themes/vim-delek-light-color-theme.json"
       },
       {
-        "label": "Vim desert (dark)",
+        "label": "VimSem desert",
         "uiTheme": "vs-dark",
         "path": "./themes/vim-desert-dark-color-theme.json"
       },
       {
-        "label": "Vim elflord (dark)",
+        "label": "VimSem elflord",
         "uiTheme": "vs-dark",
         "path": "./themes/vim-elflord-dark-color-theme.json"
       },
       {
-        "label": "Vim evening (dark)",
+        "label": "VimSem evening",
         "uiTheme": "vs-dark",
         "path": "./themes/vim-evening-dark-color-theme.json"
       },
       {
-        "label": "Vim habamax (dark)",
+        "label": "VimSem habamax",
         "uiTheme": "vs-dark",
         "path": "./themes/vim-habamax-dark-color-theme.json"
       },
       {
-        "label": "Vim industry (dark)",
+        "label": "VimSem industry",
         "uiTheme": "vs-dark",
         "path": "./themes/vim-industry-dark-color-theme.json"
       },
       {
-        "label": "Vim koehler (dark)",
+        "label": "VimSem koehler",
         "uiTheme": "vs-dark",
         "path": "./themes/vim-koehler-dark-color-theme.json"
       },
       {
-        "label": "Vim lunaperche (dark)",
+        "label": "VimSem lunaperche dark",
         "uiTheme": "vs-dark",
         "path": "./themes/vim-lunaperche-dark-color-theme.json"
       },
       {
-        "label": "Vim lunaperche (light)",
+        "label": "VimSem lunaperche light",
         "uiTheme": "vs",
         "path": "./themes/vim-lunaperche-light-color-theme.json"
       },
       {
-        "label": "Vim morning (light)",
+        "label": "VimSem morning",
         "uiTheme": "vs",
         "path": "./themes/vim-morning-light-color-theme.json"
       },
       {
-        "label": "Vim murphy (dark)",
+        "label": "VimSem murphy",
         "uiTheme": "vs-dark",
         "path": "./themes/vim-murphy-dark-color-theme.json"
       },
       {
-        "label": "Vim novum (dark)",
+        "label": "VimSem novum dark",
         "uiTheme": "vs-dark",
         "path": "./themes/vim-novum-dark-color-theme.json"
       },
       {
-        "label": "Vim novum (light)",
+        "label": "VimSem novum light",
         "uiTheme": "vs",
         "path": "./themes/vim-novum-light-color-theme.json"
       },
       {
-        "label": "Vim pablo (dark)",
+        "label": "VimSem pablo",
         "uiTheme": "vs-dark",
         "path": "./themes/vim-pablo-dark-color-theme.json"
       },
       {
-        "label": "Vim peachpuff (light)",
+        "label": "VimSem peachpuff",
         "uiTheme": "vs",
         "path": "./themes/vim-peachpuff-light-color-theme.json"
       },
       {
-        "label": "Vim quiet (dark)",
+        "label": "VimSem quiet dark",
         "uiTheme": "vs-dark",
         "path": "./themes/vim-quiet-dark-color-theme.json"
       },
       {
-        "label": "Vim quiet (light)",
+        "label": "VimSem quiet light",
         "uiTheme": "vs",
         "path": "./themes/vim-quiet-light-color-theme.json"
       },
       {
-        "label": "Vim retrobox (dark)",
+        "label": "VimSem retrobox dark",
         "uiTheme": "vs-dark",
         "path": "./themes/vim-retrobox-dark-color-theme.json"
       },
       {
-        "label": "Vim retrobox (light)",
+        "label": "VimSem retrobox light",
         "uiTheme": "vs",
         "path": "./themes/vim-retrobox-light-color-theme.json"
       },
       {
-        "label": "Vim ron (dark)",
+        "label": "VimSem ron",
         "uiTheme": "vs-dark",
         "path": "./themes/vim-ron-dark-color-theme.json"
       },
       {
-        "label": "Vim shine (light)",
+        "label": "VimSem shine",
         "uiTheme": "vs",
         "path": "./themes/vim-shine-light-color-theme.json"
       },
       {
-        "label": "Vim slate (dark)",
+        "label": "VimSem slate",
         "uiTheme": "vs-dark",
         "path": "./themes/vim-slate-dark-color-theme.json"
       },
       {
-        "label": "Vim sorbet (dark)",
+        "label": "VimSem sorbet",
         "uiTheme": "vs-dark",
         "path": "./themes/vim-sorbet-dark-color-theme.json"
       },
       {
-        "label": "Vim torte (dark)",
+        "label": "VimSem torte",
         "uiTheme": "vs-dark",
         "path": "./themes/vim-torte-dark-color-theme.json"
       },
       {
-        "label": "Vim unokai (dark)",
+        "label": "VimSem unokai",
         "uiTheme": "vs-dark",
         "path": "./themes/vim-unokai-dark-color-theme.json"
       },
       {
-        "label": "Vim wildcharm (dark)",
+        "label": "VimSem wildcharm dark",
         "uiTheme": "vs-dark",
         "path": "./themes/vim-wildcharm-dark-color-theme.json"
       },
       {
-        "label": "Vim wildcharm (light)",
+        "label": "VimSem wildcharm light",
         "uiTheme": "vs",
         "path": "./themes/vim-wildcharm-light-color-theme.json"
       },
       {
-        "label": "Vim zaibatsu (dark)",
+        "label": "VimSem zaibatsu",
         "uiTheme": "vs-dark",
         "path": "./themes/vim-zaibatsu-dark-color-theme.json"
       },
       {
-        "label": "Vim zellner (light)",
+        "label": "VimSem zellner",
         "uiTheme": "vs",
         "path": "./themes/vim-zellner-light-color-theme.json"
       }

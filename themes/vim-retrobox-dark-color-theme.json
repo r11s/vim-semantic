@@ -1,5 +1,5 @@
 {
-  "name": "Vim retrobox (dark)",
+  "name": "VimSem retrobox dark",
   "type": "dark",
   "semanticHighlighting": true,
   "colors": {
@@ -786,5 +786,6 @@
     "vim_ToolbarButton": "#303030",
     "vim_Visual": "#2a405a",
     "vim_WildMenu": "#504945"
-  }
+  },
+  "vimScheme": "retrobox"
 }

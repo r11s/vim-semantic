@@ -49,7 +49,6 @@ async function main() {
   }
 
   const type = data.type;
-  const label = `Vim ${scheme} (${type})`;
   const write = (file, value) =>
     fs.writeFileSync(path.join(__dirname, file), JSON.stringify(value, null, 2) + '\n');
 
@@ -59,26 +58,41 @@ async function main() {
     .map((file) => ({ file, theme: JSON.parse(fs.readFileSync(path.join(themeDir, file), 'utf8')) }));
 
   // Gibt es das Theme schon, wird seine Datei ersetzt
-  const existing = readThemes().find((entry) => entry.theme.name === label);
-  write(`themes/${existing ? existing.file : `vim-${scheme}-${type}-color-theme.json`}`, {
-    name: label,
+  const existing = readThemes()
+    .find((entry) => entry.theme.vimScheme === scheme && entry.theme.type === type);
+  const target = existing ? existing.file : `vim-${scheme}-${type}-color-theme.json`;
+  write(`themes/${target}`, {
+    name: '', // wird unten vergeben
     type,
     semanticHighlighting: true,
     colors: { 'editor.background': data.background, 'editor.foreground': data.foreground },
     tokenColors: [],
     semanticTokenColors: colors,
-    vimBackgrounds: backgrounds, // eigener Schluessel, VS Code wertet ihn nicht aus
+    vimBackgrounds: backgrounds, // eigene Schluessel, VS Code wertet sie nicht aus
+    vimScheme: scheme,
   });
 
   // Alles Weitere ergibt sich aus den vorhandenen Theme-Dateien
   const themes = [];
   const schemes = {};
   const ids = new Set();
-  for (const { file, theme } of readThemes()) {
-    const match = /^Vim (\S+) \((light|dark)\)$/.exec(theme.name);
-    if (!match) continue;
-    themes.push({ label: theme.name, uiTheme: match[2] === 'dark' ? 'vs-dark' : 'vs', path: `./themes/${file}` });
-    schemes[theme.name] = { scheme: match[1], background: match[2], backgrounds: theme.vimBackgrounds || {} };
+  const entries = readThemes().filter((entry) => entry.theme.vimScheme);
+  // Name "VimSem <schema>", mit light/dark nur, wenn es von dem Schema beides gibt
+  const label = ({ theme }) => {
+    const both = entries.filter((e) => e.theme.vimScheme === theme.vimScheme).length > 1;
+    return `VimSem ${theme.vimScheme}${both ? ` ${theme.type}` : ''}`;
+  };
+  let generated;
+  for (const entry of entries) {
+    const { file, theme } = entry;
+    const name = label(entry);
+    if (file === target) generated = name;
+    if (theme.name !== name) {
+      theme.name = name;
+      write(`themes/${file}`, theme);
+    }
+    themes.push({ label: name, uiTheme: theme.type === 'dark' ? 'vs-dark' : 'vs', path: `./themes/${file}` });
+    schemes[name] = { scheme: theme.vimScheme, background: theme.type, backgrounds: theme.vimBackgrounds || {} };
     Object.keys(theme.semanticTokenColors).forEach((id) => ids.add(id));
   }
   const types = [...ids].sort().map((id) => ({ id, description: `Vim: ${id.slice(4)}` }));
@@ -111,7 +125,7 @@ async function main() {
       },
     },
   });
-  console.log(`${label}: ${Object.keys(colors).length} Gruppen`);
+  console.log(`${generated}: ${Object.keys(colors).length} Gruppen`);
   console.log(`Verfuegbare Themes: ${themes.map((t) => t.label).join(', ')}`);
 }
 

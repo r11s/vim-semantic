@@ -10,7 +10,7 @@ Voraussetzung: Vim 9 mit Syntax-Unterstuetzung (nicht vim-tiny).
     node generate.js elflord dark       # jedes weitere Theme kommt dazu
     code --extensionDevelopmentPath=/pfad/zu/vim-highlight
 
-Im neuen Fenster eines der "Vim ..."-Farbschemata waehlen.
+Im neuen Fenster eines der "VimSem ..."-Farbschemata waehlen.
 
 In der settings.json:
 

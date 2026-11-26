@@ -1,5 +1,5 @@
 {
-  "name": "Vim industry (dark)",
+  "name": "VimSem industry",
   "type": "dark",
   "semanticHighlighting": true,
   "colors": {
@@ -628,5 +628,6 @@
     "vim_VisualNOS": "#6c6c6c",
     "vim_WildMenu": "#ffff00",
     "vim_lCursor": "#ff0000"
-  }
+  },
+  "vimScheme": "industry"
 }

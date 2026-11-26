@@ -1,5 +1,5 @@
 {
-  "name": "Vim default (light)",
+  "name": "VimSem default",
   "type": "light",
   "semanticHighlighting": true,
   "colors": {
@@ -547,5 +547,6 @@
     "vim_VertSplit": "#000000",
     "vim_Visual": "#d3d3d3",
     "vim_WildMenu": "#ffff00"
-  }
+  },
+  "vimScheme": "default"
 }

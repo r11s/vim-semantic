@@ -1,5 +1,5 @@
 {
-  "name": "Vim novum (light)",
+  "name": "VimSem novum light",
   "type": "light",
   "semanticHighlighting": true,
   "colors": {
@@ -582,5 +582,6 @@
     "vim_debugBreakpoint": "#ffc0b9",
     "vim_debugPC": "#8cf8f7",
     "vim_lCursor": "#14161b"
-  }
+  },
+  "vimScheme": "novum"
 }

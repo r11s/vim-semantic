@@ -1,5 +1,5 @@
 {
-  "name": "Vim zaibatsu (dark)",
+  "name": "VimSem zaibatsu",
   "type": "dark",
   "semanticHighlighting": true,
   "colors": {
@@ -586,5 +586,6 @@
     "vim_WildMenu": "#afafff",
     "vim_debugBreakpoint": "#87ff00",
     "vim_debugPC": "#87ffff"
-  }
+  },
+  "vimScheme": "zaibatsu"
 }

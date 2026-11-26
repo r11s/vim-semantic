@@ -1,5 +1,5 @@
 {
-  "name": "Vim slate (dark)",
+  "name": "VimSem slate",
   "type": "dark",
   "semanticHighlighting": true,
   "colors": {
@@ -653,5 +653,6 @@
     "vim_VisualNOS": "#5f8700",
     "vim_WildMenu": "#d7d787",
     "vim_lCursor": "#ffafaf"
-  }
+  },
+  "vimScheme": "slate"
 }

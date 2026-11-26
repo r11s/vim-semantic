@@ -1,5 +1,5 @@
 {
-  "name": "Vim koehler (dark)",
+  "name": "VimSem koehler",
   "type": "dark",
   "semanticHighlighting": true,
   "colors": {
@@ -597,5 +597,6 @@
     "vim_VertSplitNC": "#e5e5e5",
     "vim_Visual": "#ffffff",
     "vim_WildMenu": "#ffff00"
-  }
+  },
+  "vimScheme": "koehler"
 }

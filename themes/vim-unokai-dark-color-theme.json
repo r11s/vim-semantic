@@ -1,5 +1,5 @@
 {
-  "name": "Vim unokai (dark)",
+  "name": "VimSem unokai",
   "type": "dark",
   "semanticHighlighting": true,
   "colors": {
@@ -744,5 +744,6 @@
     "vim_debugBreakpoint": "#f92672",
     "vim_debugPC": "#51aebe",
     "vim_lCursor": "#5fff00"
-  }
+  },
+  "vimScheme": "unokai"
 }

@@ -1,5 +1,5 @@
 {
-  "name": "Vim lunaperche (dark)",
+  "name": "VimSem lunaperche dark",
   "type": "dark",
   "semanticHighlighting": true,
   "colors": {
@@ -636,5 +636,6 @@
     "vim_WildMenu": "#ffd787",
     "vim_debugBreakpoint": "#5fafaf",
     "vim_debugPC": "#5f87af"
-  }
+  },
+  "vimScheme": "lunaperche"
 }

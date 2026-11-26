@@ -1,5 +1,5 @@
 {
-  "name": "Vim ron (dark)",
+  "name": "VimSem ron",
   "type": "dark",
   "semanticHighlighting": true,
   "colors": {
@@ -626,5 +626,6 @@
     "vim_VertSplitNC": "#00008b",
     "vim_Visual": "#00ffff",
     "vim_WildMenu": "#ffff00"
-  }
+  },
+  "vimScheme": "ron"
 }

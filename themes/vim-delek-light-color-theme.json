@@ -1,5 +1,5 @@
 {
-  "name": "Vim delek (light)",
+  "name": "VimSem delek",
   "type": "light",
   "semanticHighlighting": true,
   "colors": {
@@ -623,5 +623,6 @@
     "vim_debugBreakpoint": "#0000ff",
     "vim_debugPC": "#0000ff",
     "vim_lCursor": "#00cd00"
-  }
+  },
+  "vimScheme": "delek"
 }

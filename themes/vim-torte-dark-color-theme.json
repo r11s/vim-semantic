@@ -1,5 +1,5 @@
 {
-  "name": "Vim torte (dark)",
+  "name": "VimSem torte",
   "type": "dark",
   "semanticHighlighting": true,
   "colors": {
@@ -612,5 +612,6 @@
     "vim_Visual": "#a9a9a9",
     "vim_WildMenu": "#ffff00",
     "vim_lCursor": "#e5e5e5"
-  }
+  },
+  "vimScheme": "torte"
 }

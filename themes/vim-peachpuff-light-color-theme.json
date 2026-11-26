@@ -1,5 +1,5 @@
 {
-  "name": "Vim peachpuff (light)",
+  "name": "VimSem peachpuff",
   "type": "light",
   "semanticHighlighting": true,
   "colors": {
@@ -622,5 +622,6 @@
     "vim_VisualNOS": "#406090",
     "vim_WildMenu": "#ffff00",
     "vim_lCursor": "#c00058"
-  }
+  },
+  "vimScheme": "peachpuff"
 }

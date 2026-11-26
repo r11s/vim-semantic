@@ -1,5 +1,5 @@
 {
-  "name": "Vim wildcharm (dark)",
+  "name": "VimSem wildcharm dark",
   "type": "dark",
   "semanticHighlighting": true,
   "colors": {
@@ -682,5 +682,6 @@
     "vim_debugBreakpoint": "#00afaf",
     "vim_debugPC": "#0087d7",
     "vim_lCursor": "#ff5fff"
-  }
+  },
+  "vimScheme": "wildcharm"
 }

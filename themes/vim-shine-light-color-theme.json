@@ -1,5 +1,5 @@
 {
-  "name": "Vim shine (light)",
+  "name": "VimSem shine",
   "type": "light",
   "semanticHighlighting": true,
   "colors": {
@@ -627,5 +627,6 @@
     "vim_Visual": "#a8a8a8",
     "vim_WildMenu": "#ffff00",
     "vim_lCursor": "#a07070"
-  }
+  },
+  "vimScheme": "shine"
 }

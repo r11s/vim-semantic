@@ -1,5 +1,5 @@
 {
-  "name": "Vim evening (dark)",
+  "name": "VimSem evening",
   "type": "dark",
   "semanticHighlighting": true,
   "colors": {
@@ -570,5 +570,6 @@
     "vim_WildMenu": "#ffff00",
     "vim_debugBreakpoint": "#ff0000",
     "vim_debugPC": "#0000ff"
-  }
+  },
+  "vimScheme": "evening"
 }

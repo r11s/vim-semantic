@@ -1,6 +1,6 @@
 {
   "themes": {
-    "Vim blue (dark)": {
+    "VimSem blue": {
       "scheme": "blue",
       "background": "dark",
       "backgrounds": {
@@ -41,7 +41,7 @@
         "vim_debugPC": "#5fffff"
       }
     },
-    "Vim catppuccin (dark)": {
+    "VimSem catppuccin dark": {
       "scheme": "catppuccin",
       "background": "dark",
       "backgrounds": {
@@ -80,7 +80,7 @@
         "vim_lCursor": "#f38ba8"
       }
     },
-    "Vim catppuccin (light)": {
+    "VimSem catppuccin light": {
       "scheme": "catppuccin",
       "background": "light",
       "backgrounds": {
@@ -119,7 +119,7 @@
         "vim_lCursor": "#d20f39"
       }
     },
-    "Vim default (light)": {
+    "VimSem default": {
       "scheme": "default",
       "background": "light",
       "backgrounds": {
@@ -158,7 +158,7 @@
         "vim_WildMenu": "#ffff00"
       }
     },
-    "Vim darkblue (dark)": {
+    "VimSem darkblue": {
       "scheme": "darkblue",
       "background": "dark",
       "backgrounds": {
@@ -201,7 +201,7 @@
         "vim_debugPC": "#90fff0"
       }
     },
-    "Vim delek (light)": {
+    "VimSem delek": {
       "scheme": "delek",
       "background": "light",
       "backgrounds": {
@@ -246,7 +246,7 @@
         "vim_lCursor": "#00cd00"
       }
     },
-    "Vim desert (dark)": {
+    "VimSem desert": {
       "scheme": "desert",
       "background": "dark",
       "backgrounds": {
@@ -295,7 +295,7 @@
         "vim_lCursor": "#ff0000"
       }
     },
-    "Vim elflord (dark)": {
+    "VimSem elflord": {
       "scheme": "elflord",
       "background": "dark",
       "backgrounds": {
@@ -335,7 +335,7 @@
         "vim_WildMenu": "#ffff00"
       }
     },
-    "Vim evening (dark)": {
+    "VimSem evening": {
       "scheme": "evening",
       "background": "dark",
       "backgrounds": {
@@ -376,7 +376,7 @@
         "vim_debugPC": "#0000ff"
       }
     },
-    "Vim habamax (dark)": {
+    "VimSem habamax": {
       "scheme": "habamax",
       "background": "dark",
       "backgrounds": {
@@ -425,7 +425,7 @@
         "vim_lCursor": "#5fff00"
       }
     },
-    "Vim industry (dark)": {
+    "VimSem industry": {
       "scheme": "industry",
       "background": "dark",
       "backgrounds": {
@@ -468,7 +468,7 @@
         "vim_lCursor": "#ff0000"
       }
     },
-    "Vim koehler (dark)": {
+    "VimSem koehler": {
       "scheme": "koehler",
       "background": "dark",
       "backgrounds": {
@@ -508,7 +508,7 @@
         "vim_WildMenu": "#ffff00"
       }
     },
-    "Vim lunaperche (dark)": {
+    "VimSem lunaperche dark": {
       "scheme": "lunaperche",
       "background": "dark",
       "backgrounds": {
@@ -552,7 +552,7 @@
         "vim_debugPC": "#5f87af"
       }
     },
-    "Vim lunaperche (light)": {
+    "VimSem lunaperche light": {
       "scheme": "lunaperche",
       "background": "light",
       "backgrounds": {
@@ -596,7 +596,7 @@
         "vim_debugPC": "#005fd7"
       }
     },
-    "Vim morning (light)": {
+    "VimSem morning": {
       "scheme": "morning",
       "background": "light",
       "backgrounds": {
@@ -640,7 +640,7 @@
         "vim_lCursor": "#a52a2a"
       }
     },
-    "Vim murphy (dark)": {
+    "VimSem murphy": {
       "scheme": "murphy",
       "background": "dark",
       "backgrounds": {
@@ -682,7 +682,7 @@
         "vim_lCursor": "#ff0000"
       }
     },
-    "Vim novum (dark)": {
+    "VimSem novum dark": {
       "scheme": "novum",
       "background": "dark",
       "backgrounds": {
@@ -714,7 +714,7 @@
         "vim_lCursor": "#e0e2ea"
       }
     },
-    "Vim novum (light)": {
+    "VimSem novum light": {
       "scheme": "novum",
       "background": "light",
       "backgrounds": {
@@ -746,7 +746,7 @@
         "vim_lCursor": "#14161b"
       }
     },
-    "Vim pablo (dark)": {
+    "VimSem pablo": {
       "scheme": "pablo",
       "background": "dark",
       "backgrounds": {
@@ -789,7 +789,7 @@
         "vim_lCursor": "#ffffff"
       }
     },
-    "Vim peachpuff (light)": {
+    "VimSem peachpuff": {
       "scheme": "peachpuff",
       "background": "light",
       "backgrounds": {
@@ -833,7 +833,7 @@
         "vim_lCursor": "#c00058"
       }
     },
-    "Vim quiet (dark)": {
+    "VimSem quiet dark": {
       "scheme": "quiet",
       "background": "dark",
       "backgrounds": {
@@ -874,7 +874,7 @@
         "vim_VisualNOS": "#303030"
       }
     },
-    "Vim quiet (light)": {
+    "VimSem quiet light": {
       "scheme": "quiet",
       "background": "light",
       "backgrounds": {
@@ -917,7 +917,7 @@
         "vim_WildMenu": "#eeeeee"
       }
     },
-    "Vim retrobox (dark)": {
+    "VimSem retrobox dark": {
       "scheme": "retrobox",
       "background": "dark",
       "backgrounds": {
@@ -957,7 +957,7 @@
         "vim_WildMenu": "#504945"
       }
     },
-    "Vim retrobox (light)": {
+    "VimSem retrobox light": {
       "scheme": "retrobox",
       "background": "light",
       "backgrounds": {
@@ -997,7 +997,7 @@
         "vim_WildMenu": "#e5d4b1"
       }
     },
-    "Vim ron (dark)": {
+    "VimSem ron": {
       "scheme": "ron",
       "background": "dark",
       "backgrounds": {
@@ -1038,7 +1038,7 @@
         "vim_WildMenu": "#ffff00"
       }
     },
-    "Vim shine (light)": {
+    "VimSem shine": {
       "scheme": "shine",
       "background": "light",
       "backgrounds": {
@@ -1080,7 +1080,7 @@
         "vim_lCursor": "#a07070"
       }
     },
-    "Vim slate (dark)": {
+    "VimSem slate": {
       "scheme": "slate",
       "background": "dark",
       "backgrounds": {
@@ -1127,7 +1127,7 @@
         "vim_lCursor": "#ffafaf"
       }
     },
-    "Vim sorbet (dark)": {
+    "VimSem sorbet": {
       "scheme": "sorbet",
       "background": "dark",
       "backgrounds": {
@@ -1171,7 +1171,7 @@
         "vim_debugBreakpoint": "#8787af"
       }
     },
-    "Vim torte (dark)": {
+    "VimSem torte": {
       "scheme": "torte",
       "background": "dark",
       "backgrounds": {
@@ -1212,7 +1212,7 @@
         "vim_lCursor": "#e5e5e5"
       }
     },
-    "Vim unokai (dark)": {
+    "VimSem unokai": {
       "scheme": "unokai",
       "background": "dark",
       "backgrounds": {
@@ -1259,7 +1259,7 @@
         "vim_lCursor": "#5fff00"
       }
     },
-    "Vim wildcharm (dark)": {
+    "VimSem wildcharm dark": {
       "scheme": "wildcharm",
       "background": "dark",
       "backgrounds": {
@@ -1307,7 +1307,7 @@
         "vim_lCursor": "#ff5fff"
       }
     },
-    "Vim wildcharm (light)": {
+    "VimSem wildcharm light": {
       "scheme": "wildcharm",
       "background": "light",
       "backgrounds": {
@@ -1355,7 +1355,7 @@
         "vim_lCursor": "#ff00ff"
       }
     },
-    "Vim zaibatsu (dark)": {
+    "VimSem zaibatsu": {
       "scheme": "zaibatsu",
       "background": "dark",
       "backgrounds": {
@@ -1398,7 +1398,7 @@
         "vim_debugPC": "#87ffff"
       }
     },
-    "Vim zellner (light)": {
+    "VimSem zellner": {
       "scheme": "zellner",
       "background": "light",
       "backgrounds": {

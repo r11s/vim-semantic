@@ -1,5 +1,5 @@
 {
-  "name": "Vim sorbet (dark)",
+  "name": "VimSem sorbet",
   "type": "dark",
   "semanticHighlighting": true,
   "colors": {
@@ -629,5 +629,6 @@
     "vim_Visual": "#ffaf00",
     "vim_VisualNOS": "#363841",
     "vim_debugBreakpoint": "#8787af"
-  }
+  },
+  "vimScheme": "sorbet"
 }

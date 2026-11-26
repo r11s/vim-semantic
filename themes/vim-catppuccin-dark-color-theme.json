@@ -1,5 +1,5 @@
 {
-  "name": "Vim catppuccin (dark)",
+  "name": "VimSem catppuccin dark",
   "type": "dark",
   "semanticHighlighting": true,
   "colors": {
@@ -960,5 +960,6 @@
     "vim_WildMenu": "#6c7086",
     "vim_debugPC": "#11111b",
     "vim_lCursor": "#f38ba8"
-  }
+  },
+  "vimScheme": "catppuccin"
 }

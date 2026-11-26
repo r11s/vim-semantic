@@ -1,5 +1,5 @@
 {
-  "name": "Vim pablo (dark)",
+  "name": "VimSem pablo",
   "type": "dark",
   "semanticHighlighting": true,
   "colors": {
@@ -614,5 +614,6 @@
     "vim_Visual": "#a9a9a9",
     "vim_WildMenu": "#ffff00",
     "vim_lCursor": "#ffffff"
-  }
+  },
+  "vimScheme": "pablo"
 }

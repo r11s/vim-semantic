@@ -18,7 +18,7 @@ Danach das Testfenster neu starten.
 
 ## Alles ist einfarbig
 
-- "Vim ..."-Farbschema wählen: Strg+K, Strg+T
+- "VimSem ..."-Farbschema wählen: Strg+K, Strg+T
 - In settings.json: `"editor.semanticHighlighting.enabled": true`
 - `protokoll.txt` ansehen
 

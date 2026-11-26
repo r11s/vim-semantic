@@ -1,5 +1,5 @@
 {
-  "name": "Vim blue (dark)",
+  "name": "VimSem blue",
   "type": "dark",
   "semanticHighlighting": true,
   "colors": {
@@ -591,5 +591,6 @@
     "vim_WildMenu": "#ffd700",
     "vim_debugBreakpoint": "#00ff00",
     "vim_debugPC": "#5fffff"
-  }
+  },
+  "vimScheme": "blue"
 }

@@ -1,5 +1,5 @@
 {
-  "name": "Vim zellner (light)",
+  "name": "VimSem zellner",
   "type": "light",
   "semanticHighlighting": true,
   "colors": {
@@ -622,5 +622,6 @@
     "vim_VisualNOS": "#ff0000",
     "vim_WildMenu": "#ffff00",
     "vim_lCursor": "#ff00ff"
-  }
+  },
+  "vimScheme": "zellner"
 }

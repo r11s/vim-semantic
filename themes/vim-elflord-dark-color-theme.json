@@ -1,5 +1,5 @@
 {
-  "name": "Vim elflord (dark)",
+  "name": "VimSem elflord",
   "type": "dark",
   "semanticHighlighting": true,
   "colors": {
@@ -632,5 +632,6 @@
     "vim_VertSplitNC": "#00cdcd",
     "vim_Visual": "#a9a9a9",
     "vim_WildMenu": "#ffff00"
-  }
+  },
+  "vimScheme": "elflord"
 }

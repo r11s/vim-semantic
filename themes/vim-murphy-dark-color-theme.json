@@ -1,5 +1,5 @@
 {
-  "name": "Vim murphy (dark)",
+  "name": "VimSem murphy",
   "type": "dark",
   "semanticHighlighting": true,
   "colors": {
@@ -592,5 +592,6 @@
     "vim_VisualNOS": "#005f00",
     "vim_WildMenu": "#ffff00",
     "vim_lCursor": "#ff0000"
-  }
+  },
+  "vimScheme": "murphy"
 }

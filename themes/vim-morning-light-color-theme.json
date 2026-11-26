@@ -1,5 +1,5 @@
 {
-  "name": "Vim morning (light)",
+  "name": "VimSem morning",
   "type": "light",
   "semanticHighlighting": true,
   "colors": {
@@ -601,5 +601,6 @@
     "vim_VisualNOS": "#0000ff",
     "vim_WildMenu": "#ffff00",
     "vim_lCursor": "#a52a2a"
-  }
+  },
+  "vimScheme": "morning"
 }
