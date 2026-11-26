@@ -1,0 +1,47 @@
+diff --git a/src/syntax.c b/src/syntax.c
+index 6f22d9e..7c9eacb 100644
+--- a/src/syntax.c
++++ b/src/syntax.c
+@@ -6490,6 +6490,25 @@ static struct subcommand subcommands[] =
+  * This searches the subcommands[] table for the subcommand name, and calls a
+  * syntax_subcommand() function to do the rest.
+  */
++// vim-semantic: write every executed ":syntax" command, in order, to $VH_SYNLOG
++// as "script <Tab> line <Tab> arguments".
++    static void
++vh_synlog(char_u *args, char_u *end)
++{
++    char	*name = getenv("VH_SYNLOG");
++    FILE	*fd;
++    size_t	len = STRLEN(args);
++
++    if (name == NULL || *name == NUL || (fd = fopen(name, "a")) == NULL)
++	return;
++    if (end != NULL && end > args && end <= args + len)
++	len = (size_t)(end - args);
++    fprintf(fd, "%s\t%ld\t%.*s\n",
++	    exestack.ga_len > 0 && SOURCING_NAME != NULL ? (char *)SOURCING_NAME : "",
++	    exestack.ga_len > 0 ? (long)SOURCING_LNUM : 0L, (int)len, (char *)args);
++    fclose(fd);
++}
++
+     void
+ ex_syntax(exarg_T *eap)
+ {
+@@ -6513,8 +6532,16 @@ ex_syntax(exarg_T *eap)
+     {
+ 	if (STRCMP(subcmd_name, (char_u *)subcommands[i].name) == 0)
+ 	{
++	    int		vh_include = !eap->skip && STRCMP(subcmd_name, "include") == 0;
++
+ 	    eap->arg = skipwhite(subcmd_end);
++	    if (vh_include)
++		vh_synlog(arg, NULL);
+ 	    (subcommands[i].func)(eap, FALSE);
++	    if (vh_include)
++		vh_synlog((char_u *)"include-end", NULL);
++	    else if (!eap->skip)
++		vh_synlog(arg, eap->nextcmd);
+ 	    break;
+ 	}
+     }
