@@ -23,7 +23,9 @@ function script(data, dir) {
       const file = path.join(dir, `include${count++}.vim`);
       fs.writeFileSync(file, rows.join('\n') + '\n');
       const cluster = includes.pop();
-      stack.at(-1).push(`syntax include ${cluster}${slash(file)}`);
+      // Mit "$" am Anfang liest Vim die Datei direkt. Einen Pfad wie "C:/..." haelt das
+      // Vim aus Git for Windows nicht fuer vollstaendig und sucht ihn vergeblich.
+      stack.at(-1).push(`syntax include ${cluster}$VH_DIR/${path.basename(file)}`);
     } else if (/^include\s/.test(command)) {
       const cluster = /^include\s+(@\S+\s+)/.exec(command);
       includes.push(cluster ? cluster[1] : '');
@@ -46,11 +48,15 @@ async function replay(file, data) {
     const rules = path.join(dir, 'rules.vim');
     const output = path.join(dir, 'tokens');
     fs.writeFileSync(rules, script(data, dir));
-    await runVim(VIM, 'syntax-replay.vim', { VH_IN: file, VH_OUT: output, VH_RULES: slash(rules) });
-    return fs.readFileSync(output, 'utf8').split(/\r?\n/).filter(Boolean).map((row) => {
+    await runVim(VIM, 'syntax-replay.vim', {
+      VH_IN: file, VH_OUT: output, VH_RULES: slash(rules), VH_DIR: slash(dir),
+    });
+    const message = fs.existsSync(`${output}.err`) ? fs.readFileSync(`${output}.err`, 'utf8').trim() : '';
+    const tokens = fs.readFileSync(output, 'utf8').split(/\r?\n/).filter(Boolean).map((row) => {
       const [line, start, length, group] = row.split('\t');
       return { line: +line, start: +start, length: +length, type: tokenType(group) };
     });
+    return { tokens, message };
   } finally {
     fs.rmSync(dir, { recursive: true, force: true });
   }
@@ -80,15 +86,19 @@ async function main() {
       const want = perChar(await highlight({
         vimPath: VIM, text, fileName: file, filetype: '', scheme: 'default', background: 'light',
       }));
-      const got = perChar(await replay(file, data));
+      const result = await replay(file, data);
+      const got = perChar(result.tokens);
       const keys = new Set([...want.keys(), ...got.keys()]);
       const wrong = [...keys].filter((k) => want.get(k) !== got.get(k));
       total++;
       allChars += keys.size;
       wrongChars += wrong.length;
       if (!wrong.length) same++;
-      else console.log(`${test}: ${wrong.length} von ${keys.size} Zeichen anders, z. B. Zeile ${+wrong[0].split(':')[0] + 1}: ` +
-        `${want.get(wrong[0])} statt ${got.get(wrong[0])}`);
+      else {
+        console.log(`${test}: ${wrong.length} von ${keys.size} Zeichen anders, z. B. Zeile ${+wrong[0].split(':')[0] + 1}: ` +
+          `Vim ${want.get(wrong[0]) ?? 'ohne Gruppe'}, aus den Daten ${got.get(wrong[0]) ?? 'ohne Gruppe'}`);
+        if (result.message) console.log(`  Letzte Meldung von Vim: ${result.message}`);
+      }
     }
   }
   console.log(`\n${same} von ${total} Testdateien gleich; ${wrongChars} von ${allChars} gefaerbten Zeichen anders`);

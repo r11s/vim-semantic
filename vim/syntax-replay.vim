@@ -11,7 +11,11 @@ endif
 colorscheme default
 execute 'noautocmd edit ' . fnameescape($VH_IN)
 " Einzelne Befehle duerfen scheitern; was dadurch fehlt, zeigt der Vergleich
+let v:errmsg = ''
 execute 'silent! source ' . fnameescape($VH_RULES)
+if v:errmsg !=# ''
+  call writefile([v:errmsg], $VH_OUT . '.err')
+endif
 syntax sync fromstart
 
 let s:out = []
