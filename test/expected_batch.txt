@@ -1,0 +1,9 @@
+Formen-Rechner (Batch, nur ganze Zahlen)
+Fehler: Dreieck 1/2/10 ungueltig
+Dreieck: Flaeche=6 Umfang=12 klein Ecken=3
+Rechteck: Flaeche=12 Umfang=14 gross Ecken=4
+ggT(48, 18) = 6
+Primzahlen bis 30: 2 3 5 7 11 13 17 19 23 29
+Wurzel(2000000) = 1414
+Maske: 170
+Skala: 125000
