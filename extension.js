@@ -32,15 +32,20 @@ const FILETYPES = { shellscript: 'sh', viml: 'vim', csharp: 'cs', powershell: 'p
 function activate(context) {
   const legend = new vscode.SemanticTokensLegend(types);
   const index = new Map(types.map((type, i) => [type, i]));
-  const log = vscode.window.createOutputChannel('Vim Highlight');
+  const log = vscode.window.createOutputChannel('VimSem');
   let warned = false;
 
-  // Protokoll zur Fehlersuche: Ausgabekanal und protokoll.txt im Erweiterungsordner
+  // Protokoll zur Fehlersuche: immer im Ausgabekanal, auf Wunsch (vimHighlight.logFile)
+  // auch in protokoll.txt im Erweiterungsordner
   const logFile = path.join(__dirname, 'protokoll.txt');
   const note = (message) => {
     log.appendLine(message);
+    if (!vscode.workspace.getConfiguration('vimHighlight').get('logFile')) return;
     try {
-      fs.appendFileSync(logFile, `${new Date().toISOString()} ${message}\n`);
+      // Ab 1 MB neu beginnen, damit die Datei nicht unbegrenzt waechst
+      const full = fs.existsSync(logFile) && fs.statSync(logFile).size > 1024 * 1024;
+      const write = full ? fs.writeFileSync : fs.appendFileSync;
+      write(logFile, `${new Date().toISOString()} ${message}\n`);
     } catch {
       // Das Protokoll darf die Faerbung nie stoeren
     }
@@ -110,8 +115,11 @@ function activate(context) {
   const changed = new vscode.EventEmitter();
   context.subscriptions.push(changed, vscode.workspace.onDidChangeConfiguration((event) => {
     const theme = event.affectsConfiguration('workbench.colorTheme');
-    if (theme || event.affectsConfiguration('vimHighlight.backgroundGroups')) {
+    const settings = ['backgroundGroups', 'vimPath', 'maxLines']
+      .some((key) => event.affectsConfiguration(`vimHighlight.${key}`));
+    if (theme || settings) {
       if (theme) note(`Farbschema: ${activeTheme()}`);
+      if (event.affectsConfiguration('vimHighlight.vimPath')) warned = false;
       cache.clear();
       vscode.window.visibleTextEditors.forEach(decorate);
       changed.fire();
@@ -165,7 +173,12 @@ function activate(context) {
           note(String(error.message || error));
           if (!warned) {
             warned = true;
-            vscode.window.showWarningMessage('Vim Highlight: Vim konnte nicht ausgefuehrt werden (siehe Ausgabe).');
+            const text = error.code === 'ENOENT'
+              ? `VimSem: Vim nicht gefunden ("${config.get('vimPath')}"). Bitte vimHighlight.vimPath setzen.`
+              : 'VimSem: Vim konnte nicht ausgefuehrt werden (siehe Ausgabe "VimSem").';
+            vscode.window.showWarningMessage(text, 'Einstellung oeffnen').then((choice) => {
+              if (choice) vscode.commands.executeCommand('workbench.action.openSettings', 'vimHighlight.vimPath');
+            });
           }
         }
         return null;

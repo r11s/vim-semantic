@@ -1,8 +1,16 @@
 {
-  "name": "vim-highlight",
-  "displayName": "Vim Highlight (Prototyp)",
-  "publisher": "local",
-  "version": "0.0.1",
+  "name": "vim-semantic",
+  "displayName": "VimSem",
+  "description": "Vim-Farbschemata im Editor, gefaerbt von Vim selbst",
+  "publisher": "r11s",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/r11s/vim-semantic.git"
+  },
+  "categories": [
+    "Themes"
+  ],
   "engines": {
     "vscode": "^1.80.0"
   },
@@ -874,13 +882,18 @@
       }
     ],
     "configuration": {
-      "title": "Vim Highlight",
+      "title": "VimSem",
       "properties": {
         "vimHighlight.vimPath": {
           "type": "string",
           "default": "vim",
           "scope": "machine-overridable",
-          "description": "Pfad zu Vim"
+          "description": "Pfad zu Vim (unter Windows z. B. zur vim.exe aus Git)"
+        },
+        "vimHighlight.logFile": {
+          "type": "boolean",
+          "default": false,
+          "description": "Protokoll zur Fehlersuche in protokoll.txt im Erweiterungsordner schreiben"
         },
         "vimHighlight.maxLines": {
           "type": "number",

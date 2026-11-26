@@ -1,4 +1,4 @@
-# Vim Highlight (Prototyp)
+# vim-semantic (VimSem)
 
 Vim ermittelt im Hintergrund die Highlight-Gruppen, VS Code zeigt sie als Semantic Tokens an.
 
@@ -8,7 +8,7 @@ Voraussetzung: Vim 9 mit Syntax-Unterstuetzung (nicht vim-tiny).
 
     node generate.js default light      # nutzt dein Vim; VIM_PATH setzt einen anderen Pfad
     node generate.js elflord dark       # jedes weitere Theme kommt dazu
-    code --extensionDevelopmentPath=/pfad/zu/vim-highlight
+    code --extensionDevelopmentPath=/pfad/zu/vim-semantic
 
 Im neuen Fenster eines der "VimSem ..."-Farbschemata waehlen.
 
@@ -17,6 +17,23 @@ In der settings.json:
     "editor.bracketPairColorization.enabled": false
 
 Unter Windows ggf. "vimHighlight.vimPath" auf vim.exe setzen.
+
+## Installieren
+
+Braucht Node.js ab Version 20 und beim ersten Mal Internet (laedt `@vscode/vsce`).
+
+    bash werkzeuge/vsix.sh                                   # baut vim-semantic-<version>.vsix
+    code --install-extension vim-semantic-0.1.0.vsix --force
+
+Danach VS Code neu starten und ein "VimSem ..."-Farbschema waehlen. Findet VS Code kein Vim,
+in der settings.json den vollen Pfad angeben, z. B. fuer das Vim aus Git:
+
+    "vimHighlight.vimPath": "C:\\Program Files\\Git\\usr\\bin\\vim.exe"
+
+Fehlersuche: Ansicht "Ausgabe", Kanal "VimSem". Mit `"vimHighlight.logFile": true`
+zusaetzlich in `protokoll.txt` im Erweiterungsordner.
+
+Entfernen: `code --uninstall-extension r11s.vim-semantic`
 
 ## Grenzen
 

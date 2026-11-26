@@ -98,11 +98,15 @@ async function main() {
   const types = [...ids].sort().map((id) => ({ id, description: `Vim: ${id.slice(4)}` }));
 
   write('scheme.json', { themes: schemes, types: types.map((t) => t.id) });
+  // package.json wird bei jedem Lauf neu geschrieben: Aenderungen (auch die Version) hier
   write('package.json', {
-    name: 'vim-highlight',
-    displayName: 'Vim Highlight (Prototyp)',
-    publisher: 'local',
-    version: '0.0.1',
+    name: 'vim-semantic',
+    displayName: 'VimSem',
+    description: 'Vim-Farbschemata im Editor, gefaerbt von Vim selbst',
+    publisher: 'r11s',
+    version: '0.1.0',
+    repository: { type: 'git', url: 'https://github.com/r11s/vim-semantic.git' },
+    categories: ['Themes'],
     engines: { vscode: '^1.80.0' },
     main: './extension.js',
     activationEvents: ['onStartupFinished'],
@@ -113,9 +117,10 @@ async function main() {
       themes,
       semanticTokenTypes: types,
       configuration: {
-        title: 'Vim Highlight',
+        title: 'VimSem',
         properties: {
-          'vimHighlight.vimPath': { type: 'string', default: 'vim', scope: 'machine-overridable', description: 'Pfad zu Vim' },
+          'vimHighlight.vimPath': { type: 'string', default: 'vim', scope: 'machine-overridable', description: 'Pfad zu Vim (unter Windows z. B. zur vim.exe aus Git)' },
+          'vimHighlight.logFile': { type: 'boolean', default: false, description: 'Protokoll zur Fehlersuche in protokoll.txt im Erweiterungsordner schreiben' },
           'vimHighlight.maxLines': { type: 'number', default: 3000, description: 'Groessere Dateien bleiben ungefaerbt' },
           'vimHighlight.backgroundGroups': {
             type: 'array', items: { type: 'string' }, default: ['Todo', 'Error', 'Constant'],

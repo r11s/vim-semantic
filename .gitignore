@@ -13,3 +13,6 @@ _to_delete/
 temp
 
 messung/
+
+# Gebaute Pakete
+*.vsix

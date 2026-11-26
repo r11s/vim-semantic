@@ -23,7 +23,7 @@ async function runVim(vimPath, script, env, signal) {
       const child = execFile(
         vimPath,
         [...VIM_ARGS, `-V1${forVim(log)}`, '-S', forVim(path.join(__dirname, 'vim', script))],
-        { env: vimEnv, timeout: 20000, signal },
+        { env: vimEnv, timeout: 20000, signal, windowsHide: true },
         (error) => (error ? reject(error) : resolve())
       );
       child.stdin.end();

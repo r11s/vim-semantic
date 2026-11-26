@@ -12,6 +12,15 @@ Alles in **Git Bash**, im Ordner `~/work/vim-semantic`.
 
 Danach das Testfenster neu starten.
 
+## vsix bauen und installieren
+
+    bash werkzeuge/vsix.sh
+    code --install-extension vim-semantic-0.1.0.vsix --force
+
+Danach VS Code neu starten. Wieder entfernen:
+
+    code --uninstall-extension r11s.vim-semantic
+
 ## Messen
 
     node measure.js blue               # Details in messung/
@@ -20,7 +29,9 @@ Danach das Testfenster neu starten.
 
 - "VimSem ..."-Farbschema wählen: Strg+K, Strg+T
 - In settings.json: `"editor.semanticHighlighting.enabled": true`
-- `protokoll.txt` ansehen
+- Ansicht "Ausgabe", Kanal "VimSem" ansehen
+- Für `protokoll.txt`: `"vimHighlight.logFile": true`
+- Vim nicht gefunden: `"vimHighlight.vimPath"` setzen (Pfad: `cygpath -w "$(which vim)"`)
 
 ## Woher kommt eine Farbe?
 

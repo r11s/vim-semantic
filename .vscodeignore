@@ -1,0 +1,9 @@
+# In die vsix kommt nur, was die installierte Erweiterung braucht
+**
+!package.json
+!README.md
+!extension.js
+!vim.js
+!scheme.json
+!vim/tokens.vim
+!themes/*.json
