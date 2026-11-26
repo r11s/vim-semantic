@@ -26,6 +26,14 @@ Danach VS Code neu starten. Wieder entfernen:
     node measure.js blue               # Details in messung/
     bash werkzeuge/themes.sh           # vorher: alle Themes neu erzeugen
 
+## C ohne Vim prüfen
+
+    node werkzeuge/ohne-vim-messen.js c test/09_c.c
+
+Mit dem Vim aus gVim:
+
+    VIM_PATH="C:/Program Files/Vim/vim92/vim.exe" node werkzeuge/ohne-vim-messen.js c test/09_c.c
+
 ## Syntaxdaten prüfen
 
     node werkzeuge/syntaxdaten-pruefen.js      # Abweichungen in temp/unterschiede.txt

@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const vscode = require('vscode');
 const { highlight, tokenType } = require('./vim');
+const { highlighter, loadData } = require('./faerben');
 const { themes, types } = require('./scheme.json');
 
 // VS-Code-Sprachen, fuer die ein Vim-Syntax vorgesehen ist
@@ -28,6 +29,16 @@ const FILETYPES = { shellscript: 'sh', viml: 'vim', csharp: 'cs', powershell: 'p
   'objective-c': 'objc', plaintext: '', bat: 'dosbatch', 'cuda-cpp': 'cuda', cython: 'pyrex',
   standardml: 'sml', smalltalk: 'st', unrealscript: 'uc', ahk: 'autohotkey',
   processing: 'arduino', nushell: 'nu' };
+
+// Versuch: Diese Dateien faerbt die Erweiterung selbst nach den Regeln aus syntaxdaten,
+// ohne Vim zu starten. Nur C; ".h" behandelt Vim als C++ und bleibt deshalb bei Vim.
+const ownType = (document) => (/\.c$/.test(document.fileName) ||
+  (document.isUntitled && document.languageId === 'c') ? 'c' : null);
+const engines = new Map(); // Dateityp -> Faerber, beim ersten Gebrauch geladen
+const ownEngine = (type) => {
+  if (!engines.has(type)) engines.set(type, highlighter(loadData(type)));
+  return engines.get(type);
+};
 
 function activate(context) {
   const legend = new vscode.SemanticTokensLegend(types);
@@ -148,16 +159,21 @@ function activate(context) {
 
       const abort = new AbortController();
       const subscription = cancel.onCancellationRequested(() => abort.abort());
+      const type = ownType(document);
       try {
-        const tokens = await highlight({
-          vimPath: config.get('vimPath'),
-          text: document.getText(),
-          fileName: document.fileName,
-          filetype: FILETYPES[document.languageId] ?? document.languageId,
-          scheme: current.scheme,
-          background: current.background,
-          signal: abort.signal,
-        });
+        const start = Date.now();
+        const tokens = type
+          ? ownEngine(type).highlight(document.getText(), { scheme: current.scheme, background: current.background })
+          : await highlight({
+            vimPath: config.get('vimPath'),
+            text: document.getText(),
+            fileName: document.fileName,
+            filetype: FILETYPES[document.languageId] ?? document.languageId,
+            scheme: current.scheme,
+            background: current.background,
+            signal: abort.signal,
+          });
+        const time = Date.now() - start;
         const builder = new vscode.SemanticTokensBuilder(legend);
         for (const t of tokens) {
           if (index.has(t.type)) builder.push(t.line, t.start, t.length, index.get(t.type), 0);
@@ -165,13 +181,17 @@ function activate(context) {
         // Ergebnisse zu einem inzwischen geaenderten Text wuerden verrutschen
         const upToDate = !cancel.isCancellationRequested && document.version === version && theme === activeTheme();
         const marked = upToDate ? remember(document, version, theme, tokens) : 0;
-        note(`${name}: ${tokens.length} Abschnitte von Vim, ` +
+        note(`${name}: ${tokens.length} Abschnitte ${type ? 'ohne Vim' : 'von Vim'} in ${time} ms, ` +
           `${tokens.filter((t) => index.has(t.type)).length} davon mit bekannter Gruppe, ${marked} Hintergruende`);
         return builder.build();
       } catch (error) {
         if (!cancel.isCancellationRequested) {
           note(String(error.message || error));
-          if (!warned) {
+          if (type) {
+            // Bewusst kein Ausweichen auf Vim: Beim Versuch soll ein Fehler sichtbar sein
+            note(String(error.stack));
+            vscode.window.showWarningMessage('VimSem: Faerben ohne Vim fehlgeschlagen (siehe Ausgabe "VimSem").');
+          } else if (!warned) {
             warned = true;
             const text = error.code === 'ENOENT'
               ? `VimSem: Vim nicht gefunden ("${config.get('vimPath')}"). Bitte vimHighlight.vimPath setzen.`

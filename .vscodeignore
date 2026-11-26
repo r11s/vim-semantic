@@ -4,6 +4,9 @@
 !README.md
 !extension.js
 !vim.js
+!faerben.js
+!syntaxdaten/c.json
+!schemata/c.json
 !scheme.json
 !vim/tokens.vim
 !themes/*.json

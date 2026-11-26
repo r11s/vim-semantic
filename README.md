@@ -8,8 +8,18 @@ Es geht nur um die Darstellung im Editor, nicht um das Verhalten von Vim.
 
 ## Voraussetzung
 
-Vim 9 mit Syntax-Unterstuetzung (nicht vim-tiny) auf demselben Rechner. Ohne Vim wird nichts
-gefaerbt.
+Vim 9 mit Syntax-Unterstuetzung (nicht vim-tiny) auf demselben Rechner. Ohne Vim werden nur
+C-Dateien gefaerbt, siehe unten.
+
+## Versuch: C ohne Vim
+
+Dateien mit der Endung `.c` faerbt die Erweiterung selbst: `faerben.js` wendet die Regeln aus
+`syntaxdaten/c.json` an, ohne Vim zu starten. `.h` und alle anderen Sprachen brauchen weiterhin
+Vim. In der Ausgabe "VimSem" steht je Datei "ohne Vim" oder "von Vim".
+
+Verglichen mit Vim 9.2 (Patches 1-858) ohne eigene Einstellungen: die 201 C-Dateien aus dem
+Quelltext von Vim ohne Abweichung. Bei absichtlich fehlerhaftem Zufallstext sind vereinzelte
+Abweichungen moeglich.
 
 ## Installieren
 
@@ -61,7 +71,7 @@ naechsten Releases aufgenommen. Voraussetzung: Vim hat fuer die Sprache eine Syn
 - Hintergruende nur fuer die eingestellten Gruppen. Semantic Tokens kennen keinen Hintergrund,
   deshalb setzt die Erweiterung dafuer Decorations.
 - Cursorzeile, Zeilennummern, Auswahl und Suchtreffer haben die Farben von VS Code.
-- Vim startet bei jeder Aktualisierung neu; grosse Dateien sind langsam.
+- Vim startet bei jeder Aktualisierung neu; grosse Dateien sind langsam (ausser bei `.c`).
 - Syntax wird immer ab Dateianfang berechnet (`syntax sync fromstart`).
 - Ohne vimrc und Plugins.
 - Andere Semantic-Token-Anbieter (etwa fuer TypeScript) koennen Vorrang bekommen.
@@ -92,10 +102,15 @@ nicht geprueft.
 | `vim/` | Vim-Skripte |
 | `test/` | Testprogramme, siehe [test/README.md](test/README.md) |
 | `syntaxdaten/` | Faerberegeln von Vim je Sprache, siehe [syntaxdaten/README.md](syntaxdaten/README.md) |
+| `schemata/` | wo ein Farbschema eine Gruppe anders zuordnet (bisher nur C) |
 | `werkzeuge/` | Skripte zum Bauen, Erzeugen und Pruefen |
 
-Die Syntaxdaten benutzt die Erweiterung noch nicht. Sie sind die Grundlage dafuer, spaeter
-ohne installiertes Vim zu faerben. Kurzbefehle: [SPICKZETTEL.md](SPICKZETTEL.md).
+Die Erweiterung benutzt von den Syntaxdaten bisher nur C. Faerben ohne Vim pruefen:
+
+    node werkzeuge/ohne-vim-messen.js c datei.c ...    # mit SCHEMA=blue BG=dark fuer ein anderes
+    node werkzeuge/schema-gruppen.js c                 # schemata/c.json neu erzeugen
+
+Kurzbefehle: [SPICKZETTEL.md](SPICKZETTEL.md).
 
 ## Lizenz
 
