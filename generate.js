@@ -118,8 +118,8 @@ async function main() {
       configuration: {
         title: 'VimSem',
         properties: {
-          'vimHighlight.logFile': { type: 'boolean', default: false, description: 'Protokoll zur Fehlersuche in protokoll.txt im Erweiterungsordner schreiben' },
-          'vimHighlight.backgroundGroups': {
+          'vimsem.logFile': { type: 'boolean', default: false, description: 'Protokoll zur Fehlersuche in protokoll.txt im Erweiterungsordner schreiben' },
+          'vimsem.backgroundGroups': {
             type: 'array', items: { type: 'string' }, default: ['Todo', 'Error', 'Constant'],
             description: 'Vim-Gruppen, deren Hintergrundfarbe angezeigt wird',
           },

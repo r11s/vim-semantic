@@ -43,12 +43,12 @@ function activate(context) {
   const index = new Map(types.map((type, i) => [type, i]));
   const log = vscode.window.createOutputChannel('VimSem');
 
-  // Protokoll zur Fehlersuche: immer im Ausgabekanal, auf Wunsch (vimHighlight.logFile)
+  // Protokoll zur Fehlersuche: immer im Ausgabekanal, auf Wunsch (vimsem.logFile)
   // auch in protokoll.txt im Erweiterungsordner
   const logFile = path.join(__dirname, 'protokoll.txt');
   const note = (message) => {
     log.appendLine(message);
-    if (!vscode.workspace.getConfiguration('vimHighlight').get('logFile')) return;
+    if (!vscode.workspace.getConfiguration('vimsem').get('logFile')) return;
     try {
       // Ab 1 MB neu beginnen, damit die Datei nicht unbegrenzt waechst
       const full = fs.existsSync(logFile) && fs.statSync(logFile).size > 1024 * 1024;
@@ -102,7 +102,7 @@ function activate(context) {
     decorateDocument(document);
   };
   const remember = (document, version, theme, tokens) => {
-    const groups = vscode.workspace.getConfiguration('vimHighlight', document.uri).get('backgroundGroups') || [];
+    const groups = vscode.workspace.getConfiguration('vimsem', document.uri).get('backgroundGroups') || [];
     const wanted = new Set(groups.map(tokenType));
     const ranges = new Map();
     let count = 0;
@@ -123,7 +123,7 @@ function activate(context) {
   const changed = new vscode.EventEmitter();
   context.subscriptions.push(changed, vscode.workspace.onDidChangeConfiguration((event) => {
     const theme = event.affectsConfiguration('workbench.colorTheme');
-    const settings = event.affectsConfiguration('vimHighlight.backgroundGroups');
+    const settings = event.affectsConfiguration('vimsem.backgroundGroups');
     if (theme || settings) {
       if (theme) note(`Farbschema: ${activeTheme()}`);
       cache.clear();

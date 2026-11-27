@@ -51,7 +51,7 @@ Neu erzeugen geht nur mit dem ergänzten Vim, siehe `syntaxdaten/README.md`.
 - "VimSem ..."-Farbschema wählen: Strg+K, Strg+T
 - In settings.json: `"editor.semanticHighlighting.enabled": true`
 - Ansicht "Ausgabe", Kanal "VimSem" ansehen
-- Für `protokoll.txt`: `"vimHighlight.logFile": true`
+- Für `protokoll.txt`: `"vimsem.logFile": true`
 - Steht im Kanal "keine Syntaxregeln fuer diese Datei": Der Dateityp wird nicht gefärbt, siehe README
 
 ## Woher kommt eine Farbe?

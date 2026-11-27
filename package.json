@@ -882,12 +882,12 @@
     "configuration": {
       "title": "VimSem",
       "properties": {
-        "vimHighlight.logFile": {
+        "vimsem.logFile": {
           "type": "boolean",
           "default": false,
           "description": "Protokoll zur Fehlersuche in protokoll.txt im Erweiterungsordner schreiben"
         },
-        "vimHighlight.backgroundGroups": {
+        "vimsem.backgroundGroups": {
           "type": "array",
           "items": {
             "type": "string"

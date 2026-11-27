@@ -29,7 +29,7 @@ function findTheme(scheme, background) {
   const [label, settings] = matches[0];
   const { contributes } = readJson('package.json');
   const entry = contributes.themes.find((t) => t.label === label);
-  const groups = contributes.configuration.properties['vimHighlight.backgroundGroups']?.default || [];
+  const groups = contributes.configuration.properties['vimsem.backgroundGroups']?.default || [];
   return {
     label, ...settings, types: new Set(types), theme: readJson(entry.path),
     marked: new Set(groups.map(tokenType)), groups,
