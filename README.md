@@ -68,11 +68,44 @@ Braucht Node.js ab Version 20 und beim ersten Mal Internet (laedt `@vscode/vsce`
 
 Danach VS Code bzw. VSCodium neu starten und ein "VimSem ..."-Farbschema waehlen.
 
-Empfohlen, weil Vim Klammern nicht nach Tiefe faerbt:
-
-    "editor.bracketPairColorization.enabled": false
-
 Entfernen: `code --uninstall-extension r11s.vim-semantic` (VSCodium: `codium` statt `code`)
+
+## Editor noch naeher an Vim bringen
+
+VimSem aendert keine Einstellungen von VS Code oder VSCodium. Wer mag, ergaenzt in der
+`settings.json` (Befehl "Open User Settings (JSON)"):
+
+```json
+"editor.bracketPairColorization.enabled": false,
+"editor.occurrencesHighlight": "off",
+"editor.selectionHighlight": false,
+"editor.renderLineHighlight": "none"
+```
+
+| Einstellung | Wirkung |
+|---|---|
+| `editor.bracketPairColorization.enabled` | Klammern nicht nach Tiefe faerben (empfohlen) |
+| `editor.occurrencesHighlight` | Wort unter dem Cursor nicht ueberall markieren |
+| `editor.selectionHighlight` | Stellen wie der markierte Text nicht markieren |
+| `editor.renderLineHighlight` | kein Balken auf der aktuellen Zeile |
+
+Diese Einstellungen gelten fuer alle Farbschemata.
+
+Wer in Vim `set cursorline` nutzt, laesst den Balken an (`"line"`) und gibt ihm je Theme die
+Farbe aus Vim:
+
+```json
+"editor.renderLineHighlight": "line",
+"workbench.colorCustomizations": {
+  "[VimSem elflord]": {
+    "editor.lineHighlightBackground": "#333333",
+    "editor.lineHighlightBorder": "#00000000"
+  }
+}
+```
+
+`#333333` ist ein Beispiel. Die Farbe zeigt gVim mit
+`:echo synIDattr(hlID('CursorLine'), 'bg#')`.
 
 ## Einstellungen
 
