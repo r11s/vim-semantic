@@ -28,14 +28,16 @@ const LANGUAGES = {
   diff: 'diff', dockerfile: 'dockerfile', ini: 'dosini', javascriptreact: 'javascriptreact',
   jsonc: 'jsonc', less: 'less', makefile: 'make', scss: 'scss', toml: 'toml',
   typescriptreact: 'typescriptreact', xml: 'xml',
+  latex: 'tex', tex: 'plaintex',
 };
 // Typen mit mehreren Regelsaetzen: unter diesem Namen entscheidet bei ungespeicherten
 // Dateien wie sonst der Inhalt
-const UNTITLED = { sh: 'Untitled.sh', make: 'Untitled.mk', diff: 'Untitled.diff' };
+const UNTITLED = { sh: 'Untitled.sh', make: 'Untitled.mk', diff: 'Untitled.diff', plaintex: 'Untitled.tex' };
 // Endungen und Namen, bei denen VS Code die Erweiterung auch ohne passende Sprache fragt.
 // Die zweite Liste sind Endungen, ueber die nur der Inhalt entscheidet.
 const EXTENSIONS = [...new Set([...Object.keys(endungen),
-  'h', 'm', 'pl', 'v', 'p', 'i', 'd', 'r', 'cls', 'sh', 'cmd', 'inc', 'pp', 'lpr', 'sc', 'class'])];
+  'h', 'm', 'pl', 'v', 'p', 'i', 'd', 'r', 'cls', 'sh', 'cmd', 'inc', 'pp', 'lpr', 'sc', 'class',
+  'toc', 'lot', 'def', 'inp'])];
 const NAMES = Object.keys(namen);
 
 const engines = new Map(); // Dateityp -> Faerber, beim ersten Gebrauch geladen

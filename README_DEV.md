@@ -16,9 +16,9 @@ Gefaerbt werden diese Vim-Dateitypen:
 abap, ada, arduino, asm, autohotkey, awk, basic, c, clojure, cobol, cpp, cs, css, cuda, d,
 dart, diff, dockerfile, dosbatch, dosini, elm, erlang, forth, gdscript, glsl, go, groovy,
 haskell, html, java, javascript, javascriptreact, json, jsonc, julia, kotlin, less, lisp, lua,
-make, markdown, matlab, mojo, nix, nu, objc, ocaml, pascal, perl, php, progress, prolog, ps1,
+make, markdown, matlab, mojo, nix, nu, objc, ocaml, pascal, perl, php, plaintex, progress, prolog, ps1,
 pyrex, python, r, racket, raku, ruby, rust, sas, scala, scheme, scilab, scss, sh, sml,
-solidity, sql, st, stata, swift, systemverilog, tcl, toml, typescript, typescriptreact, uc,
+solidity, sql, st, stata, swift, systemverilog, tcl, tex, toml, typescript, typescriptreact, uc,
 vb, verilog, vhdl, xml, yaml, zig
 
 **Nicht gefaerbt** wird alles andere, zum Beispiel:
@@ -27,6 +27,7 @@ vb, verilog, vhdl, xml, yaml, zig
 - Objective-C++ (`.mm`, und `.h`-Dateien, in denen eine Zeile mit `@interface`, `@class` oder
   `@end` beginnt)
 - zsh, csh, tcsh, Vue, Svelte
+- BibTeX und ConTeXt
 - was in Vim ein eigener Dateityp ist: SVG, XSD, XSLT, DocBook, XBL und Patches von
   `git format-patch`
 
@@ -38,6 +39,9 @@ VS Code gewaehlten Sprache. Unter Windows und macOS zaehlt Gross-/Kleinschreibun
 Wie in Vim gibt es auch fuer Makefiles (GNU, BSD, Microsoft) und Diff ("unified" und andere
 Formate) mehrere Regelsaetze.
 
+TeX ist wie in Vim je nach Inhalt LaTeX oder Plain TeX. Stildateien (`.sty`, `.cls`, `.clo`,
+`.ltx`) und `.dtx` haben eigene Regelsaetze.
+
 Fuer Shell gibt es wie in Vim drei Regelsaetze: bash, Korn-Shell und POSIX. Es entscheidet die
 erste Zeile, sonst der Dateiname (`.bashrc`, `*.bash`, `*.ksh` ...). `#!/bin/sh` und Dateien
 ohne Angabe gelten als POSIX-Shell, wie in Vim unter Windows.
@@ -46,7 +50,8 @@ ohne Angabe gelten als POSIX-Shell, wie in Vim unter Windows.
 
 Verglichen mit Vim 9.2 (Patches 1-858) unter Linux, ohne eigene Einstellungen:
 
-- 91 Testdateien aus `test/` in allen 34 Themes: keine Abweichung.
+- 95 Testdateien aus `test/` in allen 34 Themes: keine Abweichung.
+- 1526 TeX-Dateien des Systems (LaTeX, Plain TeX, Stildateien, `.dtx`): keine Abweichung.
 - 545 weitere Dateien des Systems zu den Typen diff, dockerfile, dosini, jsonc, make, scss,
   toml, tsx, xml u. a.: keine sichtbare Abweichung.
 - eine Stichprobe von 438 C- und C++-Dateien und Headern ohne Abweichung.
@@ -169,6 +174,7 @@ Mit Vim vergleichen und Daten erzeugen:
     node werkzeuge/schema-gruppen.js sh test/08_shell.sh   # sh braucht eine Beispieldatei
     node werkzeuge/schema-gruppen.js sh-posix datei         # Datei mit "#!/bin/sh"; sh-ksh: "#!/bin/ksh"
     node werkzeuge/schema-gruppen.js make-bsd datei         # ebenso make-microsoft, diff-context
+    node werkzeuge/schema-gruppen.js tex-sty datei.sty      # ebenso tex-dtx mit einer ".dtx"
     node werkzeuge/dateitypen.js                      # dateitypen.json (braucht VIMRUNTIME)
 
 Kurzbefehle: [SPICKZETTEL.md](SPICKZETTEL.md).

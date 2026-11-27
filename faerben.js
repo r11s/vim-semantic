@@ -182,10 +182,14 @@ function normalize(p) {
 }
 
 // "external": was die Klammern \z( \) des Anfangs erfasst haben, fuer \z1 in "skip" und "end"
-function translate(source, external = [], words = wordsFor()) {
+// "marking": das Muster hat "\ze" in einer Klammer. Dann merkt sich jedes "\ze" nur seine
+// Stelle (leere Klammer "ze1", "ze2" ...), und die letzte davon ist das Ende (wie in Vim)
+function translate(source, external = [], words = wordsFor(), marking = false, info = {}) {
   const classes = { ...CLASSES, k: words.key, K: `(?![0-9])${words.key}` };
   const pattern = source.replace(NESTED, '$1$2');
   let captures = 0;
+  let marks = 0;
+  let nested = false;
   let groups = 0; // Nummern der Klammern \( \), fuer \1 bis \9
   // Je Ebene eine Gruppe: Zweige, jeder mit seinen Teilen und \zs / \ze
   const branch = () => ({ atoms: [], zs: null, ze: null });
@@ -221,9 +225,7 @@ function translate(source, external = [], words = wordsFor()) {
   const render = (group, lookaround) => group.branches.map((b) => {
     if (group !== stack[0]) {
       if (b.zs !== null && !lookaround) throw new Unsupported('\\zs innerhalb einer Gruppe');
-      if (b.ze === null || lookaround) return b.atoms.join('');
-      // \ze in einer Gruppe: Was folgt, wird nur geprueft (richtig, wenn die Gruppe am Ende steht)
-      return b.atoms.slice(0, b.ze).join('') + `(?=${b.atoms.slice(b.ze).join('')})`;
+      return b.atoms.join('');
     }
     const from = b.zs ?? 0;
     const to = b.ze ?? b.atoms.length;
@@ -256,12 +258,17 @@ function translate(source, external = [], words = wordsFor()) {
         const group = stack.pop();
         if (!group || !stack.length) throw new Unsupported('Klammern');
         const ahead = /^\\@\d*(=|!|<=|<!|>)/.exec(pattern.slice(i + 1));
-        const body = render(group, !!ahead);
+        let body = render(group, !!ahead);
         if (ahead) {
+          // In einer Vorschau oder Rueckschau zaehlt "\ze" nicht, in "\@>" schon
+          if (ahead[1] !== '>') body = body.replace(/\(\?<ze\d+>\)/g, '');
           // Eine nummerierte Klammer behaelt ihre Nummer auch in der Vorschau
           const inner = ahead[1] === '=' && group.open.startsWith('(?<p') ? `${group.open}${body})` : body;
           add(ahead[1] === '>' ? atomic(body) : `(?${ahead[1]}${inner})`);
           i += ahead[0].length;
+          // Vim nimmt ein "\ze" aus "\@>" nicht zurueck, wenn es danach doch anders weitergeht.
+          // Deshalb den ersten Versuch bis hierher fuer sich merken
+          if (ahead[1] === '>' && stack.length === 1 && body.includes('(?<ze')) info.first = top().atoms.join('');
         } else {
           const result = `${group.open}${body})`;
           let changed = false;
@@ -299,7 +306,12 @@ function translate(source, external = [], words = wordsFor()) {
       } else if (n === '<') add(words.start);
       else if (n === '>') add(words.end);
       else if (n === 'z' && pattern[i + 1] === 's') { i++; top().zs = top().atoms.length; }
-      else if (n === 'z' && pattern[i + 1] === 'e') { i++; top().ze = top().atoms.length; }
+      else if (n === 'z' && pattern[i + 1] === 'e') {
+        i++;
+        if (stack.length > 1) nested = true;
+        if (marking) add(`(?<ze${++marks}>)`);
+        else top().ze = top().atoms.length;
+      }
       else if (n === '%' && pattern[i + 1] === '[') {
         // \%[abc]: a, ab, abc oder nichts
         const parts = [];
@@ -346,6 +358,7 @@ function translate(source, external = [], words = wordsFor()) {
     }
   }
   if (stack.length !== 1) throw new Unsupported('Klammern');
+  if (nested && !marking) return translate(source, external, words, true, info);
   return render(stack[0], false);
 }
 
@@ -376,7 +389,8 @@ const LISTS = /^(contains|containedin|nextgroup|add|remove)\s*=\s*((?:[^\s,]*\s*
 function hasEol(body) {
   for (let j = 0; j < body.length;) {
     if (body[j] === '\\') {
-      if (body[j + 1] === 'n' || (body[j + 1] === '_' && body[j + 2] !== '^')) return true;
+      // Wie in Vim zaehlen nur "$" und "\_$", nicht "\n" oder "\_s"
+      if (body[j + 1] === '_' && body[j + 2] === '$') return true;
       j += 2;
     } else if (body[j] === '[') {
       const set = collection(body, j, false);
@@ -398,8 +412,13 @@ function compile(found, ignoreCase, part, words) {
   // deshalb bestimmt matches() den Ort selbst und prueft dort den Rest
   const column = /^\\%(\d+)c/.exec(body);
   if (column) body = body.slice(column[0].length);
-  const flags = ((forced ?? ignoreCase) ? 'mui' : 'mu') + (column ? 'y' : 'g');
-  const pattern = { re: new RegExp(translate(body, [], words), flags), off: null };
+  const info = {};
+  const expression = translate(body, [], words, false, info);
+  // "d": fuer die gemerkten Stellen von "\ze" braucht es die Positionen
+  const flags = ((forced ?? ignoreCase) ? 'mui' : 'mu') + (column ? 'y' : 'g') +
+    (expression.includes('(?<ze1>') ? 'd' : '');
+  const pattern = { re: new RegExp(expression, flags), off: null };
+  if (info.first) pattern.first = new RegExp(info.first, flags.replace('g', '') + (column ? '' : 'y'));
   if (column) pattern.column = Number(column[1]);
   if ((part === 'end' || part === 'skip') && /\\z[1-9]/.test(body)) {
     pattern.build = (external) => new RegExp(translate(body, external, words), flags);
@@ -434,7 +453,8 @@ function parseItem(kind, text, ignoreCase, words) {
     const space = /^\s+/.exec(rest);
     if (space) { position += space[0].length; continue; }
     const list = LISTS.exec(rest);
-    const option = /^(matchgroup|cchar)=(\S+)/i.exec(rest); // wie in Vim auch "matchGroup"
+    // wie in Vim auch "matchGroup"; "cchar=" kann ein Leerzeichen sein, das hier fehlt
+    const option = /^(matchgroup(?==\S)|cchar)=(\S*)/i.exec(rest);
     const part = kind === 'region' && /^(start|skip|end)\s*=\s*/.exec(rest);
     const word = /^\S+/.exec(rest)[0];
     if (list) {
@@ -718,10 +738,20 @@ function highlighter(data) {
             p.length = m[0].length;
             p.lead = 0; // Laenge des Teils vor \zs
             p.external = []; // Erfasstes aus \z( \)
+            let end = -1;
             for (const [key, value] of Object.entries(m.groups || {})) {
               if (key.startsWith('lead')) p.lead = Math.max(p.lead, value?.length || 0);
               else if (key.startsWith('zx')) p.external[key.slice(2) - 1] = value || '';
+              else if (key.startsWith('ze') && value !== undefined) end = Math.max(end, m.indices.groups[key][0]);
             }
+            if (p.first) {
+              p.first.lastIndex = m.index;
+              const marks = p.first.exec(text)?.indices.groups || {};
+              for (const [key, value] of Object.entries(marks)) {
+                if (key.startsWith('ze') && value) end = Math.max(end, value[0]);
+              }
+            }
+            if (end >= 0) p.length = end - m.index;
           }
         }
         return p.index === pos;
@@ -818,6 +848,7 @@ function highlighter(data) {
 
       // Welche Regel beginnt hier? "from": ab hier ist die Zeile noch frei, auch fuer den
       // Teil vor \zs
+      let again = false; // eine Regel passte, ist hier aber schon offen
       const find = (set, stack, pos, from) => {
         const open = (item) => stack.some((f) => f.item === item && f.from === pos) || zero.has(item);
         const keyword = keywordAt(set, pos);
@@ -825,7 +856,8 @@ function highlighter(data) {
         for (const item of set.rules) {
           for (const start of item.start) {
             const found = startsAt(start, pos, from);
-            if (!found || open(item)) continue;
+            if (!found) continue;
+            if (open(item)) { again = true; continue; }
             const [s, e] = found;
             const off = start.off || {};
             const hs = off.hs ? Math.max(pos, startOff(s, e, off.hs)) : pos;
@@ -864,6 +896,7 @@ function highlighter(data) {
       let byte = 0; // Spalte in UTF-8-Bytes, wie Vim sie zaehlt
       let open = null;
       let searchFrom = 0;
+      let skipped = 0; // bis hierhin wurde fuer "nextgroup" Leerraum uebersprungen
       let here = 0;
       const zero = new Set(); // Regeln, die an dieser Stelle schon leer gepasst haben
       const close = () => {
@@ -876,13 +909,17 @@ function highlighter(data) {
         const top = stack.at(-1);
         if (top && top.item.kind === 'region' && !top.closing && !top.item.flags.has('keepend')) {
           top.noEnd = here;
-          // Reichte die enthaltene Regel bis ans Zeilenende, geht die Region weiter
+          // Reichte die enthaltene Regel bis ans Zeilenende, geht die Region weiter, auch
+          // eine mit "oneline"
           if (frame.item.eol && text[here] === '\n' && !stack.some((f) => f.item.flags.has('keepend'))) {
             // Ausser das Ende nimmt den Zeilenumbruch selbst mit
             const probe = { ...top };
             const end = regionEnd(probe, here);
             if (end) startClosing(probe, end);
-            if (!end || probe.end <= here) top.noEnd = here + 1;
+            if (!end || probe.end <= here) {
+              top.noEnd = here + 1;
+              top.carried = here;
+            }
           }
         }
       };
@@ -918,7 +955,10 @@ function highlighter(data) {
           if (!top) break;
           if (top.end !== undefined && pos >= top.end) { close(); continue; }
           if (top.item.kind === 'region') {
-            if (top.item.flags.has('oneline') && text[pos] === '\n' && !top.closing) { close(); continue; }
+            if (top.item.flags.has('oneline') && text[pos] === '\n' && !top.closing && top.carried !== pos) {
+              close();
+              continue;
+            }
             const end = regionEnd(top, pos);
             if (end) { startClosing(top, end); continue; }
           }
@@ -938,13 +978,25 @@ function highlighter(data) {
           }
           if (top && top.item.kind === 'keyword') break;
           let found = null;
+          again = false;
           if (next) {
             found = find(following(next.list), stack, pos, searchFrom);
             if (found) next = null;
-            else if (!(next.flags.has('skipwhite') && /[ \t]/.test(text[pos]))) next = null;
+            else if (next.flags.has('skipwhite') && /[ \t]/.test(text[pos])) {
+              // Wie in Vim: Beim Ueberspringen beginnt nichts anderes, und andere Regeln
+              // werden danach erst ab dort gesucht (die aus "nextgroup" auch davor)
+              skipped = pos + 1;
+              break;
+            } else next = null;
           }
-          found = found || find(allowed(stack), stack, pos, searchFrom);
-          if (!found) break;
+          found = found || find(allowed(stack), stack, pos, Math.max(searchFrom, skipped));
+          if (!found) {
+            // Wie in Vim: Passt hier eine schon offene Regel noch einmal (Klammern, die sich
+            // selbst enthalten), wird erst ab dem naechsten Zeichen weitergesucht. Ein Teil
+            // vor "\zs" kann dann nicht mehr bei diesem liegen
+            if (again) searchFrom = Math.max(searchFrom, pos + 1);
+            break;
+          }
           // Verbraucht eine enthaltene Regel das Ende, wird es spaeter neu gesucht.
           // Bei "keepend" bleibt das Ende stehen, ausser die Regel hat "extend"
           if (top && top.closing &&

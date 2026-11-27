@@ -1,0 +1,109 @@
+% Formen-Rechner: Dokumentation. TODO: Beispiele ergaenzen
+% FIXME XXX NOTE
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb, graphicx, listings, hyperref, verbatim}
+\input{kopf}
+\include{anhang}
+\newcommand{\flaeche}[2][r]{\pi #1^{2} + #2}
+\renewcommand{\arraystretch}{1.2}
+\newenvironment{hinweis}[1]{\begin{quote}\textbf{#1}: }{\end{quote}}
+\DeclareMathOperator{\umfang}{U}
+\def\firma{Muster \& Co}
+\setlength{\parindent}{0pt}
+
+\title{Der Formen-Rechner}
+\author{Team \and G\"ast\'e \c{c} \ss{} \ae \O}
+\date{\today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\begin{abstract}
+  Berechnet Fl\"ache und Umfang. Preis: 10\,\% oder \$5 -- siehe unten --- fertig~sofort.
+\end{abstract}
+
+\part{Grundlagen}
+\chapter*{Vorwort}
+\section{Einleitung}\label{sec:einleitung}
+\subsection*{Ziele}
+\subsubsection{Details}
+\paragraph{Absatz} Text mit \emph{Betonung}, \textit{kursiv}, \textbf{fett \textit{beides}}
+und \texttt{Schreibmaschine}. {\bfseries Fett} {\em alt} {\Large gross}\\[2ex]
+Siehe Abschnitt~\ref{sec:einleitung} auf Seite~\pageref{sec:einleitung}, \eqref{eq:kreis}
+und \cite[S.~5]{knuth84,lamport94}. \nocite{*} \footnote{Eine Fussnote.}
+\url{https://example.org/a_b#c} \href{https://example.org}{Webseite}
+
+\section{Mathematik}
+Inline: $A = \pi r^2$ und \(U = 2\pi r\), $x_{i+1} \leq \alpha \cdot \beta - \sqrt{\gamma}$.
+Abgesetzt: $$\sum_{i=0}^{n} i = \frac{n(n+1)}{2}$$
+\[
+  \int_0^\infty e^{-x^2}\,\mathrm{d}x = \frac{\sqrt{\pi}}{2} \quad \text{fuer alle $x$}
+\]
+\begin{equation}\label{eq:kreis}
+  A(r) = \pi r^{2}, \qquad \left( \frac{a}{b} \right) \Rightarrow \left\{ x \in \mathbb{R} \right.
+\end{equation}
+\begin{align*}
+  a &= b + c & d &\neq e \\
+  f &\approx \lim_{x \to 0} \sin(x)/x % Kommentar in Mathe
+\end{align*}
+\begin{eqnarray}
+  y & = & \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix} \nonumber
+\end{eqnarray}
+\begin{displaymath} \vec{v} = (v_1, \ldots, v_n)^T \end{displaymath}
+\begin{math} \Omega \end{math}
+
+\section{Listen und Tabellen}
+\begin{itemize}
+  \item Kreis
+  \item[--] Rechteck
+\end{itemize}
+\begin{enumerate}
+  \item erstens \item zweitens
+\end{enumerate}
+\begin{description}
+  \item[Form] eine Fl\"ache
+\end{description}
+\begin{table}[htbp]
+  \centering
+  \begin{tabular}{|l|c|r@{.}l|}
+    \hline
+    Form & Seiten & \multicolumn{2}{c|}{Wert} \\ \cline{1-2}
+    Kreis & 0 & 3 & 14 \\
+    \hline
+  \end{tabular}
+  \caption{Formen}\label{tab:formen}
+\end{table}
+\begin{figure}
+  \includegraphics[width=0.5\textwidth]{bild.png}
+  \caption[kurz]{Ein Bild mit $r = 1$.}
+\end{figure}
+
+\section{Woertlich}
+Mit \verb|\foo{$x$}| und \verb*+a b+ im Text.
+\begin{verbatim}
+  def flaeche(r):   % kein Kommentar $x$
+      return \pi
+\end{verbatim}
+\begin{lstlisting}[language=Python]
+print("Hallo %s" % name)  # kein TeX \section{x}
+\end{lstlisting}
+\begin{comment}
+  Alles Kommentar. TODO
+\end{comment}
+\iffalse versteckt \fi
+%begin-include
+Eingebunden.
+%end-include
+
+\makeatletter
+\def\@interner@befehl#1#2{#1\relax}
+\makeatother
+\ifx\foo\undefined \else \fi
+\begin{hinweis}{Achtung} Klammern { verschachtelt { tief } } fertig. \end{hinweis}
+\bibliographystyle{plain}
+\bibliography{literatur}
+\appendix
+\end{document}
+Nach dem Ende. \section{ignoriert}

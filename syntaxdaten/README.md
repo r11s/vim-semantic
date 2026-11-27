@@ -16,6 +16,7 @@ Aus einer leeren Datei erzeugt und von der Gegenprobe nicht erfasst: json, html,
 `sh.json` gilt fuer bash, `sh-posix.json` fuer `#!/bin/sh` und dash, `sh-ksh.json` fuer die Korn-Shell.
 `make.json` gilt fuer GNU make, daneben `make-bsd.json` und `make-microsoft.json`.
 `diff.json` gilt fuer unified diff, `diff-context.json` fuer die anderen Formate.
+`tex.json` gilt fuer LaTeX, `tex-sty.json` fuer Stildateien wie `.sty` und `.cls`, `tex-dtx.json` fuer `.dtx`.
 Zum Erzeugen ist ein Vim mit `werkzeuge/vim-synlog.patch` noetig.
 
 | Datei | keyword | match | region | cluster | include | inhaltsabhaengig | Testdateien |
@@ -73,6 +74,7 @@ Zum Erzeugen ist ein Vim mit `werkzeuge/vim-synlog.patch` noetig.
 | pascal | 115 | 7 | 6 | 0 | 0 |  | 28_delphi.pas |
 | perl | 6 | 117 | 123 | 8 | 1 |  | 26_perl.pl |
 | php | 718 | 318 | 141 | 11 | 6 |  | 10_php.php |
+| plaintex | 1 | 100 | 2 | 28 | 0 |  | 119_plaintex.tex |
 | progress | 179 | 13 | 9 | 1 | 0 |  | 95_openedge.p |
 | prolog | 25 | 12 | 4 | 0 | 0 |  | 41_prolog.pl |
 | ps1 | 21 | 52 | 10 | 2 | 0 |  | 14_powershell.ps1 |
@@ -99,6 +101,9 @@ Zum Erzeugen ist ein Vim mit `werkzeuge/vim-synlog.patch` noetig.
 | swift | 19 | 30 | 12 | 0 | 0 |  | 15_swift.swift |
 | systemverilog | 73 | 29 | 7 | 0 | 0 |  | 66_systemverilog.sv |
 | tcl | 61 | 15 | 34 | 2 | 0 |  | 49_tcl.tcl |
+| tex | 1 | 815 | 78 | 50 | 0 |  | 117_latex.tex |
+| tex-dtx | 1 | 608 | 77 | 50 | 0 | ja | 120_latexdoc.dtx |
+| tex-sty | 1 | 607 | 78 | 50 | 0 | ja | 118_latexstyle.sty |
 | toml | 1 | 20 | 10 | 1 | 0 |  | 116_toml.toml |
 | typescript | 912 | 104 | 56 | 126 | 0 |  | 05_typescript.ts |
 | typescriptreact | 912 | 116 | 62 | 128 | 0 |  | 114_react.tsx |

@@ -105,3 +105,7 @@ Rangliste der Sprachen: [SPRACHEN.md](../SPRACHEN.md). Fortran und Vim Script si
 | 114_react.tsx | TSX \*\* |
 | 115_jsonc.jsonc | JSON mit Kommentaren \*\* |
 | 116_toml.toml | TOML \*\* |
+| 117_latex.tex | LaTeX \*\* |
+| 118_latexstyle.sty | LaTeX-Stildatei \*\* |
+| 119_plaintex.tex | Plain TeX \*\* |
+| 120_latexdoc.dtx | LaTeX, dokumentierter Quelltext \*\* |

@@ -25,6 +25,9 @@ const VARIANTS = {
   'make-microsoft': ['beispiel.mk', '!include regeln.mak'],
   'diff-context': ['beispiel.diff', '*** alt\n--- neu'],
 };
+// Gleicher Dateityp, nach der Endung andere Regeln: tex.vim kennt "@" in Stildateien als
+// Buchstaben und hat fuer ".dtx" eigene Kommentare
+const BY_EXTENSION = [[/\.sty$/, 'tex', 'tex-sty'], [/\.dtx$/, 'tex', 'tex-dtx']];
 const slash = (file) => file.replace(/\\/g, '/');
 
 // Reine Abfragen und An-/Abschalten sind keine Regeln
@@ -114,8 +117,9 @@ async function main() {
   const overview = [];
   for (const file of files) {
     const data = await collect(file);
-    const type = data.filetype;
+    let type = data.filetype;
     if (!type) { console.log(`${file}: kein Dateityp`); continue; }
+    type = BY_EXTENSION.find(([end, of]) => of === type && end.test(file))?.[2] || type;
     const rules = JSON.stringify(data.commands.map((c) => c[1]));
     const same = [...written].find(([name, text]) => name.split('~')[0] === type && text === rules);
     if (same) {
@@ -126,7 +130,7 @@ async function main() {
     const name = written.has(type) ? `${type}~${file.replace(/\.[^.]*$/, '')}` : type;
     written.set(name, rules);
     // Dieselbe Sprache ohne Inhalt: haengen die Regeln vom Text ab?
-    const empty = await collect(null, type);
+    const empty = await collect(null, data.filetype);
     const emptyRules = JSON.stringify(empty.commands.map((c) => c[1]));
     overview.push({ name, files: [file], data, contentDependent: emptyRules !== rules });
     console.log(`${name}: ${data.commands.length} Befehle`);
@@ -185,6 +189,7 @@ async function main() {
     '`sh.json` gilt fuer bash, `sh-posix.json` fuer `#!/bin/sh` und dash, `sh-ksh.json` fuer die Korn-Shell.',
     '`make.json` gilt fuer GNU make, daneben `make-bsd.json` und `make-microsoft.json`.',
     '`diff.json` gilt fuer unified diff, `diff-context.json` fuer die anderen Formate.',
+    '`tex.json` gilt fuer LaTeX, `tex-sty.json` fuer Stildateien wie `.sty` und `.cls`, `tex-dtx.json` fuer `.dtx`.',
     'Zum Erzeugen ist ein Vim mit `werkzeuge/vim-synlog.patch` noetig.', '',
     `| Datei | ${words.join(' | ')} | inhaltsabhaengig | Testdateien |`,
     `|---|${words.map(() => '--:|').join('')}---|---|`,

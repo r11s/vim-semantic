@@ -126,13 +126,14 @@ function dotD(lines) {
   return any(lines, 100, /^#!\S+dtrace|#pragma\s+D\s+option|:\S*?:\S*?:/) ? null : 'd';
 }
 
-// ".cls": Smalltalk oder Visual Basic (TeX, Rexx, ObjectScript haben keine Regeln)
+// ".cls": LaTeX, Smalltalk oder Visual Basic (Rexx, ObjectScript haben keine Regeln)
 function dotCls(lines) {
   if (/^#!.*(?<!\w)(?:rexx|regina)(?!\w)/.test(lines[0])) return null;
   if (lines[0] === 'VERSION 1.0 CLASS') return 'vb';
   const line = lines.find((l) => /\S/.test(l) && !/^\s*(?:import|include|includegenerator)(?!\w)/i.test(l)) ?? '';
   if (/^\s*class(?!\w)\s+[%a-z][%a-z0-9_.]*(?:\s+extends(?!\w)|\s*\[|\s*\{|$)/i.test(line)) return null;
-  return /^[%\\]|^\s*(?:\/\*|::\w)/.test(line) ? null : 'st';
+  if (/^[%\\]/.test(line)) return 'tex';
+  return /^\s*(?:\/\*|::\w)/.test(line) ? null : 'st';
 }
 
 // ".sh": andere Shells haben eigene oder keine Regeln. Eine Zeile "exec wish" macht Tcl daraus
@@ -158,6 +159,28 @@ function docbook(lines) {
   return 'xml';
 }
 
+// ".tex": Wie FTtex in Vim. Die erste Zeile "%&..." nennt das Format, sonst entscheiden die
+// Befehle ab der ersten Zeile, die kein Kommentar ist; ohne Hinweis ist es Plain TeX.
+// ConTeXt hat keine Regeln.
+const LATEX = /^\s*\\(?:(?:documentclass|usepackage|newcommand|renewcommand)(?![A-Za-z0-9_À-ÿ])|begin\{)/;
+const CONTEXT = /^\s*\\(start[a-zA-Z]+|setup[a-zA-Z]+|usemodule|enablemode|enableregime|setvariables|useencoding|usesymbols|stelle[a-zA-Z]+|verwende[a-zA-Z]+|stel[a-zA-Z]+|gebruik[a-zA-Z]+|usa[a-zA-Z]+|imposta[a-zA-Z]+|regle[a-zA-Z]+|utilisemodule(?![A-Za-z0-9_À-ÿ]))/;
+function dotTex(lines, fileName) {
+  const named = /^%&\s*([a-zA-Z]+)/.exec(lines[0]);
+  if (named) {
+    const format = named[1].toLowerCase().replace('pdf', '');
+    if (format === 'context') return null;
+    return format === 'plain' || format === 'plaintex' ? 'plaintex' : 'tex';
+  }
+  if (/tex\/context\/.*\/.*.tex/.test(fileName)) return null;
+  const first = lines.slice(0, 1000).findIndex((line) => /^\s*[^\s%]/.test(line));
+  if (first < 0) return 'plaintex';
+  for (const line of lines.slice(first, first + 1001)) {
+    if (LATEX.test(line)) return 'tex';
+    if (CONTEXT.test(line)) return null;
+  }
+  return 'plaintex';
+}
+
 // Muster aus filetype.vim fuer ganze Pfade ("/" als Trenner). Die Reihenfolge zaehlt.
 const PATHS = [
   // JSON mit Kommentaren, auch wenn der Name auf ".json" endet
@@ -168,6 +191,7 @@ const PATHS = [
   [/\/(?:bpython|mypy)\/config$|\/(?:lxqt|screengrab)\/[^/]*\.conf$|\/flatpak\/repo\/config$/, 'dosini'],
   [/\/\.config\/notmuch\/[^/]*\/config$|\/etc\/yum\.conf$|\/etc\/wireguard\/[^/]*\.conf$|\/etc\/yum\.repos\.d\/[^/]*$/, 'dosini'],
   [/\/etc\/blkid\.tab(?:\.old)?$|\/etc\/xdg\/menus\/[^/]*\.menu$/, 'xml'],
+  [/\/tex\/latex\/.*\.cfg$/, 'tex'],
 ];
 
 // Muster fuer den Dateinamen, wenn Name und Endung nichts ergeben haben
@@ -195,6 +219,11 @@ const BY_CONTENT = {
   R: dotR,
   d: dotD,
   cls: dotCls,
+  tex: dotTex,
+  toc: (lines) => (/\\contentsline/.test(lines[0]) ? 'tex' : null),
+  lot: (lines) => (/\\contentsline/.test(lines[0]) ? 'tex' : null),
+  def: (lines) => (lines[0].includes('%%') ? 'tex' : null),
+  inp: (lines) => (lines[0].includes('%%') ? 'tex' : null),
   sh: dotSh,
   cmd: dotCmd,
   asm: assembler,
@@ -304,6 +333,8 @@ function typeFor(fileName, text, ignoreCase = IGNORE_CASE) {
   if (type === 'sh') return shell(base(), text.split(/\r?\n/, 1)[0]);
   if (type === 'make') return make(base(), text.split(/\r?\n/));
   if (type === 'diff') return diff(text.split(/\r?\n/));
+  // Wie tex.vim: In Stildateien gehoert "@" zu den Befehlsnamen
+  if (type === 'tex') return /\.dtx$/.test(base()) ? 'tex-dtx' : /\.(?:sty|cls|clo|ltx)$/.test(base()) ? 'tex-sty' : 'tex';
   return type;
 }
 
@@ -337,7 +368,7 @@ function fileType(fileName, text, ignoreCase) {
   const key = own(BY_CONTENT, extension) || own(table.endungen, extension) ? extension
     : ignoreCase ? lower : extension;
   const decide = own(BY_CONTENT, key);
-  if (decide) return decide(content());
+  if (decide) return decide(content(), full);
   const type = own(table.endungen, key);
   // Bei HTML-Vorlagen (Angular, Django) faerbt Vim zusaetzlich; hier gelten die HTML-Regeln
   if (type) return type;

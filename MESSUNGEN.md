@@ -27,6 +27,50 @@ Mit Umlauten davor begann Error an einer anderen Stelle als in Vim.
 Die Testdateien dienten auch zum Beheben der Fehler. Sie sagen deshalb wenig darueber, wie
 genau anderer Code getroffen wird.
 
+### Shell: Listen ueber mehrere Zeilen und "function name()"
+
+| Probe | Ergebnis |
+|---|---|
+| nvm.sh und install.sh von nvm | vorher 2235 und 208 Zeichen anders, jetzt keines |
+| 990 Shell-Dateien des Systems | 8 anders gefaerbt als vorher, alle 8 jetzt wie in Vim |
+| 7102 Dateien in 92 Dateitypen, alt gegen neu | nur ein Syntax-Test von Vim anders, jetzt wie in Vim |
+| Alle 95 Testdateien, default light | keine Abweichung |
+
+Behoben in "faerben.js":
+
+- Eine "oneline"-Region geht weiter, wenn etwas darin bis ans Zeilenende reicht (zum Beispiel
+  "\\" am Ende).
+- "\\ze" innerhalb von Klammern eines Suchmusters wirkt jetzt wie in Vim. Betraf
+  "function name()" in bash.
+- Bis ans Zeilenende reicht wie in Vim nur ein Muster mit "$" oder "\\_$".
+
+Noch anders sind 10 Syntax-Tests von Vim, vor allem zu den Varianten der Korn-Shell (Vim hat
+fuer ksh93, ksh88 und mksh eigene Regeln, hier gibt es nur einen Regelsatz) und zu
+"${ befehl; }" von bash 5.3 ueber mehrere Zeilen.
+
+### TeX (LaTeX, Plain TeX, Stildateien, dtx)
+
+| Probe | Ergebnis |
+|---|---|
+| Alle 95 Testdateien in 34 Themes (fertiges Paket, nachgebildetes VS Code) | 3230 Kombinationen, keine Abweichung |
+| 11 TeX-Dateien des Systems in 34 Themes | 374 Kombinationen, keine Abweichung |
+| 1526 TeX-Dateien des Systems, default light | keine Abweichung |
+| Dateityp-Erkennung gegen Vim, 4000 Dateien | gleich |
+| 5000 Zeilen LaTeX faerben (Linux) | rund 1 Sekunde |
+
+Mit diesen Dateien wurden die Fehler gefunden und behoben; die Zahlen sind der Stand danach.
+
+Behoben, betrifft alle Sprachen:
+
+- Passt an einer Stelle eine Regel, die dort schon offen ist (Klammern, die sich selbst
+  enthalten), sucht Vim erst ab dem naechsten Zeichen weiter.
+- Ueberspringt "nextgroup" mit "skipwhite" Leerraum, koennen andere Regeln danach nicht in
+  diesen Leerraum zurueckreichen.
+- "cchar=" mit einem Leerzeichen wurde nicht verstanden.
+
+Die messbaren Ergebnisse der anderen Sprachen sind unveraendert (Vergleich alt/neu an 1410
+Dateien in 39 Sprachen).
+
 ### XML, SCSS, Less, INI, Makefile, Dockerfile, Diff, JSX, TSX, jsonc, TOML
 
 | Probe | Ergebnis |

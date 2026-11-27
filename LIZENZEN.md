@@ -1047,6 +1047,15 @@ Lizenzen haben, die in der Datei selbst nicht genannt sind.
 " quit when a syntax file was already loaded
 ~~~~
 
+### syntax/initex.vim
+
+~~~~text
+" Vim syntax file
+" Language:             TeX (core definition)
+" Previous Maintainer:  Nikolai Weibull <now@bitwi.se>
+" Latest Revision:      2006-04-19
+~~~~
+
 ### syntax/java.vim
 
 ~~~~text
@@ -1487,6 +1496,15 @@ Lizenzen haben, die in der Datei selbst nicht genannt sind.
 "        } inside an string on the first line of this string.
 
 " quit when a syntax file was already loaded
+~~~~
+
+### syntax/plaintex.vim
+
+~~~~text
+" Vim syntax file
+" Language:             TeX (plain.tex format)
+" Previous Maintainer:  Nikolai Weibull <now@bitwi.se>
+" Latest Revision:      2006-10-26
 ~~~~
 
 ### syntax/pod.vim
@@ -2029,6 +2047,61 @@ Lizenzen haben, die in der Datei selbst nicht genannt sind.
 " Version:	1.14 plus improvements from PR #8948
 " URL:		(removed, no longer worked)
 
+" quit when a syntax file was already loaded
+~~~~
+
+### syntax/tex.vim
+
+~~~~text
+" Vim syntax file
+" Language:	TeX
+" Maintainer:	This runtime file is looking for a new maintainer.
+" Former Maintainer: Charles E. Campbell
+" Last Change:	Apr 22, 2022
+"   2024 Feb 19 by Vim Project: announce adoption
+"   2025 Jan 18 by Vim Project: add texEmphStyle to texMatchGroup, #16228
+"   2025 Feb 08 by Vim Project: improve macro option, \providecommand,
+"                               \newcommand and \newenvironment #16543
+"   2025 Sep 29 by Vim Project: add amsmath support #18433
+"   2025 Oct 06 by Vim Project: link texBoldStyle to Bold, etc #18505
+" Version:	121
+" Former URL:	http://www.drchip.org/astronaut/vim/index.html#SYNTAX_TEX
+"
+" Notes: {{{1
+"
+" 1. If you have a \begin{verbatim} that appears to overrun its boundaries,
+"    use %stopzone.
+"
+" 2. Run-on equations ($..$ and $$..$$, particularly) can also be stopped
+"    by suitable use of %stopzone.
+"
+" 3. If you have a slow computer, you may wish to modify
+"
+"	syn sync maxlines=200
+"	syn sync minlines=50
+"
+"    to values that are more to your liking.
+"
+" 4. There is no match-syncing for $...$ and $$...$$; hence large
+"    equation blocks constructed that way may exhibit syncing problems.
+"    (there's no difference between begin/end patterns)
+"
+" 5. If you have the variable "g:tex_no_error" defined then none of the
+"    lexical error-checking will be done.
+"
+"    ie. let g:tex_no_error=1
+"
+" 6. Please see  :help latex-syntax  for information on
+"      syntax folding           :help tex-folding
+"      spell checking           :help tex-nospell
+"      commands and mathzones   :help tex-runon
+"      new command highlighting :help tex-morecommands
+"      error highlighting       :help tex-error
+"      new math groups          :help tex-math
+"      new styles               :help tex-style
+"      using conceal mode       :help tex-conceal
+
+" Version Clears: {{{1
 " quit when a syntax file was already loaded
 ~~~~
 

@@ -1,0 +1,27 @@
+% Formen-Rechner: Stildatei. TODO: Optionen
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{formen}[2026/11/27 v1.0 Formen]
+\RequirePackage{xcolor}
+\newif\if@farbig
+\DeclareOption{farbig}{\@farbigtrue}
+\DeclareOption*{\PackageWarning{formen}{Unbekannte Option \CurrentOption}}
+\ProcessOptions\relax
+\newcount\formen@zaehler
+\newlength{\formen@breite}
+\setlength{\formen@breite}{10em}
+\def\formen@kopf#1#2{%
+  \hbox to \textwidth{\bfseries #1\hfil #2}}
+\newcommand*{\form}[1]{\@ifnextchar[{\formen@mit{#1}}{\formen@ohne{#1}}}
+\def\formen@mit#1[#2]{\textcolor{blue}{#1: #2}}
+\def\formen@ohne#1{\emph{#1}}
+\if@farbig
+  \definecolor{formenblau}{RGB}{51,102,255}
+\else
+  \definecolor{formenblau}{gray}{0.2}
+\fi
+\AtBeginDocument{\typeout{formen: \the\formen@zaehler\space geladen}}
+\newenvironment{formenliste}
+  {\begin{itemize}\setlength\itemsep{0pt}}
+  {\end{itemize}}
+\ss\ \'a \ae\ $r_1 + r_2$
+\endinput

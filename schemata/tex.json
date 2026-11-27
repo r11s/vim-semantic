@@ -1,0 +1,152 @@
+{
+ "blue dark": {
+  "Operator": "Type",
+  "texMathOper": "Type"
+ },
+ "catppuccin dark": {
+  "Delimiter": "Delimiter",
+  "Operator": "Operator",
+  "String": "String",
+  "texDelimiter": "Delimiter",
+  "texInputCurlies": "Delimiter",
+  "texMathOper": "Operator",
+  "texString": "String"
+ },
+ "catppuccin light": {
+  "Delimiter": "Delimiter",
+  "Operator": "Operator",
+  "String": "String",
+  "texDelimiter": "Delimiter",
+  "texInputCurlies": "Delimiter",
+  "texMathOper": "Operator",
+  "texString": "String"
+ },
+ "elflord dark": {
+  "Operator": "Operator",
+  "texMathOper": "Operator"
+ },
+ "habamax dark": {
+  "String": "String",
+  "texString": "String"
+ },
+ "industry dark": {
+  "Delimiter": "Delimiter",
+  "texDelimiter": "Delimiter",
+  "texInputCurlies": "Delimiter"
+ },
+ "lunaperche dark": {
+  "String": "String",
+  "texString": "String"
+ },
+ "lunaperche light": {
+  "String": "String",
+  "texString": "String"
+ },
+ "novum dark": {
+  "Delimiter": "Delimiter",
+  "Operator": "Operator",
+  "String": "String",
+  "texDelimiter": "Delimiter",
+  "texInputCurlies": "Delimiter",
+  "texMathOper": "Operator",
+  "texString": "String"
+ },
+ "novum light": {
+  "Delimiter": "Delimiter",
+  "Operator": "Operator",
+  "String": "String",
+  "texDelimiter": "Delimiter",
+  "texInputCurlies": "Delimiter",
+  "texMathOper": "Operator",
+  "texString": "String"
+ },
+ "retrobox dark": {
+  "Delimiter": "Delimiter",
+  "Number": "Number",
+  "Operator": "Operator",
+  "PreCondit": "PreCondit",
+  "SpecialChar": "SpecialChar",
+  "String": "String",
+  "texBeginEndName": "PreCondit",
+  "texCmdArgs": "Number",
+  "texDelimiter": "Delimiter",
+  "texDocTypeArgs": "Number",
+  "texEnvArgs": "Number",
+  "texInputCurlies": "Delimiter",
+  "texInputFileOpt": "Number",
+  "texLength": "Number",
+  "texLigature": "SpecialChar",
+  "texMathOper": "Operator",
+  "texOption": "Number",
+  "texSection": "PreCondit",
+  "texSpecialChar": "SpecialChar",
+  "texString": "String",
+  "texZone": "PreCondit"
+ },
+ "retrobox light": {
+  "Delimiter": "Delimiter",
+  "Number": "Number",
+  "Operator": "Operator",
+  "PreCondit": "PreCondit",
+  "SpecialChar": "SpecialChar",
+  "String": "String",
+  "texBeginEndName": "PreCondit",
+  "texCmdArgs": "Number",
+  "texDelimiter": "Delimiter",
+  "texDocTypeArgs": "Number",
+  "texEnvArgs": "Number",
+  "texInputCurlies": "Delimiter",
+  "texInputFileOpt": "Number",
+  "texLength": "Number",
+  "texLigature": "SpecialChar",
+  "texMathOper": "Operator",
+  "texOption": "Number",
+  "texSection": "PreCondit",
+  "texSpecialChar": "SpecialChar",
+  "texString": "String",
+  "texZone": "PreCondit"
+ },
+ "ron dark": {
+  "Operator": "Operator",
+  "texMathOper": "Operator"
+ },
+ "shine light": {
+  "Number": "Number",
+  "SpecialChar": "SpecialChar",
+  "texCmdArgs": "Number",
+  "texDocTypeArgs": "Number",
+  "texEnvArgs": "Number",
+  "texInputFileOpt": "Number",
+  "texLength": "Number",
+  "texLigature": "SpecialChar",
+  "texOption": "Number",
+  "texSpecialChar": "SpecialChar"
+ },
+ "slate dark": {
+  "Operator": "Operator",
+  "String": "String",
+  "texMathOper": "Operator",
+  "texString": "String"
+ },
+ "sorbet dark": {
+  "String": "String",
+  "texString": "String"
+ },
+ "unokai dark": {
+  "Delimiter": "PreProc",
+  "Operator": "PreProc",
+  "String": "String",
+  "texDelimiter": "PreProc",
+  "texInputCurlies": "PreProc",
+  "texMathOper": "PreProc",
+  "texString": "String"
+ },
+ "wildcharm dark": {
+  "String": "String",
+  "texString": "String"
+ },
+ "wildcharm light": {
+  "String": "String",
+  "texString": "String"
+ }
+}

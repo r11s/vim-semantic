@@ -31,18 +31,18 @@ remove it when you switch to VimSem.
 
 ABAP, Ada, Arduino, Assembly, AutoHotkey, AWK, BASIC, Batch, C, C#, C++, Clojure, COBOL, CSS,
 CUDA, Cython, D, Dart, Diff, Dockerfile, Elm, Erlang, Forth, GDScript, GLSL, Go, Groovy,
-Haskell, HTML, INI, Java, JavaScript, JSON, JSON with comments, JSX, Julia, Kotlin, Less,
-Lisp, Lua, Makefile, Markdown, MATLAB, Mojo, Nix, Nushell, Objective-C, OCaml, Pascal, Perl,
-PHP, PowerShell, Progress, Prolog, Python, R, Racket, Raku, Ruby, Rust, SAS, Scala, Scheme,
-Scilab, SCSS, Shell (sh, bash, ksh), Smalltalk, Solidity, SQL, Standard ML, Stata, Swift,
-SystemVerilog, Tcl, TOML, TSX, TypeScript, UnrealScript, Verilog, VHDL, Visual Basic, XML,
-YAML, Zig
+Haskell, HTML, INI, Java, JavaScript, JSON, JSON with comments, JSX, Julia, Kotlin, LaTeX,
+Less, Lisp, Lua, Makefile, Markdown, MATLAB, Mojo, Nix, Nushell, Objective-C, OCaml, Pascal,
+Perl, PHP, Plain TeX, PowerShell, Progress, Prolog, Python, R, Racket, Raku, Ruby, Rust, SAS,
+Scala, Scheme, Scilab, SCSS, Shell (sh, bash, ksh), Smalltalk, Solidity, SQL, Standard ML,
+Stata, Swift, SystemVerilog, Tcl, TOML, TSX, TypeScript, UnrealScript, Verilog, VHDL,
+Visual Basic, XML, YAML, Zig
 
 No language extensions are needed for the colors. As in Vim, the file name and sometimes the
 content decide which rules apply.
 
 **Other files are shown without syntax colors** while a VimSem theme is active, for example
-Vue, Svelte, Fortran, Vim script, zsh, csh, Sass (`.sass`), SVG, XSD, XSLT, JSON5 and
+Vue, Svelte, Fortran, Vim script, zsh, csh, Sass (`.sass`), SVG, XSD, XSLT, JSON5, BibTeX and
 configuration files such as `.gitconfig`, `.editorconfig`, `*.cfg` or `*.conf`. Some
 `*.conf` and similar files are recognized as INI or TOML, as in Vim.
 
@@ -95,6 +95,12 @@ color for the current line. You can change it with `editor.lineHighlightBackgrou
 - Patches made with `git format-patch` are a file type of their own in Vim and are not
   colored.
 - COBOL is colored for the fixed format only, as in Vim.
+- As in Vim, the content decides whether a `.tex` file is LaTeX or Plain TeX. It is LaTeX if a
+  line begins with `\documentclass`, `\usepackage`, `\begin{`, `\newcommand` or `\renewcommand`
+  (about the first 1000 lines are searched). A chapter file with only `\section` and text is
+  therefore treated as Plain TeX, which has much simpler colors. A first line `%&latex` makes it
+  LaTeX. The Vim setting `g:tex_flavor` is not read.
+- ConTeXt is not colored.
 - Differences from Vim are possible. Please report them.
 
 ## Feedback

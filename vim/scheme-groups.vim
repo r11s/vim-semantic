@@ -15,6 +15,10 @@ for [s:scheme, s:background] in map(split($VH_SCHEMES, ','), 'split(v:val)')
   let &background = s:background
   execute 'colorscheme ' . s:scheme
   enew!
+  " tex.vim entscheidet nach der Endung, ob es eine Stildatei ist
+  if $VH_FILETYPE ==# 'tex' && $VH_SAMPLE != ''
+    execute 'silent file ' . fnameescape(fnamemodify($VH_SAMPLE, ':t'))
+  endif
   " Bei manchen Typen haengen die Regeln vom Inhalt ab (sh: erste Zeile "#!...")
   if $VH_SAMPLE != ''
     call setline(1, readfile($VH_SAMPLE))

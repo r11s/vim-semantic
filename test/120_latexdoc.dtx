@@ -1,0 +1,22 @@
+% \iffalse meta-comment
+% Formen-Rechner: dokumentierter Quelltext. TODO: Handbuch
+% \fi
+%
+% \section{Einleitung}
+% Berechnet $A = \pi r^2$ fuer einen \texttt{Kreis}. ^^A Randbemerkung FIXME
+%% Diese Zeile bleibt in der erzeugten Datei.
+%
+% \begin{macro}{\form}
+% Zeigt eine Form, siehe \cite{knuth84} und \ref{sec:formen}.
+%    \begin{macrocode}
+\newcommand*{\form}[1]{\@form{#1}}
+\def\@form#1{\emph{#1}} % Kommentar im Code ^^A hier auch
+\newif\if@form@farbig
+%    \end{macrocode}
+% \end{macro}
+%
+%<*package>
+\ProvidesPackage{formen}
+%</package>
+% \Finale
+\endinput

@@ -1,0 +1,20 @@
+% Formen-Rechner in Plain TeX. TODO: Seitenzahlen
+\magnification=\magstep1
+\hsize=15cm \vsize=22cm
+\font\gross=cmbx12 scaled \magstep2
+\newcount\anzahl \anzahl=3
+\newdimen\rand \rand=1.5in
+\def\titel#1{\bigskip\centerline{\gross #1}\medskip}
+\titel{Der Formen-Rechner}
+\noindent Ein {\bf Kreis} hat die Fl\"ache $A = \pi r^2$ und den Umfang
+$$U = 2\pi r \eqno(1)$$
+\beginsection 1. Formen
+
+\item{$\bullet$} Kreis \hfill {\it rund}
+\item{$\bullet$} Rechteck \quad {\tt a mal b}
+\loop \ifnum\anzahl>0 \advance\anzahl by -1 \repeat
+\ifx\undefined\x \message{fehlt} \else \relax \fi
+\halign{#\hfil&\quad#\cr Form&Wert\cr Kreis&3.14\cr}
+\hbox to \hsize{\hss rechts}\vskip 12pt plus 2pt minus 1pt
+\input formen
+\bye

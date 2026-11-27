@@ -49,7 +49,7 @@ async function main() {
     total.own += Date.now() - time;
     time = Date.now();
     const want = perChar(await highlight({
-      vimPath: process.env.VIM_PATH || 'vim', text, fileName: file, filetype: type.replace(/^(sh|make|diff)-.*/, '$1'),
+      vimPath: process.env.VIM_PATH || 'vim', text, fileName: file, filetype: type.replace(/^(sh|make|diff|tex)-.*/, '$1'),
       scheme: process.env.SCHEMA || 'default', background: process.env.BG || 'light',
     }), lines);
     total.vim += Date.now() - time;
