@@ -27,6 +27,17 @@ Mit Umlauten davor begann Error an einer anderen Stelle als in Vim.
 Die Testdateien dienten auch zum Beheben der Fehler. Sie sagen deshalb wenig darueber, wie
 genau anderer Code getroffen wird.
 
+### BibTeX
+
+| Probe | Ergebnis |
+|---|---|
+| Testdatei und 10 `.bib`-Dateien des Systems in 34 Themes | keine Abweichung |
+| 40 `.bib`-Dateien des Systems, default light | keine Abweichung |
+| 600 Dateien mit zufaellig zusammengewuerfeltem Text | in 4 Dateien je ein Zeichen anders |
+
+Die vier Zeichen sind ein Komma in fehlerhafter Eingabe (eine schliessende Klammer direkt
+davor, im Schluessel eines Eintrags). Das bleibt so.
+
 ### Shell: Listen ueber mehrere Zeilen und "function name()"
 
 | Probe | Ergebnis |

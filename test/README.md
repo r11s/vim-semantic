@@ -109,3 +109,4 @@ Rangliste der Sprachen: [SPRACHEN.md](../SPRACHEN.md). Fortran und Vim Script si
 | 118_latexstyle.sty | LaTeX-Stildatei \*\* |
 | 119_plaintex.tex | Plain TeX \*\* |
 | 120_latexdoc.dtx | LaTeX, dokumentierter Quelltext \*\* |
+| 121_bibtex.bib | BibTeX \*\* |

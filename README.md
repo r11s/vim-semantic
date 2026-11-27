@@ -29,20 +29,20 @@ remove it when you switch to VimSem.
 
 ## Languages
 
-ABAP, Ada, Arduino, Assembly, AutoHotkey, AWK, BASIC, Batch, C, C#, C++, Clojure, COBOL, CSS,
-CUDA, Cython, D, Dart, Diff, Dockerfile, Elm, Erlang, Forth, GDScript, GLSL, Go, Groovy,
-Haskell, HTML, INI, Java, JavaScript, JSON, JSON with comments, JSX, Julia, Kotlin, LaTeX,
-Less, Lisp, Lua, Makefile, Markdown, MATLAB, Mojo, Nix, Nushell, Objective-C, OCaml, Pascal,
-Perl, PHP, Plain TeX, PowerShell, Progress, Prolog, Python, R, Racket, Raku, Ruby, Rust, SAS,
-Scala, Scheme, Scilab, SCSS, Shell (sh, bash, ksh), Smalltalk, Solidity, SQL, Standard ML,
-Stata, Swift, SystemVerilog, Tcl, TOML, TSX, TypeScript, UnrealScript, Verilog, VHDL,
-Visual Basic, XML, YAML, Zig
+ABAP, Ada, Arduino, Assembly, AutoHotkey, AWK, BASIC, Batch, BibTeX, C, C#, C++, Clojure,
+COBOL, CSS, CUDA, Cython, D, Dart, Diff, Dockerfile, Elm, Erlang, Forth, GDScript, GLSL, Go,
+Groovy, Haskell, HTML, INI, Java, JavaScript, JSON, JSON with comments, JSX, Julia, Kotlin,
+LaTeX, Less, Lisp, Lua, Makefile, Markdown, MATLAB, Mojo, Nix, Nushell, Objective-C, OCaml,
+Pascal, Perl, PHP, Plain TeX, PowerShell, Progress, Prolog, Python, R, Racket, Raku, Ruby,
+Rust, SAS, Scala, Scheme, Scilab, SCSS, Shell (sh, bash, ksh), Smalltalk, Solidity, SQL,
+Standard ML, Stata, Swift, SystemVerilog, Tcl, TOML, TSX, TypeScript, UnrealScript, Verilog,
+VHDL, Visual Basic, XML, YAML, Zig
 
 No language extensions are needed for the colors. As in Vim, the file name and sometimes the
 content decide which rules apply.
 
 **Other files are shown without syntax colors** while a VimSem theme is active, for example
-Vue, Svelte, Fortran, Vim script, zsh, csh, Sass (`.sass`), SVG, XSD, XSLT, JSON5, BibTeX and
+Vue, Svelte, Fortran, Vim script, zsh, csh, Sass (`.sass`), SVG, XSD, XSLT, JSON5 and
 configuration files such as `.gitconfig`, `.editorconfig`, `*.cfg` or `*.conf`. Some
 `*.conf` and similar files are recognized as INI or TOML, as in Vim.
 

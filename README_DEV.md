@@ -13,7 +13,7 @@ Es geht nur um die Darstellung im Editor, nicht um das Verhalten von Vim.
 
 Gefaerbt werden diese Vim-Dateitypen:
 
-abap, ada, arduino, asm, autohotkey, awk, basic, c, clojure, cobol, cpp, cs, css, cuda, d,
+abap, ada, arduino, asm, autohotkey, awk, basic, bib, c, clojure, cobol, cpp, cs, css, cuda, d,
 dart, diff, dockerfile, dosbatch, dosini, elm, erlang, forth, gdscript, glsl, go, groovy,
 haskell, html, java, javascript, javascriptreact, json, jsonc, julia, kotlin, less, lisp, lua,
 make, markdown, matlab, mojo, nix, nu, objc, ocaml, pascal, perl, php, plaintex, progress, prolog, ps1,
@@ -27,7 +27,7 @@ vb, verilog, vhdl, xml, yaml, zig
 - Objective-C++ (`.mm`, und `.h`-Dateien, in denen eine Zeile mit `@interface`, `@class` oder
   `@end` beginnt)
 - zsh, csh, tcsh, Vue, Svelte
-- BibTeX und ConTeXt
+- ConTeXt und BibTeX-Stildateien (`.bst`)
 - was in Vim ein eigener Dateityp ist: SVG, XSD, XSLT, DocBook, XBL und Patches von
   `git format-patch`
 
@@ -50,7 +50,7 @@ ohne Angabe gelten als POSIX-Shell, wie in Vim unter Windows.
 
 Verglichen mit Vim 9.2 (Patches 1-858) unter Linux, ohne eigene Einstellungen:
 
-- 95 Testdateien aus `test/` in allen 34 Themes: keine Abweichung.
+- 96 Testdateien aus `test/` in allen 34 Themes: keine Abweichung.
 - 1526 TeX-Dateien des Systems (LaTeX, Plain TeX, Stildateien, `.dtx`): keine Abweichung.
 - 545 weitere Dateien des Systems zu den Typen diff, dockerfile, dosini, jsonc, make, scss,
   toml, tsx, xml u. a.: keine sichtbare Abweichung.

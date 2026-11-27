@@ -566,6 +566,22 @@ Lizenzen haben, die in der Datei selbst nicht genannt sind.
 " Prelude {{{1
 ~~~~
 
+### syntax/bib.vim
+
+~~~~text
+" Vim syntax file
+" Language:	BibTeX (bibliographic database format for (La)TeX)
+" Maintainer:	Bernd Feige <Bernd.Feige@gmx.net>
+" Filenames:	*.bib
+" Last Change:	2017 Sep 29
+
+" Thanks to those who pointed out problems with this file or supplied fixes!
+
+" Initialization
+" ==============
+" quit when a syntax file was already loaded
+~~~~
+
 ### syntax/c.vim
 
 ~~~~text

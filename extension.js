@@ -28,7 +28,7 @@ const LANGUAGES = {
   diff: 'diff', dockerfile: 'dockerfile', ini: 'dosini', javascriptreact: 'javascriptreact',
   jsonc: 'jsonc', less: 'less', makefile: 'make', scss: 'scss', toml: 'toml',
   typescriptreact: 'typescriptreact', xml: 'xml',
-  latex: 'tex', tex: 'plaintex',
+  latex: 'tex', tex: 'plaintex', bibtex: 'bib',
 };
 // Typen mit mehreren Regelsaetzen: unter diesem Namen entscheidet bei ungespeicherten
 // Dateien wie sonst der Inhalt

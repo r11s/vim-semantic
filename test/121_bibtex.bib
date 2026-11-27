@@ -1,0 +1,49 @@
+% Literaturliste zum Testen
+@comment{Dieser Block wird nicht ausgewertet}
+
+@preamble{ "\newcommand{\noop}[1]{}" }
+
+@string{ acm = "ACM Press" }
+@STRING{cacm = {Communications of the {ACM}}}
+
+@article{knuth1984,
+  author    = {Donald E. Knuth and {Zoë Müller}},
+  title     = {Literate {Programming}},
+  journal   = "The Computer Journal",
+  volume    = 27,
+  number    = {2},
+  pages     = "97--111",
+  year      = 1984,
+  month     = jan,
+  doi       = {10.1093/comjnl/27.2.97},
+  url       = {https://example.org/a_b?c=1&d=%20},
+}
+
+@Book{lamport1994,
+  author =    "Leslie Lamport",
+  title =     "\LaTeX: A Document Preparation System",
+  publisher = acm # " and " # {Addison-Wesley},
+  edition =   "Second",
+  year =      {1994},
+  note =      {Mit Formel $E = mc^2$ und \"Umlaut},
+}
+
+@inproceedings(beispiel:2020,
+  author = {A. Beispiel},
+  booktitle = cacm,
+  title = {Ein Titel
+           über zwei Zeilen},
+  year = 2020
+)
+
+@online{web,
+  title = {Eine Seite},
+  urldate = {2026-11-27},
+  eprint = {1234.5678},
+  keywords = {vim, farben},
+  eigenesfeld = {wird nicht hervorgehoben},
+}
+
+@unbekannt{x, year = 2000}
+
+Text ausserhalb eines Eintrags ist in BibTeX ein Kommentar.

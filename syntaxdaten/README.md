@@ -28,6 +28,7 @@ Zum Erzeugen ist ein Vim mit `werkzeuge/vim-synlog.patch` noetig.
 | autohotkey | 12 | 17 | 2 | 1 | 0 |  | 79_autohotkey.ahk |
 | awk | 26 | 29 | 5 | 0 | 0 |  | 58_awk.awk |
 | basic | 11 | 184 | 9 | 5 | 0 |  | 100_basic.bas |
+| bib | 40 | 4 | 9 | 1 | 0 |  | 121_bibtex.bib |
 | c | 76 | 1 | 4 | 0 | 0 |  | 09_c.c |
 | clojure | 11 | 35 | 9 | 3 | 0 |  | 44_clojure.clj |
 | cobol | 46 | 46 | 0 | 12 | 0 |  | 39_cobol.cob |
