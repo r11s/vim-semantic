@@ -10,14 +10,19 @@ ist nicht geprueft.
 
 | Probe | Ergebnis |
 |---|---|
-| Fertiges Paket (nachgebildetes VS Code): 80 Testdateien in 34 Themes, Gruppe je Zeichen | 2720 Kombinationen, Abweichung nur bei COBOL (8 Zeichen) |
-| `measure.js`: Farbe, Stil und Hintergrund je Zeichen, 34 Themes | Abweichung nur bei COBOL, dieselbe Stelle |
+| Fertiges Paket (nachgebildetes VS Code): 80 Testdateien in 34 Themes, Gruppe je Zeichen | 2720 Kombinationen, keine Abweichung |
+| `measure.js`: Farbe, Stil und Hintergrund je Zeichen, 34 Themes | keine Abweichung |
 | Stichprobe von 438 C- und C++-Dateien und Headern, default light | keine Abweichung |
 | Dateityp-Erkennung gegen Vim, 2529 Dateien | gleich |
 | Jede Testdatei mit den Regeln jeder Sprache (Suche nach Haengern) | keine |
 
-COBOL: In Zeile 183 von `39_cobol.cob` reicht eine Zeichenkette ueber Spalte 73; Vim zeigt dort
-Error, die Erweiterung nicht.
+COBOL: `39_cobol.cob` war anfangs im freien Format, das Vims Regeln nicht kennen (rund 56 % der
+Zeichen als Error, in Vim wie in der Erweiterung). Die Datei ist jetzt im festen Format. In der
+alten Fassung gab es eine Abweichung von 8 Zeichen: Vim zeigte bei einer Zeichenkette ueber
+Spalte 73 Error, die Erweiterung nicht. Das ist nicht behoben.
+
+Behoben in 0.2.1: Vim zaehlt die Spalte 73 (und 7) in Bytes, die Erweiterung zaehlte Zeichen.
+Mit Umlauten davor begann Error an einer anderen Stelle als in Vim.
 
 Die Testdateien dienten auch zum Beheben der Fehler. Sie sagen deshalb wenig darueber, wie
 genau anderer Code getroffen wird.

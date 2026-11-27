@@ -393,9 +393,14 @@ const OFFSETS = { match: ['ms', 'me', 'hs', 'he', 'lc'], start: ['ms', 'hs', 'rs
   end: ['me', 'he', 're', 'lc'] };
 
 function compile(found, ignoreCase, part, words) {
-  const { body, ignoreCase: forced } = normalize(found.body);
-  const flags = (forced ?? ignoreCase) ? 'mugi' : 'mug';
+  let { body, ignoreCase: forced } = normalize(found.body);
+  // "\%73c" am Anfang: Vim zaehlt diese Spalte in Bytes. Das kann ein JavaScript-Muster nicht,
+  // deshalb bestimmt matches() den Ort selbst und prueft dort den Rest
+  const column = /^\\%(\d+)c/.exec(body);
+  if (column) body = body.slice(column[0].length);
+  const flags = ((forced ?? ignoreCase) ? 'mui' : 'mu') + (column ? 'y' : 'g');
   const pattern = { re: new RegExp(translate(body, [], words), flags), off: null };
+  if (column) pattern.column = Number(column[1]);
   if ((part === 'end' || part === 'skip') && /\\z[1-9]/.test(body)) {
     pattern.build = (external) => new RegExp(translate(body, external, words), flags);
   }
@@ -673,12 +678,36 @@ function highlighter(data) {
         return found.get(key);
       });
 
+      // Erster Treffer ab pos, der in Spalte p.column beginnt (in Bytes gezaehlt)
+      const atColumn = (p, pos) => {
+        for (let i = pos > 0 ? text.lastIndexOf('\n', pos - 1) + 1 : 0; i <= text.length;) {
+          let at = i;
+          for (let bytes = 1; bytes < p.column; ) {
+            const code = text.codePointAt(at);
+            if (code === undefined || code === 10) { at = -1; break; }
+            bytes += code < 0x80 ? 1 : code < 0x800 ? 2 : code < 0x10000 ? 3 : 4;
+            at += code < 0x10000 ? 1 : 2;
+            // Liegt die Spalte mitten in einem Zeichen, passt hier nichts
+            if (bytes > p.column) { at = -1; break; }
+          }
+          if (at >= pos) {
+            p.re.lastIndex = at;
+            const m = p.re.exec(text);
+            if (m) return m;
+          }
+          const eol = text.indexOf('\n', i);
+          if (eol < 0) break;
+          i = eol + 1;
+        }
+        return null;
+      };
+
       // Passt das Muster bei pos? Der naechste Treffer wird gemerkt, damit nicht jede
       // Stelle neu durchsucht werden muss.
       const matches = (p, pos) => {
         if (p.from < 0 || pos < p.from || (p.index >= 0 && p.index < pos)) {
           p.re.lastIndex = pos;
-          const m = p.re.exec(text);
+          const m = p.column ? atColumn(p, pos) : p.re.exec(text);
           p.from = pos;
           p.index = m ? m.index : -1;
           if (m) {

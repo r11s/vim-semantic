@@ -42,7 +42,7 @@ ohne Angabe gelten als POSIX-Shell, wie in Vim unter Windows.
 
 Verglichen mit Vim 9.2 (Patches 1-858) unter Linux, ohne eigene Einstellungen:
 
-- 80 Testdateien aus `test/` in allen 34 Themes: eine Abweichung (COBOL, 8 Zeichen).
+- 80 Testdateien aus `test/` in allen 34 Themes: keine Abweichung.
 - eine Stichprobe von 438 C- und C++-Dateien und Headern ohne Abweichung.
 - 322 weitere Dateien in 39 Sprachen (Vims Syntax-Tests und Dateien des Systems): 320 gleich,
   die zwei anderen sind HTML-Vorlagen.
@@ -52,7 +52,8 @@ Sprachkonstrukt.** Bei anderem Code sind Abweichungen zu erwarten.
 
 Bekannte Abweichungen:
 
-- COBOL: Zeilen, die ueber Spalte 72 hinausgehen, koennen anders aussehen.
+- COBOL: Zeilen, die ueber Spalte 72 hinausgehen, koennen anders aussehen. Das freie Format
+  kennen Vims Regeln nicht; es erscheint wie in gVim zu grossen Teilen als Fehler.
 - Die Varianten der Korn-Shell (ksh88, ksh93, mksh) werden alle gleich gefaerbt.
 - Vorlagen in HTML (Angular, Django) werden nur als HTML gefaerbt.
 - Nach einer Zeile mit mehr als 3000 Zeichen kann die folgende Zeile anders aussehen.
@@ -62,8 +63,8 @@ Bekannte Abweichungen:
 Braucht Node.js ab Version 20 und beim ersten Mal Internet (laedt `@vscode/vsce`).
 
     bash werkzeuge/vsix.sh                                   # baut vim-semantic-<version>.vsix
-    code --install-extension vim-semantic-0.2.0.vsix --force
-    codium --install-extension vim-semantic-0.2.0.vsix --force      # fuer VSCodium
+    code --install-extension vim-semantic-0.2.1.vsix --force
+    codium --install-extension vim-semantic-0.2.1.vsix --force      # fuer VSCodium
 
 Danach VS Code bzw. VSCodium neu starten und ein "VimSem ..."-Farbschema waehlen.
 
