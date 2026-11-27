@@ -102,7 +102,7 @@ async function main() {
   write('package.json', {
     name: 'vim-semantic',
     displayName: 'VimSem',
-    description: 'Vim-Farbschemata im Editor, gefaerbt von Vim selbst',
+    description: 'Vim-Farbschemata im Editor, gefaerbt wie in Vim (ohne Vim zu brauchen)',
     publisher: 'r11s',
     version: '0.1.0',
     repository: { type: 'git', url: 'https://github.com/r11s/vim-semantic.git' },
@@ -111,18 +111,14 @@ async function main() {
     engines: { vscode: '^1.80.0' },
     main: './extension.js',
     activationEvents: ['onStartupFinished'],
-    capabilities: {
-      untrustedWorkspaces: { supported: 'limited', restrictedConfigurations: ['vimHighlight.vimPath'] },
-    },
+    capabilities: { untrustedWorkspaces: { supported: true } },
     contributes: {
       themes,
       semanticTokenTypes: types,
       configuration: {
         title: 'VimSem',
         properties: {
-          'vimHighlight.vimPath': { type: 'string', default: 'vim', scope: 'machine-overridable', description: 'Pfad zu Vim (unter Windows z. B. zur vim.exe aus Git)' },
           'vimHighlight.logFile': { type: 'boolean', default: false, description: 'Protokoll zur Fehlersuche in protokoll.txt im Erweiterungsordner schreiben' },
-          'vimHighlight.maxLines': { type: 'number', default: 3000, description: 'Groessere Dateien bleiben ungefaerbt' },
           'vimHighlight.backgroundGroups': {
             type: 'array', items: { type: 'string' }, default: ['Todo', 'Error', 'Constant'],
             description: 'Vim-Gruppen, deren Hintergrundfarbe angezeigt wird',

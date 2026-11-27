@@ -3,6 +3,7 @@ const { execFile } = require('child_process');
 const fs = require('fs');
 const os = require('os');
 const path = require('path');
+const { tokenType } = require('./faerben');
 
 const VIM_ARGS = ['-N', '-u', 'NONE', '-i', 'NONE', '-n', '-es'];
 
@@ -37,9 +38,6 @@ async function runVim(vimPath, script, env, signal) {
     await fs.promises.rm(dir, { recursive: true, force: true });
   }
 }
-
-// Token-Namen in VS Code duerfen nur Buchstaben, Ziffern, _ und - enthalten.
-const tokenType = (group) => 'vim_' + group.replace(/[^A-Za-z0-9_-]/g, '_');
 
 async function highlight({ vimPath, text, fileName, filetype, scheme, background, signal }) {
   const dir = await fs.promises.mkdtemp(path.join(os.tmpdir(), 'vim-highlight-'));

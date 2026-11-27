@@ -1,0 +1,95 @@
+{
+ "catppuccin dark": {
+  "Function": "Function",
+  "sqlFunction": "Function",
+  "sqlString": "String",
+  "String": "String"
+ },
+ "catppuccin light": {
+  "Function": "Function",
+  "sqlFunction": "Function",
+  "sqlString": "String",
+  "String": "String"
+ },
+ "elflord dark": {
+  "Function": "Function",
+  "sqlFunction": "Function"
+ },
+ "habamax dark": {
+  "Quote": "String",
+  "sqlKeyword": "Statement",
+  "sqlSpecial": "Constant",
+  "sqlString": "String",
+  "String": "String"
+ },
+ "industry dark": {
+  "Function": "Function",
+  "sqlFunction": "Function"
+ },
+ "lunaperche dark": {
+  "sqlKeyword": "Statement",
+  "sqlString": "String",
+  "String": "String"
+ },
+ "lunaperche light": {
+  "sqlKeyword": "Statement",
+  "sqlString": "String",
+  "String": "String"
+ },
+ "novum dark": {
+  "Function": "Function",
+  "sqlFunction": "Function",
+  "sqlString": "String",
+  "String": "String"
+ },
+ "novum light": {
+  "Function": "Function",
+  "sqlFunction": "Function",
+  "sqlString": "String",
+  "String": "String"
+ },
+ "retrobox dark": {
+  "Function": "Function",
+  "Number": "Number",
+  "sqlFunction": "Function",
+  "sqlNumber": "Number",
+  "sqlString": "String",
+  "String": "String"
+ },
+ "retrobox light": {
+  "Function": "Function",
+  "Number": "Number",
+  "sqlFunction": "Function",
+  "sqlNumber": "Number",
+  "sqlString": "String",
+  "String": "String"
+ },
+ "shine light": {
+  "Number": "Number",
+  "sqlNumber": "Number"
+ },
+ "slate dark": {
+  "Function": "Function",
+  "sqlFunction": "Function",
+  "sqlString": "String",
+  "String": "String"
+ },
+ "sorbet dark": {
+  "sqlString": "String",
+  "String": "String"
+ },
+ "unokai dark": {
+  "Function": "Function",
+  "sqlFunction": "Function",
+  "sqlString": "String",
+  "String": "String"
+ },
+ "wildcharm dark": {
+  "sqlString": "String",
+  "String": "String"
+ },
+ "wildcharm light": {
+  "sqlString": "String",
+  "String": "String"
+ }
+}

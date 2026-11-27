@@ -1,8 +1,10 @@
 {
 "dateityp": "json",
 "vim": 9020858,
-"testdateien": [],
-"inhaltsabhaengig": null,
+"testdateien": [
+ "101_json.json"
+],
+"inhaltsabhaengig": false,
 "iskeyword": "@,48-57,_,192-255",
 "syntaxIskeyword": "syntax iskeyword not set",
 "gruppen": {

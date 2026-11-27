@@ -1,0 +1,175 @@
+{
+ "blue dark": {
+  "Label": "Label",
+  "Operator": "Type",
+  "pascalLabel": "Label",
+  "pascalOperator": "Type"
+ },
+ "catppuccin dark": {
+  "Character": "Character",
+  "Conditional": "Conditional",
+  "Function": "Function",
+  "Label": "Label",
+  "Operator": "Operator",
+  "pascalConditional": "Conditional",
+  "pascalControlCharacter": "Character",
+  "pascalFunction": "Function",
+  "pascalLabel": "Label",
+  "pascalOperator": "Operator",
+  "pascalRepeat": "Repeat",
+  "pascalString": "String",
+  "Repeat": "Repeat",
+  "String": "String"
+ },
+ "catppuccin light": {
+  "Character": "Character",
+  "Conditional": "Conditional",
+  "Function": "Function",
+  "Label": "Label",
+  "Operator": "Operator",
+  "pascalConditional": "Conditional",
+  "pascalControlCharacter": "Character",
+  "pascalFunction": "Function",
+  "pascalLabel": "Label",
+  "pascalOperator": "Operator",
+  "pascalRepeat": "Repeat",
+  "pascalString": "String",
+  "Repeat": "Repeat",
+  "String": "String"
+ },
+ "elflord dark": {
+  "Conditional": "Repeat",
+  "Function": "Function",
+  "Operator": "Operator",
+  "pascalConditional": "Repeat",
+  "pascalFunction": "Function",
+  "pascalOperator": "Operator",
+  "pascalRepeat": "Repeat",
+  "Repeat": "Repeat"
+ },
+ "habamax dark": {
+  "Character": "Character",
+  "pascalControlCharacter": "Character",
+  "pascalString": "String",
+  "String": "String"
+ },
+ "industry dark": {
+  "Function": "Function",
+  "pascalFunction": "Function"
+ },
+ "lunaperche dark": {
+  "pascalString": "String",
+  "String": "String"
+ },
+ "lunaperche light": {
+  "pascalString": "String",
+  "String": "String"
+ },
+ "novum dark": {
+  "Function": "Function",
+  "Operator": "Operator",
+  "pascalFunction": "Function",
+  "pascalOperator": "Operator",
+  "pascalString": "String",
+  "String": "String"
+ },
+ "novum light": {
+  "Function": "Function",
+  "Operator": "Operator",
+  "pascalFunction": "Function",
+  "pascalOperator": "Operator",
+  "pascalString": "String",
+  "String": "String"
+ },
+ "retrobox dark": {
+  "Boolean": "Boolean",
+  "Character": "Character",
+  "Conditional": "Conditional",
+  "Float": "Float",
+  "Function": "Function",
+  "Label": "Label",
+  "Number": "Number",
+  "Operator": "Operator",
+  "pascalBoolean": "Boolean",
+  "pascalConditional": "Conditional",
+  "pascalControlCharacter": "Character",
+  "pascalFloat": "Float",
+  "pascalFunction": "Function",
+  "pascalHexNumber": "Number",
+  "pascalLabel": "Label",
+  "pascalNumber": "Number",
+  "pascalOperator": "Operator",
+  "pascalRepeat": "Repeat",
+  "pascalString": "String",
+  "Repeat": "Repeat",
+  "String": "String"
+ },
+ "retrobox light": {
+  "Boolean": "Boolean",
+  "Character": "Character",
+  "Conditional": "Conditional",
+  "Float": "Float",
+  "Function": "Function",
+  "Label": "Label",
+  "Number": "Number",
+  "Operator": "Operator",
+  "pascalBoolean": "Boolean",
+  "pascalConditional": "Conditional",
+  "pascalControlCharacter": "Character",
+  "pascalFloat": "Float",
+  "pascalFunction": "Function",
+  "pascalHexNumber": "Number",
+  "pascalLabel": "Label",
+  "pascalNumber": "Number",
+  "pascalOperator": "Operator",
+  "pascalRepeat": "Repeat",
+  "pascalString": "String",
+  "Repeat": "Repeat",
+  "String": "String"
+ },
+ "ron dark": {
+  "Label": "Label",
+  "Operator": "Operator",
+  "pascalLabel": "Label",
+  "pascalOperator": "Operator"
+ },
+ "shine light": {
+  "Float": "Float",
+  "Number": "Number",
+  "pascalFloat": "Float",
+  "pascalHexNumber": "Number",
+  "pascalNumber": "Number"
+ },
+ "slate dark": {
+  "Function": "Function",
+  "Operator": "Operator",
+  "pascalFunction": "Function",
+  "pascalOperator": "Operator",
+  "pascalString": "String",
+  "String": "String"
+ },
+ "sorbet dark": {
+  "pascalString": "String",
+  "String": "String"
+ },
+ "unokai dark": {
+  "Character": "Character",
+  "Function": "Function",
+  "Label": "String",
+  "Operator": "PreProc",
+  "pascalControlCharacter": "Character",
+  "pascalFunction": "Function",
+  "pascalLabel": "String",
+  "pascalOperator": "PreProc",
+  "pascalString": "String",
+  "String": "String"
+ },
+ "wildcharm dark": {
+  "pascalString": "String",
+  "String": "String"
+ },
+ "wildcharm light": {
+  "pascalString": "String",
+  "String": "String"
+ }
+}

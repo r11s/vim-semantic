@@ -8,7 +8,8 @@
 const fs = require('fs');
 const path = require('path');
 const { highlight } = require('../vim');
-const { highlighter, loadData, typeFor } = require('../faerben');
+const { highlighter, loadData } = require('../faerben');
+const { typeFor } = require('../erkennen');
 
 const perChar = (tokens, lines) => {
   const map = new Map();
@@ -48,7 +49,7 @@ async function main() {
     total.own += Date.now() - time;
     time = Date.now();
     const want = perChar(await highlight({
-      vimPath: process.env.VIM_PATH || 'vim', text, fileName: file, filetype: type,
+      vimPath: process.env.VIM_PATH || 'vim', text, fileName: file, filetype: type.replace(/^sh-.*/, 'sh'),
       scheme: process.env.SCHEMA || 'default', background: process.env.BG || 'light',
     }), lines);
     total.vim += Date.now() - time;

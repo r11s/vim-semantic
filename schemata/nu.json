@@ -1,0 +1,62 @@
+{
+ "blue dark": {
+  "nuOp": "Type",
+  "Operator": "Type"
+ },
+ "catppuccin dark": {
+  "Keyword": "Keyword",
+  "nuCmd": "Keyword",
+  "nuOp": "Operator",
+  "Operator": "Operator"
+ },
+ "catppuccin light": {
+  "Keyword": "Keyword",
+  "nuCmd": "Keyword",
+  "nuOp": "Operator",
+  "Operator": "Operator"
+ },
+ "elflord dark": {
+  "nuOp": "Operator",
+  "Operator": "Operator"
+ },
+ "novum dark": {
+  "nuOp": "Operator",
+  "Operator": "Operator"
+ },
+ "novum light": {
+  "nuOp": "Operator",
+  "Operator": "Operator"
+ },
+ "retrobox dark": {
+  "Keyword": "Keyword",
+  "nuCmd": "Keyword",
+  "Number": "Number",
+  "nuNumber": "Number",
+  "nuOp": "Operator",
+  "Operator": "Operator"
+ },
+ "retrobox light": {
+  "Keyword": "Keyword",
+  "nuCmd": "Keyword",
+  "Number": "Number",
+  "nuNumber": "Number",
+  "nuOp": "Operator",
+  "Operator": "Operator"
+ },
+ "ron dark": {
+  "nuOp": "Operator",
+  "Operator": "Operator"
+ },
+ "shine light": {
+  "Number": "Number",
+  "nuNumber": "Number"
+ },
+ "slate dark": {
+  "nuOp": "Operator",
+  "Operator": "Operator"
+ },
+ "unokai dark": {
+  "nuOp": "PreProc",
+  "Operator": "PreProc"
+ }
+}

@@ -4,7 +4,8 @@ VimSem steht unter der Vim-Lizenz (Datei `LICENSE`). Teile sind aus Dateien von 
 (Patches 1-858) abgeleitet und dabei veraendert, also umgeformt und neu verpackt:
 
 - `themes/`: Farben und Stile aus den Farbschemata (`colors/*.vim`)
-- `syntaxdaten/`: ausgefuehrte Regeln aus den Syntaxdateien (`syntax/*.vim`), in der vsix nur C und C++
+- `syntaxdaten/`: ausgefuehrte Regeln aus den Syntaxdateien (`syntax/*.vim`)
+- `dateitypen.json`, `erkennen.js`: Zuordnung der Dateinamen nach `filetype.vim` und den Dateien daneben
 - `schemata/`: Zuordnung der Gruppen aus Farbschemata und Syntaxdateien
 - `werkzeuge/vim-synlog.patch`: Aenderung am Quellcode von Vim, nicht in der vsix
 

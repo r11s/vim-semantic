@@ -1,0 +1,190 @@
+{
+ "catppuccin dark": {
+  "autohotkeyBuiltinVariable": "Macro",
+  "autohotkeyCommand": "Keyword",
+  "autohotkeyConditional": "Conditional",
+  "autohotkeyDelimiter": "Delimiter",
+  "autohotkeyFunction": "Function",
+  "autohotkeyHotstringDelimiter": "Delimiter",
+  "autohotkeyInclude": "Include",
+  "autohotkeyRepeat": "Repeat",
+  "autohotkeyStatement": "Keyword",
+  "autohotkeyString": "String",
+  "autohotkeyStringDelimiter": "String",
+  "Conditional": "Conditional",
+  "Delimiter": "Delimiter",
+  "Function": "Function",
+  "Include": "Include",
+  "Keyword": "Keyword",
+  "Macro": "Macro",
+  "Repeat": "Repeat",
+  "String": "String"
+ },
+ "catppuccin light": {
+  "autohotkeyBuiltinVariable": "Macro",
+  "autohotkeyCommand": "Keyword",
+  "autohotkeyConditional": "Conditional",
+  "autohotkeyDelimiter": "Delimiter",
+  "autohotkeyFunction": "Function",
+  "autohotkeyHotstringDelimiter": "Delimiter",
+  "autohotkeyInclude": "Include",
+  "autohotkeyRepeat": "Repeat",
+  "autohotkeyStatement": "Keyword",
+  "autohotkeyString": "String",
+  "autohotkeyStringDelimiter": "String",
+  "Conditional": "Conditional",
+  "Delimiter": "Delimiter",
+  "Function": "Function",
+  "Include": "Include",
+  "Keyword": "Keyword",
+  "Macro": "Macro",
+  "Repeat": "Repeat",
+  "String": "String"
+ },
+ "elflord dark": {
+  "autohotkeyConditional": "Repeat",
+  "autohotkeyFunction": "Function",
+  "autohotkeyRepeat": "Repeat",
+  "Conditional": "Repeat",
+  "Function": "Function",
+  "Repeat": "Repeat"
+ },
+ "habamax dark": {
+  "autohotkeyString": "String",
+  "autohotkeyStringDelimiter": "String",
+  "String": "String"
+ },
+ "industry dark": {
+  "autohotkeyDelimiter": "Delimiter",
+  "autohotkeyFunction": "Function",
+  "autohotkeyHotstringDelimiter": "Delimiter",
+  "Delimiter": "Delimiter",
+  "Function": "Function"
+ },
+ "lunaperche dark": {
+  "autohotkeyString": "String",
+  "autohotkeyStringDelimiter": "String",
+  "String": "String"
+ },
+ "lunaperche light": {
+  "autohotkeyString": "String",
+  "autohotkeyStringDelimiter": "String",
+  "String": "String"
+ },
+ "novum dark": {
+  "autohotkeyDelimiter": "Delimiter",
+  "autohotkeyFunction": "Function",
+  "autohotkeyHotstringDelimiter": "Delimiter",
+  "autohotkeyString": "String",
+  "autohotkeyStringDelimiter": "String",
+  "Delimiter": "Delimiter",
+  "Function": "Function",
+  "String": "String"
+ },
+ "novum light": {
+  "autohotkeyDelimiter": "Delimiter",
+  "autohotkeyFunction": "Function",
+  "autohotkeyHotstringDelimiter": "Delimiter",
+  "autohotkeyString": "String",
+  "autohotkeyStringDelimiter": "String",
+  "Delimiter": "Delimiter",
+  "Function": "Function",
+  "String": "String"
+ },
+ "retrobox dark": {
+  "autohotkeyBoolean": "Boolean",
+  "autohotkeyBuiltinVariable": "Macro",
+  "autohotkeyCommand": "Keyword",
+  "autohotkeyConditional": "Conditional",
+  "autohotkeyDelimiter": "Delimiter",
+  "autohotkeyFloat": "Number",
+  "autohotkeyFunction": "Function",
+  "autohotkeyHotstringDelimiter": "Delimiter",
+  "autohotkeyInclude": "Include",
+  "autohotkeyInteger": "Number",
+  "autohotkeyMatchClass": "Typedef",
+  "autohotkeyNumber": "Number",
+  "autohotkeyRepeat": "Repeat",
+  "autohotkeyStatement": "Keyword",
+  "autohotkeyString": "String",
+  "autohotkeyStringDelimiter": "String",
+  "Boolean": "Boolean",
+  "Conditional": "Conditional",
+  "Delimiter": "Delimiter",
+  "Function": "Function",
+  "Include": "Include",
+  "Keyword": "Keyword",
+  "Macro": "Macro",
+  "Number": "Number",
+  "Repeat": "Repeat",
+  "String": "String",
+  "Typedef": "Typedef"
+ },
+ "retrobox light": {
+  "autohotkeyBoolean": "Boolean",
+  "autohotkeyBuiltinVariable": "Macro",
+  "autohotkeyCommand": "Keyword",
+  "autohotkeyConditional": "Conditional",
+  "autohotkeyDelimiter": "Delimiter",
+  "autohotkeyFloat": "Number",
+  "autohotkeyFunction": "Function",
+  "autohotkeyHotstringDelimiter": "Delimiter",
+  "autohotkeyInclude": "Include",
+  "autohotkeyInteger": "Number",
+  "autohotkeyMatchClass": "Typedef",
+  "autohotkeyNumber": "Number",
+  "autohotkeyRepeat": "Repeat",
+  "autohotkeyStatement": "Keyword",
+  "autohotkeyString": "String",
+  "autohotkeyStringDelimiter": "String",
+  "Boolean": "Boolean",
+  "Conditional": "Conditional",
+  "Delimiter": "Delimiter",
+  "Function": "Function",
+  "Include": "Include",
+  "Keyword": "Keyword",
+  "Macro": "Macro",
+  "Number": "Number",
+  "Repeat": "Repeat",
+  "String": "String",
+  "Typedef": "Typedef"
+ },
+ "shine light": {
+  "autohotkeyFloat": "Number",
+  "autohotkeyInteger": "Number",
+  "autohotkeyNumber": "Number",
+  "Number": "Number"
+ },
+ "slate dark": {
+  "autohotkeyFunction": "Function",
+  "autohotkeyString": "String",
+  "autohotkeyStringDelimiter": "String",
+  "Function": "Function",
+  "String": "String"
+ },
+ "sorbet dark": {
+  "autohotkeyString": "String",
+  "autohotkeyStringDelimiter": "String",
+  "String": "String"
+ },
+ "unokai dark": {
+  "autohotkeyDelimiter": "PreProc",
+  "autohotkeyFunction": "Function",
+  "autohotkeyHotstringDelimiter": "PreProc",
+  "autohotkeyString": "String",
+  "autohotkeyStringDelimiter": "String",
+  "Delimiter": "PreProc",
+  "Function": "Function",
+  "String": "String"
+ },
+ "wildcharm dark": {
+  "autohotkeyString": "String",
+  "autohotkeyStringDelimiter": "String",
+  "String": "String"
+ },
+ "wildcharm light": {
+  "autohotkeyString": "String",
+  "autohotkeyStringDelimiter": "String",
+  "String": "String"
+ }
+}

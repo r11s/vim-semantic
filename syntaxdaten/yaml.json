@@ -1,8 +1,10 @@
 {
 "dateityp": "yaml",
 "vim": 9020858,
-"testdateien": [],
-"inhaltsabhaengig": null,
+"testdateien": [
+ "105_yaml.yaml"
+],
+"inhaltsabhaengig": false,
 "iskeyword": "@,48-57,_,192-255",
 "syntaxIskeyword": "syntax iskeyword not set",
 "gruppen": {

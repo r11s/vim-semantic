@@ -1,0 +1,218 @@
+{
+ "blue dark": {
+  "Label": "Label",
+  "Operator": "Type",
+  "ps1Label": "Label",
+  "ps1Operator": "Type"
+ },
+ "catppuccin dark": {
+  "Conditional": "Conditional",
+  "Delimiter": "Delimiter",
+  "Exception": "Exception",
+  "Function": "Function",
+  "Keyword": "Keyword",
+  "Label": "Label",
+  "Operator": "Operator",
+  "ps1BuiltIn": "StorageClass",
+  "ps1Cmdlet": "Function",
+  "ps1CommentDoc": "Tag",
+  "ps1Conditional": "Conditional",
+  "ps1Exception": "Exception",
+  "ps1InterpolationDelimiter": "Delimiter",
+  "ps1Keyword": "Keyword",
+  "ps1Label": "Label",
+  "ps1Operator": "Operator",
+  "ps1Repeat": "Repeat",
+  "ps1ScopeModifier": "StorageClass",
+  "ps1String": "String",
+  "Repeat": "Repeat",
+  "StorageClass": "StorageClass",
+  "String": "String",
+  "Tag": "Tag"
+ },
+ "catppuccin light": {
+  "Conditional": "Conditional",
+  "Delimiter": "Delimiter",
+  "Exception": "Exception",
+  "Function": "Function",
+  "Keyword": "Keyword",
+  "Label": "Label",
+  "Operator": "Operator",
+  "ps1BuiltIn": "StorageClass",
+  "ps1Cmdlet": "Function",
+  "ps1CommentDoc": "Tag",
+  "ps1Conditional": "Conditional",
+  "ps1Exception": "Exception",
+  "ps1InterpolationDelimiter": "Delimiter",
+  "ps1Keyword": "Keyword",
+  "ps1Label": "Label",
+  "ps1Operator": "Operator",
+  "ps1Repeat": "Repeat",
+  "ps1ScopeModifier": "StorageClass",
+  "ps1String": "String",
+  "Repeat": "Repeat",
+  "StorageClass": "StorageClass",
+  "String": "String",
+  "Tag": "Tag"
+ },
+ "elflord dark": {
+  "Conditional": "Repeat",
+  "Function": "Function",
+  "Operator": "Operator",
+  "ps1Cmdlet": "Function",
+  "ps1Conditional": "Repeat",
+  "ps1Operator": "Operator",
+  "ps1Repeat": "Repeat",
+  "Repeat": "Repeat"
+ },
+ "habamax dark": {
+  "ps1String": "String",
+  "String": "String"
+ },
+ "industry dark": {
+  "Delimiter": "Delimiter",
+  "Function": "Function",
+  "ps1Cmdlet": "Function",
+  "ps1InterpolationDelimiter": "Delimiter"
+ },
+ "lunaperche dark": {
+  "ps1String": "String",
+  "String": "String"
+ },
+ "lunaperche light": {
+  "ps1String": "String",
+  "String": "String"
+ },
+ "novum dark": {
+  "Delimiter": "Delimiter",
+  "Function": "Function",
+  "Operator": "Operator",
+  "ps1Cmdlet": "Function",
+  "ps1InterpolationDelimiter": "Delimiter",
+  "ps1Operator": "Operator",
+  "ps1String": "String",
+  "String": "String"
+ },
+ "novum light": {
+  "Delimiter": "Delimiter",
+  "Function": "Function",
+  "Operator": "Operator",
+  "ps1Cmdlet": "Function",
+  "ps1InterpolationDelimiter": "Delimiter",
+  "ps1Operator": "Operator",
+  "ps1String": "String",
+  "String": "String"
+ },
+ "retrobox dark": {
+  "Boolean": "Boolean",
+  "Conditional": "Conditional",
+  "Delimiter": "Delimiter",
+  "Exception": "Exception",
+  "Function": "Function",
+  "Keyword": "Keyword",
+  "Label": "Label",
+  "Number": "Number",
+  "Operator": "Operator",
+  "ps1Boolean": "Boolean",
+  "ps1BuiltIn": "StorageClass",
+  "ps1Cmdlet": "Function",
+  "ps1Conditional": "Conditional",
+  "ps1Escape": "SpecialChar",
+  "ps1Exception": "Exception",
+  "ps1InterpolationDelimiter": "Delimiter",
+  "ps1Keyword": "Keyword",
+  "ps1Label": "Label",
+  "ps1Number": "Number",
+  "ps1Operator": "Operator",
+  "ps1Repeat": "Repeat",
+  "ps1ScopeModifier": "StorageClass",
+  "ps1String": "String",
+  "Repeat": "Repeat",
+  "SpecialChar": "SpecialChar",
+  "StorageClass": "StorageClass",
+  "String": "String"
+ },
+ "retrobox light": {
+  "Boolean": "Boolean",
+  "Conditional": "Conditional",
+  "Delimiter": "Delimiter",
+  "Exception": "Exception",
+  "Function": "Function",
+  "Keyword": "Keyword",
+  "Label": "Label",
+  "Number": "Number",
+  "Operator": "Operator",
+  "ps1Boolean": "Boolean",
+  "ps1BuiltIn": "StorageClass",
+  "ps1Cmdlet": "Function",
+  "ps1Conditional": "Conditional",
+  "ps1Escape": "SpecialChar",
+  "ps1Exception": "Exception",
+  "ps1InterpolationDelimiter": "Delimiter",
+  "ps1Keyword": "Keyword",
+  "ps1Label": "Label",
+  "ps1Number": "Number",
+  "ps1Operator": "Operator",
+  "ps1Repeat": "Repeat",
+  "ps1ScopeModifier": "StorageClass",
+  "ps1String": "String",
+  "Repeat": "Repeat",
+  "SpecialChar": "SpecialChar",
+  "StorageClass": "StorageClass",
+  "String": "String"
+ },
+ "ron dark": {
+  "Label": "Label",
+  "Operator": "Operator",
+  "ps1Label": "Label",
+  "ps1Operator": "Operator"
+ },
+ "shine light": {
+  "Number": "Number",
+  "ps1BuiltIn": "StorageClass",
+  "ps1Escape": "SpecialChar",
+  "ps1Number": "Number",
+  "ps1ScopeModifier": "StorageClass",
+  "SpecialChar": "SpecialChar",
+  "StorageClass": "StorageClass"
+ },
+ "slate dark": {
+  "Function": "Function",
+  "Operator": "Operator",
+  "ps1Cmdlet": "Function",
+  "ps1Operator": "Operator",
+  "ps1String": "String",
+  "String": "String"
+ },
+ "sorbet dark": {
+  "ps1String": "String",
+  "String": "String"
+ },
+ "unokai dark": {
+  "Delimiter": "PreProc",
+  "Function": "Function",
+  "Label": "String",
+  "Operator": "PreProc",
+  "ps1BuiltIn": "PreProc",
+  "ps1Cmdlet": "Function",
+  "ps1InterpolationDelimiter": "PreProc",
+  "ps1Label": "String",
+  "ps1Operator": "PreProc",
+  "ps1ScopeModifier": "PreProc",
+  "ps1String": "String",
+  "StorageClass": "PreProc",
+  "String": "String"
+ },
+ "wildcharm dark": {
+  "ps1String": "String",
+  "String": "String"
+ },
+ "wildcharm light": {
+  "ps1String": "String",
+  "String": "String"
+ },
+ "zellner light": {
+  "ps1CommentDoc": "Tag",
+  "Tag": "Tag"
+ }
+}

@@ -1,0 +1,171 @@
+{
+ "catppuccin dark": {
+  "Character": "Character",
+  "Include": "Include",
+  "Keyword": "Keyword",
+  "smlAnyVar": "Keyword",
+  "smlCharacter": "Character",
+  "smlEncl": "Keyword",
+  "smlFullMod": "Include",
+  "smlFunDef": "Keyword",
+  "smlKeyChar": "Keyword",
+  "smlKeyword": "Keyword",
+  "smlModParam1": "Include",
+  "smlModPath": "Include",
+  "smlModPreRHS": "Keyword",
+  "smlModTypeRestr": "Include",
+  "smlModule": "Include",
+  "smlMPRestr2": "Keyword",
+  "smlMPRestr3": "Include",
+  "smlMTDef": "Include",
+  "smlOperator": "Keyword",
+  "smlRefAssign": "Keyword",
+  "smlString": "String",
+  "smlTopStop": "Keyword",
+  "smlWith": "Include",
+  "String": "String"
+ },
+ "catppuccin light": {
+  "Character": "Character",
+  "Include": "Include",
+  "Keyword": "Keyword",
+  "smlAnyVar": "Keyword",
+  "smlCharacter": "Character",
+  "smlEncl": "Keyword",
+  "smlFullMod": "Include",
+  "smlFunDef": "Keyword",
+  "smlKeyChar": "Keyword",
+  "smlKeyword": "Keyword",
+  "smlModParam1": "Include",
+  "smlModPath": "Include",
+  "smlModPreRHS": "Keyword",
+  "smlModTypeRestr": "Include",
+  "smlModule": "Include",
+  "smlMPRestr2": "Keyword",
+  "smlMPRestr3": "Include",
+  "smlMTDef": "Include",
+  "smlOperator": "Keyword",
+  "smlRefAssign": "Keyword",
+  "smlString": "String",
+  "smlTopStop": "Keyword",
+  "smlWith": "Include",
+  "String": "String"
+ },
+ "habamax dark": {
+  "Character": "Character",
+  "smlCharacter": "Character",
+  "smlString": "String",
+  "String": "String"
+ },
+ "lunaperche dark": {
+  "smlString": "String",
+  "String": "String"
+ },
+ "lunaperche light": {
+  "smlString": "String",
+  "String": "String"
+ },
+ "novum dark": {
+  "smlString": "String",
+  "String": "String"
+ },
+ "novum light": {
+  "smlString": "String",
+  "String": "String"
+ },
+ "retrobox dark": {
+  "Boolean": "Boolean",
+  "Character": "Character",
+  "Float": "Float",
+  "Include": "Include",
+  "Keyword": "Keyword",
+  "Number": "Number",
+  "smlAnyVar": "Keyword",
+  "smlBoolean": "Boolean",
+  "smlCharacter": "Character",
+  "smlEncl": "Keyword",
+  "smlFullMod": "Include",
+  "smlFunDef": "Keyword",
+  "smlKeyChar": "Keyword",
+  "smlKeyword": "Keyword",
+  "smlModParam1": "Include",
+  "smlModPath": "Include",
+  "smlModPreRHS": "Keyword",
+  "smlModTypeRestr": "Include",
+  "smlModule": "Include",
+  "smlMPRestr2": "Keyword",
+  "smlMPRestr3": "Include",
+  "smlMTDef": "Include",
+  "smlNumber": "Number",
+  "smlOperator": "Keyword",
+  "smlReal": "Float",
+  "smlRefAssign": "Keyword",
+  "smlString": "String",
+  "smlTopStop": "Keyword",
+  "smlWith": "Include",
+  "smlWord": "Number",
+  "String": "String"
+ },
+ "retrobox light": {
+  "Boolean": "Boolean",
+  "Character": "Character",
+  "Float": "Float",
+  "Include": "Include",
+  "Keyword": "Keyword",
+  "Number": "Number",
+  "smlAnyVar": "Keyword",
+  "smlBoolean": "Boolean",
+  "smlCharacter": "Character",
+  "smlEncl": "Keyword",
+  "smlFullMod": "Include",
+  "smlFunDef": "Keyword",
+  "smlKeyChar": "Keyword",
+  "smlKeyword": "Keyword",
+  "smlModParam1": "Include",
+  "smlModPath": "Include",
+  "smlModPreRHS": "Keyword",
+  "smlModTypeRestr": "Include",
+  "smlModule": "Include",
+  "smlMPRestr2": "Keyword",
+  "smlMPRestr3": "Include",
+  "smlMTDef": "Include",
+  "smlNumber": "Number",
+  "smlOperator": "Keyword",
+  "smlReal": "Float",
+  "smlRefAssign": "Keyword",
+  "smlString": "String",
+  "smlTopStop": "Keyword",
+  "smlWith": "Include",
+  "smlWord": "Number",
+  "String": "String"
+ },
+ "shine light": {
+  "Float": "Float",
+  "Number": "Number",
+  "smlNumber": "Number",
+  "smlReal": "Float",
+  "smlWord": "Number"
+ },
+ "slate dark": {
+  "smlString": "String",
+  "String": "String"
+ },
+ "sorbet dark": {
+  "smlString": "String",
+  "String": "String"
+ },
+ "unokai dark": {
+  "Character": "Character",
+  "smlCharacter": "Character",
+  "smlString": "String",
+  "String": "String"
+ },
+ "wildcharm dark": {
+  "smlString": "String",
+  "String": "String"
+ },
+ "wildcharm light": {
+  "smlString": "String",
+  "String": "String"
+ }
+}

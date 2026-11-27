@@ -1,0 +1,16 @@
+{
+  "titel": "Formen-Rechner",
+  "version": 1.0,
+  "aktiv": true,
+  "fehler": null,
+  "pi": 3.141592653589793,
+  "gross": -1.5e+10,
+  "zeichen": "Tab\t Zeile\n \"Zitat\" ä",
+  "formen": [
+    { "art": "kreis", "radius": 2 },
+    { "art": "rechteck", "breite": 3, "hoehe": 4 }
+  ],
+  "leer": {},
+  "falsch": [1, 2,],
+  'einfach': 'nicht erlaubt'
+}

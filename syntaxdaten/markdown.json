@@ -1,8 +1,10 @@
 {
 "dateityp": "markdown",
 "vim": 9020858,
-"testdateien": [],
-"inhaltsabhaengig": null,
+"testdateien": [
+ "104_markdown.md"
+],
+"inhaltsabhaengig": false,
 "iskeyword": "@,48-57,_,192-255",
 "syntaxIskeyword": "syntax iskeyword @,48-57,_,192-255,-",
 "gruppen": {

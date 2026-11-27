@@ -28,13 +28,13 @@ Danach VS Code bzw. VSCodium neu starten. Wieder entfernen:
     node measure.js blue               # Details in messung/
     bash werkzeuge/themes.sh           # vorher: alle Themes neu erzeugen
 
-## C und C++ ohne Vim prüfen
+## Färben mit Vim vergleichen
 
-    node werkzeuge/ohne-vim-messen.js auto test/09_c.c test/07_cpp.cpp
+    node werkzeuge/ohne-vim-messen.js auto test/[0-9]*
 
 Mit dem Vim aus gVim:
 
-    VIM_PATH="C:/Program Files/Vim/vim92/vim.exe" node werkzeuge/ohne-vim-messen.js auto test/09_c.c test/07_cpp.cpp
+    VIM_PATH="C:/Program Files/Vim/vim92/vim.exe" node werkzeuge/ohne-vim-messen.js auto test/[0-9]*
 
 ## Syntaxdaten prüfen
 
@@ -52,7 +52,7 @@ Neu erzeugen geht nur mit dem ergänzten Vim, siehe `syntaxdaten/README.md`.
 - In settings.json: `"editor.semanticHighlighting.enabled": true`
 - Ansicht "Ausgabe", Kanal "VimSem" ansehen
 - Für `protokoll.txt`: `"vimHighlight.logFile": true`
-- Vim nicht gefunden: `"vimHighlight.vimPath"` setzen (Vim aus Git: `cygpath -w "$(which vim)"`; gVim: `C:\Program Files\Vim\vim92\vim.exe`)
+- Steht im Kanal "keine Syntaxregeln fuer diese Datei": Der Dateityp wird nicht gefärbt, siehe README
 
 ## Woher kommt eine Farbe?
 

@@ -1,0 +1,33 @@
+/* Formen-Rechner. TODO: dunkles Thema */
+@charset "utf-8";
+@import url("basis.css");
+
+:root {
+  --farbe: #336699;
+  --abstand: calc(4px + 0.5em);
+}
+
+body, h1 > .titel::after {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 1.2rem;
+  color: var(--farbe);
+  margin: 0 auto;
+  content: "\201C";
+}
+
+#flaeche[data-art="kreis"]:nth-child(2n+1) {
+  border-radius: 50%;
+  background: linear-gradient(90deg, red 0%, rgba(0, 0, 255, .5) 100%);
+  transition: all 200ms ease-in-out !important;
+}
+
+@media screen and (max-width: 600px) {
+  .form { display: none; width: 100vw; }
+}
+
+@keyframes drehen {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.falsch { colr: blau; width: 10 px }

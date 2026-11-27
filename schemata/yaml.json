@@ -1,0 +1,177 @@
+{
+ "blue dark": {
+  "Label": "Label",
+  "yamlBlockCollectionItemStart": "Label"
+ },
+ "catppuccin dark": {
+  "Keyword": "Keyword",
+  "Label": "Label",
+  "String": "String",
+  "yamlBlockCollectionItemStart": "Label",
+  "yamlDirectiveName": "Keyword",
+  "yamlFlowString": "String",
+  "yamlFlowStringDelimiter": "String",
+  "yamlString": "String",
+  "yamlTAGDirective": "Keyword",
+  "yamlTagHandle": "String",
+  "yamlTagPrefix": "String",
+  "yamlYAMLDirective": "Keyword"
+ },
+ "catppuccin light": {
+  "Keyword": "Keyword",
+  "Label": "Label",
+  "String": "String",
+  "yamlBlockCollectionItemStart": "Label",
+  "yamlDirectiveName": "Keyword",
+  "yamlFlowString": "String",
+  "yamlFlowStringDelimiter": "String",
+  "yamlString": "String",
+  "yamlTAGDirective": "Keyword",
+  "yamlTagHandle": "String",
+  "yamlTagPrefix": "String",
+  "yamlYAMLDirective": "Keyword"
+ },
+ "habamax dark": {
+  "String": "String",
+  "yamlBlockMappingKey": "Statement",
+  "yamlFlowString": "String",
+  "yamlFlowStringDelimiter": "String",
+  "yamlString": "String",
+  "yamlTagHandle": "String",
+  "yamlTagPrefix": "String"
+ },
+ "lunaperche dark": {
+  "String": "String",
+  "yamlBlockMappingKey": "Statement",
+  "yamlFlowString": "String",
+  "yamlFlowStringDelimiter": "String",
+  "yamlString": "String",
+  "yamlTagHandle": "String",
+  "yamlTagPrefix": "String"
+ },
+ "lunaperche light": {
+  "String": "String",
+  "yamlBlockMappingKey": "Statement",
+  "yamlFlowString": "String",
+  "yamlFlowStringDelimiter": "String",
+  "yamlString": "String",
+  "yamlTagHandle": "String",
+  "yamlTagPrefix": "String"
+ },
+ "novum dark": {
+  "String": "String",
+  "yamlFlowString": "String",
+  "yamlFlowStringDelimiter": "String",
+  "yamlString": "String",
+  "yamlTagHandle": "String",
+  "yamlTagPrefix": "String"
+ },
+ "novum light": {
+  "String": "String",
+  "yamlFlowString": "String",
+  "yamlFlowStringDelimiter": "String",
+  "yamlString": "String",
+  "yamlTagHandle": "String",
+  "yamlTagPrefix": "String"
+ },
+ "retrobox dark": {
+  "Float": "Float",
+  "Keyword": "Keyword",
+  "Label": "Label",
+  "Number": "Number",
+  "SpecialChar": "SpecialChar",
+  "String": "String",
+  "yamlBlockCollectionItemStart": "Label",
+  "yamlDirectiveName": "Keyword",
+  "yamlEscape": "SpecialChar",
+  "yamlFloat": "Float",
+  "yamlFlowString": "String",
+  "yamlFlowStringDelimiter": "String",
+  "yamlInteger": "Number",
+  "yamlSingleEscape": "SpecialChar",
+  "yamlString": "String",
+  "yamlTAGDirective": "Keyword",
+  "yamlTagHandle": "String",
+  "yamlTagPrefix": "String",
+  "yamlYAMLDirective": "Keyword",
+  "yamlYAMLVersion": "Number"
+ },
+ "retrobox light": {
+  "Float": "Float",
+  "Keyword": "Keyword",
+  "Label": "Label",
+  "Number": "Number",
+  "SpecialChar": "SpecialChar",
+  "String": "String",
+  "yamlBlockCollectionItemStart": "Label",
+  "yamlDirectiveName": "Keyword",
+  "yamlEscape": "SpecialChar",
+  "yamlFloat": "Float",
+  "yamlFlowString": "String",
+  "yamlFlowStringDelimiter": "String",
+  "yamlInteger": "Number",
+  "yamlSingleEscape": "SpecialChar",
+  "yamlString": "String",
+  "yamlTAGDirective": "Keyword",
+  "yamlTagHandle": "String",
+  "yamlTagPrefix": "String",
+  "yamlYAMLDirective": "Keyword",
+  "yamlYAMLVersion": "Number"
+ },
+ "ron dark": {
+  "Label": "Label",
+  "yamlBlockCollectionItemStart": "Label"
+ },
+ "shine light": {
+  "Float": "Float",
+  "Number": "Number",
+  "SpecialChar": "SpecialChar",
+  "yamlEscape": "SpecialChar",
+  "yamlFloat": "Float",
+  "yamlInteger": "Number",
+  "yamlSingleEscape": "SpecialChar",
+  "yamlYAMLVersion": "Number"
+ },
+ "slate dark": {
+  "String": "String",
+  "yamlFlowString": "String",
+  "yamlFlowStringDelimiter": "String",
+  "yamlString": "String",
+  "yamlTagHandle": "String",
+  "yamlTagPrefix": "String"
+ },
+ "sorbet dark": {
+  "String": "String",
+  "yamlFlowString": "String",
+  "yamlFlowStringDelimiter": "String",
+  "yamlString": "String",
+  "yamlTagHandle": "String",
+  "yamlTagPrefix": "String"
+ },
+ "unokai dark": {
+  "Label": "String",
+  "String": "String",
+  "yamlBlockCollectionItemStart": "String",
+  "yamlFlowString": "String",
+  "yamlFlowStringDelimiter": "String",
+  "yamlString": "String",
+  "yamlTagHandle": "String",
+  "yamlTagPrefix": "String"
+ },
+ "wildcharm dark": {
+  "String": "String",
+  "yamlFlowString": "String",
+  "yamlFlowStringDelimiter": "String",
+  "yamlString": "String",
+  "yamlTagHandle": "String",
+  "yamlTagPrefix": "String"
+ },
+ "wildcharm light": {
+  "String": "String",
+  "yamlFlowString": "String",
+  "yamlFlowStringDelimiter": "String",
+  "yamlString": "String",
+  "yamlTagHandle": "String",
+  "yamlTagPrefix": "String"
+ }
+}

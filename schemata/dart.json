@@ -1,0 +1,171 @@
+{
+ "blue dark": {
+  "dartLabel": "Label",
+  "dartOperator": "Type",
+  "Label": "Label",
+  "Operator": "Type"
+ },
+ "catppuccin dark": {
+  "Conditional": "Conditional",
+  "dartBranch": "Conditional",
+  "dartConditional": "Conditional",
+  "dartDQString": "String",
+  "dartException": "Exception",
+  "dartLabel": "Label",
+  "dartNull": "Keyword",
+  "dartOperator": "Operator",
+  "dartRepeat": "Repeat",
+  "dartReserved": "Keyword",
+  "dartSQString": "String",
+  "Exception": "Exception",
+  "Keyword": "Keyword",
+  "Label": "Label",
+  "Operator": "Operator",
+  "Repeat": "Repeat",
+  "String": "String"
+ },
+ "catppuccin light": {
+  "Conditional": "Conditional",
+  "dartBranch": "Conditional",
+  "dartConditional": "Conditional",
+  "dartDQString": "String",
+  "dartException": "Exception",
+  "dartLabel": "Label",
+  "dartNull": "Keyword",
+  "dartOperator": "Operator",
+  "dartRepeat": "Repeat",
+  "dartReserved": "Keyword",
+  "dartSQString": "String",
+  "Exception": "Exception",
+  "Keyword": "Keyword",
+  "Label": "Label",
+  "Operator": "Operator",
+  "Repeat": "Repeat",
+  "String": "String"
+ },
+ "elflord dark": {
+  "Conditional": "Repeat",
+  "dartBranch": "Repeat",
+  "dartConditional": "Repeat",
+  "dartOperator": "Operator",
+  "dartRepeat": "Repeat",
+  "Operator": "Operator",
+  "Repeat": "Repeat"
+ },
+ "habamax dark": {
+  "dartDQString": "String",
+  "dartSQString": "String",
+  "String": "String"
+ },
+ "lunaperche dark": {
+  "dartDQString": "String",
+  "dartSQString": "String",
+  "String": "String"
+ },
+ "lunaperche light": {
+  "dartDQString": "String",
+  "dartSQString": "String",
+  "String": "String"
+ },
+ "novum dark": {
+  "dartDQString": "String",
+  "dartOperator": "Operator",
+  "dartSQString": "String",
+  "Operator": "Operator",
+  "String": "String"
+ },
+ "novum light": {
+  "dartDQString": "String",
+  "dartOperator": "Operator",
+  "dartSQString": "String",
+  "Operator": "Operator",
+  "String": "String"
+ },
+ "retrobox dark": {
+  "Boolean": "Boolean",
+  "Conditional": "Conditional",
+  "dartBoolean": "Boolean",
+  "dartBranch": "Conditional",
+  "dartConditional": "Conditional",
+  "dartDQString": "String",
+  "dartEscape": "SpecialChar",
+  "dartException": "Exception",
+  "dartLabel": "Label",
+  "dartNull": "Keyword",
+  "dartOperator": "Operator",
+  "dartRepeat": "Repeat",
+  "dartReserved": "Keyword",
+  "dartSQString": "String",
+  "Exception": "Exception",
+  "Keyword": "Keyword",
+  "Label": "Label",
+  "Operator": "Operator",
+  "Repeat": "Repeat",
+  "SpecialChar": "SpecialChar",
+  "String": "String"
+ },
+ "retrobox light": {
+  "Boolean": "Boolean",
+  "Conditional": "Conditional",
+  "dartBoolean": "Boolean",
+  "dartBranch": "Conditional",
+  "dartConditional": "Conditional",
+  "dartDQString": "String",
+  "dartEscape": "SpecialChar",
+  "dartException": "Exception",
+  "dartLabel": "Label",
+  "dartNull": "Keyword",
+  "dartOperator": "Operator",
+  "dartRepeat": "Repeat",
+  "dartReserved": "Keyword",
+  "dartSQString": "String",
+  "Exception": "Exception",
+  "Keyword": "Keyword",
+  "Label": "Label",
+  "Operator": "Operator",
+  "Repeat": "Repeat",
+  "SpecialChar": "SpecialChar",
+  "String": "String"
+ },
+ "ron dark": {
+  "dartLabel": "Label",
+  "dartOperator": "Operator",
+  "Label": "Label",
+  "Operator": "Operator"
+ },
+ "shine light": {
+  "dartEscape": "SpecialChar",
+  "SpecialChar": "SpecialChar"
+ },
+ "slate dark": {
+  "dartDQString": "String",
+  "dartOperator": "Operator",
+  "dartSQString": "String",
+  "Operator": "Operator",
+  "String": "String"
+ },
+ "sorbet dark": {
+  "dartDQString": "String",
+  "dartSQString": "String",
+  "String": "String"
+ },
+ "unokai dark": {
+  "dartDQString": "String",
+  "dartLabel": "String",
+  "dartOperator": "PreProc",
+  "dartSQString": "String",
+  "Label": "String",
+  "Operator": "PreProc",
+  "String": "String"
+ },
+ "wildcharm dark": {
+  "dartDQString": "String",
+  "dartSQString": "String",
+  "String": "String"
+ },
+ "wildcharm light": {
+  "dartDQString": "String",
+  "dartSQString": "String",
+  "String": "String"
+ }
+}

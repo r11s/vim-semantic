@@ -1,0 +1,115 @@
+{
+ "blue dark": {
+  "Operator": "Type",
+  "vhdlOperator": "Type"
+ },
+ "catppuccin dark": {
+  "Character": "Character",
+  "Operator": "Operator",
+  "String": "String",
+  "vhdlCharacter": "Character",
+  "vhdlOperator": "Operator",
+  "vhdlString": "String"
+ },
+ "catppuccin light": {
+  "Character": "Character",
+  "Operator": "Operator",
+  "String": "String",
+  "vhdlCharacter": "Character",
+  "vhdlOperator": "Operator",
+  "vhdlString": "String"
+ },
+ "elflord dark": {
+  "Operator": "Operator",
+  "vhdlOperator": "Operator"
+ },
+ "habamax dark": {
+  "Character": "Character",
+  "String": "String",
+  "vhdlCharacter": "Character",
+  "vhdlString": "String"
+ },
+ "lunaperche dark": {
+  "String": "String",
+  "vhdlString": "String"
+ },
+ "lunaperche light": {
+  "String": "String",
+  "vhdlString": "String"
+ },
+ "novum dark": {
+  "Operator": "Operator",
+  "String": "String",
+  "vhdlOperator": "Operator",
+  "vhdlString": "String"
+ },
+ "novum light": {
+  "Operator": "Operator",
+  "String": "String",
+  "vhdlOperator": "Operator",
+  "vhdlString": "String"
+ },
+ "retrobox dark": {
+  "Character": "Character",
+  "Number": "Number",
+  "Operator": "Operator",
+  "String": "String",
+  "vhdlBoolean": "Number",
+  "vhdlCharacter": "Character",
+  "vhdlNumber": "Number",
+  "vhdlOperator": "Operator",
+  "vhdlString": "String",
+  "vhdlTime": "Number",
+  "vhdlVector": "Number"
+ },
+ "retrobox light": {
+  "Character": "Character",
+  "Number": "Number",
+  "Operator": "Operator",
+  "String": "String",
+  "vhdlBoolean": "Number",
+  "vhdlCharacter": "Character",
+  "vhdlNumber": "Number",
+  "vhdlOperator": "Operator",
+  "vhdlString": "String",
+  "vhdlTime": "Number",
+  "vhdlVector": "Number"
+ },
+ "ron dark": {
+  "Operator": "Operator",
+  "vhdlOperator": "Operator"
+ },
+ "shine light": {
+  "Number": "Number",
+  "vhdlBoolean": "Number",
+  "vhdlNumber": "Number",
+  "vhdlTime": "Number",
+  "vhdlVector": "Number"
+ },
+ "slate dark": {
+  "Operator": "Operator",
+  "String": "String",
+  "vhdlOperator": "Operator",
+  "vhdlString": "String"
+ },
+ "sorbet dark": {
+  "String": "String",
+  "vhdlString": "String"
+ },
+ "unokai dark": {
+  "Character": "Character",
+  "Operator": "PreProc",
+  "String": "String",
+  "vhdlCharacter": "Character",
+  "vhdlOperator": "PreProc",
+  "vhdlString": "String"
+ },
+ "wildcharm dark": {
+  "String": "String",
+  "vhdlString": "String"
+ },
+ "wildcharm light": {
+  "String": "String",
+  "vhdlString": "String"
+ }
+}

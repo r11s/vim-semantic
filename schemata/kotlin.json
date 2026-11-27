@@ -1,0 +1,196 @@
+{
+ "blue dark": {
+  "ktOperator": "Type",
+  "Operator": "Type"
+ },
+ "catppuccin dark": {
+  "Character": "Character",
+  "Conditional": "Conditional",
+  "Exception": "Exception",
+  "Include": "Include",
+  "Keyword": "Keyword",
+  "ktArrow": "Structure",
+  "ktCharacter": "Character",
+  "ktConditional": "Conditional",
+  "ktException": "Exception",
+  "ktInclude": "Include",
+  "ktKeyword": "Keyword",
+  "ktModifier": "StorageClass",
+  "ktOperator": "Operator",
+  "ktRepeat": "Repeat",
+  "ktString": "String",
+  "ktStructure": "Structure",
+  "Operator": "Operator",
+  "Repeat": "Repeat",
+  "StorageClass": "StorageClass",
+  "String": "String",
+  "Structure": "Structure"
+ },
+ "catppuccin light": {
+  "Character": "Character",
+  "Conditional": "Conditional",
+  "Exception": "Exception",
+  "Include": "Include",
+  "Keyword": "Keyword",
+  "ktArrow": "Structure",
+  "ktCharacter": "Character",
+  "ktConditional": "Conditional",
+  "ktException": "Exception",
+  "ktInclude": "Include",
+  "ktKeyword": "Keyword",
+  "ktModifier": "StorageClass",
+  "ktOperator": "Operator",
+  "ktRepeat": "Repeat",
+  "ktString": "String",
+  "ktStructure": "Structure",
+  "Operator": "Operator",
+  "Repeat": "Repeat",
+  "StorageClass": "StorageClass",
+  "String": "String",
+  "Structure": "Structure"
+ },
+ "elflord dark": {
+  "Conditional": "Repeat",
+  "ktConditional": "Repeat",
+  "ktOperator": "Operator",
+  "ktRepeat": "Repeat",
+  "Operator": "Operator",
+  "Repeat": "Repeat"
+ },
+ "habamax dark": {
+  "Character": "Character",
+  "ktCharacter": "Character",
+  "ktString": "String",
+  "String": "String"
+ },
+ "lunaperche dark": {
+  "ktString": "String",
+  "String": "String"
+ },
+ "lunaperche light": {
+  "ktString": "String",
+  "String": "String"
+ },
+ "novum dark": {
+  "ktOperator": "Operator",
+  "ktString": "String",
+  "Operator": "Operator",
+  "String": "String"
+ },
+ "novum light": {
+  "ktOperator": "Operator",
+  "ktString": "String",
+  "Operator": "Operator",
+  "String": "String"
+ },
+ "retrobox dark": {
+  "Boolean": "Boolean",
+  "Character": "Character",
+  "Conditional": "Conditional",
+  "Exception": "Exception",
+  "Float": "Float",
+  "Include": "Include",
+  "Keyword": "Keyword",
+  "ktArrow": "Structure",
+  "ktBoolean": "Boolean",
+  "ktCharacter": "Character",
+  "ktConditional": "Conditional",
+  "ktException": "Exception",
+  "ktFloat": "Float",
+  "ktInclude": "Include",
+  "ktKeyword": "Keyword",
+  "ktModifier": "StorageClass",
+  "ktNumber": "Number",
+  "ktOperator": "Operator",
+  "ktRepeat": "Repeat",
+  "ktSpecialChar": "SpecialChar",
+  "ktString": "String",
+  "ktStructure": "Structure",
+  "Number": "Number",
+  "Operator": "Operator",
+  "Repeat": "Repeat",
+  "SpecialChar": "SpecialChar",
+  "StorageClass": "StorageClass",
+  "String": "String",
+  "Structure": "Structure"
+ },
+ "retrobox light": {
+  "Boolean": "Boolean",
+  "Character": "Character",
+  "Conditional": "Conditional",
+  "Exception": "Exception",
+  "Float": "Float",
+  "Include": "Include",
+  "Keyword": "Keyword",
+  "ktArrow": "Structure",
+  "ktBoolean": "Boolean",
+  "ktCharacter": "Character",
+  "ktConditional": "Conditional",
+  "ktException": "Exception",
+  "ktFloat": "Float",
+  "ktInclude": "Include",
+  "ktKeyword": "Keyword",
+  "ktModifier": "StorageClass",
+  "ktNumber": "Number",
+  "ktOperator": "Operator",
+  "ktRepeat": "Repeat",
+  "ktSpecialChar": "SpecialChar",
+  "ktString": "String",
+  "ktStructure": "Structure",
+  "Number": "Number",
+  "Operator": "Operator",
+  "Repeat": "Repeat",
+  "SpecialChar": "SpecialChar",
+  "StorageClass": "StorageClass",
+  "String": "String",
+  "Structure": "Structure"
+ },
+ "ron dark": {
+  "ktOperator": "Operator",
+  "Operator": "Operator"
+ },
+ "shine light": {
+  "Float": "Float",
+  "ktFloat": "Float",
+  "ktModifier": "StorageClass",
+  "ktNumber": "Number",
+  "ktSpecialChar": "SpecialChar",
+  "Number": "Number",
+  "SpecialChar": "SpecialChar",
+  "StorageClass": "StorageClass"
+ },
+ "slate dark": {
+  "ktArrow": "Structure",
+  "ktOperator": "Operator",
+  "ktString": "String",
+  "ktStructure": "Structure",
+  "Operator": "Operator",
+  "String": "String",
+  "Structure": "Structure"
+ },
+ "sorbet dark": {
+  "ktString": "String",
+  "String": "String"
+ },
+ "unokai dark": {
+  "Character": "Character",
+  "ktArrow": "PreProc",
+  "ktCharacter": "Character",
+  "ktModifier": "PreProc",
+  "ktOperator": "PreProc",
+  "ktString": "String",
+  "ktStructure": "PreProc",
+  "Operator": "PreProc",
+  "StorageClass": "PreProc",
+  "String": "String",
+  "Structure": "PreProc"
+ },
+ "wildcharm dark": {
+  "ktString": "String",
+  "String": "String"
+ },
+ "wildcharm light": {
+  "ktString": "String",
+  "String": "String"
+ }
+}

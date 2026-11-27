@@ -15,6 +15,9 @@ const TARGET = path.join(ROOT, 'syntaxdaten');
 const VIM = process.env.VIM_PATH || 'vim';
 // Unterstuetzte Sprachen ohne Testdatei: Regeln aus einer leeren Datei, ohne Gegenprobe
 const EXTRA = ['json', 'html', 'css', 'markdown', 'yaml'];
+// sh: Vim waehlt die Regeln nach der ersten Zeile. sh.json (aus der Testdatei) ist bash;
+// die anderen Shells aus einer Datei, die nur diese Zeile enthaelt
+const SHELLS = { 'sh-posix': '#!/bin/sh', 'sh-ksh': '#!/bin/ksh' };
 const slash = (file) => file.replace(/\\/g, '/');
 
 // Reine Abfragen und An-/Abschalten sind keine Regeln
@@ -54,7 +57,7 @@ async function collect(file, filetype) {
     const output = path.join(dir, 'data.json');
     const log = path.join(dir, 'synlog');
     await runVim(VIM, 'syntax-data.vim', {
-      VH_IN: file ? path.join(TESTDIR, file) : '', VH_OUT: output,
+      VH_IN: file ? path.resolve(TESTDIR, file) : '', VH_OUT: output,
       VH_FILETYPE: filetype || '', VH_SYNLOG: slash(log),
     });
     const data = JSON.parse(fs.readFileSync(output, 'utf8'));
@@ -128,6 +131,19 @@ async function main() {
     console.log(`${type}: ${data.commands.length} Befehle (ohne Testdatei)`);
   }
 
+  for (const [name, firstLine] of Object.entries(SHELLS)) {
+    const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'vim-shell-'));
+    try {
+      const sample = path.join(dir, 'beispiel.sh');
+      fs.writeFileSync(sample, `${firstLine}\n`);
+      const data = await collect(sample);
+      overview.push({ name, files: [], data, contentDependent: true });
+      console.log(`${name}: ${data.commands.length} Befehle (${firstLine})`);
+    } finally {
+      fs.rmSync(dir, { recursive: true, force: true });
+    }
+  }
+
   fs.mkdirSync(TARGET, { recursive: true });
   for (const entry of overview) {
     const { data } = entry;
@@ -157,8 +173,9 @@ async function main() {
     '- `iskeyword`, `syntaxIskeyword`: was als Wort gilt',
     '- `inhaltsabhaengig`: die Regeln sind anders als bei einer leeren Datei desselben Typs', '',
     '`name~testdatei.json`: gleicher Dateityp, aber andere Regeln als in `name.json`.',
-    'Ohne Testdatei, aus einer leeren Datei erzeugt und von der Gegenprobe nicht erfasst: ' +
+    'Aus einer leeren Datei erzeugt und von der Gegenprobe nicht erfasst: ' +
       EXTRA.join(', ') + '.',
+    '`sh.json` gilt fuer bash, `sh-posix.json` fuer `#!/bin/sh` und dash, `sh-ksh.json` fuer die Korn-Shell.',
     'Zum Erzeugen ist ein Vim mit `werkzeuge/vim-synlog.patch` noetig.', '',
     `| Datei | ${words.join(' | ')} | inhaltsabhaengig | Testdateien |`,
     `|---|${words.map(() => '--:|').join('')}---|---|`,

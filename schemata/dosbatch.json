@@ -1,0 +1,190 @@
+{
+ "blue dark": {
+  "dosbatchEchoOperator": "Type",
+  "dosbatchIfOperator": "Type",
+  "dosbatchLabel": "Label",
+  "dosbatchOperator": "Type",
+  "Label": "Label",
+  "Operator": "Type"
+ },
+ "catppuccin dark": {
+  "Conditional": "Conditional",
+  "dosbatchConditional": "Conditional",
+  "dosbatchEchoOperator": "Operator",
+  "dosbatchIfOperator": "Operator",
+  "dosbatchImplicit": "Function",
+  "dosbatchLabel": "Label",
+  "dosbatchOperator": "Operator",
+  "dosbatchRepeat": "Repeat",
+  "dosbatchString": "String",
+  "Function": "Function",
+  "Label": "Label",
+  "Operator": "Operator",
+  "Repeat": "Repeat",
+  "String": "String"
+ },
+ "catppuccin light": {
+  "Conditional": "Conditional",
+  "dosbatchConditional": "Conditional",
+  "dosbatchEchoOperator": "Operator",
+  "dosbatchIfOperator": "Operator",
+  "dosbatchImplicit": "Function",
+  "dosbatchLabel": "Label",
+  "dosbatchOperator": "Operator",
+  "dosbatchRepeat": "Repeat",
+  "dosbatchString": "String",
+  "Function": "Function",
+  "Label": "Label",
+  "Operator": "Operator",
+  "Repeat": "Repeat",
+  "String": "String"
+ },
+ "elflord dark": {
+  "Conditional": "Repeat",
+  "dosbatchConditional": "Repeat",
+  "dosbatchEchoOperator": "Operator",
+  "dosbatchIfOperator": "Operator",
+  "dosbatchImplicit": "Function",
+  "dosbatchOperator": "Operator",
+  "dosbatchRepeat": "Repeat",
+  "Function": "Function",
+  "Operator": "Operator",
+  "Repeat": "Repeat"
+ },
+ "habamax dark": {
+  "dosbatchString": "String",
+  "String": "String"
+ },
+ "industry dark": {
+  "dosbatchImplicit": "Function",
+  "Function": "Function"
+ },
+ "lunaperche dark": {
+  "dosbatchString": "String",
+  "String": "String"
+ },
+ "lunaperche light": {
+  "dosbatchString": "String",
+  "String": "String"
+ },
+ "novum dark": {
+  "dosbatchEchoOperator": "Operator",
+  "dosbatchIfOperator": "Operator",
+  "dosbatchImplicit": "Function",
+  "dosbatchOperator": "Operator",
+  "dosbatchString": "String",
+  "Function": "Function",
+  "Operator": "Operator",
+  "String": "String"
+ },
+ "novum light": {
+  "dosbatchEchoOperator": "Operator",
+  "dosbatchIfOperator": "Operator",
+  "dosbatchImplicit": "Function",
+  "dosbatchOperator": "Operator",
+  "dosbatchString": "String",
+  "Function": "Function",
+  "Operator": "Operator",
+  "String": "String"
+ },
+ "retrobox dark": {
+  "Conditional": "Conditional",
+  "dosbatchBinary": "Number",
+  "dosbatchConditional": "Conditional",
+  "dosbatchEchoOperator": "Operator",
+  "dosbatchHex": "Number",
+  "dosbatchIfOperator": "Operator",
+  "dosbatchImplicit": "Function",
+  "dosbatchInteger": "Number",
+  "dosbatchLabel": "Label",
+  "dosbatchNumber": "Number",
+  "dosbatchOctal": "Number",
+  "dosbatchOperator": "Operator",
+  "dosbatchRepeat": "Repeat",
+  "dosbatchSpecialChar": "SpecialChar",
+  "dosbatchString": "String",
+  "Function": "Function",
+  "Label": "Label",
+  "Number": "Number",
+  "Operator": "Operator",
+  "Repeat": "Repeat",
+  "SpecialChar": "SpecialChar",
+  "String": "String"
+ },
+ "retrobox light": {
+  "Conditional": "Conditional",
+  "dosbatchBinary": "Number",
+  "dosbatchConditional": "Conditional",
+  "dosbatchEchoOperator": "Operator",
+  "dosbatchHex": "Number",
+  "dosbatchIfOperator": "Operator",
+  "dosbatchImplicit": "Function",
+  "dosbatchInteger": "Number",
+  "dosbatchLabel": "Label",
+  "dosbatchNumber": "Number",
+  "dosbatchOctal": "Number",
+  "dosbatchOperator": "Operator",
+  "dosbatchRepeat": "Repeat",
+  "dosbatchSpecialChar": "SpecialChar",
+  "dosbatchString": "String",
+  "Function": "Function",
+  "Label": "Label",
+  "Number": "Number",
+  "Operator": "Operator",
+  "Repeat": "Repeat",
+  "SpecialChar": "SpecialChar",
+  "String": "String"
+ },
+ "ron dark": {
+  "dosbatchEchoOperator": "Operator",
+  "dosbatchIfOperator": "Operator",
+  "dosbatchLabel": "Label",
+  "dosbatchOperator": "Operator",
+  "Label": "Label",
+  "Operator": "Operator"
+ },
+ "shine light": {
+  "dosbatchBinary": "Number",
+  "dosbatchHex": "Number",
+  "dosbatchInteger": "Number",
+  "dosbatchNumber": "Number",
+  "dosbatchOctal": "Number",
+  "dosbatchSpecialChar": "SpecialChar",
+  "Number": "Number",
+  "SpecialChar": "SpecialChar"
+ },
+ "slate dark": {
+  "dosbatchEchoOperator": "Operator",
+  "dosbatchIfOperator": "Operator",
+  "dosbatchImplicit": "Function",
+  "dosbatchOperator": "Operator",
+  "dosbatchString": "String",
+  "Function": "Function",
+  "Operator": "Operator",
+  "String": "String"
+ },
+ "sorbet dark": {
+  "dosbatchString": "String",
+  "String": "String"
+ },
+ "unokai dark": {
+  "dosbatchEchoOperator": "PreProc",
+  "dosbatchIfOperator": "PreProc",
+  "dosbatchImplicit": "Function",
+  "dosbatchLabel": "String",
+  "dosbatchOperator": "PreProc",
+  "dosbatchString": "String",
+  "Function": "Function",
+  "Label": "String",
+  "Operator": "PreProc",
+  "String": "String"
+ },
+ "wildcharm dark": {
+  "dosbatchString": "String",
+  "String": "String"
+ },
+ "wildcharm light": {
+  "dosbatchString": "String",
+  "String": "String"
+ }
+}

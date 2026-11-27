@@ -1,0 +1,116 @@
+{
+ "blue dark": {
+  "Operator": "Type",
+  "prologOperator": "Type"
+ },
+ "catppuccin dark": {
+  "Keyword": "Keyword",
+  "Operator": "Operator",
+  "prologAtom": "String",
+  "prologKeyword": "Keyword",
+  "prologOperator": "Operator",
+  "prologString": "String",
+  "String": "String"
+ },
+ "catppuccin light": {
+  "Keyword": "Keyword",
+  "Operator": "Operator",
+  "prologAtom": "String",
+  "prologKeyword": "Keyword",
+  "prologOperator": "Operator",
+  "prologString": "String",
+  "String": "String"
+ },
+ "elflord dark": {
+  "Operator": "Operator",
+  "prologOperator": "Operator"
+ },
+ "habamax dark": {
+  "prologAtom": "String",
+  "prologString": "String",
+  "String": "String"
+ },
+ "lunaperche dark": {
+  "prologAtom": "String",
+  "prologString": "String",
+  "String": "String"
+ },
+ "lunaperche light": {
+  "prologAtom": "String",
+  "prologString": "String",
+  "String": "String"
+ },
+ "novum dark": {
+  "Operator": "Operator",
+  "prologAtom": "String",
+  "prologOperator": "Operator",
+  "prologString": "String",
+  "String": "String"
+ },
+ "novum light": {
+  "Operator": "Operator",
+  "prologAtom": "String",
+  "prologOperator": "Operator",
+  "prologString": "String",
+  "String": "String"
+ },
+ "retrobox dark": {
+  "Keyword": "Keyword",
+  "Number": "Number",
+  "Operator": "Operator",
+  "prologAtom": "String",
+  "prologKeyword": "Keyword",
+  "prologNumber": "Number",
+  "prologOperator": "Operator",
+  "prologString": "String",
+  "String": "String"
+ },
+ "retrobox light": {
+  "Keyword": "Keyword",
+  "Number": "Number",
+  "Operator": "Operator",
+  "prologAtom": "String",
+  "prologKeyword": "Keyword",
+  "prologNumber": "Number",
+  "prologOperator": "Operator",
+  "prologString": "String",
+  "String": "String"
+ },
+ "ron dark": {
+  "Operator": "Operator",
+  "prologOperator": "Operator"
+ },
+ "shine light": {
+  "Number": "Number",
+  "prologNumber": "Number"
+ },
+ "slate dark": {
+  "Operator": "Operator",
+  "prologAtom": "String",
+  "prologOperator": "Operator",
+  "prologString": "String",
+  "String": "String"
+ },
+ "sorbet dark": {
+  "prologAtom": "String",
+  "prologString": "String",
+  "String": "String"
+ },
+ "unokai dark": {
+  "Operator": "PreProc",
+  "prologAtom": "String",
+  "prologOperator": "PreProc",
+  "prologString": "String",
+  "String": "String"
+ },
+ "wildcharm dark": {
+  "prologAtom": "String",
+  "prologString": "String",
+  "String": "String"
+ },
+ "wildcharm light": {
+  "prologAtom": "String",
+  "prologString": "String",
+  "String": "String"
+ }
+}

@@ -1,0 +1,142 @@
+{
+ "blue dark": {
+  "abapOperator": "Type",
+  "abapSymbolOperator": "Type",
+  "Operator": "Type"
+ },
+ "catppuccin dark": {
+  "abapCharString": "String",
+  "abapInclude": "Include",
+  "abapOperator": "Operator",
+  "abapString": "String",
+  "abapStructure": "Structure",
+  "abapSymbolOperator": "Operator",
+  "Include": "Include",
+  "Operator": "Operator",
+  "String": "String",
+  "Structure": "Structure"
+ },
+ "catppuccin light": {
+  "abapCharString": "String",
+  "abapInclude": "Include",
+  "abapOperator": "Operator",
+  "abapString": "String",
+  "abapStructure": "Structure",
+  "abapSymbolOperator": "Operator",
+  "Include": "Include",
+  "Operator": "Operator",
+  "String": "String",
+  "Structure": "Structure"
+ },
+ "elflord dark": {
+  "abapOperator": "Operator",
+  "abapSymbolOperator": "Operator",
+  "Operator": "Operator"
+ },
+ "habamax dark": {
+  "abapCharString": "String",
+  "abapString": "String",
+  "String": "String"
+ },
+ "lunaperche dark": {
+  "abapCharString": "String",
+  "abapString": "String",
+  "String": "String"
+ },
+ "lunaperche light": {
+  "abapCharString": "String",
+  "abapString": "String",
+  "String": "String"
+ },
+ "novum dark": {
+  "abapCharString": "String",
+  "abapOperator": "Operator",
+  "abapString": "String",
+  "abapSymbolOperator": "Operator",
+  "Operator": "Operator",
+  "String": "String"
+ },
+ "novum light": {
+  "abapCharString": "String",
+  "abapOperator": "Operator",
+  "abapString": "String",
+  "abapSymbolOperator": "Operator",
+  "Operator": "Operator",
+  "String": "String"
+ },
+ "retrobox dark": {
+  "abapCharString": "String",
+  "abapHex": "Number",
+  "abapInclude": "Include",
+  "abapNumber": "Number",
+  "abapOperator": "Operator",
+  "abapString": "String",
+  "abapStructure": "Structure",
+  "abapSymbolOperator": "Operator",
+  "Include": "Include",
+  "Number": "Number",
+  "Operator": "Operator",
+  "String": "String",
+  "Structure": "Structure"
+ },
+ "retrobox light": {
+  "abapCharString": "String",
+  "abapHex": "Number",
+  "abapInclude": "Include",
+  "abapNumber": "Number",
+  "abapOperator": "Operator",
+  "abapString": "String",
+  "abapStructure": "Structure",
+  "abapSymbolOperator": "Operator",
+  "Include": "Include",
+  "Number": "Number",
+  "Operator": "Operator",
+  "String": "String",
+  "Structure": "Structure"
+ },
+ "ron dark": {
+  "abapOperator": "Operator",
+  "abapSymbolOperator": "Operator",
+  "Operator": "Operator"
+ },
+ "shine light": {
+  "abapHex": "Number",
+  "abapNumber": "Number",
+  "Number": "Number"
+ },
+ "slate dark": {
+  "abapCharString": "String",
+  "abapOperator": "Operator",
+  "abapString": "String",
+  "abapStructure": "Structure",
+  "abapSymbolOperator": "Operator",
+  "Operator": "Operator",
+  "String": "String",
+  "Structure": "Structure"
+ },
+ "sorbet dark": {
+  "abapCharString": "String",
+  "abapString": "String",
+  "String": "String"
+ },
+ "unokai dark": {
+  "abapCharString": "String",
+  "abapOperator": "PreProc",
+  "abapString": "String",
+  "abapStructure": "PreProc",
+  "abapSymbolOperator": "PreProc",
+  "Operator": "PreProc",
+  "String": "String",
+  "Structure": "PreProc"
+ },
+ "wildcharm dark": {
+  "abapCharString": "String",
+  "abapString": "String",
+  "String": "String"
+ },
+ "wildcharm light": {
+  "abapCharString": "String",
+  "abapString": "String",
+  "String": "String"
+ }
+}

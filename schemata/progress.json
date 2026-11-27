@@ -1,0 +1,166 @@
+{
+ "blue dark": {
+  "Operator": "Type",
+  "ProgressOperator": "Type"
+ },
+ "catppuccin dark": {
+  "Conditional": "Conditional",
+  "Delimiter": "Delimiter",
+  "Include": "Include",
+  "Operator": "Operator",
+  "ProgressCase": "Repeat",
+  "ProgressConditional": "Conditional",
+  "ProgressDo": "Repeat",
+  "ProgressFor": "Repeat",
+  "ProgressInclude": "Include",
+  "ProgressOperator": "Operator",
+  "ProgressQuote": "Delimiter",
+  "ProgressRepeat": "Repeat",
+  "ProgressString": "String",
+  "Repeat": "Repeat",
+  "String": "String"
+ },
+ "catppuccin light": {
+  "Conditional": "Conditional",
+  "Delimiter": "Delimiter",
+  "Include": "Include",
+  "Operator": "Operator",
+  "ProgressCase": "Repeat",
+  "ProgressConditional": "Conditional",
+  "ProgressDo": "Repeat",
+  "ProgressFor": "Repeat",
+  "ProgressInclude": "Include",
+  "ProgressOperator": "Operator",
+  "ProgressQuote": "Delimiter",
+  "ProgressRepeat": "Repeat",
+  "ProgressString": "String",
+  "Repeat": "Repeat",
+  "String": "String"
+ },
+ "elflord dark": {
+  "Conditional": "Repeat",
+  "Operator": "Operator",
+  "ProgressCase": "Repeat",
+  "ProgressConditional": "Repeat",
+  "ProgressDo": "Repeat",
+  "ProgressFor": "Repeat",
+  "ProgressOperator": "Operator",
+  "ProgressRepeat": "Repeat",
+  "Repeat": "Repeat"
+ },
+ "habamax dark": {
+  "Debug": "Debug",
+  "ProgressDebug": "Debug",
+  "ProgressString": "String",
+  "String": "String"
+ },
+ "industry dark": {
+  "Delimiter": "Delimiter",
+  "ProgressQuote": "Delimiter"
+ },
+ "lunaperche dark": {
+  "ProgressString": "String",
+  "String": "String"
+ },
+ "lunaperche light": {
+  "ProgressString": "String",
+  "String": "String"
+ },
+ "novum dark": {
+  "Delimiter": "Delimiter",
+  "Operator": "Operator",
+  "ProgressOperator": "Operator",
+  "ProgressQuote": "Delimiter",
+  "ProgressString": "String",
+  "String": "String"
+ },
+ "novum light": {
+  "Delimiter": "Delimiter",
+  "Operator": "Operator",
+  "ProgressOperator": "Operator",
+  "ProgressQuote": "Delimiter",
+  "ProgressString": "String",
+  "String": "String"
+ },
+ "retrobox dark": {
+  "Conditional": "Conditional",
+  "Debug": "Debug",
+  "Delimiter": "Delimiter",
+  "Include": "Include",
+  "Number": "Number",
+  "Operator": "Operator",
+  "ProgressByte": "Number",
+  "ProgressCase": "Repeat",
+  "ProgressConditional": "Conditional",
+  "ProgressDebug": "Debug",
+  "ProgressDo": "Repeat",
+  "ProgressFor": "Repeat",
+  "ProgressInclude": "Include",
+  "ProgressNumber": "Number",
+  "ProgressOperator": "Operator",
+  "ProgressQuote": "Delimiter",
+  "ProgressRepeat": "Repeat",
+  "ProgressString": "String",
+  "Repeat": "Repeat",
+  "String": "String"
+ },
+ "retrobox light": {
+  "Conditional": "Conditional",
+  "Debug": "Debug",
+  "Delimiter": "Delimiter",
+  "Include": "Include",
+  "Number": "Number",
+  "Operator": "Operator",
+  "ProgressByte": "Number",
+  "ProgressCase": "Repeat",
+  "ProgressConditional": "Conditional",
+  "ProgressDebug": "Debug",
+  "ProgressDo": "Repeat",
+  "ProgressFor": "Repeat",
+  "ProgressInclude": "Include",
+  "ProgressNumber": "Number",
+  "ProgressOperator": "Operator",
+  "ProgressQuote": "Delimiter",
+  "ProgressRepeat": "Repeat",
+  "ProgressString": "String",
+  "Repeat": "Repeat",
+  "String": "String"
+ },
+ "ron dark": {
+  "Operator": "Operator",
+  "ProgressOperator": "Operator"
+ },
+ "shine light": {
+  "Number": "Number",
+  "ProgressByte": "Number",
+  "ProgressNumber": "Number"
+ },
+ "slate dark": {
+  "Operator": "Operator",
+  "ProgressOperator": "Operator",
+  "ProgressString": "String",
+  "String": "String"
+ },
+ "sorbet dark": {
+  "ProgressString": "String",
+  "String": "String"
+ },
+ "unokai dark": {
+  "Debug": "Debug",
+  "Delimiter": "PreProc",
+  "Operator": "PreProc",
+  "ProgressDebug": "Debug",
+  "ProgressOperator": "PreProc",
+  "ProgressQuote": "PreProc",
+  "ProgressString": "String",
+  "String": "String"
+ },
+ "wildcharm dark": {
+  "ProgressString": "String",
+  "String": "String"
+ },
+ "wildcharm light": {
+  "ProgressString": "String",
+  "String": "String"
+ }
+}

@@ -15,6 +15,10 @@ for [s:scheme, s:background] in map(split($VH_SCHEMES, ','), 'split(v:val)')
   let &background = s:background
   execute 'colorscheme ' . s:scheme
   enew!
+  " Bei manchen Typen haengen die Regeln vom Inhalt ab (sh: erste Zeile "#!...")
+  if $VH_SAMPLE != ''
+    call setline(1, readfile($VH_SAMPLE))
+  endif
   let &filetype = $VH_FILETYPE
   let s:map = {}
   for s:group in s:groups

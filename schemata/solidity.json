@@ -1,0 +1,203 @@
+{
+ "blue dark": {
+  "Label": "Label",
+  "Operator": "Type",
+  "solEventArgSpecial": "Label",
+  "solNatSpec": "Label",
+  "solOperator": "Type"
+ },
+ "catppuccin dark": {
+  "Function": "Function",
+  "Keyword": "Keyword",
+  "Label": "Label",
+  "Operator": "Operator",
+  "solContractName": "Function",
+  "solErrorName": "Function",
+  "solEventArgSpecial": "Label",
+  "solEventName": "Function",
+  "solFuncName": "Function",
+  "solKeyword": "Keyword",
+  "solModifierName": "Function",
+  "solNatSpec": "Label",
+  "solOperator": "Operator",
+  "solString": "String",
+  "String": "String",
+  "yul": "Keyword",
+  "yulAssemblyOp": "Keyword",
+  "yulVarDeclaration": "Keyword"
+ },
+ "catppuccin light": {
+  "Function": "Function",
+  "Keyword": "Keyword",
+  "Label": "Label",
+  "Operator": "Operator",
+  "solContractName": "Function",
+  "solErrorName": "Function",
+  "solEventArgSpecial": "Label",
+  "solEventName": "Function",
+  "solFuncName": "Function",
+  "solKeyword": "Keyword",
+  "solModifierName": "Function",
+  "solNatSpec": "Label",
+  "solOperator": "Operator",
+  "solString": "String",
+  "String": "String",
+  "yul": "Keyword",
+  "yulAssemblyOp": "Keyword",
+  "yulVarDeclaration": "Keyword"
+ },
+ "elflord dark": {
+  "Function": "Function",
+  "Operator": "Operator",
+  "solContractName": "Function",
+  "solErrorName": "Function",
+  "solEventName": "Function",
+  "solFuncName": "Function",
+  "solModifierName": "Function",
+  "solOperator": "Operator"
+ },
+ "habamax dark": {
+  "solString": "String",
+  "String": "String"
+ },
+ "industry dark": {
+  "Function": "Function",
+  "solContractName": "Function",
+  "solErrorName": "Function",
+  "solEventName": "Function",
+  "solFuncName": "Function",
+  "solModifierName": "Function"
+ },
+ "lunaperche dark": {
+  "solString": "String",
+  "String": "String"
+ },
+ "lunaperche light": {
+  "solString": "String",
+  "String": "String"
+ },
+ "novum dark": {
+  "Function": "Function",
+  "Operator": "Operator",
+  "solContractName": "Function",
+  "solErrorName": "Function",
+  "solEventName": "Function",
+  "solFuncName": "Function",
+  "solModifierName": "Function",
+  "solOperator": "Operator",
+  "solString": "String",
+  "String": "String"
+ },
+ "novum light": {
+  "Function": "Function",
+  "Operator": "Operator",
+  "solContractName": "Function",
+  "solErrorName": "Function",
+  "solEventName": "Function",
+  "solFuncName": "Function",
+  "solModifierName": "Function",
+  "solOperator": "Operator",
+  "solString": "String",
+  "String": "String"
+ },
+ "retrobox dark": {
+  "Float": "Float",
+  "Function": "Function",
+  "Keyword": "Keyword",
+  "Label": "Label",
+  "Number": "Number",
+  "Operator": "Operator",
+  "solContractName": "Function",
+  "solErrorName": "Function",
+  "solEventArgSpecial": "Label",
+  "solEventName": "Function",
+  "solFloat": "Float",
+  "solFuncName": "Function",
+  "solKeyword": "Keyword",
+  "solModifierName": "Function",
+  "solNatSpec": "Label",
+  "solNumber": "Number",
+  "solOperator": "Operator",
+  "solString": "String",
+  "String": "String",
+  "yul": "Keyword",
+  "yulAssemblyOp": "Keyword",
+  "yulVarDeclaration": "Keyword"
+ },
+ "retrobox light": {
+  "Float": "Float",
+  "Function": "Function",
+  "Keyword": "Keyword",
+  "Label": "Label",
+  "Number": "Number",
+  "Operator": "Operator",
+  "solContractName": "Function",
+  "solErrorName": "Function",
+  "solEventArgSpecial": "Label",
+  "solEventName": "Function",
+  "solFloat": "Float",
+  "solFuncName": "Function",
+  "solKeyword": "Keyword",
+  "solModifierName": "Function",
+  "solNatSpec": "Label",
+  "solNumber": "Number",
+  "solOperator": "Operator",
+  "solString": "String",
+  "String": "String",
+  "yul": "Keyword",
+  "yulAssemblyOp": "Keyword",
+  "yulVarDeclaration": "Keyword"
+ },
+ "ron dark": {
+  "Label": "Label",
+  "Operator": "Operator",
+  "solEventArgSpecial": "Label",
+  "solNatSpec": "Label",
+  "solOperator": "Operator"
+ },
+ "shine light": {
+  "Float": "Float",
+  "Number": "Number",
+  "solFloat": "Float",
+  "solNumber": "Number"
+ },
+ "slate dark": {
+  "Function": "Function",
+  "Operator": "Operator",
+  "solContractName": "Function",
+  "solErrorName": "Function",
+  "solEventName": "Function",
+  "solFuncName": "Function",
+  "solModifierName": "Function",
+  "solOperator": "Operator",
+  "solString": "String",
+  "String": "String"
+ },
+ "sorbet dark": {
+  "solString": "String",
+  "String": "String"
+ },
+ "unokai dark": {
+  "Function": "Function",
+  "Label": "String",
+  "Operator": "PreProc",
+  "solContractName": "Function",
+  "solErrorName": "Function",
+  "solEventArgSpecial": "String",
+  "solEventName": "Function",
+  "solFuncName": "Function",
+  "solModifierName": "Function",
+  "solNatSpec": "String",
+  "solOperator": "PreProc",
+  "solString": "String",
+  "String": "String"
+ },
+ "wildcharm dark": {
+  "solString": "String",
+  "String": "String"
+ },
+ "wildcharm light": {
+  "solString": "String",
+  "String": "String"
+ }
+}

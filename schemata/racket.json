@@ -1,0 +1,160 @@
+{
+ "catppuccin dark": {
+  "Character": "Character",
+  "Delimiter": "Delimiter",
+  "Function": "Function",
+  "racketChar": "Character",
+  "racketDelimiter": "Delimiter",
+  "racketFunc": "Function",
+  "racketHereString": "String",
+  "racketParen": "Delimiter",
+  "racketString": "String",
+  "String": "String"
+ },
+ "catppuccin light": {
+  "Character": "Character",
+  "Delimiter": "Delimiter",
+  "Function": "Function",
+  "racketChar": "Character",
+  "racketDelimiter": "Delimiter",
+  "racketFunc": "Function",
+  "racketHereString": "String",
+  "racketParen": "Delimiter",
+  "racketString": "String",
+  "String": "String"
+ },
+ "elflord dark": {
+  "Function": "Function",
+  "racketFunc": "Function"
+ },
+ "habamax dark": {
+  "Character": "Character",
+  "racketChar": "Character",
+  "racketHereString": "String",
+  "racketString": "String",
+  "String": "String"
+ },
+ "industry dark": {
+  "Delimiter": "Delimiter",
+  "Function": "Function",
+  "racketDelimiter": "Delimiter",
+  "racketFunc": "Function",
+  "racketParen": "Delimiter"
+ },
+ "lunaperche dark": {
+  "racketHereString": "String",
+  "racketString": "String",
+  "String": "String"
+ },
+ "lunaperche light": {
+  "racketHereString": "String",
+  "racketString": "String",
+  "String": "String"
+ },
+ "novum dark": {
+  "Delimiter": "Delimiter",
+  "Function": "Function",
+  "racketDelimiter": "Delimiter",
+  "racketFunc": "Function",
+  "racketHereString": "String",
+  "racketParen": "Delimiter",
+  "racketString": "String",
+  "String": "String"
+ },
+ "novum light": {
+  "Delimiter": "Delimiter",
+  "Function": "Function",
+  "racketDelimiter": "Delimiter",
+  "racketFunc": "Function",
+  "racketHereString": "String",
+  "racketParen": "Delimiter",
+  "racketString": "String",
+  "String": "String"
+ },
+ "retrobox dark": {
+  "Boolean": "Boolean",
+  "Character": "Character",
+  "Delimiter": "Delimiter",
+  "Function": "Function",
+  "Number": "Number",
+  "racketBoolean": "Boolean",
+  "racketChar": "Character",
+  "racketDelimiter": "Delimiter",
+  "racketFormComment": "SpecialChar",
+  "racketFunc": "Function",
+  "racketHereString": "String",
+  "racketNote": "SpecialComment",
+  "racketNumber": "Number",
+  "racketParen": "Delimiter",
+  "racketQuote": "SpecialChar",
+  "racketString": "String",
+  "racketUnquote": "SpecialChar",
+  "SpecialChar": "SpecialChar",
+  "SpecialComment": "SpecialComment",
+  "String": "String"
+ },
+ "retrobox light": {
+  "Boolean": "Boolean",
+  "Character": "Character",
+  "Delimiter": "Delimiter",
+  "Function": "Function",
+  "Number": "Number",
+  "racketBoolean": "Boolean",
+  "racketChar": "Character",
+  "racketDelimiter": "Delimiter",
+  "racketFormComment": "SpecialChar",
+  "racketFunc": "Function",
+  "racketHereString": "String",
+  "racketNote": "SpecialComment",
+  "racketNumber": "Number",
+  "racketParen": "Delimiter",
+  "racketQuote": "SpecialChar",
+  "racketString": "String",
+  "racketUnquote": "SpecialChar",
+  "SpecialChar": "SpecialChar",
+  "SpecialComment": "SpecialComment",
+  "String": "String"
+ },
+ "shine light": {
+  "Number": "Number",
+  "racketFormComment": "SpecialChar",
+  "racketNumber": "Number",
+  "racketQuote": "SpecialChar",
+  "racketUnquote": "SpecialChar",
+  "SpecialChar": "SpecialChar"
+ },
+ "slate dark": {
+  "Function": "Function",
+  "racketFunc": "Function",
+  "racketHereString": "String",
+  "racketString": "String",
+  "String": "String"
+ },
+ "sorbet dark": {
+  "racketHereString": "String",
+  "racketString": "String",
+  "String": "String"
+ },
+ "unokai dark": {
+  "Character": "Character",
+  "Delimiter": "PreProc",
+  "Function": "Function",
+  "racketChar": "Character",
+  "racketDelimiter": "PreProc",
+  "racketFunc": "Function",
+  "racketHereString": "String",
+  "racketParen": "PreProc",
+  "racketString": "String",
+  "String": "String"
+ },
+ "wildcharm dark": {
+  "racketHereString": "String",
+  "racketString": "String",
+  "String": "String"
+ },
+ "wildcharm light": {
+  "racketHereString": "String",
+  "racketString": "String",
+  "String": "String"
+ }
+}

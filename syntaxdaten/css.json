@@ -1,8 +1,10 @@
 {
 "dateityp": "css",
 "vim": 9020858,
-"testdateien": [],
-"inhaltsabhaengig": null,
+"testdateien": [
+ "103_css.css"
+],
+"inhaltsabhaengig": false,
 "iskeyword": "@,48-57,_,192-255,-",
 "syntaxIskeyword": "syntax iskeyword @,48-57,_,192-255,-",
 "gruppen": {

@@ -1,6 +1,49 @@
 # Messungen
 
-Wie genau trifft die Erweiterung die Darstellung von Vim? Stand 26.11.2026.
+Wie genau trifft die Erweiterung die Darstellung von Vim?
+
+## Faerben ohne Vim (Stand 27.11.2026)
+
+Die Erweiterung faerbt selbst (`faerben.js`), Vim dient nur als Vergleich. Vim 9.2, Patches
+1-858, unter Linux; ohne vimrc und Plugins. **Rechnerisch:** Was VS Code tatsaechlich anzeigt,
+ist nicht geprueft.
+
+| Probe | Ergebnis |
+|---|---|
+| Fertiges Paket (nachgebildetes VS Code): 80 Testdateien in 34 Themes, Gruppe je Zeichen | 2720 Kombinationen, Abweichung nur bei COBOL (8 Zeichen) |
+| `measure.js`: Farbe, Stil und Hintergrund je Zeichen, 34 Themes | Abweichung nur bei COBOL, dieselbe Stelle |
+| Stichprobe von 438 C- und C++-Dateien und Headern, default light | keine Abweichung |
+| Dateityp-Erkennung gegen Vim, 2529 Dateien | gleich |
+| Jede Testdatei mit den Regeln jeder Sprache (Suche nach Haengern) | keine |
+
+COBOL: In Zeile 183 von `39_cobol.cob` reicht eine Zeichenkette ueber Spalte 73; Vim zeigt dort
+Error, die Erweiterung nicht.
+
+Die Testdateien dienten auch zum Beheben der Fehler. Sie sagen deshalb wenig darueber, wie
+genau anderer Code getroffen wird.
+
+### Neue Dateien je Sprache
+
+Bis zu 12 Dateien je Sprache aus Vims Syntax-Tests (`runtime/syntax/testdir/input`) und aus dem
+Linux-System, die beim Bauen nicht verwendet waren; default light, Gruppe je Zeichen.
+
+| Stand | Dateien gleich |
+|---|---|
+| Erster Lauf | 309 von 322 (39 Sprachen) |
+| Nach den Korrekturen | 320 von 322 |
+
+Die zwei uebrigen sind HTML-Vorlagen (Jinja), die nur als HTML gefaerbt werden. Auch diese
+Dateien dienten dann zum Beheben; 320 von 322 ist deshalb kein Mass fuer weiteren Code.
+
+Korrigiert: Shell (Vim waehlt bash, ksh oder POSIX nach der ersten Zeile), Perl (`sub {`),
+Tcl (`he=` in Regionen mit `keepend`). Die Shell-Dateien stimmen in allen 34 Themes (13
+Dateien), die Wahl der Shell wie bei Vim (210 Dateien).
+
+Ohne neue Datei blieben 34 Sprachen: abap, ada, arduino, autohotkey, basic, clojure, cobol,
+dart, elm, erlang, forth, gdscript, haskell, julia, kotlin, mojo, nix, nu, ocaml, prolog,
+racket, raku, rust, sas, scala, scheme, scilab, solidity, stata, swift, uc, verilog, vhdl, zig.
+
+## Fruehere Version: Vim faerbt (Stand 26.11.2026)
 
 - 75 Testprogramme aus `test/`, je ein Programm pro Sprache (siehe [SPRACHEN.md](SPRACHEN.md))
 - 34 Themes: alle 28 Farbschemata von Vim 9.2, sechs davon hell und dunkel
@@ -57,7 +100,7 @@ Gegenprobe: Mit absichtlich falscher Kommentarfarbe sinkt default auf 82,9 %, di
 
 ## Offene Probleme, nach Wichtigkeit
 
-Die Reihenfolge ist ein Vorschlag.
+Stand der frueheren Version; Nr. 2 entfaellt ohne Vim. Die Reihenfolge ist ein Vorschlag.
 
 | Nr | Problem | Stand |
 |---:|---|---|
@@ -78,7 +121,7 @@ Die Reihenfolge ist ein Vorschlag.
 
 ## Syntaxdaten
 
-`syntaxdaten/` wird von der Erweiterung noch nicht benutzt. Gegenprobe: Faerbt Vim nur aus diesen
+Gegenprobe der Daten, aus denen die Erweiterung faerbt: Faerbt Vim nur aus diesen
 Daten wie mit seinen eigenen Syntaxdateien?
 
 | Probe | Ergebnis |

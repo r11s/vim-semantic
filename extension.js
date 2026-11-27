@@ -2,42 +2,38 @@
 const fs = require('fs');
 const path = require('path');
 const vscode = require('vscode');
-const { highlight, tokenType } = require('./vim');
-const { highlighter, loadData, typeFor } = require('./faerben');
+const { highlighter, loadData, tokenType } = require('./faerben');
+const { typeFor } = require('./erkennen');
+const { endungen, namen } = require('./dateitypen.json');
 const { themes, types } = require('./scheme.json');
 
-// VS-Code-Sprachen, fuer die ein Vim-Syntax vorgesehen ist
-const LANGUAGES = ['python', 'javascript', 'typescript', 'shellscript', 'json', 'jsonc', 'c', 'cpp',
-  'vim', 'viml', 'html', 'css', 'markdown', 'yaml', 'java', 'go', 'rust', 'sql', 'csharp', 'php',
-  'r', 'powershell', 'swift', 'kotlin', 'ruby', 'asm', 'dart', 'objective-c', 'vb', 'lua', 'ada',
-  'fortran', 'scala', 'perl', 'matlab', 'pascal', 'julia',
-  // weitere Sprachen der Rangliste (siehe SPRACHEN.md); unbekannte Kennungen schaden nicht
-  'nix', 'bat', 'groovy', 'haskell', 'lisp', 'gdscript', 'zig', 'ocaml', 'cobol', 'prolog',
-  'solidity', 'plsql', 'clojure', 'glsl', 'erlang', 'tcl', 'cuda-cpp', 'd', 'sas', 'cython',
-  'awk', 'verilog', 'systemverilog', 'vhdl', 'abap', 'scheme', 'raku', 'standardml', 'smalltalk',
-  'unrealscript', 'stata', 'forth', 'scilab', 'ahk', 'processing', 'nushell', 'racket', 'mojo',
-  'elm'];
-// Ohne passende Spracherweiterung kennt VS Code den Typ nicht; dann zaehlt die Endung
-const EXTENSIONS = ['asm', 'swift', 'kt', 'dart', 'adb', 'ads', 'f90', 'scala', 'm', 'pas', 'jl',
-  'R', 'r', 'vb',
-  'nix', 'bat', 'cmd', 'groovy', 'hs', 'lisp', 'gd', 'zig', 'ml', 'cob', 'pl', 'sol', 'sql', 'clj',
-  'glsl', 'erl', 'tcl', 'cu', 'd', 'vim', 'sas', 'pyx', 'el', 'awk', 'v', 'vhd', 'vbs', 'abap',
-  'scm', 'raku', 'sv', 'sml', 'st', 'uc', 'do', 'fth', 'sce', 'ahk', 'pde', 'nu', 'rkt', 'mojo',
-  'bas', 'p', 'elm', 'tcc', 'moc'];
-// Nur noetig, wenn Vim den Typ nicht am Dateinamen erkennt (etwa bei "Untitled")
-const FILETYPES = { shellscript: 'sh', viml: 'vim', csharp: 'cs', powershell: 'ps1',
-  'objective-c': 'objc', plaintext: '', bat: 'dosbatch', 'cuda-cpp': 'cuda', cython: 'pyrex',
-  standardml: 'sml', smalltalk: 'st', unrealscript: 'uc', ahk: 'autohotkey',
-  processing: 'arduino', nushell: 'nu' };
+// VS-Code-Sprachen -> Syntaxregeln. Die Zuordnung zaehlt bei ungespeicherten Dateien; bei
+// gespeicherten entscheiden wie in Vim Dateiname und Inhalt (erkennen.js).
+const LANGUAGES = {
+  abap: 'abap', abl: 'progress', ada: 'ada', ahk: 'autohotkey', asm: 'asm', awk: 'awk', basic: 'basic',
+  bat: 'dosbatch', c: 'c',
+  clojure: 'clojure', cobol: 'cobol', cpp: 'cpp', csharp: 'cs', css: 'css', 'cuda-cpp': 'cuda',
+  cython: 'pyrex', d: 'd', dart: 'dart', elm: 'elm', erlang: 'erlang', forth: 'forth',
+  gdscript: 'gdscript', glsl: 'glsl', go: 'go', groovy: 'groovy', haskell: 'haskell',
+  html: 'html', java: 'java', javascript: 'javascript', json: 'json', julia: 'julia',
+  kotlin: 'kotlin', lisp: 'lisp', lua: 'lua', markdown: 'markdown', matlab: 'matlab',
+  mojo: 'mojo', nix: 'nix', nushell: 'nu', 'objective-c': 'objc', ocaml: 'ocaml',
+  pascal: 'pascal', perl: 'perl', php: 'php', plsql: 'sql', powershell: 'ps1',
+  processing: 'arduino', progress: 'progress', prolog: 'prolog', python: 'python', r: 'r', racket: 'racket', raku: 'raku', ruby: 'ruby',
+  rust: 'rust', sas: 'sas', scala: 'scala', scheme: 'scheme', scilab: 'scilab',
+  shellscript: 'sh', smalltalk: 'st', solidity: 'solidity', sql: 'sql', standardml: 'sml',
+  stata: 'stata', swift: 'swift', systemverilog: 'systemverilog', tcl: 'tcl',
+  typescript: 'typescript', unrealscript: 'uc', vb: 'vb', verilog: 'verilog', vhdl: 'vhdl',
+  yaml: 'yaml', zig: 'zig',
+};
+// Endungen und Namen, bei denen VS Code die Erweiterung auch ohne passende Sprache fragt.
+// Die zweite Liste sind Endungen, ueber die nur der Inhalt entscheidet.
+const EXTENSIONS = [...new Set([...Object.keys(endungen),
+  'h', 'm', 'pl', 'v', 'p', 'i', 'd', 'r', 'cls', 'sh', 'cmd', 'inc', 'pp', 'lpr', 'sc', 'class'])];
+const NAMES = Object.keys(namen);
 
-// Versuch: C und C++ faerbt die Erweiterung selbst nach den Regeln aus syntaxdaten, ohne Vim
-// zu starten. Den Typ bestimmen wie in Vim der Dateiname und bei ".h" der Inhalt; ohne
-// passenden Namen zaehlt bei ungespeicherten Dateien die Sprache.
-const UNTITLED = { c: 'c', cpp: 'cpp' };
-const ownType = (document, text) => typeFor(document.fileName, text) ??
-  ((document.isUntitled && UNTITLED[document.languageId]) || null);
 const engines = new Map(); // Dateityp -> Faerber, beim ersten Gebrauch geladen
-const ownEngine = (type) => {
+const engineFor = (type) => {
   if (!engines.has(type)) engines.set(type, highlighter(loadData(type)));
   return engines.get(type);
 };
@@ -46,7 +42,6 @@ function activate(context) {
   const legend = new vscode.SemanticTokensLegend(types);
   const index = new Map(types.map((type, i) => [type, i]));
   const log = vscode.window.createOutputChannel('VimSem');
-  let warned = false;
 
   // Protokoll zur Fehlersuche: immer im Ausgabekanal, auf Wunsch (vimHighlight.logFile)
   // auch in protokoll.txt im Erweiterungsordner
@@ -128,11 +123,9 @@ function activate(context) {
   const changed = new vscode.EventEmitter();
   context.subscriptions.push(changed, vscode.workspace.onDidChangeConfiguration((event) => {
     const theme = event.affectsConfiguration('workbench.colorTheme');
-    const settings = ['backgroundGroups', 'vimPath', 'maxLines']
-      .some((key) => event.affectsConfiguration(`vimHighlight.${key}`));
+    const settings = event.affectsConfiguration('vimHighlight.backgroundGroups');
     if (theme || settings) {
       if (theme) note(`Farbschema: ${activeTheme()}`);
-      if (event.affectsConfiguration('vimHighlight.vimPath')) warned = false;
       cache.clear();
       vscode.window.visibleTextEditors.forEach(decorate);
       changed.fire();
@@ -142,7 +135,7 @@ function activate(context) {
 
   const provider = {
     onDidChangeSemanticTokens: changed.event,
-    async provideDocumentSemanticTokens(document, cancel) {
+    provideDocumentSemanticTokens(document, cancel) {
       const theme = activeTheme();
       const current = themes[theme];
       if (!current) {
@@ -150,32 +143,24 @@ function activate(context) {
         return null;
       }
 
-      const config = vscode.workspace.getConfiguration('vimHighlight', document.uri);
       const name = path.basename(document.fileName);
       note(`Anfrage: ${name} (${document.languageId}, ${document.lineCount} Zeilen)`);
-      if (document.lineCount > config.get('maxLines')) {
-        forget(document);
-        return null;
-      }
       const version = document.version;
-
-      const abort = new AbortController();
-      const subscription = cancel.onCancellationRequested(() => abort.abort());
-      const text = document.getText();
-      const type = ownType(document, text);
       try {
+        const text = document.getText();
+        let type = typeFor(document.fileName, text);
+        if (!type && document.isUntitled) {
+          type = LANGUAGES[document.languageId] || null;
+          // Welche Shell, entscheidet wie bei Dateien die erste Zeile
+          if (type === 'sh') type = typeFor('Untitled.sh', text);
+        }
+        if (!type) {
+          forget(document);
+          note(`${name}: keine Syntaxregeln fuer diese Datei`);
+          return null;
+        }
         const start = Date.now();
-        const tokens = type
-          ? ownEngine(type).highlight(text, { scheme: current.scheme, background: current.background })
-          : await highlight({
-            vimPath: config.get('vimPath'),
-            text,
-            fileName: document.fileName,
-            filetype: FILETYPES[document.languageId] ?? document.languageId,
-            scheme: current.scheme,
-            background: current.background,
-            signal: abort.signal,
-          });
+        const tokens = engineFor(type).highlight(text, { scheme: current.scheme, background: current.background });
         const time = Date.now() - start;
         const builder = new vscode.SemanticTokensBuilder(legend);
         for (const t of tokens) {
@@ -184,39 +169,25 @@ function activate(context) {
         // Ergebnisse zu einem inzwischen geaenderten Text wuerden verrutschen
         const upToDate = !cancel.isCancellationRequested && document.version === version && theme === activeTheme();
         const marked = upToDate ? remember(document, version, theme, tokens) : 0;
-        note(`${name}: ${tokens.length} Abschnitte ${type ? `ohne Vim (${type})` : 'von Vim'} in ${time} ms, ` +
+        note(`${name}: ${tokens.length} Abschnitte (${type}) in ${time} ms, ` +
           `${tokens.filter((t) => index.has(t.type)).length} davon mit bekannter Gruppe, ${marked} Hintergruende`);
         return builder.build();
       } catch (error) {
-        if (!cancel.isCancellationRequested) {
-          note(String(error.message || error));
-          if (type) {
-            // Bewusst kein Ausweichen auf Vim: Beim Versuch soll ein Fehler sichtbar sein
-            note(String(error.stack));
-            vscode.window.showWarningMessage('VimSem: Faerben ohne Vim fehlgeschlagen (siehe Ausgabe "VimSem").');
-          } else if (!warned) {
-            warned = true;
-            const text = error.code === 'ENOENT'
-              ? `VimSem: Vim nicht gefunden ("${config.get('vimPath')}"). Bitte vimHighlight.vimPath setzen.`
-              : 'VimSem: Vim konnte nicht ausgefuehrt werden (siehe Ausgabe "VimSem").';
-            vscode.window.showWarningMessage(text, 'Einstellung oeffnen').then((choice) => {
-              if (choice) vscode.commands.executeCommand('workbench.action.openSettings', 'vimHighlight.vimPath');
-            });
-          }
-        }
+        note(String(error.stack || error));
+        vscode.window.showWarningMessage('VimSem: Faerben fehlgeschlagen (siehe Ausgabe "VimSem").');
         return null;
-      } finally {
-        subscription.dispose();
       }
     },
   };
 
   const selector = [
-    ...LANGUAGES.flatMap((language) => [
+    // "plaintext": Skripte ohne Endung ("#!...") und Sicherungskopien wie "x.py.bak"
+    ...[...Object.keys(LANGUAGES), 'plaintext'].flatMap((language) => [
       { scheme: 'file', language },
       { scheme: 'untitled', language },
     ]),
-    ...EXTENSIONS.map((extension) => ({ scheme: 'file', pattern: `**/*.${extension}` })),
+    { scheme: 'file', pattern: `**/*.{${EXTENSIONS.join(',')}}` },
+    { scheme: 'file', pattern: `**/{${NAMES.join(',')}}` },
   ];
   context.subscriptions.push(
     log,

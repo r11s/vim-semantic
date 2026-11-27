@@ -1,41 +1,61 @@
 # vim-semantic (VimSem)
 
-Die Farbschemata von Vim im Editor von VS Code, so wie in Vim. Vim ermittelt im Hintergrund
-die Highlight-Gruppen, VS Code zeigt sie als Semantic Tokens an. Enthalten sind 34 Themes
-"VimSem ..." zu den Farbschemata von Vim 9.2.
+Die Farbschemata von Vim im Editor von VS Code und VSCodium, so wie in Vim. **Vim muss dafuer
+nicht installiert sein:** Die Erweiterung wendet Vims Syntaxregeln selbst an und zeigt das
+Ergebnis als Semantic Tokens. Enthalten sind 34 Themes "VimSem ..." zu den Farbschemata von
+Vim 9.2.
 
 Es geht nur um die Darstellung im Editor, nicht um das Verhalten von Vim.
 
-## Voraussetzung
+**Das Faerben ohne Vim ist neu und noch ein Versuch.**
 
-Vim 9 mit Syntax-Unterstuetzung (nicht vim-tiny) auf demselben Rechner. Ohne Vim werden nur
-C- und C++-Dateien gefaerbt, siehe unten.
+## Sprachen
 
-## Versuch: C und C++ ohne Vim
+Gefaerbt werden diese Vim-Dateitypen:
 
-C- und C++-Dateien faerbt die Erweiterung selbst: `faerben.js` wendet die Regeln aus
-`syntaxdaten/c.json` und `cpp.json` an, ohne Vim zu starten. Alle anderen Sprachen brauchen
-weiterhin Vim. In der Ausgabe "VimSem" steht je Datei "ohne Vim (c)", "ohne Vim (cpp)" oder
-"von Vim".
+abap, ada, arduino, asm, autohotkey, awk, basic, c, clojure, cobol, cpp, cs, css, cuda, d,
+dart, dosbatch, elm, erlang, forth, gdscript, glsl, go, groovy, haskell, html, java,
+javascript, json, julia, kotlin, lisp, lua, markdown, matlab, mojo, nix, nu, objc, ocaml,
+pascal, perl, php, progress, prolog, ps1, pyrex, python, r, racket, raku, ruby, rust, sas,
+scala, scheme, scilab, sh, sml, solidity, sql, st, stata, swift, systemverilog, tcl,
+typescript, uc, vb, verilog, vhdl, yaml, zig
 
-Der Typ wird wie in Vim 9.2 bestimmt:
+**Nicht gefaerbt** wird alles andere, zum Beispiel:
 
-- `.c` ist C.
-- `.cpp .cc .cxx .c++ .hpp .hh .hxx .ipp .tcc .inl .ixx .cppm .moc` sind C++.
-- Gross-/Kleinschreibung zaehlt unter Windows und macOS nicht. Unter Linux sind `.C` und
-  `.H` C++.
-- `.h` ist C++, wenn in den ersten 99 Zeilen eine Zeile mit `class`, `namespace`, `template`
-  oder `using` beginnt, sonst C. Beginnt eine mit `@interface`, `@class` oder `@end`
-  (Objective-C), faerbt Vim die Datei.
+- Vim script und Fortran
+- JSON mit Kommentaren (jsonc), zum Beispiel `tsconfig.json` und die `settings.json` in den
+  Benutzereinstellungen von VS Code
+- Objective-C++ (`.mm`, und `.h`-Dateien, in denen eine Zeile mit `@interface`, `@class` oder
+  `@end` beginnt)
+- zsh, csh, tcsh
 
-Verglichen mit Vim 9.2 (Patches 1-858) ohne eigene Einstellungen, Zeichen fuer Zeichen:
+Welche Regeln gelten, entscheidet wie in Vim 9.2 der Dateiname (`dateitypen.json`) und bei
+mehrdeutigen Endungen wie `.h .m .pl .v .bas .p` der Inhalt (`erkennen.js`). Dateien ohne
+passenden Namen werden an der ersten Zeile `#!...` erkannt, ungespeicherte Dateien an der in
+VS Code gewaehlten Sprache. Unter Windows und macOS zaehlt Gross-/Kleinschreibung nicht.
 
-- 201 C-Dateien aus dem Quelltext von Vim ohne Abweichung.
-- 1223 C++-Dateien und Header (libstdc++, Node.js) ohne Abweichung.
-- alle 34 Themes mit je 6 C- und C++-Dateien ohne Abweichung.
+Fuer Shell gibt es wie in Vim drei Regelsaetze: bash, Korn-Shell und POSIX. Es entscheidet die
+erste Zeile, sonst der Dateiname (`.bashrc`, `*.bash`, `*.ksh` ...). `#!/bin/sh` und Dateien
+ohne Angabe gelten als POSIX-Shell, wie in Vim unter Windows.
 
-Bekannte Abweichungen: nach einer Zeile mit mehr als 3000 Zeichen kann die folgende Zeile
-anders aussehen, und bei fehlerhaftem Code sind vereinzelte Abweichungen moeglich.
+## Wie genau?
+
+Verglichen mit Vim 9.2 (Patches 1-858) unter Linux, ohne eigene Einstellungen:
+
+- 80 Testdateien aus `test/` in allen 34 Themes: eine Abweichung (COBOL, 8 Zeichen).
+- eine Stichprobe von 438 C- und C++-Dateien und Headern ohne Abweichung.
+- 322 weitere Dateien in 39 Sprachen (Vims Syntax-Tests und Dateien des Systems): 320 gleich,
+  die zwei anderen sind HTML-Vorlagen.
+
+Mehr dazu in [MESSUNGEN.md](MESSUNGEN.md). **Eine Testdatei je Sprache prueft nicht jedes
+Sprachkonstrukt.** Bei anderem Code sind Abweichungen zu erwarten.
+
+Bekannte Abweichungen:
+
+- COBOL: Zeilen, die ueber Spalte 72 hinausgehen, koennen anders aussehen.
+- Die Varianten der Korn-Shell (ksh88, ksh93, mksh) werden alle gleich gefaerbt.
+- Vorlagen in HTML (Angular, Django) werden nur als HTML gefaerbt.
+- Nach einer Zeile mit mehr als 3000 Zeichen kann die folgende Zeile anders aussehen.
 
 ## Installieren
 
@@ -47,12 +67,6 @@ Braucht Node.js ab Version 20 und beim ersten Mal Internet (laedt `@vscode/vsce`
 
 Danach VS Code bzw. VSCodium neu starten und ein "VimSem ..."-Farbschema waehlen.
 
-Findet VS Code kein Vim, in der settings.json den vollen Pfad zur `vim.exe` angeben, z. B. fuer
-das Vim aus Git oder fuer gVim:
-
-    "vimHighlight.vimPath": "C:\\Program Files\\Git\\usr\\bin\\vim.exe"
-    "vimHighlight.vimPath": "C:\\Program Files\\Vim\\vim92\\vim.exe"
-
 Empfohlen, weil Vim Klammern nicht nach Tiefe faerbt:
 
     "editor.bracketPairColorization.enabled": false
@@ -63,18 +77,10 @@ Entfernen: `code --uninstall-extension r11s.vim-semantic` (VSCodium: `codium` st
 
 | Einstellung | Vorgabe | Bedeutung |
 |---|---|---|
-| `vimHighlight.vimPath` | `vim` | Pfad zu Vim |
-| `vimHighlight.maxLines` | `3000` | groessere Dateien bleiben ungefaerbt |
 | `vimHighlight.backgroundGroups` | `["Todo", "Error", "Constant"]` | Gruppen mit Hintergrund |
 | `vimHighlight.logFile` | `false` | Protokoll in `protokoll.txt` im Erweiterungsordner |
 
 Fehlersuche: Ansicht "Ausgabe", Kanal "VimSem".
-
-## Sprachen
-
-Gefaerbt werden die Sprachen und Dateiendungen, die in `extension.js` aufgefuehrt sind.
-Gemessen ist die Darstellung mit je einem Testprogramm in 75 Sprachen und Dialekten, siehe
-[MESSUNGEN.md](MESSUNGEN.md) und [SPRACHEN.md](SPRACHEN.md).
 
 ## Neue Sprache anfragen
 
@@ -88,12 +94,16 @@ naechsten Releases aufgenommen. Voraussetzung: Vim hat fuer die Sprache eine Syn
 - Hintergruende nur fuer die eingestellten Gruppen. Semantic Tokens kennen keinen Hintergrund,
   deshalb setzt die Erweiterung dafuer Decorations.
 - Cursorzeile, Zeilennummern, Auswahl und Suchtreffer haben die Farben von VS Code.
-- Vim startet bei jeder Aktualisierung neu; grosse Dateien sind langsam (ausser bei C und C++).
-- Syntax wird immer ab Dateianfang berechnet (`syntax sync fromstart`).
+- Bei jeder Aenderung wird die ganze Datei neu berechnet. Bei 5000 Zeilen dauert das meist
+  unter 0,5 Sekunden, bei einzelnen Sprachen (JSON, Nushell) gut 1 Sekunde (gemessen unter
+  Linux).
+- Syntax wird immer ab Dateianfang berechnet (wie `syntax sync fromstart`).
 - Ohne vimrc und Plugins.
 - Andere Semantic-Token-Anbieter (etwa fuer TypeScript) koennen Vorrang bekommen.
 
 ## Entwickeln
+
+Vim 9 braucht nur, wer Themes oder Daten erzeugt oder misst.
 
 Testfenster ohne Installation:
 
@@ -108,8 +118,8 @@ Messen:
 
     node measure.js blue                # bei hell und dunkel: node measure.js <name> light|dark
 
-Vergleicht je Zeichen (ohne Leerraum) Farbe, Stil und Hintergrund: Soll aus `vim/reference.vim`,
-Ist aus den Tokens der Erweiterung und der Theme-Datei. Abweichungen stehen in
+Vergleicht je Zeichen (ohne Leerraum) Farbe, Stil und Hintergrund: Soll aus `vim/reference.vim`
+(Vim), Ist aus dem Faerber der Erweiterung (`faerben.js`) und der Theme-Datei. Abweichungen stehen in
 `messung/<name>-<light|dark>.txt`. Rechnerisch: Was VS Code tatsaechlich anzeigt, wird damit
 nicht geprueft.
 
@@ -119,13 +129,16 @@ nicht geprueft.
 | `vim/` | Vim-Skripte |
 | `test/` | Testprogramme, siehe [test/README.md](test/README.md) |
 | `syntaxdaten/` | Faerberegeln von Vim je Sprache, siehe [syntaxdaten/README.md](syntaxdaten/README.md) |
-| `schemata/` | wo ein Farbschema eine Gruppe anders zuordnet (bisher C und C++) |
+| `schemata/` | wo ein Farbschema eine Gruppe anders zuordnet |
 | `werkzeuge/` | Skripte zum Bauen, Erzeugen und Pruefen |
 
-Die Erweiterung benutzt von den Syntaxdaten bisher C und C++. Faerben ohne Vim pruefen:
+Mit Vim vergleichen und Daten erzeugen:
 
-    node werkzeuge/ohne-vim-messen.js auto datei...    # mit SCHEMA=blue BG=dark fuer ein anderes
-    node werkzeuge/schema-gruppen.js cpp               # schemata/cpp.json neu erzeugen (ebenso c)
+    node werkzeuge/ohne-vim-messen.js auto datei...   # mit SCHEMA=blue BG=dark fuer ein anderes
+    node werkzeuge/schema-gruppen.js cpp              # schemata/cpp.json neu erzeugen
+    node werkzeuge/schema-gruppen.js sh test/08_shell.sh   # sh braucht eine Beispieldatei
+    node werkzeuge/schema-gruppen.js sh-posix datei         # Datei mit "#!/bin/sh"; sh-ksh: "#!/bin/ksh"
+    node werkzeuge/dateitypen.js                      # dateitypen.json (braucht VIMRUNTIME)
 
 Kurzbefehle: [SPICKZETTEL.md](SPICKZETTEL.md).
 
@@ -133,7 +146,7 @@ Kurzbefehle: [SPICKZETTEL.md](SPICKZETTEL.md).
 
 VimSem steht unter der Vim-Lizenz, siehe [LICENSE](LICENSE).
 
-Themes und Syntaxdaten sind aus Dateien von [Vim](https://github.com/vim/vim) abgeleitet und
+Themes, Syntaxdaten und Dateityp-Erkennung sind aus Dateien von [Vim](https://github.com/vim/vim) abgeleitet und
 dabei veraendert. Die Angaben zu diesen Dateien, auch zu solchen mit eigener Lizenz, stehen in
 [LIZENZEN.md](LIZENZEN.md). Neu erzeugen: `werkzeuge/lizenzen.js`.
 

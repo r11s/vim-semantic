@@ -1,0 +1,174 @@
+{
+ "blue dark": {
+  "basicArithmeticOperator": "Type",
+  "basicLogicalOperator": "Type",
+  "basicOperator": "Type",
+  "Operator": "Type"
+ },
+ "catppuccin dark": {
+  "basicArithmeticOperator": "Operator",
+  "basicDataString": "String",
+  "basicFunction": "Function",
+  "basicKeyword": "Keyword",
+  "basicLogicalOperator": "Operator",
+  "basicOperator": "Operator",
+  "basicPutAction": "Keyword",
+  "basicString": "String",
+  "Function": "Function",
+  "Keyword": "Keyword",
+  "Operator": "Operator",
+  "String": "String"
+ },
+ "catppuccin light": {
+  "basicArithmeticOperator": "Operator",
+  "basicDataString": "String",
+  "basicFunction": "Function",
+  "basicKeyword": "Keyword",
+  "basicLogicalOperator": "Operator",
+  "basicOperator": "Operator",
+  "basicPutAction": "Keyword",
+  "basicString": "String",
+  "Function": "Function",
+  "Keyword": "Keyword",
+  "Operator": "Operator",
+  "String": "String"
+ },
+ "elflord dark": {
+  "basicArithmeticOperator": "Operator",
+  "basicFunction": "Function",
+  "basicLogicalOperator": "Operator",
+  "basicOperator": "Operator",
+  "Function": "Function",
+  "Operator": "Operator"
+ },
+ "habamax dark": {
+  "basicDataString": "String",
+  "basicString": "String",
+  "String": "String"
+ },
+ "industry dark": {
+  "basicFunction": "Function",
+  "Function": "Function"
+ },
+ "lunaperche dark": {
+  "basicDataString": "String",
+  "basicString": "String",
+  "String": "String"
+ },
+ "lunaperche light": {
+  "basicDataString": "String",
+  "basicString": "String",
+  "String": "String"
+ },
+ "novum dark": {
+  "basicArithmeticOperator": "Operator",
+  "basicDataString": "String",
+  "basicFunction": "Function",
+  "basicLogicalOperator": "Operator",
+  "basicOperator": "Operator",
+  "basicString": "String",
+  "Function": "Function",
+  "Operator": "Operator",
+  "String": "String"
+ },
+ "novum light": {
+  "basicArithmeticOperator": "Operator",
+  "basicDataString": "String",
+  "basicFunction": "Function",
+  "basicLogicalOperator": "Operator",
+  "basicOperator": "Operator",
+  "basicString": "String",
+  "Function": "Function",
+  "Operator": "Operator",
+  "String": "String"
+ },
+ "retrobox dark": {
+  "basicArithmeticOperator": "Operator",
+  "basicDataString": "String",
+  "basicFloat": "Float",
+  "basicFunction": "Function",
+  "basicKeyword": "Keyword",
+  "basicLogicalOperator": "Operator",
+  "basicMetacommand": "SpecialComment",
+  "basicNumber": "Number",
+  "basicOperator": "Operator",
+  "basicPutAction": "Keyword",
+  "basicString": "String",
+  "Float": "Float",
+  "Function": "Function",
+  "Keyword": "Keyword",
+  "Number": "Number",
+  "Operator": "Operator",
+  "SpecialComment": "SpecialComment",
+  "String": "String"
+ },
+ "retrobox light": {
+  "basicArithmeticOperator": "Operator",
+  "basicDataString": "String",
+  "basicFloat": "Float",
+  "basicFunction": "Function",
+  "basicKeyword": "Keyword",
+  "basicLogicalOperator": "Operator",
+  "basicMetacommand": "SpecialComment",
+  "basicNumber": "Number",
+  "basicOperator": "Operator",
+  "basicPutAction": "Keyword",
+  "basicString": "String",
+  "Float": "Float",
+  "Function": "Function",
+  "Keyword": "Keyword",
+  "Number": "Number",
+  "Operator": "Operator",
+  "SpecialComment": "SpecialComment",
+  "String": "String"
+ },
+ "ron dark": {
+  "basicArithmeticOperator": "Operator",
+  "basicLogicalOperator": "Operator",
+  "basicOperator": "Operator",
+  "Operator": "Operator"
+ },
+ "shine light": {
+  "basicFloat": "Float",
+  "basicNumber": "Number",
+  "Float": "Float",
+  "Number": "Number"
+ },
+ "slate dark": {
+  "basicArithmeticOperator": "Operator",
+  "basicDataString": "String",
+  "basicFunction": "Function",
+  "basicLogicalOperator": "Operator",
+  "basicOperator": "Operator",
+  "basicString": "String",
+  "Function": "Function",
+  "Operator": "Operator",
+  "String": "String"
+ },
+ "sorbet dark": {
+  "basicDataString": "String",
+  "basicString": "String",
+  "String": "String"
+ },
+ "unokai dark": {
+  "basicArithmeticOperator": "PreProc",
+  "basicDataString": "String",
+  "basicFunction": "Function",
+  "basicLogicalOperator": "PreProc",
+  "basicOperator": "PreProc",
+  "basicString": "String",
+  "Function": "Function",
+  "Operator": "PreProc",
+  "String": "String"
+ },
+ "wildcharm dark": {
+  "basicDataString": "String",
+  "basicString": "String",
+  "String": "String"
+ },
+ "wildcharm light": {
+  "basicDataString": "String",
+  "basicString": "String",
+  "String": "String"
+ }
+}

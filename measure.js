@@ -6,7 +6,9 @@
 const fs = require('fs');
 const os = require('os');
 const path = require('path');
-const { runVim, highlight, tokenType } = require('./vim');
+const { runVim, tokenType } = require('./vim');
+const { highlighter, loadData } = require('./faerben');
+const { typeFor } = require('./erkennen');
 
 const TESTDIR = process.env.TESTDIR || path.join(__dirname, 'test');
 const VIM = process.env.VIM_PATH || 'vim';
@@ -53,6 +55,8 @@ async function reference(file, text, current) {
   }
 }
 
+const engines = new Map(); // Dateityp -> Faerber
+
 // Aussehen je Position, so wie die Erweiterung es VS Code vorgibt
 async function actual(file, text, current) {
   const { theme, types } = current;
@@ -62,10 +66,10 @@ async function actual(file, text, current) {
     bg: theme.colors['editor.background'].toLowerCase(),
     style: '',
   };
-  const tokens = await highlight({
-    vimPath: VIM, text, fileName: file, filetype: '',
-    scheme: current.scheme, background: current.background,
-  });
+  // Wie die Erweiterung: Typ nach Name und Inhalt, gefaerbt ohne Vim
+  const type = typeFor(file, text);
+  if (type && !engines.has(type)) engines.set(type, highlighter(loadData(type)));
+  const tokens = type ? engines.get(type).highlight(text, current) : [];
   const at = new Map();
   for (const t of tokens) {
     if (!types.has(t.type)) continue;

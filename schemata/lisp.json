@@ -1,0 +1,103 @@
+{
+ "catppuccin dark": {
+  "Delimiter": "Delimiter",
+  "lispAtomMark": "Delimiter",
+  "lispMark": "Delimiter",
+  "lispParen": "Delimiter",
+  "lispString": "String",
+  "String": "String"
+ },
+ "catppuccin light": {
+  "Delimiter": "Delimiter",
+  "lispAtomMark": "Delimiter",
+  "lispMark": "Delimiter",
+  "lispParen": "Delimiter",
+  "lispString": "String",
+  "String": "String"
+ },
+ "habamax dark": {
+  "lispString": "String",
+  "String": "String"
+ },
+ "industry dark": {
+  "Delimiter": "Delimiter",
+  "lispAtomMark": "Delimiter",
+  "lispMark": "Delimiter",
+  "lispParen": "Delimiter"
+ },
+ "lunaperche dark": {
+  "lispString": "String",
+  "String": "String"
+ },
+ "lunaperche light": {
+  "lispString": "String",
+  "String": "String"
+ },
+ "novum dark": {
+  "Delimiter": "Delimiter",
+  "lispAtomMark": "Delimiter",
+  "lispMark": "Delimiter",
+  "lispParen": "Delimiter",
+  "lispString": "String",
+  "String": "String"
+ },
+ "novum light": {
+  "Delimiter": "Delimiter",
+  "lispAtomMark": "Delimiter",
+  "lispMark": "Delimiter",
+  "lispParen": "Delimiter",
+  "lispString": "String",
+  "String": "String"
+ },
+ "retrobox dark": {
+  "Delimiter": "Delimiter",
+  "lispAtomMark": "Delimiter",
+  "lispAtomNmbr": "Number",
+  "lispMark": "Delimiter",
+  "lispNumber": "Number",
+  "lispParen": "Delimiter",
+  "lispString": "String",
+  "Number": "Number",
+  "String": "String"
+ },
+ "retrobox light": {
+  "Delimiter": "Delimiter",
+  "lispAtomMark": "Delimiter",
+  "lispAtomNmbr": "Number",
+  "lispMark": "Delimiter",
+  "lispNumber": "Number",
+  "lispParen": "Delimiter",
+  "lispString": "String",
+  "Number": "Number",
+  "String": "String"
+ },
+ "shine light": {
+  "lispAtomNmbr": "Number",
+  "lispNumber": "Number",
+  "Number": "Number"
+ },
+ "slate dark": {
+  "lispString": "String",
+  "String": "String"
+ },
+ "sorbet dark": {
+  "lispString": "String",
+  "String": "String"
+ },
+ "unokai dark": {
+  "Delimiter": "PreProc",
+  "lispAtomMark": "PreProc",
+  "lispMark": "PreProc",
+  "lispParen": "PreProc",
+  "lispString": "String",
+  "String": "String"
+ },
+ "wildcharm dark": {
+  "lispString": "String",
+  "String": "String"
+ },
+ "wildcharm light": {
+  "lispString": "String",
+  "String": "String"
+ }
+}

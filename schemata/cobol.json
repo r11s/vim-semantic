@@ -1,0 +1,100 @@
+{
+ "blue dark": {
+  "cobolDivision": "Label",
+  "cobolParagraph": "Label",
+  "cobolSection": "Label",
+  "Label": "Label"
+ },
+ "catppuccin dark": {
+  "cobolCALLs": "Function",
+  "cobolDivision": "Label",
+  "cobolDivisionName": "Keyword",
+  "cobolGoToPara": "Function",
+  "cobolParagraph": "Label",
+  "cobolParagraphName": "Keyword",
+  "cobolSection": "Label",
+  "cobolSectionName": "Keyword",
+  "Function": "Function",
+  "Keyword": "Keyword",
+  "Label": "Label"
+ },
+ "catppuccin light": {
+  "cobolCALLs": "Function",
+  "cobolDivision": "Label",
+  "cobolDivisionName": "Keyword",
+  "cobolGoToPara": "Function",
+  "cobolParagraph": "Label",
+  "cobolParagraphName": "Keyword",
+  "cobolSection": "Label",
+  "cobolSectionName": "Keyword",
+  "Function": "Function",
+  "Keyword": "Keyword",
+  "Label": "Label"
+ },
+ "elflord dark": {
+  "cobolCALLs": "Function",
+  "cobolGoToPara": "Function",
+  "Function": "Function"
+ },
+ "industry dark": {
+  "cobolCALLs": "Function",
+  "cobolGoToPara": "Function",
+  "Function": "Function"
+ },
+ "novum dark": {
+  "cobolCALLs": "Function",
+  "cobolGoToPara": "Function",
+  "Function": "Function"
+ },
+ "novum light": {
+  "cobolCALLs": "Function",
+  "cobolGoToPara": "Function",
+  "Function": "Function"
+ },
+ "retrobox dark": {
+  "cobolCALLs": "Function",
+  "cobolDivision": "Label",
+  "cobolDivisionName": "Keyword",
+  "cobolGoToPara": "Function",
+  "cobolParagraph": "Label",
+  "cobolParagraphName": "Keyword",
+  "cobolSection": "Label",
+  "cobolSectionName": "Keyword",
+  "Function": "Function",
+  "Keyword": "Keyword",
+  "Label": "Label"
+ },
+ "retrobox light": {
+  "cobolCALLs": "Function",
+  "cobolDivision": "Label",
+  "cobolDivisionName": "Keyword",
+  "cobolGoToPara": "Function",
+  "cobolParagraph": "Label",
+  "cobolParagraphName": "Keyword",
+  "cobolSection": "Label",
+  "cobolSectionName": "Keyword",
+  "Function": "Function",
+  "Keyword": "Keyword",
+  "Label": "Label"
+ },
+ "ron dark": {
+  "cobolDivision": "Label",
+  "cobolParagraph": "Label",
+  "cobolSection": "Label",
+  "Label": "Label"
+ },
+ "slate dark": {
+  "cobolCALLs": "Function",
+  "cobolGoToPara": "Function",
+  "Function": "Function"
+ },
+ "unokai dark": {
+  "cobolCALLs": "Function",
+  "cobolDivision": "String",
+  "cobolGoToPara": "Function",
+  "cobolParagraph": "String",
+  "cobolSection": "String",
+  "Function": "Function",
+  "Label": "String"
+ }
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!-- Formen-Rechner. TODO: weitere Formen -->
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>Formen-Rechner</title>
+  <style>
+    body { font: 16px/1.5 "Segoe UI", sans-serif; color: #333; }
+    .form:hover > td { background: rgb(240, 240, 240); margin: 0 auto !important; }
+    @media (max-width: 600px) { table { width: 100%; } }
+  </style>
+</head>
+<body>
+  <h1 id="kopf">Formen &amp; Fl&auml;chen</h1>
+  <p>Ein <b>fetter</b>, <i>schr&#228;ger</i> und <u>unterstrichener</u> Text.</p>
+  <a href="https://example.org/?a=1&b=2" target=_blank>Link</a>
+  <table>
+    <tr class="form"><td>Kreis</td><td>12.57</td></tr>
+  </table>
+  <input type="number" value="2" disabled/>
+  <script>
+    // Kommentar
+    const PI = 3.141592653589793;
+    function flaeche(r) { return PI * r ** 2; }
+    document.getElementById('kopf').textContent = `Kreis: ${flaeche(2).toFixed(2)}`;
+  </script>
+  <unbekannt falsch="1">Ende</unbekannt>
+</body>
+</html>

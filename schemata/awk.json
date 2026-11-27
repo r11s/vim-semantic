@@ -1,0 +1,146 @@
+{
+ "catppuccin dark": {
+  "awkBrktRegExp": "Keyword",
+  "awkCharClass": "Keyword",
+  "awkConditional": "Conditional",
+  "awkFunction": "Function",
+  "awkNestRegExp": "Keyword",
+  "awkRepeat": "Repeat",
+  "awkSearch": "String",
+  "awkString": "String",
+  "Conditional": "Conditional",
+  "Function": "Function",
+  "Keyword": "Keyword",
+  "Repeat": "Repeat",
+  "String": "String"
+ },
+ "catppuccin light": {
+  "awkBrktRegExp": "Keyword",
+  "awkCharClass": "Keyword",
+  "awkConditional": "Conditional",
+  "awkFunction": "Function",
+  "awkNestRegExp": "Keyword",
+  "awkRepeat": "Repeat",
+  "awkSearch": "String",
+  "awkString": "String",
+  "Conditional": "Conditional",
+  "Function": "Function",
+  "Keyword": "Keyword",
+  "Repeat": "Repeat",
+  "String": "String"
+ },
+ "elflord dark": {
+  "awkConditional": "Repeat",
+  "awkFunction": "Function",
+  "awkRepeat": "Repeat",
+  "Conditional": "Repeat",
+  "Function": "Function",
+  "Repeat": "Repeat"
+ },
+ "habamax dark": {
+  "awkSearch": "String",
+  "awkString": "String",
+  "String": "String"
+ },
+ "industry dark": {
+  "awkFunction": "Function",
+  "Function": "Function"
+ },
+ "lunaperche dark": {
+  "awkSearch": "String",
+  "awkString": "String",
+  "String": "String"
+ },
+ "lunaperche light": {
+  "awkSearch": "String",
+  "awkString": "String",
+  "String": "String"
+ },
+ "novum dark": {
+  "awkFunction": "Function",
+  "awkSearch": "String",
+  "awkString": "String",
+  "Function": "Function",
+  "String": "String"
+ },
+ "novum light": {
+  "awkFunction": "Function",
+  "awkSearch": "String",
+  "awkString": "String",
+  "Function": "Function",
+  "String": "String"
+ },
+ "retrobox dark": {
+  "awkBrktRegExp": "Keyword",
+  "awkCharClass": "Keyword",
+  "awkConditional": "Conditional",
+  "awkFloat": "Float",
+  "awkFunction": "Function",
+  "awkNestRegExp": "Keyword",
+  "awkNumber": "Number",
+  "awkRepeat": "Repeat",
+  "awkSearch": "String",
+  "awkString": "String",
+  "Conditional": "Conditional",
+  "Float": "Float",
+  "Function": "Function",
+  "Keyword": "Keyword",
+  "Number": "Number",
+  "Repeat": "Repeat",
+  "String": "String"
+ },
+ "retrobox light": {
+  "awkBrktRegExp": "Keyword",
+  "awkCharClass": "Keyword",
+  "awkConditional": "Conditional",
+  "awkFloat": "Float",
+  "awkFunction": "Function",
+  "awkNestRegExp": "Keyword",
+  "awkNumber": "Number",
+  "awkRepeat": "Repeat",
+  "awkSearch": "String",
+  "awkString": "String",
+  "Conditional": "Conditional",
+  "Float": "Float",
+  "Function": "Function",
+  "Keyword": "Keyword",
+  "Number": "Number",
+  "Repeat": "Repeat",
+  "String": "String"
+ },
+ "shine light": {
+  "awkFloat": "Float",
+  "awkNumber": "Number",
+  "Float": "Float",
+  "Number": "Number"
+ },
+ "slate dark": {
+  "awkFunction": "Function",
+  "awkSearch": "String",
+  "awkString": "String",
+  "Function": "Function",
+  "String": "String"
+ },
+ "sorbet dark": {
+  "awkSearch": "String",
+  "awkString": "String",
+  "String": "String"
+ },
+ "unokai dark": {
+  "awkFunction": "Function",
+  "awkSearch": "String",
+  "awkString": "String",
+  "Function": "Function",
+  "String": "String"
+ },
+ "wildcharm dark": {
+  "awkSearch": "String",
+  "awkString": "String",
+  "String": "String"
+ },
+ "wildcharm light": {
+  "awkSearch": "String",
+  "awkString": "String",
+  "String": "String"
+ }
+}

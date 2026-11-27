@@ -1,0 +1,118 @@
+{
+ "blue dark": {
+  "Label": "Label",
+  "tclLabel": "Label"
+ },
+ "catppuccin dark": {
+  "Conditional": "Conditional",
+  "Label": "Label",
+  "Repeat": "Repeat",
+  "String": "String",
+  "Structure": "Structure",
+  "tclConditional": "Conditional",
+  "tclLabel": "Label",
+  "tclRepeat": "Repeat",
+  "tclString": "String",
+  "tcltkWidgetColor": "Structure"
+ },
+ "catppuccin light": {
+  "Conditional": "Conditional",
+  "Label": "Label",
+  "Repeat": "Repeat",
+  "String": "String",
+  "Structure": "Structure",
+  "tclConditional": "Conditional",
+  "tclLabel": "Label",
+  "tclRepeat": "Repeat",
+  "tclString": "String",
+  "tcltkWidgetColor": "Structure"
+ },
+ "elflord dark": {
+  "Conditional": "Repeat",
+  "Repeat": "Repeat",
+  "tclConditional": "Repeat",
+  "tclRepeat": "Repeat"
+ },
+ "habamax dark": {
+  "String": "String",
+  "tclString": "String"
+ },
+ "lunaperche dark": {
+  "String": "String",
+  "tclString": "String"
+ },
+ "lunaperche light": {
+  "String": "String",
+  "tclString": "String"
+ },
+ "novum dark": {
+  "String": "String",
+  "tclString": "String"
+ },
+ "novum light": {
+  "String": "String",
+  "tclString": "String"
+ },
+ "retrobox dark": {
+  "Conditional": "Conditional",
+  "Label": "Label",
+  "Number": "Number",
+  "Repeat": "Repeat",
+  "String": "String",
+  "Structure": "Structure",
+  "tclConditional": "Conditional",
+  "tclLabel": "Label",
+  "tclNumber": "Number",
+  "tclRepeat": "Repeat",
+  "tclString": "String",
+  "tcltkWidgetColor": "Structure"
+ },
+ "retrobox light": {
+  "Conditional": "Conditional",
+  "Label": "Label",
+  "Number": "Number",
+  "Repeat": "Repeat",
+  "String": "String",
+  "Structure": "Structure",
+  "tclConditional": "Conditional",
+  "tclLabel": "Label",
+  "tclNumber": "Number",
+  "tclRepeat": "Repeat",
+  "tclString": "String",
+  "tcltkWidgetColor": "Structure"
+ },
+ "ron dark": {
+  "Label": "Label",
+  "tclLabel": "Label"
+ },
+ "shine light": {
+  "Number": "Number",
+  "tclNumber": "Number"
+ },
+ "slate dark": {
+  "String": "String",
+  "Structure": "Structure",
+  "tclString": "String",
+  "tcltkWidgetColor": "Structure"
+ },
+ "sorbet dark": {
+  "String": "String",
+  "tclString": "String"
+ },
+ "unokai dark": {
+  "Label": "String",
+  "String": "String",
+  "Structure": "PreProc",
+  "tclLabel": "String",
+  "tclString": "String",
+  "tcltkWidgetColor": "PreProc"
+ },
+ "wildcharm dark": {
+  "String": "String",
+  "tclString": "String"
+ },
+ "wildcharm light": {
+  "String": "String",
+  "tclString": "String"
+ }
+}

@@ -1,0 +1,124 @@
+{
+ "blue dark": {
+  "Operator": "Type",
+  "vbOperator": "Type"
+ },
+ "catppuccin dark": {
+  "Conditional": "Conditional",
+  "Operator": "Operator",
+  "Repeat": "Repeat",
+  "String": "String",
+  "vbConditional": "Conditional",
+  "vbOperator": "Operator",
+  "vbRepeat": "Repeat",
+  "vbString": "String"
+ },
+ "catppuccin light": {
+  "Conditional": "Conditional",
+  "Operator": "Operator",
+  "Repeat": "Repeat",
+  "String": "String",
+  "vbConditional": "Conditional",
+  "vbOperator": "Operator",
+  "vbRepeat": "Repeat",
+  "vbString": "String"
+ },
+ "elflord dark": {
+  "Conditional": "Repeat",
+  "Operator": "Operator",
+  "Repeat": "Repeat",
+  "vbConditional": "Repeat",
+  "vbOperator": "Operator",
+  "vbRepeat": "Repeat"
+ },
+ "habamax dark": {
+  "String": "String",
+  "vbString": "String"
+ },
+ "lunaperche dark": {
+  "String": "String",
+  "vbString": "String"
+ },
+ "lunaperche light": {
+  "String": "String",
+  "vbString": "String"
+ },
+ "novum dark": {
+  "Operator": "Operator",
+  "String": "String",
+  "vbOperator": "Operator",
+  "vbString": "String"
+ },
+ "novum light": {
+  "Operator": "Operator",
+  "String": "String",
+  "vbOperator": "Operator",
+  "vbString": "String"
+ },
+ "retrobox dark": {
+  "Boolean": "Boolean",
+  "Conditional": "Conditional",
+  "Float": "Float",
+  "Number": "Number",
+  "Operator": "Operator",
+  "Repeat": "Repeat",
+  "String": "String",
+  "vbBoolean": "Boolean",
+  "vbConditional": "Conditional",
+  "vbFloat": "Float",
+  "vbNumber": "Number",
+  "vbOperator": "Operator",
+  "vbRepeat": "Repeat",
+  "vbString": "String"
+ },
+ "retrobox light": {
+  "Boolean": "Boolean",
+  "Conditional": "Conditional",
+  "Float": "Float",
+  "Number": "Number",
+  "Operator": "Operator",
+  "Repeat": "Repeat",
+  "String": "String",
+  "vbBoolean": "Boolean",
+  "vbConditional": "Conditional",
+  "vbFloat": "Float",
+  "vbNumber": "Number",
+  "vbOperator": "Operator",
+  "vbRepeat": "Repeat",
+  "vbString": "String"
+ },
+ "ron dark": {
+  "Operator": "Operator",
+  "vbOperator": "Operator"
+ },
+ "shine light": {
+  "Float": "Float",
+  "Number": "Number",
+  "vbFloat": "Float",
+  "vbNumber": "Number"
+ },
+ "slate dark": {
+  "Operator": "Operator",
+  "String": "String",
+  "vbOperator": "Operator",
+  "vbString": "String"
+ },
+ "sorbet dark": {
+  "String": "String",
+  "vbString": "String"
+ },
+ "unokai dark": {
+  "Operator": "PreProc",
+  "String": "String",
+  "vbOperator": "PreProc",
+  "vbString": "String"
+ },
+ "wildcharm dark": {
+  "String": "String",
+  "vbString": "String"
+ },
+ "wildcharm light": {
+  "String": "String",
+  "vbString": "String"
+ }
+}

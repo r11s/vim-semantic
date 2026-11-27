@@ -1,0 +1,153 @@
+{
+ "blue dark": {
+  "Label": "Label",
+  "systemverilogLabel": "Label",
+  "verilogLabel": "Label"
+ },
+ "catppuccin dark": {
+  "Conditional": "Conditional",
+  "Label": "Label",
+  "Repeat": "Repeat",
+  "String": "String",
+  "systemverilogBlockString": "String",
+  "systemverilogConditional": "Conditional",
+  "systemverilogLabel": "Label",
+  "systemverilogRepeat": "Repeat",
+  "verilogConditional": "Conditional",
+  "verilogLabel": "Label",
+  "verilogRepeat": "Repeat",
+  "verilogString": "String"
+ },
+ "catppuccin light": {
+  "Conditional": "Conditional",
+  "Label": "Label",
+  "Repeat": "Repeat",
+  "String": "String",
+  "systemverilogBlockString": "String",
+  "systemverilogConditional": "Conditional",
+  "systemverilogLabel": "Label",
+  "systemverilogRepeat": "Repeat",
+  "verilogConditional": "Conditional",
+  "verilogLabel": "Label",
+  "verilogRepeat": "Repeat",
+  "verilogString": "String"
+ },
+ "elflord dark": {
+  "Conditional": "Repeat",
+  "Repeat": "Repeat",
+  "systemverilogConditional": "Repeat",
+  "systemverilogRepeat": "Repeat",
+  "verilogConditional": "Repeat",
+  "verilogRepeat": "Repeat"
+ },
+ "habamax dark": {
+  "String": "String",
+  "systemverilogBlockString": "String",
+  "verilogString": "String"
+ },
+ "lunaperche dark": {
+  "String": "String",
+  "systemverilogBlockString": "String",
+  "verilogString": "String"
+ },
+ "lunaperche light": {
+  "String": "String",
+  "systemverilogBlockString": "String",
+  "verilogString": "String"
+ },
+ "novum dark": {
+  "String": "String",
+  "systemverilogBlockString": "String",
+  "verilogString": "String"
+ },
+ "novum light": {
+  "String": "String",
+  "systemverilogBlockString": "String",
+  "verilogString": "String"
+ },
+ "retrobox dark": {
+  "Conditional": "Conditional",
+  "Define": "Define",
+  "Label": "Label",
+  "Number": "Number",
+  "Repeat": "Repeat",
+  "SpecialComment": "SpecialComment",
+  "String": "String",
+  "systemverilogBlockString": "String",
+  "systemverilogConditional": "Conditional",
+  "systemverilogLabel": "Label",
+  "systemverilogRepeat": "Repeat",
+  "systemverilogTypeDef": "Typedef",
+  "Typedef": "Typedef",
+  "verilogConditional": "Conditional",
+  "verilogDirective": "SpecialComment",
+  "verilogGlobal": "Define",
+  "verilogLabel": "Label",
+  "verilogNumber": "Number",
+  "verilogRepeat": "Repeat",
+  "verilogString": "String"
+ },
+ "retrobox light": {
+  "Conditional": "Conditional",
+  "Define": "Define",
+  "Label": "Label",
+  "Number": "Number",
+  "Repeat": "Repeat",
+  "SpecialComment": "SpecialComment",
+  "String": "String",
+  "systemverilogBlockString": "String",
+  "systemverilogConditional": "Conditional",
+  "systemverilogLabel": "Label",
+  "systemverilogRepeat": "Repeat",
+  "systemverilogTypeDef": "Typedef",
+  "Typedef": "Typedef",
+  "verilogConditional": "Conditional",
+  "verilogDirective": "SpecialComment",
+  "verilogGlobal": "Define",
+  "verilogLabel": "Label",
+  "verilogNumber": "Number",
+  "verilogRepeat": "Repeat",
+  "verilogString": "String"
+ },
+ "ron dark": {
+  "Label": "Label",
+  "systemverilogLabel": "Label",
+  "verilogLabel": "Label"
+ },
+ "shine light": {
+  "Number": "Number",
+  "verilogNumber": "Number"
+ },
+ "slate dark": {
+  "Define": "Define",
+  "String": "String",
+  "systemverilogBlockString": "String",
+  "verilogGlobal": "Define",
+  "verilogString": "String"
+ },
+ "sorbet dark": {
+  "String": "String",
+  "systemverilogBlockString": "String",
+  "verilogString": "String"
+ },
+ "unokai dark": {
+  "Define": "Identifier",
+  "Label": "String",
+  "String": "String",
+  "systemverilogBlockString": "String",
+  "systemverilogLabel": "String",
+  "verilogGlobal": "Identifier",
+  "verilogLabel": "String",
+  "verilogString": "String"
+ },
+ "wildcharm dark": {
+  "String": "String",
+  "systemverilogBlockString": "String",
+  "verilogString": "String"
+ },
+ "wildcharm light": {
+  "String": "String",
+  "systemverilogBlockString": "String",
+  "verilogString": "String"
+ }
+}

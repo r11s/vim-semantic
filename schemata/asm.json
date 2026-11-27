@@ -1,0 +1,131 @@
+{
+ "blue dark": {
+  "asmLabel": "Label",
+  "Label": "Label"
+ },
+ "catppuccin dark": {
+  "asmCharacter": "Character",
+  "asmInclude": "Include",
+  "asmLabel": "Label",
+  "asmMacro": "Macro",
+  "asmString": "String",
+  "Character": "Character",
+  "Include": "Include",
+  "Label": "Label",
+  "Macro": "Macro",
+  "String": "String"
+ },
+ "catppuccin light": {
+  "asmCharacter": "Character",
+  "asmInclude": "Include",
+  "asmLabel": "Label",
+  "asmMacro": "Macro",
+  "asmString": "String",
+  "Character": "Character",
+  "Include": "Include",
+  "Label": "Label",
+  "Macro": "Macro",
+  "String": "String"
+ },
+ "habamax dark": {
+  "asmCharacter": "Character",
+  "asmString": "String",
+  "Character": "Character",
+  "String": "String"
+ },
+ "lunaperche dark": {
+  "asmString": "String",
+  "String": "String"
+ },
+ "lunaperche light": {
+  "asmString": "String",
+  "String": "String"
+ },
+ "novum dark": {
+  "asmString": "String",
+  "String": "String"
+ },
+ "novum light": {
+  "asmString": "String",
+  "String": "String"
+ },
+ "retrobox dark": {
+  "asmBinary": "Number",
+  "asmCharacter": "Character",
+  "asmCond": "PreCondit",
+  "asmDecimal": "Number",
+  "asmFloat": "Float",
+  "asmHexadecimal": "Number",
+  "asmInclude": "Include",
+  "asmLabel": "Label",
+  "asmMacro": "Macro",
+  "asmOctal": "Number",
+  "asmString": "String",
+  "Character": "Character",
+  "Float": "Float",
+  "Include": "Include",
+  "Label": "Label",
+  "Macro": "Macro",
+  "Number": "Number",
+  "PreCondit": "PreCondit",
+  "String": "String"
+ },
+ "retrobox light": {
+  "asmBinary": "Number",
+  "asmCharacter": "Character",
+  "asmCond": "PreCondit",
+  "asmDecimal": "Number",
+  "asmFloat": "Float",
+  "asmHexadecimal": "Number",
+  "asmInclude": "Include",
+  "asmLabel": "Label",
+  "asmMacro": "Macro",
+  "asmOctal": "Number",
+  "asmString": "String",
+  "Character": "Character",
+  "Float": "Float",
+  "Include": "Include",
+  "Label": "Label",
+  "Macro": "Macro",
+  "Number": "Number",
+  "PreCondit": "PreCondit",
+  "String": "String"
+ },
+ "ron dark": {
+  "asmLabel": "Label",
+  "Label": "Label"
+ },
+ "shine light": {
+  "asmBinary": "Number",
+  "asmDecimal": "Number",
+  "asmFloat": "Float",
+  "asmHexadecimal": "Number",
+  "asmOctal": "Number",
+  "Float": "Float",
+  "Number": "Number"
+ },
+ "slate dark": {
+  "asmString": "String",
+  "String": "String"
+ },
+ "sorbet dark": {
+  "asmString": "String",
+  "String": "String"
+ },
+ "unokai dark": {
+  "asmCharacter": "Character",
+  "asmLabel": "String",
+  "asmString": "String",
+  "Character": "Character",
+  "Label": "String",
+  "String": "String"
+ },
+ "wildcharm dark": {
+  "asmString": "String",
+  "String": "String"
+ },
+ "wildcharm light": {
+  "asmString": "String",
+  "String": "String"
+ }
+}

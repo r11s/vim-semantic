@@ -1,0 +1,137 @@
+{
+ "catppuccin dark": {
+  "Conditional": "Conditional",
+  "Function": "Function",
+  "Repeat": "Repeat",
+  "stataConditional": "Conditional",
+  "stataEString": "String",
+  "stataRepeat": "Repeat",
+  "stataString": "String",
+  "String": "String"
+ },
+ "catppuccin light": {
+  "Conditional": "Conditional",
+  "Function": "Function",
+  "Repeat": "Repeat",
+  "stataConditional": "Conditional",
+  "stataEString": "String",
+  "stataRepeat": "Repeat",
+  "stataString": "String",
+  "String": "String"
+ },
+ "elflord dark": {
+  "Conditional": "Repeat",
+  "Function": "Function",
+  "Repeat": "Repeat",
+  "stataConditional": "Repeat",
+  "stataRepeat": "Repeat"
+ },
+ "habamax dark": {
+  "stataEString": "String",
+  "stataString": "String",
+  "String": "String"
+ },
+ "industry dark": {
+  "Function": "Function"
+ },
+ "lunaperche dark": {
+  "stataEString": "String",
+  "stataString": "String",
+  "String": "String"
+ },
+ "lunaperche light": {
+  "stataEString": "String",
+  "stataString": "String",
+  "String": "String"
+ },
+ "novum dark": {
+  "Function": "Function",
+  "stataEString": "String",
+  "stataString": "String",
+  "String": "String"
+ },
+ "novum light": {
+  "Function": "Function",
+  "stataEString": "String",
+  "stataString": "String",
+  "String": "String"
+ },
+ "retrobox dark": {
+  "Conditional": "Conditional",
+  "Define": "Define",
+  "Function": "Function",
+  "Repeat": "Repeat",
+  "SpecialChar": "SpecialChar",
+  "stataCommand": "Define",
+  "stataConditional": "Conditional",
+  "stataEString": "String",
+  "stataFormat": "SpecialChar",
+  "stataGlobal": "Define",
+  "stataLocal": "Define",
+  "stataMacro": "Define",
+  "stataRepeat": "Repeat",
+  "stataSpecial": "SpecialChar",
+  "stataString": "String",
+  "String": "String"
+ },
+ "retrobox light": {
+  "Conditional": "Conditional",
+  "Define": "Define",
+  "Function": "Function",
+  "Repeat": "Repeat",
+  "SpecialChar": "SpecialChar",
+  "stataCommand": "Define",
+  "stataConditional": "Conditional",
+  "stataEString": "String",
+  "stataFormat": "SpecialChar",
+  "stataGlobal": "Define",
+  "stataLocal": "Define",
+  "stataMacro": "Define",
+  "stataRepeat": "Repeat",
+  "stataSpecial": "SpecialChar",
+  "stataString": "String",
+  "String": "String"
+ },
+ "shine light": {
+  "SpecialChar": "SpecialChar",
+  "stataFormat": "SpecialChar",
+  "stataSpecial": "SpecialChar"
+ },
+ "slate dark": {
+  "Define": "Define",
+  "Function": "Function",
+  "stataCommand": "Define",
+  "stataEString": "String",
+  "stataGlobal": "Define",
+  "stataLocal": "Define",
+  "stataMacro": "Define",
+  "stataString": "String",
+  "String": "String"
+ },
+ "sorbet dark": {
+  "stataEString": "String",
+  "stataString": "String",
+  "String": "String"
+ },
+ "unokai dark": {
+  "Define": "Identifier",
+  "Function": "Function",
+  "stataCommand": "Identifier",
+  "stataEString": "String",
+  "stataGlobal": "Identifier",
+  "stataLocal": "Identifier",
+  "stataMacro": "Identifier",
+  "stataString": "String",
+  "String": "String"
+ },
+ "wildcharm dark": {
+  "stataEString": "String",
+  "stataString": "String",
+  "String": "String"
+ },
+ "wildcharm light": {
+  "stataEString": "String",
+  "stataString": "String",
+  "String": "String"
+ }
+}

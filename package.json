@@ -1,7 +1,7 @@
 {
   "name": "vim-semantic",
   "displayName": "VimSem",
-  "description": "Vim-Farbschemata im Editor, gefaerbt von Vim selbst",
+  "description": "Vim-Farbschemata im Editor, gefaerbt wie in Vim (ohne Vim zu brauchen)",
   "publisher": "r11s",
   "version": "0.1.0",
   "repository": {
@@ -21,10 +21,7 @@
   ],
   "capabilities": {
     "untrustedWorkspaces": {
-      "supported": "limited",
-      "restrictedConfigurations": [
-        "vimHighlight.vimPath"
-      ]
+      "supported": true
     }
   },
   "contributes": {
@@ -885,21 +882,10 @@
     "configuration": {
       "title": "VimSem",
       "properties": {
-        "vimHighlight.vimPath": {
-          "type": "string",
-          "default": "vim",
-          "scope": "machine-overridable",
-          "description": "Pfad zu Vim (unter Windows z. B. zur vim.exe aus Git)"
-        },
         "vimHighlight.logFile": {
           "type": "boolean",
           "default": false,
           "description": "Protokoll zur Fehlersuche in protokoll.txt im Erweiterungsordner schreiben"
-        },
-        "vimHighlight.maxLines": {
-          "type": "number",
-          "default": 3000,
-          "description": "Groessere Dateien bleiben ungefaerbt"
         },
         "vimHighlight.backgroundGroups": {
           "type": "array",

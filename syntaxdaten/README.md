@@ -12,7 +12,8 @@ Je Datei:
 - `inhaltsabhaengig`: die Regeln sind anders als bei einer leeren Datei desselben Typs
 
 `name~testdatei.json`: gleicher Dateityp, aber andere Regeln als in `name.json`.
-Ohne Testdatei, aus einer leeren Datei erzeugt und von der Gegenprobe nicht erfasst: json, html, css, markdown, yaml.
+Aus einer leeren Datei erzeugt und von der Gegenprobe nicht erfasst: json, html, css, markdown, yaml.
+`sh.json` gilt fuer bash, `sh-posix.json` fuer `#!/bin/sh` und dash, `sh-ksh.json` fuer die Korn-Shell.
 Zum Erzeugen ist ein Vim mit `werkzeuge/vim-synlog.patch` noetig.
 
 | Datei | keyword | match | region | cluster | include | inhaltsabhaengig | Testdateien |
@@ -29,7 +30,7 @@ Zum Erzeugen ist ein Vim mit `werkzeuge/vim-synlog.patch` noetig.
 | cobol | 46 | 46 | 0 | 12 | 0 |  | 39_cobol.cob |
 | cpp | 105 | 31 | 8 | 0 | 0 |  | 07_cpp.cpp |
 | cs | 6 | 71 | 46 | 1 | 1 |  | 06_csharp.cs |
-| css | 123 | 178 | 23 | 0 | 0 |  |  |
+| css | 123 | 178 | 23 | 0 | 0 |  | 103_css.css |
 | cuda | 130 | 31 | 8 | 0 | 0 |  | 50_cuda.cu |
 | d | 232 | 39 | 24 | 13 | 0 |  | 51_d.d |
 | dart | 14 | 8 | 3 | 0 | 0 |  | 19_dart.dart |
@@ -42,15 +43,15 @@ Zum Erzeugen ist ein Vim mit `werkzeuge/vim-synlog.patch` noetig.
 | go | 22 | 34 | 12 | 3 | 0 |  | 12_go.go |
 | groovy | 519 | 294 | 125 | 8 | 6 |  | 32_groovy.groovy |
 | haskell | 11 | 18 | 4 | 0 | 0 |  | 33_haskell.hs |
-| html | 481 | 261 | 110 | 4 | 5 |  |  |
+| html | 481 | 261 | 110 | 4 | 5 |  | 102_html.html |
 | java | 159 | 200 | 211 | 10 | 6 |  | 04_java.java |
 | javascript | 19 | 12 | 6 | 1 | 0 |  | 02_javascript.js |
-| json | 1 | 21 | 5 | 0 | 0 |  |  |
+| json | 1 | 21 | 5 | 0 | 0 |  | 101_json.json |
 | julia | 1 | 95 | 59 | 26 | 0 |  | 29_julia.jl |
 | kotlin | 42 | 29 | 6 | 0 | 0 |  | 16_kotlin.kt |
 | lisp | 377 | 25 | 6 | 1 | 0 |  | 34_lisp.lisp, 57_emacslisp.el |
 | lua | 24 | 130 | 14 | 0 | 0 |  | 22_lua.lua |
-| markdown | 484 | 315 | 145 | 13 | 6 |  |  |
+| markdown | 484 | 315 | 145 | 13 | 6 |  | 104_markdown.md |
 | matlab | 13 | 18 | 3 | 0 | 0 |  | 27_matlab.m |
 | mojo | 53 | 24 | 6 | 0 | 0 |  | 86_mojo.mojo |
 | nix | 8 | 39 | 18 | 1 | 0 |  | 27_nix.nix |
@@ -75,6 +76,8 @@ Zum Erzeugen ist ein Vim mit `werkzeuge/vim-synlog.patch` noetig.
 | scheme | 345 | 12 | 26 | 2 | 0 |  | 64_scheme.scm |
 | scilab | 10 | 20 | 2 | 0 | 0 |  | 78_scilab.sce |
 | sh | 11 | 103 | 96 | 41 | 0 | ja | 08_shell.sh |
+| sh-ksh | 12 | 102 | 97 | 41 | 0 | ja |  |
+| sh-posix | 6 | 91 | 85 | 33 | 0 | ja |  |
 | sml | 12 | 50 | 28 | 4 | 0 |  | 71_standardml.sml |
 | solidity | 82 | 20 | 13 | 0 | 0 |  | 42_solidity.sol |
 | sql | 66 | 3 | 9 | 0 | 0 |  | 03_sql.sql, 35_plpgsql.sql, 43_plsql.sql, 55_tsql.sql |
@@ -88,5 +91,5 @@ Zum Erzeugen ist ein Vim mit `werkzeuge/vim-synlog.patch` noetig.
 | vb | 271 | 17 | 5 | 0 | 0 |  | 21_visualbasic.vb, 61_vbscript.vbs, 90_vb6.bas, 94_vba.bas |
 | verilog | 28 | 29 | 6 | 0 | 0 |  | 59_verilog.v |
 | vhdl | 27 | 27 | 1 | 0 | 0 |  | 60_vhdl.vhd |
-| yaml | 3 | 37 | 7 | 7 | 0 |  |  |
+| yaml | 3 | 37 | 7 | 7 | 0 |  | 105_yaml.yaml |
 | zig | 17 | 15 | 5 | 0 | 0 |  | 37_zig.zig |

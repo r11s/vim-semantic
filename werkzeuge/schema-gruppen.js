@@ -2,6 +2,9 @@
 // Haelt fest, wo ein Farbschema eine Gruppe anders zuordnet als in syntaxdaten/<typ>.json.
 // Ergebnis: schemata/<typ>.json (nur die Abweichungen, je Schema).
 //   VIM_PATH=... node werkzeuge/schema-gruppen.js c
+// Haengen die Regeln vom Inhalt ab, eine Beispieldatei mitgeben:
+//   VIM_PATH=... node werkzeuge/schema-gruppen.js sh test/08_shell.sh
+// sh-posix und sh-ksh ebenso, mit einer Datei, die "#!/bin/sh" bzw. "#!/bin/ksh" enthaelt
 const fs = require('fs');
 const os = require('os');
 const path = require('path');
@@ -10,9 +13,10 @@ const { runVim } = require('../vim');
 const root = path.join(__dirname, '..');
 
 async function main() {
-  const [type] = process.argv.slice(2);
-  if (!type) throw new Error('Aufruf: node werkzeuge/schema-gruppen.js <typ>');
+  const [type, sample] = process.argv.slice(2);
+  if (!type) throw new Error('Aufruf: node werkzeuge/schema-gruppen.js <typ> [beispieldatei]');
   const data = JSON.parse(fs.readFileSync(path.join(root, 'syntaxdaten', `${type}.json`), 'utf8'));
+  if (data.inhaltsabhaengig && !sample) throw new Error(`${type}: Beispieldatei noetig`);
   const { themes } = JSON.parse(fs.readFileSync(path.join(root, 'scheme.json'), 'utf8'));
   const schemes = [...new Set(Object.values(themes).map((t) => `${t.scheme} ${t.background}`))].sort();
 
@@ -33,7 +37,7 @@ async function main() {
     const answer = path.join(dir, 'out');
     await runVim(process.env.VIM_PATH || 'vim', 'scheme-groups.vim', {
       VH_GROUPS: Object.keys(data.gruppen).join(','), VH_SCHEMES: schemes.join(','),
-      VH_OUT: answer, VH_FILETYPE: type,
+      VH_OUT: answer, VH_FILETYPE: data.dateityp, VH_SAMPLE: sample ? path.resolve(sample) : '',
     });
     const found = JSON.parse(fs.readFileSync(answer, 'utf8'));
     const result = {};

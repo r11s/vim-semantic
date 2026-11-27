@@ -7,6 +7,9 @@ Erwartete Ausgabe: `expected.txt` (Assembly: `expected_assembly.txt`, Batch: `ex
 
 **\*** = nie ausgeführt (21 Dateien). Zum Vergleich der Farben genügt das.
 
+**\*\*** = keine Programmiersprache und kein Formen-Rechner nach der Rangliste, nur zum Vergleich
+der Farben.
+
 Rangliste der Sprachen: [SPRACHEN.md](../SPRACHEN.md). Fortran und Vim Script sind nicht dabei.
 
 | Datei | Sprache |
@@ -86,3 +89,8 @@ Rangliste der Sprachen: [SPRACHEN.md](../SPRACHEN.md). Fortran und Vim Script si
 | 95_openedge.p \* | OpenEdge ABL |
 | 98_elm.elm \* | Elm |
 | 100_basic.bas | BASIC |
+| 101_json.json | JSON \*\* |
+| 102_html.html | HTML \*\* |
+| 103_css.css | CSS \*\* |
+| 104_markdown.md | Markdown \*\* |
+| 105_yaml.yaml | YAML \*\* |
