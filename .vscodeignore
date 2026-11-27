@@ -6,7 +6,9 @@
 !vim.js
 !faerben.js
 !syntaxdaten/c.json
+!syntaxdaten/cpp.json
 !schemata/c.json
+!schemata/cpp.json
 !scheme.json
 !vim/tokens.vim
 !themes/*.json

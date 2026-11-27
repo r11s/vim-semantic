@@ -16,23 +16,25 @@ Danach das Testfenster neu starten.
 
     bash werkzeuge/vsix.sh
     code --install-extension vim-semantic-0.1.0.vsix --force
+    codium --install-extension vim-semantic-0.1.0.vsix --force
 
-Danach VS Code neu starten. Wieder entfernen:
+Danach VS Code bzw. VSCodium neu starten. Wieder entfernen:
 
     code --uninstall-extension r11s.vim-semantic
+    codium --uninstall-extension r11s.vim-semantic
 
 ## Messen
 
     node measure.js blue               # Details in messung/
     bash werkzeuge/themes.sh           # vorher: alle Themes neu erzeugen
 
-## C ohne Vim prüfen
+## C und C++ ohne Vim prüfen
 
-    node werkzeuge/ohne-vim-messen.js c test/09_c.c
+    node werkzeuge/ohne-vim-messen.js auto test/09_c.c test/07_cpp.cpp
 
 Mit dem Vim aus gVim:
 
-    VIM_PATH="C:/Program Files/Vim/vim92/vim.exe" node werkzeuge/ohne-vim-messen.js c test/09_c.c
+    VIM_PATH="C:/Program Files/Vim/vim92/vim.exe" node werkzeuge/ohne-vim-messen.js auto test/09_c.c test/07_cpp.cpp
 
 ## Syntaxdaten prüfen
 

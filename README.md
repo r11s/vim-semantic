@@ -9,17 +9,33 @@ Es geht nur um die Darstellung im Editor, nicht um das Verhalten von Vim.
 ## Voraussetzung
 
 Vim 9 mit Syntax-Unterstuetzung (nicht vim-tiny) auf demselben Rechner. Ohne Vim werden nur
-C-Dateien gefaerbt, siehe unten.
+C- und C++-Dateien gefaerbt, siehe unten.
 
-## Versuch: C ohne Vim
+## Versuch: C und C++ ohne Vim
 
-Dateien mit der Endung `.c` faerbt die Erweiterung selbst: `faerben.js` wendet die Regeln aus
-`syntaxdaten/c.json` an, ohne Vim zu starten. `.h` und alle anderen Sprachen brauchen weiterhin
-Vim. In der Ausgabe "VimSem" steht je Datei "ohne Vim" oder "von Vim".
+C- und C++-Dateien faerbt die Erweiterung selbst: `faerben.js` wendet die Regeln aus
+`syntaxdaten/c.json` und `cpp.json` an, ohne Vim zu starten. Alle anderen Sprachen brauchen
+weiterhin Vim. In der Ausgabe "VimSem" steht je Datei "ohne Vim (c)", "ohne Vim (cpp)" oder
+"von Vim".
 
-Verglichen mit Vim 9.2 (Patches 1-858) ohne eigene Einstellungen: die 201 C-Dateien aus dem
-Quelltext von Vim ohne Abweichung. Bei absichtlich fehlerhaftem Zufallstext sind vereinzelte
-Abweichungen moeglich.
+Der Typ wird wie in Vim 9.2 bestimmt:
+
+- `.c` ist C.
+- `.cpp .cc .cxx .c++ .hpp .hh .hxx .ipp .tcc .inl .ixx .cppm .moc` sind C++.
+- Gross-/Kleinschreibung zaehlt unter Windows und macOS nicht. Unter Linux sind `.C` und
+  `.H` C++.
+- `.h` ist C++, wenn in den ersten 99 Zeilen eine Zeile mit `class`, `namespace`, `template`
+  oder `using` beginnt, sonst C. Beginnt eine mit `@interface`, `@class` oder `@end`
+  (Objective-C), faerbt Vim die Datei.
+
+Verglichen mit Vim 9.2 (Patches 1-858) ohne eigene Einstellungen, Zeichen fuer Zeichen:
+
+- 201 C-Dateien aus dem Quelltext von Vim ohne Abweichung.
+- 1223 C++-Dateien und Header (libstdc++, Node.js) ohne Abweichung.
+- alle 34 Themes mit je 6 C- und C++-Dateien ohne Abweichung.
+
+Bekannte Abweichungen: nach einer Zeile mit mehr als 3000 Zeichen kann die folgende Zeile
+anders aussehen, und bei fehlerhaftem Code sind vereinzelte Abweichungen moeglich.
 
 ## Installieren
 
@@ -27,8 +43,9 @@ Braucht Node.js ab Version 20 und beim ersten Mal Internet (laedt `@vscode/vsce`
 
     bash werkzeuge/vsix.sh                                   # baut vim-semantic-<version>.vsix
     code --install-extension vim-semantic-0.1.0.vsix --force
+    codium --install-extension vim-semantic-0.1.0.vsix --force      # fuer VSCodium
 
-Danach VS Code neu starten und ein "VimSem ..."-Farbschema waehlen.
+Danach VS Code bzw. VSCodium neu starten und ein "VimSem ..."-Farbschema waehlen.
 
 Findet VS Code kein Vim, in der settings.json den vollen Pfad zur `vim.exe` angeben, z. B. fuer
 das Vim aus Git oder fuer gVim:
@@ -40,7 +57,7 @@ Empfohlen, weil Vim Klammern nicht nach Tiefe faerbt:
 
     "editor.bracketPairColorization.enabled": false
 
-Entfernen: `code --uninstall-extension r11s.vim-semantic`
+Entfernen: `code --uninstall-extension r11s.vim-semantic` (VSCodium: `codium` statt `code`)
 
 ## Einstellungen
 
@@ -71,7 +88,7 @@ naechsten Releases aufgenommen. Voraussetzung: Vim hat fuer die Sprache eine Syn
 - Hintergruende nur fuer die eingestellten Gruppen. Semantic Tokens kennen keinen Hintergrund,
   deshalb setzt die Erweiterung dafuer Decorations.
 - Cursorzeile, Zeilennummern, Auswahl und Suchtreffer haben die Farben von VS Code.
-- Vim startet bei jeder Aktualisierung neu; grosse Dateien sind langsam (ausser bei `.c`).
+- Vim startet bei jeder Aktualisierung neu; grosse Dateien sind langsam (ausser bei C und C++).
 - Syntax wird immer ab Dateianfang berechnet (`syntax sync fromstart`).
 - Ohne vimrc und Plugins.
 - Andere Semantic-Token-Anbieter (etwa fuer TypeScript) koennen Vorrang bekommen.
@@ -102,13 +119,13 @@ nicht geprueft.
 | `vim/` | Vim-Skripte |
 | `test/` | Testprogramme, siehe [test/README.md](test/README.md) |
 | `syntaxdaten/` | Faerberegeln von Vim je Sprache, siehe [syntaxdaten/README.md](syntaxdaten/README.md) |
-| `schemata/` | wo ein Farbschema eine Gruppe anders zuordnet (bisher nur C) |
+| `schemata/` | wo ein Farbschema eine Gruppe anders zuordnet (bisher C und C++) |
 | `werkzeuge/` | Skripte zum Bauen, Erzeugen und Pruefen |
 
-Die Erweiterung benutzt von den Syntaxdaten bisher nur C. Faerben ohne Vim pruefen:
+Die Erweiterung benutzt von den Syntaxdaten bisher C und C++. Faerben ohne Vim pruefen:
 
-    node werkzeuge/ohne-vim-messen.js c datei.c ...    # mit SCHEMA=blue BG=dark fuer ein anderes
-    node werkzeuge/schema-gruppen.js c                 # schemata/c.json neu erzeugen
+    node werkzeuge/ohne-vim-messen.js auto datei...    # mit SCHEMA=blue BG=dark fuer ein anderes
+    node werkzeuge/schema-gruppen.js cpp               # schemata/cpp.json neu erzeugen (ebenso c)
 
 Kurzbefehle: [SPICKZETTEL.md](SPICKZETTEL.md).
 

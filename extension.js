@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const vscode = require('vscode');
 const { highlight, tokenType } = require('./vim');
-const { highlighter, loadData } = require('./faerben');
+const { highlighter, loadData, typeFor } = require('./faerben');
 const { themes, types } = require('./scheme.json');
 
 // VS-Code-Sprachen, fuer die ein Vim-Syntax vorgesehen ist
@@ -23,17 +23,19 @@ const EXTENSIONS = ['asm', 'swift', 'kt', 'dart', 'adb', 'ads', 'f90', 'scala', 
   'nix', 'bat', 'cmd', 'groovy', 'hs', 'lisp', 'gd', 'zig', 'ml', 'cob', 'pl', 'sol', 'sql', 'clj',
   'glsl', 'erl', 'tcl', 'cu', 'd', 'vim', 'sas', 'pyx', 'el', 'awk', 'v', 'vhd', 'vbs', 'abap',
   'scm', 'raku', 'sv', 'sml', 'st', 'uc', 'do', 'fth', 'sce', 'ahk', 'pde', 'nu', 'rkt', 'mojo',
-  'bas', 'p', 'elm'];
+  'bas', 'p', 'elm', 'tcc', 'moc'];
 // Nur noetig, wenn Vim den Typ nicht am Dateinamen erkennt (etwa bei "Untitled")
 const FILETYPES = { shellscript: 'sh', viml: 'vim', csharp: 'cs', powershell: 'ps1',
   'objective-c': 'objc', plaintext: '', bat: 'dosbatch', 'cuda-cpp': 'cuda', cython: 'pyrex',
   standardml: 'sml', smalltalk: 'st', unrealscript: 'uc', ahk: 'autohotkey',
   processing: 'arduino', nushell: 'nu' };
 
-// Versuch: Diese Dateien faerbt die Erweiterung selbst nach den Regeln aus syntaxdaten,
-// ohne Vim zu starten. Nur C; ".h" behandelt Vim als C++ und bleibt deshalb bei Vim.
-const ownType = (document) => (/\.c$/.test(document.fileName) ||
-  (document.isUntitled && document.languageId === 'c') ? 'c' : null);
+// Versuch: C und C++ faerbt die Erweiterung selbst nach den Regeln aus syntaxdaten, ohne Vim
+// zu starten. Den Typ bestimmen wie in Vim der Dateiname und bei ".h" der Inhalt; ohne
+// passenden Namen zaehlt bei ungespeicherten Dateien die Sprache.
+const UNTITLED = { c: 'c', cpp: 'cpp' };
+const ownType = (document, text) => typeFor(document.fileName, text) ??
+  ((document.isUntitled && UNTITLED[document.languageId]) || null);
 const engines = new Map(); // Dateityp -> Faerber, beim ersten Gebrauch geladen
 const ownEngine = (type) => {
   if (!engines.has(type)) engines.set(type, highlighter(loadData(type)));
@@ -159,14 +161,15 @@ function activate(context) {
 
       const abort = new AbortController();
       const subscription = cancel.onCancellationRequested(() => abort.abort());
-      const type = ownType(document);
+      const text = document.getText();
+      const type = ownType(document, text);
       try {
         const start = Date.now();
         const tokens = type
-          ? ownEngine(type).highlight(document.getText(), { scheme: current.scheme, background: current.background })
+          ? ownEngine(type).highlight(text, { scheme: current.scheme, background: current.background })
           : await highlight({
             vimPath: config.get('vimPath'),
-            text: document.getText(),
+            text,
             fileName: document.fileName,
             filetype: FILETYPES[document.languageId] ?? document.languageId,
             scheme: current.scheme,
@@ -181,7 +184,7 @@ function activate(context) {
         // Ergebnisse zu einem inzwischen geaenderten Text wuerden verrutschen
         const upToDate = !cancel.isCancellationRequested && document.version === version && theme === activeTheme();
         const marked = upToDate ? remember(document, version, theme, tokens) : 0;
-        note(`${name}: ${tokens.length} Abschnitte ${type ? 'ohne Vim' : 'von Vim'} in ${time} ms, ` +
+        note(`${name}: ${tokens.length} Abschnitte ${type ? `ohne Vim (${type})` : 'von Vim'} in ${time} ms, ` +
           `${tokens.filter((t) => index.has(t.type)).length} davon mit bekannter Gruppe, ${marked} Hintergruende`);
         return builder.build();
       } catch (error) {

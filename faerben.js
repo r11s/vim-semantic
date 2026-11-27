@@ -1,6 +1,6 @@
 'use strict';
 // Faerbt ohne Vim, allein aus den Daten in syntaxdaten und schemata. Bildet die Teile der
-// Syntax-Maschine von Vim nach, die C und JSON brauchen. Andere Sprachen sind nicht
+// Syntax-Maschine von Vim nach, die C, C++ und JSON brauchen. Andere Sprachen sind nicht
 // freigegeben: Erst mit werkzeuge/ohne-vim-messen.js messen.
 const fs = require('fs');
 const path = require('path');
@@ -9,17 +9,33 @@ class Unsupported extends Error {}
 
 // ---- Vim-Muster -> JavaScript ------------------------------------------------
 
-// Wortzeichen wie in Vim: iskeyword "@,48-57,_,192-255", dazu Emoji als eigene Wortart.
-// Eine Wortgrenze (\< \>) liegt auch zwischen zwei verschiedenen Wortarten.
-const WORD = '[\\p{L}\\p{N}\\p{M}_\u00d7\u00f7]';
-const EMOJI = '\\p{Extended_Pictographic}';
-const boundary = (make) => `(?:${make(WORD)}|${make(EMOJI)})`;
+// Zeichenarten wie in Vim (utf_class). Bis Zeichen 255 zaehlt 'iskeyword' "@,48-57,_,192-255",
+// darueber ist alles ein Wortzeichen, was nicht Leerraum oder Satzzeichen ist.
+const LATIN = '[0-9A-Za-z_\\u00b5\\u00c0-\\u00ff]';
+const HIGH = '[\\u0100-\\u{10ffff}]';
+const PUNCT = '\\u037e\\u0387\\u055a-\\u055f\\u0589\\u05be\\u05c0\\u05c3\\u05f3\\u05f4\\u060c\\u061b\\u061f' +
+  '\\u066a-\\u066d\\u06d4\\u0700-\\u070d\\u0964\\u0965\\u0970\\u0df4\\u0e4f\\u0e5a\\u0e5b\\u0f04-\\u0f12\\u0f3a-\\u0f3d' +
+  '\\u0f85\\u104a-\\u104f\\u10fb\\u1361-\\u1368\\u166d\\u166e\\u1680\\u169b\\u169c\\u16eb-\\u16ed\\u1735\\u1736' +
+  '\\u17d4-\\u17dc\\u1800-\\u180a\\u2000-\\u206f\\u20a0-\\u2125\\u2127-\\u2129\\u212c-\\u27ff\\u2900-\\u2998\\u29d8-\\u29db\\u29fc\\u29fd' +
+  '\\u2e00-\\u2e7f\\u3000-\\u3020\\u3030\\u303d\\ufd3e\\ufd3f\\ufe30-\\ufe6b\\uff00-\\uff0f\\uff1a-\\uff20' +
+  '\\uff3b-\\uff40\\uff5b-\\uff65\\u{1d000}-\\u{1d24f}\\u{1d400}-\\u{1d7ff}\\u{1f000}-\\u{1f2ff}';
+// (U+2126, U+212A und U+212B fehlen: ohne Gross/Klein wuerden sie auch gewoehnliche Buchstaben treffen.)
+// Arten mit eigener Wortgrenze: hoch- und tiefgestellt, Braille, Hiragana, Katakana, CJK, Hangul
+const SCRIPTS = ['\\u2070-\\u207f', '\\u2080-\\u2094', '\\u2800-\\u28ff', '\\u3040-\\u309f', '\\u30a0-\\u30ff',
+  '\\u3300-\\u9fff\\uf900-\\ufaff\\u{20000}-\\u{2a6df}\\u{2a700}-\\u{2b81f}\\u{2f800}-\\u{2fa1f}', '\\uac00-\\ud7a3'];
+const EMOJI = '(?![\\x00-\\xff])\\p{Extended_Pictographic}';
+const KEYCHAR = `(?:${LATIN}|(?![${PUNCT}])${HIGH})`;
+const WORD = `(?:${LATIN}|(?![${PUNCT}${SCRIPTS.join('')}]|\\p{Extended_Pictographic})${HIGH})`;
+const OTHERS = [`(?:${EMOJI})`, ...SCRIPTS.map((range) => `[${range}]`)];
+// Wortgrenzen \< und \>: auch zwischen zwei verschiedenen Arten
+const WORD_START = `(?:(?<!${WORD})(?=${WORD})|(?=${HIGH})(?:${OTHERS.map((c) => `(?<!${c})(?=${c})`).join('|')}))`;
+const WORD_END = `(?:(?<=${WORD})(?!${WORD})|(?<=${HIGH})(?:${OTHERS.map((c) => `(?<=${c})(?!${c})`).join('|')}))`;
 const CLASSES = {
   d: '[0-9]', D: '[^0-9\\n]', x: '[0-9A-Fa-f]', X: '[^0-9A-Fa-f\\n]', o: '[0-7]',
   s: '[ \\t]', S: '[^ \\t\\n]', w: '[0-9A-Za-z_]', W: '[^0-9A-Za-z_\\n]',
   // \i und \I nach 'isident': nur Zeichen bis 255
   i: '[A-Za-z0-9_\\u00b5\\u00c0-\\u00ff]', I: '[A-Za-z_\\u00b5\\u00c0-\\u00ff]',
-  a: '[A-Za-z]', A: '[^A-Za-z\\n]', l: '[a-z]', u: '[A-Z]', h: '[A-Za-z_]', k: WORD,
+  a: '[A-Za-z]', A: '[^A-Za-z\\n]', l: '[a-z]', u: '[A-Z]', h: '[A-Za-z_]', k: KEYCHAR,
 };
 const NAMED = {
   alpha: 'A-Za-z', alnum: 'A-Za-z0-9', digit: '0-9', xdigit: '0-9A-Fa-f', blank: ' \\t',
@@ -59,7 +75,15 @@ function collection(p, i, newline) {
   return { source: `[${body}]`, end: j + 1 };
 }
 
-function translate(pattern) {
+// Zahlen mit Trennzeichen wie \('\=\d\+\)* : Vim prueft das ohne Zuruecksetzen, JavaScript
+// wuerde bei langen Ziffernfolgen praktisch endlos probieren. Ohne das innere \+ passt
+// dasselbe, nur schnell.
+const NESTED = /(\\%?\(\\\('\\\)\\=|\\%?\('\\=)(\\[dxo]|\[01\])\\\+(?=\\\)(?:\*|\\\+))/g;
+
+// "external": was die Klammern \z( \) des Anfangs erfasst haben, fuer \z1 in "skip" und "end"
+function translate(source, external = []) {
+  const pattern = source.replace(NESTED, '$1$2');
+  let captures = 0;
   // Je Ebene eine Gruppe: Zweige, jeder mit seinen Teilen und \zs / \ze
   const branch = () => ({ atoms: [], zs: null, ze: null });
   const stack = [{ open: '', branches: [branch()] }];
@@ -95,11 +119,16 @@ function translate(pattern) {
     else {
       const n = pattern[++i];
       if (n === '(') stack.push({ open: '(', branches: [branch()] });
+      else if (n === 'z' && pattern[i + 1] === '(') { i++; stack.push({ open: `(?<zx${++captures}>`, branches: [branch()] }); }
+      else if (n === 'z' && /[1-9]/.test(pattern[i + 1])) {
+        const value = external[pattern[++i] - 1] || '';
+        add(`(?:${[...value].map(literal).join('')})`);
+      }
       else if (n === '%' && pattern[i + 1] === '(') { i++; stack.push({ open: '(?:', branches: [branch()] }); }
       else if (n === ')') {
         const group = stack.pop();
         if (!group || !stack.length) throw new Unsupported('Klammern');
-        const ahead = /^\\@(=|!|<=|<!)/.exec(pattern.slice(i + 1));
+        const ahead = /^\\@(?:\d*(?=<))?(=|!|<=|<!)/.exec(pattern.slice(i + 1));
         const body = render(group, !!ahead);
         if (ahead) {
           add(`(?${ahead[1]}${body})`);
@@ -116,13 +145,14 @@ function translate(pattern) {
         repeat(count + (lazy ? '?' : ''));
         i += all.length;
       } else if (n === '@') {
-        const m = /^(=|!|<=|<!)/.exec(pattern.slice(i + 1));
+        // Die Zahl in \@123<= begrenzt bei Vim nur, wie weit zurueck gesucht wird
+        const m = /^(?:\d*(?=<))?(=|!|<=|<!)/.exec(pattern.slice(i + 1));
         if (!m) throw new Unsupported('\\@' + pattern[i + 1]);
         const k = last();
         top().atoms[k] = `(?${m[1]}${top().atoms[k]})`;
-        i += m[1].length;
-      } else if (n === '<') add(boundary((c) => `(?<!${c})(?=${c})`));
-      else if (n === '>') add(boundary((c) => `(?<=${c})(?!${c})`));
+        i += m[0].length;
+      } else if (n === '<') add(WORD_START);
+      else if (n === '>') add(WORD_END);
       else if (n === 'z' && pattern[i + 1] === 's') { i++; top().zs = top().atoms.length; }
       else if (n === 'z' && pattern[i + 1] === 'e') { i++; top().ze = top().atoms.length; }
       else if (n === '%' && pattern[i + 1] === '^') { i++; add('(?<![\\s\\S])'); }
@@ -190,7 +220,11 @@ function hasEol(body) {
 }
 
 function compile(found, ignoreCase, part) {
-  const pattern = { re: new RegExp(translate(found.body), ignoreCase ? 'mugi' : 'mug'), me: null };
+  const flags = ignoreCase ? 'mugi' : 'mug';
+  const pattern = { re: new RegExp(translate(found.body), flags), me: null };
+  if ((part === 'end' || part === 'skip') && /\\z[1-9]/.test(found.body)) {
+    pattern.build = (external) => new RegExp(translate(found.body, external), flags);
+  }
   if (found.offsets) {
     // Nachgebaut ist nur "me=" (Ende des Treffers) bei match und beim Ende einer Region
     const m = /^me=([se])([+-]\d+)?,?$/.exec(found.offsets);
@@ -376,8 +410,8 @@ function highlighter(data) {
     return type;
   };
 
-  const isWord = new RegExp(`${WORD}|${EMOJI}`, 'uy');
-  const afterWord = new RegExp(`(?<=${WORD}|${EMOJI})`, 'uy');
+  const isWord = new RegExp(KEYCHAR, 'uy');
+  const afterWord = new RegExp(`(?<=${KEYCHAR})`, 'uy');
   const sticky = (regex, text, pos) => {
     regex.lastIndex = pos;
     const m = regex.exec(text);
@@ -391,6 +425,15 @@ function highlighter(data) {
       const type = typesFor(`${scheme} ${background}`);
       const text = source.replace(/^\uFEFF/, '').replace(/\r\n/g, '\n').replace(/\n$/, '');
       for (const p of patterns) p.from = -1;
+      const built = new Map(); // Muster mit \z1, je erfasstem Text
+      const withExternal = (list, external) => list.map((p) => {
+        if (!p.build) return p;
+        let found = built.get(p);
+        if (!found) built.set(p, found = new Map());
+        const key = external.join('\n');
+        if (!found.has(key)) found.set(key, { ...p, re: p.build(external), build: null, from: -1 });
+        return found.get(key);
+      });
 
       // Passt das Muster bei pos? Der naechste Treffer wird gemerkt, damit nicht jede
       // Stelle neu durchsucht werden muss.
@@ -403,7 +446,11 @@ function highlighter(data) {
           if (m) {
             p.length = m[0].length;
             p.lead = 0; // Laenge des Teils vor \zs
-            if (m.groups) for (const g of Object.values(m.groups)) p.lead = Math.max(p.lead, g?.length || 0);
+            p.external = []; // Erfasstes aus \z( \)
+            for (const [key, value] of Object.entries(m.groups || {})) {
+              if (key.startsWith('lead')) p.lead = Math.max(p.lead, value?.length || 0);
+              else p.external[key.slice(2) - 1] = value || '';
+            }
           }
         }
         return p.index === pos;
@@ -422,14 +469,14 @@ function highlighter(data) {
       // Findet sich hier das Ende der Region? Was "skip" erfasst, zaehlt dafuer nicht.
       const regionEnd = (frame, pos) => {
         if (frame.closing || pos < frame.content || pos < frame.noEnd) return null;
-        for (const p of frame.item.skip) {
+        for (const p of frame.skips || frame.item.skip) {
           if (!matches(p, pos)) continue;
           let to = endOf(p);
           // Reicht "skip" bis ans Zeilenende, geht die Suche in der naechsten Zeile weiter
           if (to >= text.length || text[to] === '\n') to++;
           if (to > pos) { frame.noEnd = to; return null; }
         }
-        return frame.item.end.find((p) => matches(p, pos)) || null;
+        return (frame.ends || frame.item.end).find((p) => matches(p, pos)) || null;
       };
       const startClosing = (frame, end) => {
         frame.closing = true;
@@ -438,9 +485,9 @@ function highlighter(data) {
       };
 
       // "oneline": die Region beginnt nur, wenn ihr Ende in derselben Zeile liegt
-      const endsOnLine = (item, pos) => {
-        const probe = { item, content: pos, noEnd: pos, closing: false };
-        for (let p = pos; p <= text.length; p++) {
+      const endsOnLine = (frame) => {
+        const probe = { ...frame };
+        for (let p = frame.content; p <= text.length; p++) {
           if (regionEnd(probe, p)) return true;
           if (text[p] === '\n') return false;
         }
@@ -471,9 +518,12 @@ function highlighter(data) {
               if (end > pos) return { item, from: pos, end };
             } else {
               const content = endOf(start);
-              if (!item.flags.has('oneline') || endsOnLine(item, content)) {
-                return { item, from: pos, content, startGroup: start.group, noEnd: content, closing: false };
+              const frame = { item, from: pos, content, startGroup: start.group, noEnd: content, closing: false };
+              if (start.external?.length) {
+                frame.skips = withExternal(item.skip, start.external);
+                frame.ends = withExternal(item.end, start.external);
               }
+              if (!item.flags.has('oneline') || endsOnLine(frame)) return frame;
             }
           }
         }
@@ -511,7 +561,9 @@ function highlighter(data) {
         // ist, ausser darueber liegt eine Regel mit "extend"
         let guard = 0;
         for (let i = stack.length - 1; i >= 0; i--) {
-          if (stack[i].item.flags.has('extend')) { guard = i + 1; break; }
+          // Eine Regel, die gerade vor diesem Zeichen endet, schuetzt nicht mehr
+          const f = stack[i];
+          if (f.item.flags.has('extend') && !(f.end !== undefined && pos >= f.end)) { guard = i + 1; break; }
         }
         for (let i = guard; i < stack.length - 1; i++) {
           const frame = stack[i];
@@ -610,4 +662,29 @@ function loadData(type) {
   return data;
 }
 
-module.exports = { highlighter, loadData };
+// Welche Dateien faerbt die Erweiterung ohne Vim, und mit welchen Regeln? Wie Vim nach dem
+// Dateinamen; null = nicht freigegeben, dann faerbt Vim.
+const C_NAME = /\.c$/;
+const CPP_NAME = /\.(?:cpp|cc|cxx|c\+\+|hpp|hh|hxx|ipp|tcc|inl|ixx|cppm|moc)$/;
+// Unter Windows und macOS beachtet Vim die Gross-/Kleinschreibung von Dateinamen nicht
+// ('fileignorecase'); sonst sind ".C" und ".H" C++.
+const IGNORE_CASE = process.platform === 'win32' || process.platform === 'darwin';
+
+// ".h" entscheidet Vim nach dem Inhalt der ersten 99 Zeilen (dist#ft#FTheader): Objective-C,
+// sonst C++, sonst C
+function headerType(text) {
+  for (const line of text.split('\n', 99)) {
+    if (/^[ \t]*@(?:class|interface|end)(?![\p{L}\p{N}_])/u.test(line)) return null;
+    if (/^[ \t]*(?:class|namespace|template|using)(?![\p{L}\p{N}_])/u.test(line)) return 'cpp';
+  }
+  return 'c';
+}
+
+function typeFor(fileName, text, ignoreCase = IGNORE_CASE) {
+  const name = ignoreCase ? fileName.toLowerCase() : fileName;
+  if (C_NAME.test(name)) return 'c';
+  if (CPP_NAME.test(name) || /\.[CH]$/.test(name)) return 'cpp';
+  return /\.h$/.test(name) ? headerType(text.replace(/^﻿/, '')) : null;
+}
+
+module.exports = { highlighter, loadData, typeFor };
