@@ -7,9 +7,10 @@ For the parts written for VimSem, read "Vim" in that text as "VimSem".
 The syntax data and color themes are derived from files of Vim and have been
 modified. See LIZENZEN.md. Files that carry their own license remain under it.
 
-The syntax data for elm, go, json, nix, nu, rust and swift is derived from files
-with their own licenses. Their texts are in the folder lizenzen/ (json: in
-LIZENZEN.md).
+The syntax data for dockerfile, elm, go, json, jsonc, nix, nu, rust and swift is
+derived from files with their own licenses. Their texts are in the folder
+lizenzen/ (json: in LIZENZEN.md). The files for dockerfile (BSD) and jsonc (MIT)
+only name their license in the file header, see LIZENZEN.md.
 
 Contact (section II 2a): https://github.com/r11s/vim-semantic/issues
 

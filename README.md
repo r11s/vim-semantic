@@ -30,20 +30,21 @@ remove it when you switch to VimSem.
 ## Languages
 
 ABAP, Ada, Arduino, Assembly, AutoHotkey, AWK, BASIC, Batch, C, C#, C++, Clojure, COBOL, CSS,
-CUDA, Cython, D, Dart, Elm, Erlang, Forth, GDScript, GLSL, Go, Groovy, Haskell, HTML, Java,
-JavaScript, JSON, Julia, Kotlin, Lisp, Lua, Markdown, MATLAB, Mojo, Nix, Nushell,
-Objective-C, OCaml, Pascal, Perl, PHP, PowerShell, Progress, Prolog, Python, R, Racket, Raku,
-Ruby, Rust, SAS, Scala, Scheme, Scilab, Shell (sh, bash, ksh), Smalltalk, Solidity, SQL,
-Standard ML, Stata, Swift, SystemVerilog, Tcl, TypeScript, UnrealScript, Verilog, VHDL,
-Visual Basic, YAML, Zig
+CUDA, Cython, D, Dart, Diff, Dockerfile, Elm, Erlang, Forth, GDScript, GLSL, Go, Groovy,
+Haskell, HTML, INI, Java, JavaScript, JSON, JSON with comments, JSX, Julia, Kotlin, Less,
+Lisp, Lua, Makefile, Markdown, MATLAB, Mojo, Nix, Nushell, Objective-C, OCaml, Pascal, Perl,
+PHP, PowerShell, Progress, Prolog, Python, R, Racket, Raku, Ruby, Rust, SAS, Scala, Scheme,
+Scilab, SCSS, Shell (sh, bash, ksh), Smalltalk, Solidity, SQL, Standard ML, Stata, Swift,
+SystemVerilog, Tcl, TOML, TSX, TypeScript, UnrealScript, Verilog, VHDL, Visual Basic, XML,
+YAML, Zig
 
 No language extensions are needed for the colors. As in Vim, the file name and sometimes the
 content decide which rules apply.
 
 **Other files are shown without syntax colors** while a VimSem theme is active, for example
-JSX and TSX, XML, SCSS, Less, TOML, INI, Makefile, Dockerfile, Diff, Vue, Svelte, Fortran,
-Vim script, zsh, csh and JSON with comments (including `tsconfig.json` and VS Code's user
-`settings.json`).
+Vue, Svelte, Fortran, Vim script, zsh, csh, Sass (`.sass`), SVG, XSD, XSLT, JSON5 and
+configuration files such as `.gitconfig`, `.editorconfig`, `*.cfg` or `*.conf`. Some
+`*.conf` and similar files are recognized as INI or TOML, as in Vim.
 
 ## Editor and user interface
 
@@ -88,6 +89,11 @@ color for the current line. You can change it with `editor.lineHighlightBackgrou
 - Another extension that provides semantic highlighting for the same language may take
   precedence.
 - HTML templates (for example Django or Angular) are colored as plain HTML.
+- As in Vim, comments in a `.json` file (for example `.vscode/settings.json`) are shown as
+  errors. `tsconfig.json` and the user settings of VS Code and VSCodium are treated as JSON
+  with comments.
+- Patches made with `git format-patch` are a file type of their own in Vim and are not
+  colored.
 - COBOL is colored for the fixed format only, as in Vim.
 - Differences from Vim are possible. Please report them.
 

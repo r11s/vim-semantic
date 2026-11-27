@@ -1,0 +1,61 @@
+// Formen-Rechner: Darstellung. TODO: dunkles Thema
+/* Blockkommentar
+   ueber zwei Zeilen */
+@use "sass:math";
+@import "variablen", "mixins";
+
+$basis: 16px !default;
+$farben: (primaer: #3366ff, warnung: rgba(255, 136, 0, .8));
+
+@mixin form($breite, $hoehe: $breite, $args...) {
+  width: $breite;
+  height: $hoehe;
+  @content;
+}
+
+@function flaeche($radius) {
+  @if $radius <= 0 {
+    @return 0;
+  } @else if $radius > 100 {
+    @error "zu gross: #{$radius}";
+  }
+  @return 3.14159 * $radius * $radius;
+}
+
+%grund {
+  margin: 0 auto;
+  font: bold 1.2em/1.5 "Helvetica Neue", Arial, sans-serif;
+}
+
+.formen {
+  @extend %grund;
+  color: map-get($farben, primaer);
+
+  > .kreis:hover,
+  & + .rechteck::before {
+    @include form(math.div($basis, 2), 40%) { border-radius: 50% !important; }
+    content: "\201C";
+  }
+
+  &--aktiv { display: none; }
+  #liste li:nth-child(2n+1) a[href^="http"] { text-decoration: underline; }
+
+  @each $name, $farbe in $farben {
+    .form-#{$name} { background: url("bilder/#{$name}.png") no-repeat $farbe; }
+  }
+  @for $i from 1 through 3 {
+    .stufe-#{$i} { z-index: $i * 10; opacity: .5 + $i / 10; }
+  }
+  @while $basis > 20px { height: 1px; }
+}
+
+@media screen and (max-width: 600px) {
+  .formen { flex-direction: column; transition: all 0.3s ease-in-out; }
+}
+
+@keyframes drehen {
+  from { transform: rotate(0deg); }
+  50%  { transform: rotate(180deg) scale(1.1); }
+}
+@debug "fertig";
+@warn "nur Beispiel";

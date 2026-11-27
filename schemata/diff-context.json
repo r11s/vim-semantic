@@ -1,0 +1,91 @@
+{
+ "blue dark": {
+  "Added": "Constant",
+  "diffAdded": "Constant",
+  "diffBDiffer": "WarningMsg",
+  "diffCommon": "WarningMsg",
+  "diffDiffer": "WarningMsg",
+  "diffIdentical": "WarningMsg",
+  "diffIsA": "WarningMsg",
+  "diffNoEOL": "WarningMsg",
+  "diffOnly": "WarningMsg",
+  "diffRemoved": "WarningMsg",
+  "Removed": "WarningMsg"
+ },
+ "catppuccin dark": {
+  "diffAdded": "diffAdded",
+  "diffChanged": "diffChanged",
+  "diffFile": "diffFile",
+  "diffIndexLine": "diffIndexLine",
+  "diffLine": "diffLine",
+  "diffNewFile": "diffNewFile",
+  "diffOldFile": "diffOldFile",
+  "diffRemoved": "diffRemoved"
+ },
+ "catppuccin light": {
+  "diffAdded": "diffAdded",
+  "diffChanged": "diffChanged",
+  "diffFile": "diffFile",
+  "diffIndexLine": "diffIndexLine",
+  "diffLine": "diffLine",
+  "diffNewFile": "diffNewFile",
+  "diffOldFile": "diffOldFile",
+  "diffRemoved": "diffRemoved"
+ },
+ "darkblue dark": {
+  "Added": "Constant",
+  "diffAdded": "Constant",
+  "diffBDiffer": "WarningMsg",
+  "diffCommon": "WarningMsg",
+  "diffDiffer": "WarningMsg",
+  "diffIdentical": "WarningMsg",
+  "diffIsA": "WarningMsg",
+  "diffNoEOL": "WarningMsg",
+  "diffOnly": "WarningMsg",
+  "diffRemoved": "WarningMsg",
+  "Removed": "WarningMsg"
+ },
+ "evening dark": {
+  "Added": "Constant",
+  "diffAdded": "Constant",
+  "diffBDiffer": "WarningMsg",
+  "diffCommon": "WarningMsg",
+  "diffDiffer": "WarningMsg",
+  "diffIdentical": "WarningMsg",
+  "diffIsA": "WarningMsg",
+  "diffNoEOL": "WarningMsg",
+  "diffOnly": "WarningMsg",
+  "diffRemoved": "WarningMsg",
+  "Removed": "WarningMsg"
+ },
+ "lunaperche dark": {
+  "diffFile": "PreProc",
+  "diffNewFile": "PreProc",
+  "diffOldFile": "PreProc"
+ },
+ "lunaperche light": {
+  "diffFile": "PreProc",
+  "diffNewFile": "PreProc",
+  "diffOldFile": "PreProc"
+ },
+ "murphy dark": {
+  "Added": "Constant",
+  "diffAdded": "Constant"
+ },
+ "quiet dark": {
+  "Added": "Normal",
+  "Changed": "Normal",
+  "diffAdded": "Normal",
+  "diffChanged": "Normal",
+  "diffRemoved": "Normal",
+  "Removed": "Normal"
+ },
+ "quiet light": {
+  "Added": "Normal",
+  "Changed": "Normal",
+  "diffAdded": "Normal",
+  "diffChanged": "Normal",
+  "diffRemoved": "Normal",
+  "Removed": "Normal"
+ }
+}

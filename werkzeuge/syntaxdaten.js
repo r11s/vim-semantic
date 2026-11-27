@@ -15,9 +15,16 @@ const TARGET = path.join(ROOT, 'syntaxdaten');
 const VIM = process.env.VIM_PATH || 'vim';
 // Unterstuetzte Sprachen ohne Testdatei: Regeln aus einer leeren Datei, ohne Gegenprobe
 const EXTRA = ['json', 'html', 'css', 'markdown', 'yaml'];
-// sh: Vim waehlt die Regeln nach der ersten Zeile. sh.json (aus der Testdatei) ist bash;
-// die anderen Shells aus einer Datei, die nur diese Zeile enthaelt
-const SHELLS = { 'sh-posix': '#!/bin/sh', 'sh-ksh': '#!/bin/ksh' };
+// Bei manchen Typen waehlt Vim die Regeln nach Dateiname oder Inhalt. Die Testdatei liefert
+// die eine Art (sh.json: bash, make.json: GNU, diff.json: unified), die anderen entstehen aus
+// einer kurzen Datei: Name der Regeln -> [Dateiname, Inhalt]
+const VARIANTS = {
+  'sh-posix': ['beispiel.sh', '#!/bin/sh'],
+  'sh-ksh': ['beispiel.sh', '#!/bin/ksh'],
+  'make-bsd': ['BSDmakefile', '# BSD'],
+  'make-microsoft': ['beispiel.mk', '!include regeln.mak'],
+  'diff-context': ['beispiel.diff', '*** alt\n--- neu'],
+};
 const slash = (file) => file.replace(/\\/g, '/');
 
 // Reine Abfragen und An-/Abschalten sind keine Regeln
@@ -131,14 +138,14 @@ async function main() {
     console.log(`${type}: ${data.commands.length} Befehle (ohne Testdatei)`);
   }
 
-  for (const [name, firstLine] of Object.entries(SHELLS)) {
-    const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'vim-shell-'));
+  for (const [name, [fileName, content]] of Object.entries(VARIANTS)) {
+    const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'vim-variant-'));
     try {
-      const sample = path.join(dir, 'beispiel.sh');
-      fs.writeFileSync(sample, `${firstLine}\n`);
+      const sample = path.join(dir, fileName);
+      fs.writeFileSync(sample, `${content}\n`);
       const data = await collect(sample);
       overview.push({ name, files: [], data, contentDependent: true });
-      console.log(`${name}: ${data.commands.length} Befehle (${firstLine})`);
+      console.log(`${name}: ${data.commands.length} Befehle (${fileName})`);
     } finally {
       fs.rmSync(dir, { recursive: true, force: true });
     }
@@ -176,6 +183,8 @@ async function main() {
     'Aus einer leeren Datei erzeugt und von der Gegenprobe nicht erfasst: ' +
       EXTRA.join(', ') + '.',
     '`sh.json` gilt fuer bash, `sh-posix.json` fuer `#!/bin/sh` und dash, `sh-ksh.json` fuer die Korn-Shell.',
+    '`make.json` gilt fuer GNU make, daneben `make-bsd.json` und `make-microsoft.json`.',
+    '`diff.json` gilt fuer unified diff, `diff-context.json` fuer die anderen Formate.',
     'Zum Erzeugen ist ein Vim mit `werkzeuge/vim-synlog.patch` noetig.', '',
     `| Datei | ${words.join(' | ')} | inhaltsabhaengig | Testdateien |`,
     `|---|${words.map(() => '--:|').join('')}---|---|`,

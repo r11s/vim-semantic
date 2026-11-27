@@ -94,3 +94,14 @@ Rangliste der Sprachen: [SPRACHEN.md](../SPRACHEN.md). Fortran und Vim Script si
 | 103_css.css | CSS \*\* |
 | 104_markdown.md | Markdown \*\* |
 | 105_yaml.yaml | YAML \*\* |
+| 106_xml.xml | XML \*\* |
+| 107_scss.scss | SCSS \*\* |
+| 108_less.less | Less \*\* |
+| 109_ini.ini | INI \*\* |
+| 110_make.mk | Makefile \*\* |
+| 111_docker.Dockerfile | Dockerfile \*\* |
+| 112_diff.diff | Diff \*\* |
+| 113_react.jsx | JSX \*\* |
+| 114_react.tsx | TSX \*\* |
+| 115_jsonc.jsonc | JSON mit Kommentaren \*\* |
+| 116_toml.toml | TOML \*\* |

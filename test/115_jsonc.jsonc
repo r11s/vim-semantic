@@ -1,0 +1,20 @@
+// Einstellungen des Formen-Rechners. TODO: Schema ergaenzen
+{
+  /* Blockkommentar
+     ueber zwei Zeilen */
+  "name": "formen-rechner",
+  "version": 2,
+  "aktiv": true,
+  "leer": null,
+  "faktor": -1.5e+3, // Zeilenkommentar
+  "einheiten": ["cm", "m", "mm",],
+  "optionen": {
+    "pfad": "C:\\Programme\\Formen\t\u00e9",
+    "url": "https://example.org//kein-kommentar",
+    "stellen": 2 /* nach dem Komma */,
+  },
+  'falsch': 'einfach',
+  "oktal": 012,
+  ohne: Wert,
+  "offen": "nicht geschlossen
+}

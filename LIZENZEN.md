@@ -26,6 +26,8 @@ Volltexte im Ordner `lizenzen/`, mit Herkunft (abgerufen am 26.11.2026):
 | `rust.vim-Apache-2.0.txt` | `syntax/rust.vim` (wahlweise) | https://github.com/rust-lang/rust.vim |
 
 Der Volltext der MIT-Lizenz zu `syntax/json.vim` steht unten bei dieser Datei.
+`syntax/dockerfile.vim` (BSD) und `syntax/jsonc.vim` (MIT) nennen ihre Lizenz im Dateikopf
+nur beim Namen; Volltexte dazu liegen nicht bei.
 
 Nicht geprueft ist, ob die Ursprungs-Repositorys weiterer Dateien oder Farbschemata eigene
 Lizenzen haben, die in der Datei selbst nicht genannt sind.
@@ -748,6 +750,31 @@ Lizenzen haben, die in der Datei selbst nicht genannt sind.
 " Quit when a (custom) syntax file was already loaded
 ~~~~
 
+### syntax/diff.vim
+
+~~~~text
+" Vim syntax file
+" Language:	Diff (context or unified)
+" Maintainer:	The Vim Project <https://github.com/vim/vim>
+"		Translations by Jakson Alves de Aquino.
+" Last Change:	2025 Aug 16
+" Former Maintainer:	Bram Moolenaar <Bram@vim.org>
+
+" Quit when a (custom) syntax file was already loaded
+~~~~
+
+### syntax/dockerfile.vim
+
+~~~~text
+" dockerfile.vim - Syntax highlighting for Dockerfiles
+" Maintainer:   Honza Pokorny <https://honza.ca>
+" Last Change:  2024 Dec 20
+"               2026 Mar 26 by Vim Project: dockerfileShell comments (#19829)
+" License:      BSD
+
+" https://docs.docker.com/engine/reference/builder/
+~~~~
+
 ### syntax/dosbatch.vim
 
 ~~~~text
@@ -762,6 +789,23 @@ Lizenzen haben, die in der Datei selbst nicht genannt sind.
 " dosbatch_cmdextversion	- 1 = Windows NT, 2 = Windows 2000 [default]
 " dosbatch_colons_comment       - any value to allow :: comments in code blocks
 "
+
+" quit when a syntax file was already loaded
+~~~~
+
+### syntax/dosini.vim
+
+~~~~text
+" Vim syntax file
+" Language:               Configuration File (ini file) for MSDOS/MS Windows
+" Version:                2.4
+" Original Author:        Sean M. McKee <mckee@misslink.net>
+" Previous Maintainer:    Nima Talebi <nima@it.net.au>
+" Current Maintainer:     Hong Xu <hong@topbug.net>
+" Homepage:               http://www.vim.org/scripts/script.php?script_id=3747
+" Repository:             https://github.com/xuhdev/syntax-dosini.vim
+" Last Change:            2024 Sept 08
+
 
 " quit when a syntax file was already loaded
 ~~~~
@@ -1056,6 +1100,21 @@ Lizenzen haben, die in der Datei selbst nicht genannt sind.
 "See https://twitter.com/elzr/status/294964017926119424
 ~~~~
 
+### syntax/jsonc.vim
+
+~~~~text
+" Vim syntax file
+" Language:         JSONC (JSON with Comments)
+" Original Author:  Izhak Jakov <izhak724@gmail.com>
+" Acknowledgement:  Based off of vim-jsonc maintained by Kevin Locke <kevin@kevinlocke.name>
+"                   https://github.com/kevinoid/vim-jsonc
+" License:          MIT
+" Last Change:      2021-07-01
+
+" Ensure syntax is loaded once, unless nested inside another (main) syntax
+" For description of main_syntax, see https://stackoverflow.com/q/16164549
+~~~~
+
 ### syntax/julia.vim
 
 ~~~~text
@@ -1075,6 +1134,16 @@ Lizenzen haben, die in der Datei selbst nicht genannt sind.
 " Maintainer:   Alexander Udalov
 " URL:          https://github.com/udalov/kotlin-vim
 " Last Change:  30 December 2022
+~~~~
+
+### syntax/less.vim
+
+~~~~text
+" Vim syntax file
+" Language:	less
+" Maintainer:	Alessandro Vioni <jenoma@gmail.com>
+" URL: https://github.com/genoma/vim-less
+" Last Change:	2020 Sep 29
 ~~~~
 
 ### syntax/lisp.vim
@@ -1108,6 +1177,25 @@ Lizenzen haben, die in der Datei selbst nicht genannt sind.
 "               lua_subversion = 0 (for 4.0 or 5.0)
 "                               or 1, 2, 3 (for 5.1, 5.2 or 5.3)
 "               the default is 5.3
+
+" quit when a syntax file was already loaded
+~~~~
+
+### syntax/make.vim
+
+~~~~text
+" Vim syntax file
+" Language:	Makefile
+" Maintainer:	This runtime file is looking for a new maintainer.
+" Previous Maintainer:	Claudio Fleiner <claudio@fleiner.com>, Roland Hieber <https://github.com/rohieb>
+" URL:		https://github.com/vim/vim/blob/master/runtime/syntax/make.vim
+" Last Change:	2022 Nov 06
+" 2025 Apr 15 by Vim project: rework Make flavor detection (#17089)
+" 2025 Oct 12 by Vim project: update makeDefine highlighting (#18403)
+" 2025 Oct 25 by Vim project: update makeTargetinDefine highlighting (#18570)
+" 2025 Dec 23 by Vim project: fix too greedy match (#18938)
+" 2025 Dec 23 by Vim project: wrong highlight with paranthesis inside quotes (#18818)
+" 2026 Apr 17 by Vim project: wrong highlight $ inside quotes (#19986)
 
 " quit when a syntax file was already loaded
 ~~~~
@@ -1719,6 +1807,16 @@ Lizenzen haben, die in der Datei selbst nicht genannt sind.
 " Drop support for VIM version < 600
 ~~~~
 
+### syntax/sass.vim
+
+~~~~text
+" Vim syntax file
+" Language:	Sass
+" Maintainer:	Tim Pope <vimNOSPAM@tpope.org>
+" Filenames:	*.sass
+" Last Change:	2022 Mar 15
+~~~~
+
 ### syntax/scala.vim
 
 ~~~~text
@@ -1760,6 +1858,16 @@ Lizenzen haben, die in der Datei selbst nicht genannt sind.
 
 
 " quit when a syntax file was already loaded
+~~~~
+
+### syntax/scss.vim
+
+~~~~text
+" Vim syntax file
+" Language:	SCSS
+" Maintainer:	Tim Pope <vimNOSPAM@tpope.org>
+" Filenames:	*.scss
+" Last Change:	2019 Dec 05
 ~~~~
 
 ### syntax/sh.vim
@@ -1924,6 +2032,17 @@ Lizenzen haben, die in der Datei selbst nicht genannt sind.
 " quit when a syntax file was already loaded
 ~~~~
 
+### syntax/toml.vim
+
+~~~~text
+" Vim syntax file
+" Language:            TOML
+" Homepage:            https://github.com/cespare/vim-toml
+" Maintainer:          Aman Verma
+" Previous Maintainer: Caleb Spare <cespare@gmail.com>
+" Last Change:         Mar 10, 2026
+~~~~
+
 ### syntax/typescript.vim
 
 ~~~~text
@@ -1942,6 +2061,18 @@ Lizenzen haben, die in der Datei selbst nicht genannt sind.
 " - flattened into one file
 " - HiLink commands changed to "hi def link"
 " - Setting 'cpo' to the Vim value
+~~~~
+
+### syntax/typescriptreact.vim
+
+~~~~text
+" Vim syntax file
+" Language:     TypeScript with React (JSX)
+" Maintainer:   The Vim Project <https://github.com/vim/vim>
+" Last Change:  2024 May 26
+" Based On:     Herrington Darkholme's yats.vim
+" Changes:      See https://github.com/HerringtonDarkholme/yats.vim
+" Credits:      See yats.vim on github
 ~~~~
 
 ### syntax/uc.vim

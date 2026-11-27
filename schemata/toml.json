@@ -1,0 +1,85 @@
+{
+ "catppuccin dark": {
+  "String": "String",
+  "tomlString": "String"
+ },
+ "catppuccin light": {
+  "String": "String",
+  "tomlString": "String"
+ },
+ "habamax dark": {
+  "String": "String",
+  "tomlString": "String"
+ },
+ "lunaperche dark": {
+  "String": "String",
+  "tomlString": "String"
+ },
+ "lunaperche light": {
+  "String": "String",
+  "tomlString": "String"
+ },
+ "novum dark": {
+  "String": "String",
+  "tomlString": "String"
+ },
+ "novum light": {
+  "String": "String",
+  "tomlString": "String"
+ },
+ "retrobox dark": {
+  "Boolean": "Boolean",
+  "Float": "Float",
+  "Number": "Number",
+  "SpecialChar": "SpecialChar",
+  "String": "String",
+  "tomlBoolean": "Boolean",
+  "tomlEscape": "SpecialChar",
+  "tomlFloat": "Float",
+  "tomlInteger": "Number",
+  "tomlLineEscape": "SpecialChar",
+  "tomlString": "String"
+ },
+ "retrobox light": {
+  "Boolean": "Boolean",
+  "Float": "Float",
+  "Number": "Number",
+  "SpecialChar": "SpecialChar",
+  "String": "String",
+  "tomlBoolean": "Boolean",
+  "tomlEscape": "SpecialChar",
+  "tomlFloat": "Float",
+  "tomlInteger": "Number",
+  "tomlLineEscape": "SpecialChar",
+  "tomlString": "String"
+ },
+ "shine light": {
+  "Float": "Float",
+  "Number": "Number",
+  "SpecialChar": "SpecialChar",
+  "tomlEscape": "SpecialChar",
+  "tomlFloat": "Float",
+  "tomlInteger": "Number",
+  "tomlLineEscape": "SpecialChar"
+ },
+ "slate dark": {
+  "String": "String",
+  "tomlString": "String"
+ },
+ "sorbet dark": {
+  "String": "String",
+  "tomlString": "String"
+ },
+ "unokai dark": {
+  "String": "String",
+  "tomlString": "String"
+ },
+ "wildcharm dark": {
+  "String": "String",
+  "tomlString": "String"
+ },
+ "wildcharm light": {
+  "String": "String",
+  "tomlString": "String"
+ }
+}

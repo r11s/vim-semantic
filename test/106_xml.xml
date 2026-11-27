@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE formen SYSTEM "formen.dtd" [
+  <!ELEMENT formen (kreis | rechteck)*>
+  <!ATTLIST kreis radius CDATA #REQUIRED>
+  <!ENTITY firma "Muster &amp; Co">
+]>
+<!-- Formen-Rechner als Daten. TODO: Dreieck ergaenzen -->
+<formen xmlns="urn:beispiel:formen" xmlns:m="urn:beispiel:mass" version='2.0'>
+  <m:einheit name="cm" faktor="1.0"/>
+  <kreis id="k1" radius="3.5" farbe="#ff8800" sichtbar="true">
+    <name>Kreis &lt;klein&gt; &#169; &#x263A; &firma;</name>
+  </kreis>
+  <rechteck id="r1"
+            breite="4"
+            hoehe="2.5">
+    <name xml:lang="de-CH">Rechteck</name>
+    <![CDATA[ if (a < b && b > 0) { return "<roh>"; } ]]>
+  </rechteck>
+  <?anweisung ziel="drucker" kopien="2"?>
+  <leer />
+  <!-- ungueltig -- im Kommentar -->
+  <fehler attr=ohne>a & b > c</fehler>
+</formen>

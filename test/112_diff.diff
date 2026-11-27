@@ -1,0 +1,36 @@
+# TODO: Aenderung pruefen
+diff --git a/formen.py b/formen.py
+index 3f1a2b4..9c8d7e6 100644
+--- a/formen.py
++++ b/formen.py
+@@ -1,9 +1,10 @@ def flaeche(form):
+ import math
+ 
+-def kreis(r):
+-    return 3.14 * r * r
++def kreis(radius):
++    """Flaeche eines Kreises."""
++    return math.pi * radius ** 2
+ 
+ def rechteck(a, b):
+     return a * b
+\ No newline at end of file
+diff --git a/alt.txt b/neu.txt
+similarity index 90%
+rename from alt.txt
+rename to neu.txt
+new file mode 100644
+deleted file mode 100644
+Binary files a/bild.png and b/bild.png differ
+Only in b: neu.py
+Files a/x and b/x are identical
+Common subdirectories: a/doc and b/doc
+Index: formen.py
+===================================================================
+! geaendert
+Nur in b: datei
+Seulement dans a: fichier
+> neue Zeile
+< alte Zeile
+12c12
+---

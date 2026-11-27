@@ -27,6 +27,19 @@ Mit Umlauten davor begann Error an einer anderen Stelle als in Vim.
 Die Testdateien dienten auch zum Beheben der Fehler. Sie sagen deshalb wenig darueber, wie
 genau anderer Code getroffen wird.
 
+### XML, SCSS, Less, INI, Makefile, Dockerfile, Diff, JSX, TSX, jsonc, TOML
+
+| Probe | Ergebnis |
+|---|---|
+| Alle 91 Testdateien in 34 Themes (fertiges Paket, nachgebildetes VS Code) | 3094 Kombinationen, keine Abweichung |
+| 545 Dateien des Systems, default light | 542 gleich, 3 mit je einem Zeichen ohne sichtbare Farbe |
+| Dateityp-Erkennung gegen Vim, 3597 Dateien | gleich |
+
+Less und JSX sind nur an ihrer Testdatei geprueft, TSX an zwei Dateien.
+
+Behoben: Heisst die Gruppe am Ende einer Region wie die Region selbst (`matchgroup`), faerbt
+Vim das Ende nicht gesondert (aufgefallen bei Makefile-Zielzeilen).
+
 ### Neue Dateien je Sprache
 
 Bis zu 12 Dateien je Sprache aus Vims Syntax-Tests (`runtime/syntax/testdir/input`) und aus dem

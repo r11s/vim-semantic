@@ -75,10 +75,18 @@ fs.rmSync(work, { recursive: true, force: true });
 if (answers.length !== candidates.length) throw new Error(`${answers.length} Antworten auf ${candidates.length} Fragen`);
 
 const result = { endungen: {}, namen: {} };
-candidates.forEach((c, i) => { if (types.has(answers[i])) result[c.kind][c.key] = answers[i]; });
+// "fremd": Namen und Endungen, fuer die Vim einen Typ ohne Regeln waehlt. Fuer sie gelten
+// die Muster nach Namensanfang ("Makefile.am") nicht.
+const foreign = { endungen: [], namen: [] };
+candidates.forEach((c, i) => {
+  if (types.has(answers[i])) result[c.kind][c.key] = answers[i];
+  // "*.txt" und "*.conf" greifen in Vim erst nach den Mustern nach Namensanfang
+  else if (answers[i] && !(c.kind === 'endungen' && ['txt', 'conf'].includes(c.key))) foreign[c.kind].push(c.key);
+});
 const sorted = (object) => Object.fromEntries(Object.entries(object).sort(([a], [b]) => (a < b ? -1 : 1)));
 fs.writeFileSync(path.join(root, 'dateitypen.json'),
-  JSON.stringify({ endungen: sorted(result.endungen), namen: sorted(result.namen) }, null, 1) + '\n');
+  JSON.stringify({ endungen: sorted(result.endungen), namen: sorted(result.namen),
+    fremd: { endungen: foreign.endungen.sort(), namen: foreign.namen.sort() } }, null, 1) + '\n');
 console.log(`${Object.keys(result.endungen).length} Endungen, ${Object.keys(result.namen).length} Namen`);
 const missing = [...types].filter((type) => !Object.values(result.endungen).includes(type));
 console.log('Typen ohne Endung:', missing.join(' ') || 'keine');

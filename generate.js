@@ -15,7 +15,9 @@ const FILETYPES = ['python', 'javascript', 'typescript', 'sh', 'json', 'c', 'cpp
   'nix', 'dosbatch', 'groovy', 'haskell', 'lisp', 'gdscript', 'zig', 'ocaml', 'cobol', 'prolog',
   'solidity', 'clojure', 'glsl', 'erlang', 'tcl', 'cuda', 'd', 'sas', 'pyrex', 'awk', 'verilog',
   'systemverilog', 'vhdl', 'abap', 'scheme', 'raku', 'sml', 'st', 'uc', 'stata', 'forth',
-  'scilab', 'autohotkey', 'arduino', 'nu', 'racket', 'mojo', 'progress', 'elm', 'basic'];
+  'scilab', 'autohotkey', 'arduino', 'nu', 'racket', 'mojo', 'progress', 'elm', 'basic',
+  'xml', 'scss', 'less', 'dosini', 'make', 'dockerfile', 'diff', 'javascriptreact',
+  'typescriptreact', 'jsonc', 'toml'];
 
 async function main() {
   const scheme = process.argv[2] || 'default';

@@ -370,7 +370,7 @@ function readPattern(text, i) {
 const FLAGS = new Set(['contained', 'transparent', 'oneline', 'keepend', 'extend', 'excludenl', 'skipwhite',
   'skipnl', 'skipempty', 'display', 'fold', 'conceal', 'concealends']);
 // Wie in Vim duerfen um die Kommas Leerzeichen stehen
-const LISTS = /^(contains|containedin|nextgroup|add|remove)\s*=\s*((?:[^\s,]*\s*,\s*)*[^\s,]*)/;
+const LISTS = /^(contains|containedin|nextgroup|add|remove)\s*=\s*((?:[^\s,]*\s*,\s*)*[^\s,]*)/i; // wie in Vim auch "nextGroup"
 
 // Kann das Muster das Zeilenende erfassen?
 function hasEol(body) {
@@ -439,9 +439,10 @@ function parseItem(kind, text, ignoreCase, words) {
     const word = /^\S+/.exec(rest)[0];
     if (list) {
       const names = list[2].split(/\s*,\s*/).filter(Boolean);
+      const key = list[1].toLowerCase();
       // Bei "cluster" wirken alle Angaben nacheinander, sonst gilt wie in Vim die erste
-      if (kind === 'cluster') (item.ops ||= []).push([list[1], names]);
-      else item[list[1]] ||= names;
+      if (kind === 'cluster') (item.ops ||= []).push([key, names]);
+      else item[key] ||= names;
       position += list[0].length;
     }
     else if (option) {
@@ -449,7 +450,10 @@ function parseItem(kind, text, ignoreCase, words) {
       position += option[0].length;
     } else if (part) {
       position += part[0].length;
-      item[part[1]].push({ ...regex(part[1]), group: matchgroup });
+      // Wie in Vim: Heisst die Gruppe des Endes wie die Region selbst, gilt das Ende als
+      // eines ohne eigene Gruppe (bei "transparent" bleibt es damit ungefaerbt)
+      const own = part[1] === 'end' && matchgroup?.toLowerCase() === name.toLowerCase();
+      item[part[1]].push({ ...regex(part[1]), group: own ? null : matchgroup });
     } else if (FLAGS.has(word) && !(kind === 'keyword' && /^(display|fold|extend)$/.test(word))) {
       // Bei "keyword" sind diese drei gewoehnliche Woerter
       item.flags.add(word); position += word.length;

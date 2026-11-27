@@ -25,7 +25,13 @@ const LANGUAGES = {
   stata: 'stata', swift: 'swift', systemverilog: 'systemverilog', tcl: 'tcl',
   typescript: 'typescript', unrealscript: 'uc', vb: 'vb', verilog: 'verilog', vhdl: 'vhdl',
   yaml: 'yaml', zig: 'zig',
+  diff: 'diff', dockerfile: 'dockerfile', ini: 'dosini', javascriptreact: 'javascriptreact',
+  jsonc: 'jsonc', less: 'less', makefile: 'make', scss: 'scss', toml: 'toml',
+  typescriptreact: 'typescriptreact', xml: 'xml',
 };
+// Typen mit mehreren Regelsaetzen: unter diesem Namen entscheidet bei ungespeicherten
+// Dateien wie sonst der Inhalt
+const UNTITLED = { sh: 'Untitled.sh', make: 'Untitled.mk', diff: 'Untitled.diff' };
 // Endungen und Namen, bei denen VS Code die Erweiterung auch ohne passende Sprache fragt.
 // Die zweite Liste sind Endungen, ueber die nur der Inhalt entscheidet.
 const EXTENSIONS = [...new Set([...Object.keys(endungen),
@@ -151,8 +157,7 @@ function activate(context) {
         let type = typeFor(document.fileName, text);
         if (!type && document.isUntitled) {
           type = LANGUAGES[document.languageId] || null;
-          // Welche Shell, entscheidet wie bei Dateien die erste Zeile
-          if (type === 'sh') type = typeFor('Untitled.sh', text);
+          if (UNTITLED[type]) type = typeFor(UNTITLED[type], text);
         }
         if (!type) {
           forget(document);

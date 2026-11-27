@@ -1,0 +1,34 @@
+# Formen-Rechner: Einstellungen. TODO: Profile
+title = "Formen-Rechner"
+version = '2.1.0'
+anzahl = 1_000
+hex = 0xDEAD_beef
+oktal = 0o755
+binaer = 0b1010
+faktor = -1.5e+3
+unendlich = +inf
+keine_zahl = nan
+aktiv = true
+stand = 2026-11-27T12:30:00+01:00
+tag = 2026-11-27
+zeit = 07:32:00.999
+
+beschreibung = """
+Rechnet Flaeche \
+und Umfang \t \u00e9 "zitiert"
+"""
+pfad = '''C:\Programme\Formen'''
+
+[formen.kreis]
+radius = 3.5
+"farbe mit leerzeichen" = "#ff8800" # Kommentar
+punkte = { x = 1, y = -2.5, name = "P" }
+
+[[formen.liste]]
+name = "a"
+werte = [ 1, 2, [3, "vier"], # im Feld
+]
+
+[ "mit.punkt" . unter ]
+a.b.c = false
+falsch = 01

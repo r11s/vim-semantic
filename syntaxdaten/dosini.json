@@ -1,0 +1,53 @@
+{
+"dateityp": "dosini",
+"vim": 9020858,
+"testdateien": [
+ "109_ini.ini"
+],
+"inhaltsabhaengig": false,
+"iskeyword": "@,48-57,_,192-255",
+"syntaxIskeyword": "syntax iskeyword not set",
+"gruppen": {
+ "Comment": null,
+ "Constant": null,
+ "Number": "Constant",
+ "Special": null,
+ "String": "Constant",
+ "Type": null,
+ "dosiniComment": "Comment",
+ "dosiniHeader": "Special",
+ "dosiniLabel": "Type",
+ "dosiniNumber": "Number",
+ "dosiniSection": null,
+ "dosiniValue": "String"
+},
+"befehle": [
+ ["syntax/dosini.vim:22","case ignore"],
+ ["syntax/dosini.vim:24","match  dosiniLabel    \"^.\\{-}\\ze\\s*=\" nextgroup=dosiniNumber,dosiniValue"],
+ ["syntax/dosini.vim:25","match  dosiniValue    \"=\\zs.*\""],
+ ["syntax/dosini.vim:26","match  dosiniNumber   \"=\\zs\\s*\\d\\+\\s*$\""],
+ ["syntax/dosini.vim:27","match  dosiniNumber   \"=\\zs\\s*\\d*\\.\\d\\+\\s*$\""],
+ ["syntax/dosini.vim:28","match  dosiniNumber   \"=\\zs\\s*\\d\\+e[+-]\\=\\d\\+\\s*$\""],
+ ["syntax/dosini.vim:29","region dosiniHeader   start=\"^\\s*\\[\" end=\"\\]\""],
+ ["syntax/dosini.vim:30","match  dosiniComment  \"^[#;].*$\" contains=@Spell"],
+ ["syntax/dosini.vim:31","region dosiniSection  start=\"\\s*\\[.*\\]\" end=\"\\ze\\s*\\[.*\\]\" fold contains=dosiniLabel,dosiniValue,dosiniNumber,dosiniHeader,dosiniComment"],
+ ["vim/syntax-data.vim:36","sync fromstart"]
+],
+"liste": [
+ "--- Syntax items ---",
+ "dosiniNumber   xxx match /=\\zs\\s*\\d\\+\\s*$/  ",
+ "                   match /=\\zs\\s*\\d*\\.\\d\\+\\s*$/  ",
+ "                   match /=\\zs\\s*\\d\\+e[+-]\\=\\d\\+\\s*$/  ",
+ "                   links to Number",
+ "dosiniValue    xxx match /=\\zs.*/  ",
+ "                   links to String",
+ "dosiniLabel    xxx match /^.\\{-}\\ze\\s*=/  nextgroup=dosiniNumber,dosiniValue ",
+ "                   links to Type",
+ "dosiniHeader   xxx start=/^\\s*\\[/ end=/\\]/  ",
+ "                   links to Special",
+ "dosiniComment  xxx match /^[#;].*$/  contains=@Spell ",
+ "                   links to Comment",
+ "dosiniSection  xxx start=/\\s*\\[.*\\]/ end=/\\ze\\s*\\[.*\\]/  fold contains=dosiniLabel,dosiniValue,dosiniNumber,dosiniHeader,dosiniComment ",
+ "Spell          cluster=NONE"
+]
+}

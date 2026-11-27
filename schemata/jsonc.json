@@ -1,0 +1,152 @@
+{
+ "blue dark": {
+  "jsonKeyword": "Label",
+  "jsonPadding": "Type",
+  "Label": "Label",
+  "Operator": "Type"
+ },
+ "catppuccin dark": {
+  "Delimiter": "Delimiter",
+  "Function": "Function",
+  "jsonBraces": "Delimiter",
+  "jsonKeyword": "Label",
+  "jsonNull": "Function",
+  "jsonPadding": "Operator",
+  "jsonString": "String",
+  "Label": "Label",
+  "Operator": "Operator",
+  "String": "String"
+ },
+ "catppuccin light": {
+  "Delimiter": "Delimiter",
+  "Function": "Function",
+  "jsonBraces": "Delimiter",
+  "jsonKeyword": "Label",
+  "jsonNull": "Function",
+  "jsonPadding": "Operator",
+  "jsonString": "String",
+  "Label": "Label",
+  "Operator": "Operator",
+  "String": "String"
+ },
+ "elflord dark": {
+  "Function": "Function",
+  "jsonNull": "Function",
+  "jsonPadding": "Operator",
+  "Operator": "Operator"
+ },
+ "habamax dark": {
+  "jsonQuote": "String",
+  "jsonString": "String",
+  "Quote": "String",
+  "String": "String"
+ },
+ "industry dark": {
+  "Delimiter": "Delimiter",
+  "Function": "Function",
+  "jsonBraces": "Delimiter",
+  "jsonNull": "Function"
+ },
+ "lunaperche dark": {
+  "jsonString": "String",
+  "String": "String"
+ },
+ "lunaperche light": {
+  "jsonString": "String",
+  "String": "String"
+ },
+ "novum dark": {
+  "Delimiter": "Delimiter",
+  "Function": "Function",
+  "jsonBraces": "Delimiter",
+  "jsonNull": "Function",
+  "jsonPadding": "Operator",
+  "jsonString": "String",
+  "Operator": "Operator",
+  "String": "String"
+ },
+ "novum light": {
+  "Delimiter": "Delimiter",
+  "Function": "Function",
+  "jsonBraces": "Delimiter",
+  "jsonNull": "Function",
+  "jsonPadding": "Operator",
+  "jsonString": "String",
+  "Operator": "Operator",
+  "String": "String"
+ },
+ "retrobox dark": {
+  "Boolean": "Boolean",
+  "Delimiter": "Delimiter",
+  "Function": "Function",
+  "jsonBoolean": "Boolean",
+  "jsonBraces": "Delimiter",
+  "jsonKeyword": "Label",
+  "jsonNull": "Function",
+  "jsonNumber": "Number",
+  "jsonPadding": "Operator",
+  "jsonString": "String",
+  "Label": "Label",
+  "Number": "Number",
+  "Operator": "Operator",
+  "String": "String"
+ },
+ "retrobox light": {
+  "Boolean": "Boolean",
+  "Delimiter": "Delimiter",
+  "Function": "Function",
+  "jsonBoolean": "Boolean",
+  "jsonBraces": "Delimiter",
+  "jsonKeyword": "Label",
+  "jsonNull": "Function",
+  "jsonNumber": "Number",
+  "jsonPadding": "Operator",
+  "jsonString": "String",
+  "Label": "Label",
+  "Number": "Number",
+  "Operator": "Operator",
+  "String": "String"
+ },
+ "ron dark": {
+  "jsonKeyword": "Label",
+  "jsonPadding": "Operator",
+  "Label": "Label",
+  "Operator": "Operator"
+ },
+ "shine light": {
+  "jsonNumber": "Number",
+  "Number": "Number"
+ },
+ "slate dark": {
+  "Function": "Function",
+  "jsonNull": "Function",
+  "jsonPadding": "Operator",
+  "jsonString": "String",
+  "Operator": "Operator",
+  "String": "String"
+ },
+ "sorbet dark": {
+  "jsonString": "String",
+  "String": "String"
+ },
+ "unokai dark": {
+  "Delimiter": "PreProc",
+  "Function": "Function",
+  "jsonBraces": "PreProc",
+  "jsonKeyword": "String",
+  "jsonNull": "Function",
+  "jsonPadding": "PreProc",
+  "jsonString": "String",
+  "Label": "String",
+  "Operator": "PreProc",
+  "String": "String"
+ },
+ "wildcharm dark": {
+  "jsonString": "String",
+  "String": "String"
+ },
+ "wildcharm light": {
+  "jsonString": "String",
+  "String": "String"
+ }
+}

@@ -1,0 +1,154 @@
+{
+ "catppuccin dark": {
+  "Function": "Function",
+  "Include": "Include",
+  "makeBString": "Function",
+  "makeDString": "String",
+  "makeImplicit": "Function",
+  "makeInclude": "Include",
+  "makeSString": "String",
+  "makeTarget": "Function",
+  "makeTargetinDefine": "Function",
+  "String": "String"
+ },
+ "catppuccin light": {
+  "Function": "Function",
+  "Include": "Include",
+  "makeBString": "Function",
+  "makeDString": "String",
+  "makeImplicit": "Function",
+  "makeInclude": "Include",
+  "makeSString": "String",
+  "makeTarget": "Function",
+  "makeTargetinDefine": "Function",
+  "String": "String"
+ },
+ "elflord dark": {
+  "Function": "Function",
+  "makeBString": "Function",
+  "makeImplicit": "Function",
+  "makeTarget": "Function",
+  "makeTargetinDefine": "Function"
+ },
+ "habamax dark": {
+  "makeDString": "String",
+  "makeSString": "String",
+  "String": "String"
+ },
+ "industry dark": {
+  "Function": "Function",
+  "makeBString": "Function",
+  "makeImplicit": "Function",
+  "makeTarget": "Function",
+  "makeTargetinDefine": "Function"
+ },
+ "lunaperche dark": {
+  "makeDString": "String",
+  "makeSString": "String",
+  "String": "String"
+ },
+ "lunaperche light": {
+  "makeDString": "String",
+  "makeSString": "String",
+  "String": "String"
+ },
+ "novum dark": {
+  "Function": "Function",
+  "makeBString": "Function",
+  "makeDString": "String",
+  "makeImplicit": "Function",
+  "makeSString": "String",
+  "makeTarget": "Function",
+  "makeTargetinDefine": "Function",
+  "String": "String"
+ },
+ "novum light": {
+  "Function": "Function",
+  "makeBString": "Function",
+  "makeDString": "String",
+  "makeImplicit": "Function",
+  "makeSString": "String",
+  "makeTarget": "Function",
+  "makeTargetinDefine": "Function",
+  "String": "String"
+ },
+ "retrobox dark": {
+  "Define": "Define",
+  "Function": "Function",
+  "Include": "Include",
+  "makeBString": "Function",
+  "makeCommands": "Number",
+  "makeConfig": "PreCondit",
+  "makeDefine": "Define",
+  "makeDString": "String",
+  "makeImplicit": "Function",
+  "makeInclude": "Include",
+  "makeSString": "String",
+  "makeTarget": "Function",
+  "makeTargetinDefine": "Function",
+  "Number": "Number",
+  "PreCondit": "PreCondit",
+  "String": "String"
+ },
+ "retrobox light": {
+  "Define": "Define",
+  "Function": "Function",
+  "Include": "Include",
+  "makeBString": "Function",
+  "makeCommands": "Number",
+  "makeConfig": "PreCondit",
+  "makeDefine": "Define",
+  "makeDString": "String",
+  "makeImplicit": "Function",
+  "makeInclude": "Include",
+  "makeSString": "String",
+  "makeTarget": "Function",
+  "makeTargetinDefine": "Function",
+  "Number": "Number",
+  "PreCondit": "PreCondit",
+  "String": "String"
+ },
+ "shine light": {
+  "makeCommands": "Number",
+  "Number": "Number"
+ },
+ "slate dark": {
+  "Define": "Define",
+  "Function": "Function",
+  "makeBString": "Function",
+  "makeDefine": "Define",
+  "makeDString": "String",
+  "makeImplicit": "Function",
+  "makeSString": "String",
+  "makeTarget": "Function",
+  "makeTargetinDefine": "Function",
+  "String": "String"
+ },
+ "sorbet dark": {
+  "makeDString": "String",
+  "makeSString": "String",
+  "String": "String"
+ },
+ "unokai dark": {
+  "Define": "Identifier",
+  "Function": "Function",
+  "makeBString": "Function",
+  "makeDefine": "Identifier",
+  "makeDString": "String",
+  "makeImplicit": "Function",
+  "makeSString": "String",
+  "makeTarget": "Function",
+  "makeTargetinDefine": "Function",
+  "String": "String"
+ },
+ "wildcharm dark": {
+  "makeDString": "String",
+  "makeSString": "String",
+  "String": "String"
+ },
+ "wildcharm light": {
+  "makeDString": "String",
+  "makeSString": "String",
+  "String": "String"
+ }
+}

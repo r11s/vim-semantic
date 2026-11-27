@@ -1,0 +1,51 @@
+// Formen-Rechner: Darstellung. TODO: Druckansicht
+/* Blockkommentar
+   ueber zwei Zeilen */
+@import (reference) "basis.less";
+
+@breite: 100px;
+@hoehe: @breite / 2;
+@farbe: #3366ff;
+@name: ~"formen";
+@regeln: { color: red; };
+
+.rahmen(@dicke: 1px; @art: solid) {
+  border: @dicke @art darken(@farbe, 10%);
+}
+
+.rund() when (default()) { border-radius: 50%; }
+.groesse(@a) when (@a > 10) and (iscolor(@farbe)) { width: @a; }
+
+.formen {
+  .rahmen(2px; dashed);
+  width: @breite;
+  height: (@hoehe + 10px) * 2;
+  color: fade(@farbe, 80%) !important;
+  content: "Form: @{name}";
+  filter: ~"progid:DXImageTransform";
+
+  .kreis:hover > a[data-art="rund"]::after {
+    #bibliothek > .rund();
+    margin: -@hoehe auto 0;
+  }
+
+  &-aktiv { display: inline-block; }
+  & + & { padding: .5em 1rem; }
+
+  @media screen and (min-width: 768px) {
+    width: percentage(0.5);
+  }
+}
+
+#@{name}-liste:extend(.formen all) {
+  background: url('bilder/@{name}.png');
+  font-family: "Fira Code", monospace;
+}
+
+.schleife(@i) when (@i > 0) {
+  .stufe-@{i} { z-index: (@i * 10); }
+  .schleife(@i - 1);
+}
+.schleife(3);
+@plugin "rechnen";
+@detached();

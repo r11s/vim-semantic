@@ -14,6 +14,8 @@ Je Datei:
 `name~testdatei.json`: gleicher Dateityp, aber andere Regeln als in `name.json`.
 Aus einer leeren Datei erzeugt und von der Gegenprobe nicht erfasst: json, html, css, markdown, yaml.
 `sh.json` gilt fuer bash, `sh-posix.json` fuer `#!/bin/sh` und dash, `sh-ksh.json` fuer die Korn-Shell.
+`make.json` gilt fuer GNU make, daneben `make-bsd.json` und `make-microsoft.json`.
+`diff.json` gilt fuer unified diff, `diff-context.json` fuer die anderen Formate.
 Zum Erzeugen ist ein Vim mit `werkzeuge/vim-synlog.patch` noetig.
 
 | Datei | keyword | match | region | cluster | include | inhaltsabhaengig | Testdateien |
@@ -34,7 +36,11 @@ Zum Erzeugen ist ein Vim mit `werkzeuge/vim-synlog.patch` noetig.
 | cuda | 130 | 31 | 8 | 0 | 0 |  | 50_cuda.cu |
 | d | 232 | 39 | 24 | 13 | 0 |  | 51_d.d |
 | dart | 14 | 8 | 3 | 0 | 0 |  | 19_dart.dart |
+| diff | 0 | 256 | 0 | 0 | 0 | ja | 112_diff.diff |
+| diff-context | 0 | 256 | 0 | 0 | 0 | ja |  |
+| dockerfile | 8 | 120 | 96 | 33 | 2 |  | 111_docker.Dockerfile |
 | dosbatch | 14 | 40 | 1 | 2 | 0 |  | 29_batch.bat |
+| dosini | 0 | 6 | 2 | 0 | 0 |  | 109_ini.ini |
 | elm | 6 | 18 | 9 | 0 | 0 |  | 98_elm.elm |
 | erlang | 35 | 55 | 11 | 1 | 0 |  | 48_erlang.erl |
 | forth | 147 | 44 | 11 | 0 | 0 |  | 77_forth.fth |
@@ -46,11 +52,17 @@ Zum Erzeugen ist ein Vim mit `werkzeuge/vim-synlog.patch` noetig.
 | html | 481 | 261 | 110 | 4 | 5 |  | 102_html.html |
 | java | 159 | 200 | 211 | 10 | 6 |  | 04_java.java |
 | javascript | 19 | 12 | 6 | 1 | 0 |  | 02_javascript.js |
+| javascriptreact | 19 | 12 | 6 | 1 | 0 |  | 113_react.jsx |
 | json | 1 | 21 | 5 | 0 | 0 |  | 101_json.json |
+| jsonc | 2 | 25 | 7 | 0 | 0 |  | 115_jsonc.jsonc |
 | julia | 1 | 95 | 59 | 26 | 0 |  | 29_julia.jl |
 | kotlin | 42 | 29 | 6 | 0 | 0 |  | 16_kotlin.kt |
+| less | 124 | 199 | 27 | 2 | 0 |  | 108_less.less |
 | lisp | 377 | 25 | 6 | 1 | 0 |  | 34_lisp.lisp, 57_emacslisp.el |
 | lua | 24 | 130 | 14 | 0 | 0 |  | 22_lua.lua |
+| make | 1 | 27 | 14 | 0 | 0 |  | 110_make.mk |
+| make-bsd | 1 | 23 | 14 | 0 | 0 | ja |  |
+| make-microsoft | 1 | 24 | 12 | 0 | 0 | ja |  |
 | markdown | 484 | 315 | 145 | 13 | 6 |  | 104_markdown.md |
 | matlab | 13 | 18 | 3 | 0 | 0 |  | 27_matlab.m |
 | mojo | 53 | 24 | 6 | 0 | 0 |  | 86_mojo.mojo |
@@ -75,6 +87,7 @@ Zum Erzeugen ist ein Vim mit `werkzeuge/vim-synlog.patch` noetig.
 | scala | 13 | 67 | 15 | 0 | 0 |  | 25_scala.scala |
 | scheme | 345 | 12 | 26 | 2 | 0 |  | 64_scheme.scm |
 | scilab | 10 | 20 | 2 | 0 | 0 |  | 78_scilab.sce |
+| scss | 126 | 210 | 35 | 2 | 0 |  | 107_scss.scss |
 | sh | 11 | 103 | 96 | 41 | 0 | ja | 08_shell.sh |
 | sh-ksh | 12 | 102 | 97 | 41 | 0 | ja |  |
 | sh-posix | 6 | 91 | 85 | 33 | 0 | ja |  |
@@ -86,10 +99,13 @@ Zum Erzeugen ist ein Vim mit `werkzeuge/vim-synlog.patch` noetig.
 | swift | 19 | 30 | 12 | 0 | 0 |  | 15_swift.swift |
 | systemverilog | 73 | 29 | 7 | 0 | 0 |  | 66_systemverilog.sv |
 | tcl | 61 | 15 | 34 | 2 | 0 |  | 49_tcl.tcl |
+| toml | 1 | 20 | 10 | 1 | 0 |  | 116_toml.toml |
 | typescript | 912 | 104 | 56 | 126 | 0 |  | 05_typescript.ts |
+| typescriptreact | 912 | 116 | 62 | 128 | 0 |  | 114_react.tsx |
 | uc | 18 | 27 | 6 | 3 | 0 |  | 74_unrealscript.uc |
 | vb | 271 | 17 | 5 | 0 | 0 |  | 21_visualbasic.vb, 61_vbscript.vbs, 90_vb6.bas, 94_vba.bas |
 | verilog | 28 | 29 | 6 | 0 | 0 |  | 59_verilog.v |
 | vhdl | 27 | 27 | 1 | 0 | 0 |  | 60_vhdl.vhd |
+| xml | 6 | 33 | 18 | 0 | 1 |  | 106_xml.xml |
 | yaml | 3 | 37 | 7 | 7 | 0 |  | 105_yaml.yaml |
 | zig | 17 | 15 | 5 | 0 | 0 |  | 37_zig.zig |

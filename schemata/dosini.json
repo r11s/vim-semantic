@@ -1,0 +1,66 @@
+{
+ "catppuccin dark": {
+  "dosiniValue": "String",
+  "String": "String"
+ },
+ "catppuccin light": {
+  "dosiniValue": "String",
+  "String": "String"
+ },
+ "habamax dark": {
+  "dosiniValue": "String",
+  "String": "String"
+ },
+ "lunaperche dark": {
+  "dosiniValue": "String",
+  "String": "String"
+ },
+ "lunaperche light": {
+  "dosiniValue": "String",
+  "String": "String"
+ },
+ "novum dark": {
+  "dosiniValue": "String",
+  "String": "String"
+ },
+ "novum light": {
+  "dosiniValue": "String",
+  "String": "String"
+ },
+ "retrobox dark": {
+  "dosiniNumber": "Number",
+  "dosiniValue": "String",
+  "Number": "Number",
+  "String": "String"
+ },
+ "retrobox light": {
+  "dosiniNumber": "Number",
+  "dosiniValue": "String",
+  "Number": "Number",
+  "String": "String"
+ },
+ "shine light": {
+  "dosiniNumber": "Number",
+  "Number": "Number"
+ },
+ "slate dark": {
+  "dosiniValue": "String",
+  "String": "String"
+ },
+ "sorbet dark": {
+  "dosiniValue": "String",
+  "String": "String"
+ },
+ "unokai dark": {
+  "dosiniValue": "String",
+  "String": "String"
+ },
+ "wildcharm dark": {
+  "dosiniValue": "String",
+  "String": "String"
+ },
+ "wildcharm light": {
+  "dosiniValue": "String",
+  "String": "String"
+ }
+}

@@ -1,0 +1,156 @@
+{
+ "catppuccin dark": {
+  "dtdCard": "Function",
+  "dtdFunction": "Function",
+  "Function": "Function",
+  "String": "String",
+  "Tag": "Tag",
+  "xmlCdata": "String",
+  "xmlDocTypeDecl": "Function",
+  "xmlInlineDTD": "Function",
+  "xmlNamespace": "Tag",
+  "xmlString": "String",
+  "xmlTag": "Function",
+  "xmlTagName": "Function"
+ },
+ "catppuccin light": {
+  "dtdCard": "Function",
+  "dtdFunction": "Function",
+  "Function": "Function",
+  "String": "String",
+  "Tag": "Tag",
+  "xmlCdata": "String",
+  "xmlDocTypeDecl": "Function",
+  "xmlInlineDTD": "Function",
+  "xmlNamespace": "Tag",
+  "xmlString": "String",
+  "xmlTag": "Function",
+  "xmlTagName": "Function"
+ },
+ "elflord dark": {
+  "dtdCard": "Function",
+  "dtdFunction": "Function",
+  "Function": "Function",
+  "xmlDocTypeDecl": "Function",
+  "xmlInlineDTD": "Function",
+  "xmlTag": "Function",
+  "xmlTagName": "Function"
+ },
+ "habamax dark": {
+  "String": "String",
+  "xmlCdata": "String",
+  "xmlString": "String"
+ },
+ "industry dark": {
+  "dtdCard": "Function",
+  "dtdFunction": "Function",
+  "Function": "Function",
+  "xmlDocTypeDecl": "Function",
+  "xmlInlineDTD": "Function",
+  "xmlTag": "Function",
+  "xmlTagName": "Function"
+ },
+ "lunaperche dark": {
+  "String": "String",
+  "xmlCdata": "String",
+  "xmlString": "String",
+  "xmlTagName": "Statement"
+ },
+ "lunaperche light": {
+  "String": "String",
+  "xmlCdata": "String",
+  "xmlString": "String",
+  "xmlTagName": "Statement"
+ },
+ "novum dark": {
+  "dtdCard": "Function",
+  "dtdFunction": "Function",
+  "Function": "Function",
+  "String": "String",
+  "xmlCdata": "String",
+  "xmlDocTypeDecl": "Function",
+  "xmlInlineDTD": "Function",
+  "xmlString": "String",
+  "xmlTag": "Function",
+  "xmlTagName": "Function"
+ },
+ "novum light": {
+  "dtdCard": "Function",
+  "dtdFunction": "Function",
+  "Function": "Function",
+  "String": "String",
+  "xmlCdata": "String",
+  "xmlDocTypeDecl": "Function",
+  "xmlInlineDTD": "Function",
+  "xmlString": "String",
+  "xmlTag": "Function",
+  "xmlTagName": "Function"
+ },
+ "retrobox dark": {
+  "dtdCard": "Function",
+  "dtdFunction": "Function",
+  "Function": "Function",
+  "String": "String",
+  "xmlCdata": "String",
+  "xmlDocTypeDecl": "Function",
+  "xmlInlineDTD": "Function",
+  "xmlString": "String",
+  "xmlTag": "Function",
+  "xmlTagName": "Function"
+ },
+ "retrobox light": {
+  "dtdCard": "Function",
+  "dtdFunction": "Function",
+  "Function": "Function",
+  "String": "String",
+  "xmlCdata": "String",
+  "xmlDocTypeDecl": "Function",
+  "xmlInlineDTD": "Function",
+  "xmlString": "String",
+  "xmlTag": "Function",
+  "xmlTagName": "Function"
+ },
+ "slate dark": {
+  "dtdCard": "Function",
+  "dtdFunction": "Function",
+  "Function": "Function",
+  "String": "String",
+  "xmlCdata": "String",
+  "xmlDocTypeDecl": "Function",
+  "xmlInlineDTD": "Function",
+  "xmlString": "String",
+  "xmlTag": "Function",
+  "xmlTagName": "Function"
+ },
+ "sorbet dark": {
+  "String": "String",
+  "xmlCdata": "String",
+  "xmlString": "String"
+ },
+ "unokai dark": {
+  "dtdCard": "Function",
+  "dtdFunction": "Function",
+  "Function": "Function",
+  "String": "String",
+  "xmlCdata": "String",
+  "xmlDocTypeDecl": "Function",
+  "xmlInlineDTD": "Function",
+  "xmlString": "String",
+  "xmlTag": "Function",
+  "xmlTagName": "Function"
+ },
+ "wildcharm dark": {
+  "String": "String",
+  "xmlCdata": "String",
+  "xmlString": "String"
+ },
+ "wildcharm light": {
+  "String": "String",
+  "xmlCdata": "String",
+  "xmlString": "String"
+ },
+ "zellner light": {
+  "Tag": "Tag",
+  "xmlNamespace": "Tag"
+ }
+}
