@@ -104,7 +104,7 @@ async function main() {
     displayName: 'VimSem',
     description: 'Vim-Farbschemata im Editor, gefaerbt wie in Vim (ohne Vim zu brauchen)',
     publisher: 'r11s',
-    version: '0.1.0',
+    version: '0.2.0',
     repository: { type: 'git', url: 'https://github.com/r11s/vim-semantic.git' },
     license: 'SEE LICENSE IN LICENSE',
     categories: ['Themes'],
