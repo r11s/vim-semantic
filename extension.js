@@ -67,11 +67,11 @@ function activate(context) {
     }
   };
   const semantic = vscode.workspace.getConfiguration('editor').get('semanticHighlighting.enabled');
-  note(`Aktiviert. Farbschema: ${vscode.workspace.getConfiguration('workbench').get('colorTheme')}, ` +
+  note(`Activated. Color theme: ${vscode.workspace.getConfiguration('workbench').get('colorTheme')}, ` +
     `semanticHighlighting: ${semantic}`);
   const showDocument = (document) => {
     if (document.uri.scheme === 'file' || document.uri.scheme === 'untitled') {
-      note(`Offen: ${path.basename(document.fileName)} (Sprache ${document.languageId})`);
+      note(`Open: ${path.basename(document.fileName)} (language ${document.languageId})`);
     }
   };
   vscode.workspace.textDocuments.forEach(showDocument);
@@ -133,7 +133,7 @@ function activate(context) {
     const theme = event.affectsConfiguration('workbench.colorTheme');
     const settings = event.affectsConfiguration('vimsem.backgroundGroups');
     if (theme || settings) {
-      if (theme) note(`Farbschema: ${activeTheme()}`);
+      if (theme) note(`Color theme: ${activeTheme()}`);
       cache.clear();
       vscode.window.visibleTextEditors.forEach(decorate);
       changed.fire();
@@ -152,7 +152,7 @@ function activate(context) {
       }
 
       const name = path.basename(document.fileName);
-      note(`Anfrage: ${name} (${document.languageId}, ${document.lineCount} Zeilen)`);
+      note(`Request: ${name} (${document.languageId}, ${document.lineCount} lines)`);
       const version = document.version;
       try {
         const text = document.getText();
@@ -163,7 +163,7 @@ function activate(context) {
         }
         if (!type) {
           forget(document);
-          note(`${name}: keine Syntaxregeln fuer diese Datei`);
+          note(`${name}: no syntax rules for this file`);
           return null;
         }
         const start = Date.now();
@@ -176,12 +176,12 @@ function activate(context) {
         // Ergebnisse zu einem inzwischen geaenderten Text wuerden verrutschen
         const upToDate = !cancel.isCancellationRequested && document.version === version && theme === activeTheme();
         const marked = upToDate ? remember(document, version, theme, tokens) : 0;
-        note(`${name}: ${tokens.length} Abschnitte (${type}) in ${time} ms, ` +
-          `${tokens.filter((t) => index.has(t.type)).length} davon mit bekannter Gruppe, ${marked} Hintergruende`);
+        note(`${name}: ${tokens.length} tokens (${type}) in ${time} ms, ` +
+          `${tokens.filter((t) => index.has(t.type)).length} with a known group, ${marked} backgrounds`);
         return builder.build();
       } catch (error) {
         note(String(error.stack || error));
-        vscode.window.showWarningMessage('VimSem: Faerben fehlgeschlagen (siehe Ausgabe "VimSem").');
+        vscode.window.showWarningMessage('VimSem: Coloring failed (see output "VimSem").');
         return null;
       }
     },

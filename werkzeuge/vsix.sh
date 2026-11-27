@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Baut das Paket zum Installieren, z. B. vim-semantic-0.2.1.vsix
+# Baut das Paket zum Installieren, z. B. vim-semantic-1.0.0.vsix
 #   bash werkzeuge/vsix.sh
 # Was hineinkommt, steht in .vscodeignore. Die Version steht in generate.js.
 set -euo pipefail

@@ -105,10 +105,10 @@ async function main() {
   write('package.json', {
     name: 'vim-semantic',
     displayName: 'VimSem',
-    description: 'Vim-Farbschemata im Editor, gefaerbt wie in Vim (ohne Vim zu brauchen)',
+    description: 'The color schemes of Vim, with syntax colors as in Vim. Vim does not need to be installed.',
     icon: 'icon.png',
     publisher: 'r11s',
-    version: '0.2.1',
+    version: '1.0.0',
     repository: { type: 'git', url: 'https://github.com/r11s/vim-semantic.git' },
     license: 'SEE LICENSE IN LICENSE',
     categories: ['Themes'],
@@ -122,10 +122,10 @@ async function main() {
       configuration: {
         title: 'VimSem',
         properties: {
-          'vimsem.logFile': { type: 'boolean', default: false, description: 'Protokoll zur Fehlersuche in protokoll.txt im Erweiterungsordner schreiben' },
+          'vimsem.logFile': { type: 'boolean', default: false, description: 'Also write the log for troubleshooting to protokoll.txt in the extension folder' },
           'vimsem.backgroundGroups': {
             type: 'array', items: { type: 'string' }, default: ['Todo', 'Error', 'Constant'],
-            description: 'Vim-Gruppen, deren Hintergrundfarbe angezeigt wird',
+            description: 'Vim highlight groups whose background color is shown',
           },
         },
       },

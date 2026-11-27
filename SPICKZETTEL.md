@@ -15,8 +15,8 @@ Danach das Testfenster neu starten.
 ## vsix bauen und installieren
 
     bash werkzeuge/vsix.sh
-    code --install-extension vim-semantic-0.2.1.vsix --force
-    codium --install-extension vim-semantic-0.2.1.vsix --force
+    code --install-extension vim-semantic-1.0.0.vsix --force
+    codium --install-extension vim-semantic-1.0.0.vsix --force
 
 Danach VS Code bzw. VSCodium neu starten. Wieder entfernen:
 
@@ -52,7 +52,7 @@ Neu erzeugen geht nur mit dem ergänzten Vim, siehe `syntaxdaten/README.md`.
 - In settings.json: `"editor.semanticHighlighting.enabled": true`
 - Ansicht "Ausgabe", Kanal "VimSem" ansehen
 - Für `protokoll.txt`: `"vimsem.logFile": true`
-- Steht im Kanal "keine Syntaxregeln fuer diese Datei": Der Dateityp wird nicht gefärbt, siehe README
+- Steht im Kanal "no syntax rules for this file": Der Dateityp wird nicht gefärbt, siehe README
 
 ## Woher kommt eine Farbe?
 

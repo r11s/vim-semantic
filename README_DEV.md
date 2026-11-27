@@ -74,8 +74,8 @@ Bekannte Abweichungen:
 Braucht Node.js ab Version 20 und beim ersten Mal Internet (laedt `@vscode/vsce`).
 
     bash werkzeuge/vsix.sh                                   # baut vim-semantic-<version>.vsix
-    code --install-extension vim-semantic-0.2.1.vsix --force
-    codium --install-extension vim-semantic-0.2.1.vsix --force      # fuer VSCodium
+    code --install-extension vim-semantic-1.0.0.vsix --force
+    codium --install-extension vim-semantic-1.0.0.vsix --force      # fuer VSCodium
 
 Danach VS Code bzw. VSCodium neu starten und ein "VimSem ..."-Farbschema waehlen.
 

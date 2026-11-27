@@ -5,6 +5,8 @@ gVim shows it with its default settings (no vimrc, no plugins).
 
 **Vim does not need to be installed.** VimSem applies Vim's syntax rules itself.
 
+![A C file with the theme VimSem desert](images/screenshot.png)
+
 ## Choose a theme
 
 Run *Preferences: Color Theme* and pick one of the 34 themes named "VimSem ...":
