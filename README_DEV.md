@@ -91,21 +91,9 @@ VimSem aendert keine Einstellungen von VS Code oder VSCodium. Wer mag, ergaenzt 
 
 Diese Einstellungen gelten fuer alle Farbschemata.
 
-Wer in Vim `set cursorline` nutzt, laesst den Balken an (`"line"`) und gibt ihm je Theme die
-Farbe aus Vim:
-
-```json
-"editor.renderLineHighlight": "line",
-"workbench.colorCustomizations": {
-  "[VimSem elflord]": {
-    "editor.lineHighlightBackground": "#333333",
-    "editor.lineHighlightBorder": "#00000000"
-  }
-}
-```
-
-`#333333` ist ein Beispiel. Die Farbe zeigt gVim mit
-`:echo synIDattr(hlID('CursorLine'), 'bg#')`.
+Wer in Vim `set cursorline` nutzt, laesst die letzte Zeile weg: Die Themes haben die Farbe von
+`CursorLine` schon. Aendern laesst sie sich mit `editor.lineHighlightBackground` in
+`workbench.colorCustomizations`.
 
 ## Einstellungen
 
@@ -127,7 +115,8 @@ naechsten Releases aufgenommen. Voraussetzung: Vim hat fuer die Sprache eine Syn
 
 - Hintergruende nur fuer die eingestellten Gruppen. Semantic Tokens kennen keinen Hintergrund,
   deshalb setzt die Erweiterung dafuer Decorations.
-- Cursorzeile, Zeilennummern, Auswahl und Suchtreffer haben die Farben von VS Code.
+- Wo Vim keine brauchbare Farbe hat (z. B. fuer die Auswahl in elflord), gilt die Farbe von
+  VS Code. Fette Zeilennummern kann VS Code nicht darstellen.
 - Bei jeder Aenderung wird die ganze Datei neu berechnet. Bei 5000 Zeilen dauert das meist
   unter 0,5 Sekunden, bei einzelnen Sprachen (JSON, Nushell) gut 1 Sekunde (gemessen unter
   Linux).
@@ -143,7 +132,8 @@ Testfenster ohne Installation:
 
     code --extensionDevelopmentPath=/pfad/zu/vim-semantic
 
-Themes erzeugen (nutzt dein Vim; `VIM_PATH` setzt ein anderes):
+Themes erzeugen (nutzt dein Vim; `VIM_PATH` setzt ein anderes). Die Farben der Oberflaeche
+berechnet `oberflaeche.js` aus Vims Gruppen:
 
     node generate.js elflord dark       # ein Theme hinzufuegen oder erneuern
     bash werkzeuge/themes.sh            # alle vorhandenen neu erzeugen

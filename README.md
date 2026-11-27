@@ -45,10 +45,13 @@ JSX and TSX, XML, SCSS, Less, TOML, INI, Makefile, Dockerfile, Diff, Vue, Svelte
 Vim script, zsh, csh and JSON with comments (including `tsconfig.json` and VS Code's user
 `settings.json`).
 
-## Only the editor
+## Editor and user interface
 
-VimSem themes set the colors of the code, the text and the editor background. Side bar, tabs,
-status bar and the rest of VS Code keep the standard light or dark colors.
+In the editor the colors come from Vim's color schemes: code, text and background, line
+numbers, cursor line, cursor, selection and search matches.
+
+Vim has nothing like the side bar, tabs or status bar of VS Code. Each theme derives these
+colors from its own Vim colors.
 
 ## Recommended settings
 
@@ -66,21 +69,9 @@ They stop VS Code from coloring brackets by depth, marking other occurrences of 
 the cursor or of the selected text, and highlighting the current line. They apply to all
 themes.
 
-If you use `set cursorline` in Vim, keep the line highlight and give it Vim's color for each
-theme instead:
-
-```json
-"editor.renderLineHighlight": "line",
-"workbench.colorCustomizations": {
-  "[VimSem elflord]": {
-    "editor.lineHighlightBackground": "#333333",
-    "editor.lineHighlightBorder": "#00000000"
-  }
-}
-```
-
-`#333333` is only an example. gVim shows the color of the current scheme with
-`:echo synIDattr(hlID('CursorLine'), 'bg#')`.
+If you use `set cursorline` in Vim, leave out the last line: the themes already have Vim's
+color for the current line. You can change it with `editor.lineHighlightBackground` in
+`workbench.colorCustomizations`.
 
 ## Settings
 
@@ -91,7 +82,8 @@ theme instead:
 
 ## Limitations
 
-- Cursor line, line numbers, selection and search matches use the colors of VS Code.
+- Where Vim has no usable color, for example for the selection in elflord, VS Code's own color
+  is used. Bold line numbers cannot be shown.
 - After each change the whole file is colored again, so very large files react slower.
 - Another extension that provides semantic highlighting for the same language may take
   precedence.

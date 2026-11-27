@@ -6,6 +6,7 @@ const fs = require('fs');
 const os = require('os');
 const path = require('path');
 const { runVim, tokenType } = require('./vim');
+const { oberflaeche } = require('./oberflaeche');
 
 const FILETYPES = ['python', 'javascript', 'typescript', 'sh', 'json', 'c', 'cpp',
   'vim', 'html', 'css', 'markdown', 'yaml', 'java', 'go', 'rust', 'sql', 'cs', 'php', 'r', 'ps1',
@@ -65,7 +66,7 @@ async function main() {
     name: '', // wird unten vergeben
     type,
     semanticHighlighting: true,
-    colors: { 'editor.background': data.background, 'editor.foreground': data.foreground },
+    colors: oberflaeche({ ...data, groups: data.ui }),
     tokenColors: [],
     semanticTokenColors: colors,
     vimBackgrounds: backgrounds, // eigene Schluessel, VS Code wertet sie nicht aus

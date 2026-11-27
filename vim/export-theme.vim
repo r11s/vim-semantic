@@ -52,5 +52,24 @@ for s:hl in hlget()
         \ 'background': s:Color(get(s:hl, 'guibg', ''), ''),
         \ 'attributes': keys(get(s:hl, 'gui', {}))}
 endfor
-call writefile([json_encode({'type': &background, 'foreground': s:fg, 'background': s:bg, 'groups': s:groups})], $VH_OUT)
+
+" Fuer die Oberflaeche (oberflaeche.js): Gruppen mit aufgeloesten Verknuepfungen
+let s:ui = {}
+for s:name in split('Normal Cursor CursorLine CursorLineNr LineNr Visual Search IncSearch CurSearch '
+      \ .. 'MatchParen Folded ColorColumn NonText Whitespace StatusLine Title Statement Constant Identifier '
+      \ .. 'Pmenu PmenuSel ErrorMsg WarningMsg Error Todo Directory DiffAdd DiffChange DiffDelete')
+  let s:hl = get(hlget(s:name, v:true), 0, {})
+  if empty(s:hl) || get(s:hl, 'cleared', v:false)
+    continue
+  endif
+  let s:ui[s:name] = {
+        \ 'foreground': s:Color(get(s:hl, 'guifg', ''), ''),
+        \ 'background': s:Color(get(s:hl, 'guibg', ''), ''),
+        \ 'attributes': keys(get(s:hl, 'gui', {}))}
+endfor
+let s:out = {'type': &background, 'foreground': s:fg, 'background': s:bg, 'groups': s:groups, 'ui': s:ui}
+if exists('g:terminal_ansi_colors')
+  let s:out.ansi = map(copy(g:terminal_ansi_colors), {_, v -> s:Color(v, '')})
+endif
+call writefile([json_encode(s:out)], $VH_OUT)
 qall!
