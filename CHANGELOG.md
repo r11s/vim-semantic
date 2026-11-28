@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.2
+
+- README: clearer help when syntax colors are missing.
+- README: quit and restart the editor if colors do not change.
+- No changes to themes or coloring.
+
 ## 1.0.1
 
 - New README with preview images of the themes default and desert.

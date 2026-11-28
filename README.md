@@ -14,17 +14,20 @@ plugins). **Vim does not need to be installed.**
 
 ![A C file with the theme VimSem desert](images/desert.png)
 
-## Requirement: semantic highlighting
+## Colors missing or not changing?
 
-VimSem colors code with semantic highlighting. If your `settings.json` contains this line,
-**remove it**, otherwise the syntax colors do not appear:
+VimSem themes switch semantic highlighting on themselves, so normally there is nothing to do.
+
+If your code stays uncolored, semantic highlighting is probably switched off in your
+`settings.json`, for example because you followed the recommendation of the extension
+"Vim Colorschemes". Change that line to:
 
 ```json
-"editor.semanticHighlighting.enabled": false
+"editor.semanticHighlighting.enabled": "configuredByTheme"
 ```
 
-The extension "Vim Colorschemes" recommends this setting. If you added it for that extension,
-remove it when you switch to VimSem.
+If the colors still do not change, or after updating or uninstalling VimSem, quit the editor
+and start it again. "Restart Extensions" is not always enough.
 
 ## Themes
 
@@ -163,6 +166,7 @@ Where it says "not stated in the file", the header does not name a license.
 
 ## Releases
 
+- **1.0.2**: Clearer help when syntax colors are missing or colors do not change.
 - **1.0.1**: New README with preview images of VimSem default and desert, and a German
   version on GitHub.
 - **1.0.0**: First release with 34 themes for 87 languages and formats.

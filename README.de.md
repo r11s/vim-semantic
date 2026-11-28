@@ -14,17 +14,20 @@ gefärbt. Ziel ist, dass eine Datei so aussieht, wie gVim sie mit den Grundeinst
 
 ![Eine C-Datei mit dem Theme VimSem desert](images/desert.png)
 
-## Voraussetzung: Semantic Highlighting
+## Farben fehlen oder ändern sich nicht?
 
-VimSem färbt Code mit Semantic Highlighting. Steht diese Zeile in deiner `settings.json`,
-**entferne sie**, sonst erscheinen die Syntaxfarben nicht:
+VimSem-Themes schalten Semantic Highlighting selbst ein, normalerweise musst du also nichts tun.
+
+Bleibt dein Code ungefärbt, ist Semantic Highlighting vermutlich in deiner `settings.json`
+ausgeschaltet, zum Beispiel weil du der Empfehlung der Extension "Vim Colorschemes" gefolgt
+bist. Ändere die Zeile auf:
 
 ```json
-"editor.semanticHighlighting.enabled": false
+"editor.semanticHighlighting.enabled": "configuredByTheme"
 ```
 
-Die Extension "Vim Colorschemes" empfiehlt diese Einstellung. Hast du sie dafür eingetragen,
-entferne sie beim Wechsel zu VimSem.
+Ändern sich die Farben immer noch nicht, oder nach dem Aktualisieren oder Deinstallieren von
+VimSem, beende den Editor und starte ihn neu. "Restart Extensions" reicht nicht immer.
 
 ## Themes
 
@@ -163,6 +166,7 @@ Wo "in der Datei nicht genannt" steht, nennt die Kopfzeile keine Lizenz.
 
 ## Versionen
 
+- **1.0.2**: Verständlichere Hinweise, wenn Syntaxfarben fehlen oder sich Farben nicht ändern.
 - **1.0.1**: Neue README mit Vorschaubildern von VimSem default und desert und eine deutsche
   Fassung auf GitHub.
 - **1.0.0**: Erste Version mit 34 Themes für 87 Sprachen und Formate.
