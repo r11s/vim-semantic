@@ -15,8 +15,8 @@ Danach das Testfenster neu starten.
 ## vsix bauen und installieren
 
     bash werkzeuge/vsix.sh
-    code --install-extension vim-semantic-1.0.0.vsix --force
-    codium --install-extension vim-semantic-1.0.0.vsix --force
+    code --install-extension vim-semantic-1.0.1.vsix --force
+    codium --install-extension vim-semantic-1.0.1.vsix --force
 
 Danach VS Code bzw. VSCodium neu starten. Wieder entfernen:
 

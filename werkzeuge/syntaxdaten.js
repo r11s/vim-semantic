@@ -174,27 +174,27 @@ async function main() {
   const count = (data, word) => (data.commands).filter((c) => c[1].startsWith(word + ' ')).length;
   const words = ['keyword', 'match', 'region', 'cluster', 'include'];
   fs.writeFileSync(path.join(TARGET, 'README.md'), [
-    '# Syntaxdaten', '',
-    'Erzeugt mit `node werkzeuge/syntaxdaten.js`, Gegenprobe mit `node werkzeuge/syntaxdaten-pruefen.js`.',
-    'Nicht von Hand aendern. Abgeleitet aus den Syntaxdateien von Vim; Lizenzen in ../LIZENZEN.md.', '',
-    'Je Datei:', '',
-    '- `befehle`: alle ausgefuehrten `syntax`-Befehle in ihrer Reihenfolge, als [Herkunft, Befehl]',
-    '- `gruppen`: Gruppe und die Gruppe, auf die sie verweist (`null` = keine)',
-    '- `liste`: Ausgabe von `:syntax list` (nach Gruppen sortiert, ohne Reihenfolge und Gross/Klein)',
-    '- `iskeyword`, `syntaxIskeyword`: was als Wort gilt',
-    '- `inhaltsabhaengig`: die Regeln sind anders als bei einer leeren Datei desselben Typs', '',
-    '`name~testdatei.json`: gleicher Dateityp, aber andere Regeln als in `name.json`.',
-    'Aus einer leeren Datei erzeugt und von der Gegenprobe nicht erfasst: ' +
+    '# Syntax data', '',
+    'Generated with `node werkzeuge/syntaxdaten.js`, cross-check with `node werkzeuge/syntaxdaten-pruefen.js`.',
+    'Do not edit by hand. Derived from the syntax files of Vim; licenses in ../LIZENZEN.md.', '',
+    'In each file:', '',
+    '- `befehle`: all executed `syntax` commands in their order, as [origin, command]',
+    '- `gruppen`: group and the group it links to (`null` = none)',
+    '- `liste`: output of `:syntax list` (sorted by group, without order and upper/lower case)',
+    '- `iskeyword`, `syntaxIskeyword`: what counts as a word',
+    '- `inhaltsabhaengig`: the rules differ from those of an empty file of the same type', '',
+    '`name~testfile.json`: same file type, but other rules than in `name.json`.',
+    'Generated from an empty file and not covered by the cross-check: ' +
       EXTRA.join(', ') + '.',
-    '`sh.json` gilt fuer bash, `sh-posix.json` fuer `#!/bin/sh` und dash, `sh-ksh.json` fuer die Korn-Shell.',
-    '`make.json` gilt fuer GNU make, daneben `make-bsd.json` und `make-microsoft.json`.',
-    '`diff.json` gilt fuer unified diff, `diff-context.json` fuer die anderen Formate.',
-    '`tex.json` gilt fuer LaTeX, `tex-sty.json` fuer Stildateien wie `.sty` und `.cls`, `tex-dtx.json` fuer `.dtx`.',
-    'Zum Erzeugen ist ein Vim mit `werkzeuge/vim-synlog.patch` noetig.', '',
-    `| Datei | ${words.join(' | ')} | inhaltsabhaengig | Testdateien |`,
+    '`sh.json` is for bash, `sh-posix.json` for `#!/bin/sh` and dash, `sh-ksh.json` for the Korn shell.',
+    '`make.json` is for GNU make, in addition there are `make-bsd.json` and `make-microsoft.json`.',
+    '`diff.json` is for unified diff, `diff-context.json` for the other formats.',
+    '`tex.json` is for LaTeX, `tex-sty.json` for style files such as `.sty` and `.cls`, `tex-dtx.json` for `.dtx`.',
+    'Generating needs a Vim with `werkzeuge/vim-synlog.patch`.', '',
+    `| File | ${words.join(' | ')} | content dependent | Test files |`,
     `|---|${words.map(() => '--:|').join('')}---|---|`,
     ...overview.sort((a, b) => a.name.localeCompare(b.name)).map((e) =>
-      `| ${e.name} | ${words.map((w) => count(e.data, w)).join(' | ')} | ${e.contentDependent ? 'ja' : ''} | ${e.files.join(', ')} |`),
+      `| ${e.name} | ${words.map((w) => count(e.data, w)).join(' | ')} | ${e.contentDependent ? 'yes' : ''} | ${e.files.join(', ')} |`),
     '',
   ].join('\n'));
   console.log(`\n${overview.length} Dateien in syntaxdaten, ${files.length} Testdateien`);

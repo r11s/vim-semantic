@@ -1,17 +1,17 @@
 # vim-semantic (VimSem)
 
-Die Farbschemata von Vim im Editor von VS Code und VSCodium, so wie in Vim. **Vim muss dafuer
-nicht installiert sein:** Die Erweiterung wendet Vims Syntaxregeln selbst an und zeigt das
-Ergebnis als Semantic Tokens. Enthalten sind 34 Themes "VimSem ..." zu den Farbschemata von
+The color schemes of Vim in the editor of VS Code and VSCodium, looking as they do in Vim.
+**Vim does not need to be installed:** the extension applies Vim's syntax rules itself and shows
+the result as semantic tokens. It contains 34 themes "VimSem ..." for the color schemes of
 Vim 9.2.
 
-Es geht nur um die Darstellung im Editor, nicht um das Verhalten von Vim.
+It is only about the display in the editor, not about the behavior of Vim.
 
-**Das Faerben ohne Vim ist neu und noch ein Versuch.**
+**Coloring without Vim is new and still an experiment.**
 
-## Sprachen
+## Languages
 
-Gefaerbt werden diese Vim-Dateitypen:
+These Vim file types are colored:
 
 abap, ada, arduino, asm, autohotkey, awk, basic, bib, c, clojure, cobol, cpp, cs, css, cuda, d,
 dart, diff, dockerfile, dosbatch, dosini, elm, erlang, forth, gdscript, glsl, go, groovy,
@@ -21,70 +21,70 @@ pyrex, python, r, racket, raku, ruby, rust, sas, scala, scheme, scilab, scss, sh
 solidity, sql, st, stata, swift, systemverilog, tcl, tex, toml, typescript, typescriptreact, uc,
 vb, verilog, vhdl, xml, yaml, zig
 
-**Nicht gefaerbt** wird alles andere, zum Beispiel:
+Everything else is **not colored**, for example:
 
-- Vim script und Fortran
-- Objective-C++ (`.mm`, und `.h`-Dateien, in denen eine Zeile mit `@interface`, `@class` oder
-  `@end` beginnt)
+- Vim script and Fortran
+- Objective-C++ (`.mm`, and `.h` files in which a line starts with `@interface`, `@class` or
+  `@end`)
 - zsh, csh, tcsh, Vue, Svelte
-- ConTeXt und BibTeX-Stildateien (`.bst`)
-- was in Vim ein eigener Dateityp ist: SVG, XSD, XSLT, DocBook, XBL und Patches von
+- ConTeXt and BibTeX style files (`.bst`)
+- what is a file type of its own in Vim: SVG, XSD, XSLT, DocBook, XBL and patches from
   `git format-patch`
 
-Welche Regeln gelten, entscheidet wie in Vim 9.2 der Dateiname (`dateitypen.json`) und bei
-mehrdeutigen Endungen wie `.h .m .pl .v .bas .p` der Inhalt (`erkennen.js`). Dateien ohne
-passenden Namen werden an der ersten Zeile `#!...` erkannt, ungespeicherte Dateien an der in
-VS Code gewaehlten Sprache. Unter Windows und macOS zaehlt Gross-/Kleinschreibung nicht.
+Which rules apply is decided as in Vim 9.2 by the file name (`dateitypen.json`) and, for
+ambiguous extensions such as `.h .m .pl .v .bas .p`, by the content (`erkennen.js`). Files
+without a matching name are recognized by a first line `#!...`, unsaved files by the language
+selected in VS Code. On Windows and macOS, upper and lower case do not matter.
 
-Wie in Vim gibt es auch fuer Makefiles (GNU, BSD, Microsoft) und Diff ("unified" und andere
-Formate) mehrere Regelsaetze.
+As in Vim, there are also several rule sets for makefiles (GNU, BSD, Microsoft) and diff
+("unified" and other formats).
 
-TeX ist wie in Vim je nach Inhalt LaTeX oder Plain TeX. Stildateien (`.sty`, `.cls`, `.clo`,
-`.ltx`) und `.dtx` haben eigene Regelsaetze.
+As in Vim, TeX is LaTeX or Plain TeX depending on the content. Style files (`.sty`, `.cls`,
+`.clo`, `.ltx`) and `.dtx` have rule sets of their own.
 
-Fuer Shell gibt es wie in Vim drei Regelsaetze: bash, Korn-Shell und POSIX. Es entscheidet die
-erste Zeile, sonst der Dateiname (`.bashrc`, `*.bash`, `*.ksh` ...). `#!/bin/sh` und Dateien
-ohne Angabe gelten als POSIX-Shell, wie in Vim unter Windows.
+For shell scripts there are three rule sets, as in Vim: bash, Korn shell and POSIX. The first
+line decides, otherwise the file name (`.bashrc`, `*.bash`, `*.ksh` ...). `#!/bin/sh` and files
+without any indication count as POSIX shell, as in Vim on Windows.
 
-## Wie genau?
+## How accurate?
 
-Verglichen mit Vim 9.2 (Patches 1-858) unter Linux, ohne eigene Einstellungen:
+Compared with Vim 9.2 (patches 1-858) on Linux, without custom settings:
 
-- 96 Testdateien aus `test/` in allen 34 Themes: keine Abweichung.
-- 1526 TeX-Dateien des Systems (LaTeX, Plain TeX, Stildateien, `.dtx`): keine Abweichung.
-- 545 weitere Dateien des Systems zu den Typen diff, dockerfile, dosini, jsonc, make, scss,
-  toml, tsx, xml u. a.: keine sichtbare Abweichung.
-- eine Stichprobe von 438 C- und C++-Dateien und Headern ohne Abweichung.
-- 322 weitere Dateien in 39 Sprachen (Vims Syntax-Tests und Dateien des Systems): 320 gleich,
-  die zwei anderen sind HTML-Vorlagen.
+- 96 test files from `test/` in all 34 themes: no differences.
+- 1526 TeX files of the system (LaTeX, Plain TeX, style files, `.dtx`): no differences.
+- 545 further files of the system of the types diff, dockerfile, dosini, jsonc, make, scss,
+  toml, tsx, xml and others: no visible differences.
+- a sample of 438 C and C++ files and headers without differences.
+- 322 further files in 39 languages (Vim's syntax tests and files of the system): 320 identical,
+  the other two are HTML templates.
 
-Mehr dazu in [MESSUNGEN.md](MESSUNGEN.md). **Eine Testdatei je Sprache prueft nicht jedes
-Sprachkonstrukt.** Bei anderem Code sind Abweichungen zu erwarten.
+More in [MESSUNGEN.md](MESSUNGEN.md) (in German). **One test file per language does not check
+every language construct.** Differences are to be expected with other code.
 
-Bekannte Abweichungen:
+Known differences:
 
-- COBOL: Zeilen, die ueber Spalte 72 hinausgehen, koennen anders aussehen. Das freie Format
-  kennen Vims Regeln nicht; es erscheint wie in gVim zu grossen Teilen als Fehler.
-- Die Varianten der Korn-Shell (ksh88, ksh93, mksh) werden alle gleich gefaerbt.
-- Vorlagen in HTML (Angular, Django) werden nur als HTML gefaerbt.
-- Nach einer Zeile mit mehr als 3000 Zeichen kann die folgende Zeile anders aussehen.
+- COBOL: lines that go beyond column 72 can look different. Vim's rules do not know the free
+  format; as in gVim, large parts of it appear as errors.
+- The variants of the Korn shell (ksh88, ksh93, mksh) are all colored the same way.
+- Templates in HTML (Angular, Django) are colored as HTML only.
+- After a line with more than 3000 characters, the following line can look different.
 
-## Installieren
+## Installation
 
-Braucht Node.js ab Version 20 und beim ersten Mal Internet (laedt `@vscode/vsce`).
+Needs Node.js version 20 or later, and internet the first time (downloads `@vscode/vsce`).
 
-    bash werkzeuge/vsix.sh                                   # baut vim-semantic-<version>.vsix
-    code --install-extension vim-semantic-1.0.0.vsix --force
-    codium --install-extension vim-semantic-1.0.0.vsix --force      # fuer VSCodium
+    bash werkzeuge/vsix.sh                                   # builds vim-semantic-<version>.vsix
+    code --install-extension vim-semantic-1.0.1.vsix --force
+    codium --install-extension vim-semantic-1.0.1.vsix --force      # for VSCodium
 
-Danach VS Code bzw. VSCodium neu starten und ein "VimSem ..."-Farbschema waehlen.
+Then restart VS Code or VSCodium and choose a "VimSem ..." color theme.
 
-Entfernen: `code --uninstall-extension r11s.vim-semantic` (VSCodium: `codium` statt `code`)
+Remove: `code --uninstall-extension r11s.vim-semantic` (VSCodium: `codium` instead of `code`)
 
-## Editor noch naeher an Vim bringen
+## Bringing the editor even closer to Vim
 
-VimSem aendert keine Einstellungen von VS Code oder VSCodium. Wer mag, ergaenzt in der
-`settings.json` (Befehl "Open User Settings (JSON)"):
+VimSem does not change any settings of VS Code or VSCodium. If you like, add to your
+`settings.json` (command "Open User Settings (JSON)"):
 
 ```json
 "editor.bracketPairColorization.enabled": false,
@@ -93,98 +93,98 @@ VimSem aendert keine Einstellungen von VS Code oder VSCodium. Wer mag, ergaenzt 
 "editor.renderLineHighlight": "none"
 ```
 
-| Einstellung | Wirkung |
+| Setting | Effect |
 |---|---|
-| `editor.bracketPairColorization.enabled` | Klammern nicht nach Tiefe faerben (empfohlen) |
-| `editor.occurrencesHighlight` | Wort unter dem Cursor nicht ueberall markieren |
-| `editor.selectionHighlight` | Stellen wie der markierte Text nicht markieren |
-| `editor.renderLineHighlight` | kein Balken auf der aktuellen Zeile |
+| `editor.bracketPairColorization.enabled` | do not color brackets by depth (recommended) |
+| `editor.occurrencesHighlight` | do not highlight the word under the cursor everywhere |
+| `editor.selectionHighlight` | do not highlight places that match the selected text |
+| `editor.renderLineHighlight` | no bar on the current line |
 
-Diese Einstellungen gelten fuer alle Farbschemata.
+These settings apply to all color themes.
 
-Wer in Vim `set cursorline` nutzt, laesst die letzte Zeile weg: Die Themes haben die Farbe von
-`CursorLine` schon. Aendern laesst sie sich mit `editor.lineHighlightBackground` in
+If you use `set cursorline` in Vim, leave out the last line: the themes already have the color of
+`CursorLine`. You can change it with `editor.lineHighlightBackground` in
 `workbench.colorCustomizations`.
 
-## Einstellungen
+## Settings
 
-| Einstellung | Vorgabe | Bedeutung |
+| Setting | Default | Meaning |
 |---|---|---|
-| `vimsem.backgroundGroups` | `["Todo", "Error", "Constant"]` | Gruppen mit Hintergrund |
-| `vimsem.logFile` | `false` | Protokoll in `protokoll.txt` im Erweiterungsordner |
+| `vimsem.backgroundGroups` | `["Todo", "Error", "Constant"]` | groups with a background |
+| `vimsem.logFile` | `false` | log to `protokoll.txt` in the extension folder |
 
-Fehlersuche: Ansicht "Ausgabe", Kanal "VimSem".
+Troubleshooting: "Output" view, channel "VimSem".
 
-## Neue Sprache anfragen
+## Requesting a new language
 
-Fehlt eine Sprache, oder wird eine nicht wie in Vim gefaerbt? Dann bitte ein
-[Issue](https://github.com/r11s/vim-semantic/issues) eroeffnen, mit dem Namen der Sprache, der
-Dateiendung und wenn moeglich einem kleinen Beispiel. Vielleicht wird sie in einem der
-naechsten Releases aufgenommen. Voraussetzung: Vim hat fuer die Sprache eine Syntax.
+Is a language missing, or is one not colored as in Vim? Then please open an
+[issue](https://github.com/r11s/vim-semantic/issues) with the name of the language, the file
+extension and, if possible, a small example. It may be included in one of the next releases.
+Requirement: Vim has a syntax for the language.
 
-## Grenzen
+## Limitations
 
-- Hintergruende nur fuer die eingestellten Gruppen. Semantic Tokens kennen keinen Hintergrund,
-  deshalb setzt die Erweiterung dafuer Decorations.
-- Wo Vim keine brauchbare Farbe hat (z. B. fuer die Auswahl in elflord), gilt die Farbe von
-  VS Code. Fette Zeilennummern kann VS Code nicht darstellen.
-- Bei jeder Aenderung wird die ganze Datei neu berechnet. Bei 5000 Zeilen dauert das meist
-  unter 0,5 Sekunden, bei einzelnen Sprachen (JSON, Nushell) gut 1 Sekunde (gemessen unter
-  Linux).
-- Syntax wird immer ab Dateianfang berechnet (wie `syntax sync fromstart`).
-- Ohne vimrc und Plugins.
-- Andere Semantic-Token-Anbieter (etwa fuer TypeScript) koennen Vorrang bekommen.
+- Backgrounds only for the configured groups. Semantic tokens have no background, so the
+  extension uses decorations for it.
+- Where Vim has no usable color (for example for the selection in elflord), the color of
+  VS Code applies. VS Code cannot show bold line numbers.
+- The whole file is recalculated on every change. For 5000 lines this usually takes less than
+  0.5 seconds, for a few languages (JSON, Nushell) a good 1 second (measured on Linux).
+- Syntax is always calculated from the start of the file (like `syntax sync fromstart`).
+- Without vimrc and plugins.
+- Other semantic token providers (for TypeScript, for example) can take precedence.
 
-## Entwickeln
+## Development
 
-Vim 9 braucht nur, wer Themes oder Daten erzeugt oder misst.
+Vim 9 is only needed to generate themes or data, or to measure.
 
-Testfenster ohne Installation:
+Test window without installing:
 
-    code --extensionDevelopmentPath=/pfad/zu/vim-semantic
+    code --extensionDevelopmentPath=/path/to/vim-semantic
 
-Themes erzeugen (nutzt dein Vim; `VIM_PATH` setzt ein anderes). Die Farben der Oberflaeche
-berechnet `oberflaeche.js` aus Vims Gruppen:
+Generate themes (uses your Vim; `VIM_PATH` sets another one). The colors of the user interface
+are calculated by `oberflaeche.js` from Vim's groups:
 
-    node generate.js elflord dark       # ein Theme hinzufuegen oder erneuern
-    bash werkzeuge/themes.sh            # alle vorhandenen neu erzeugen
+    node generate.js elflord dark       # add or renew one theme
+    bash werkzeuge/themes.sh            # regenerate all existing ones
 
-Messen:
+Measure:
 
-    node measure.js blue                # bei hell und dunkel: node measure.js <name> light|dark
+    node measure.js blue                # for light and dark: node measure.js <name> light|dark
 
-Vergleicht je Zeichen (ohne Leerraum) Farbe, Stil und Hintergrund: Soll aus `vim/reference.vim`
-(Vim), Ist aus dem Faerber der Erweiterung (`faerben.js`) und der Theme-Datei. Abweichungen stehen in
-`messung/<name>-<light|dark>.txt`. Rechnerisch: Was VS Code tatsaechlich anzeigt, wird damit
-nicht geprueft.
+Compares color, style and background per character (without whitespace): expected values from
+`vim/reference.vim` (Vim), actual values from the extension's colorizer (`faerben.js`) and the
+theme file. Differences are written to `messung/<name>-<light|dark>.txt`. This is calculated: what
+VS Code actually displays is not checked.
 
-| Ordner | Inhalt |
+| Folder | Content |
 |---|---|
-| `themes/` | die erzeugten VS-Code-Themes |
-| `vim/` | Vim-Skripte |
-| `test/` | Testprogramme, siehe [test/README.md](test/README.md) |
-| `syntaxdaten/` | Faerberegeln von Vim je Sprache, siehe [syntaxdaten/README.md](syntaxdaten/README.md) |
-| `schemata/` | wo ein Farbschema eine Gruppe anders zuordnet |
-| `werkzeuge/` | Skripte zum Bauen, Erzeugen und Pruefen |
+| `themes/` | the generated VS Code themes |
+| `vim/` | Vim scripts |
+| `test/` | test programs, see [test/README.md](test/README.md) |
+| `syntaxdaten/` | Vim's coloring rules per language, see [syntaxdaten/README.md](syntaxdaten/README.md) |
+| `schemata/` | where a color scheme assigns a group differently |
+| `werkzeuge/` | scripts for building, generating and checking |
 
-Mit Vim vergleichen und Daten erzeugen:
+Compare with Vim and generate data:
 
-    node werkzeuge/ohne-vim-messen.js auto datei...   # mit SCHEMA=blue BG=dark fuer ein anderes
-    node werkzeuge/schema-gruppen.js cpp              # schemata/cpp.json neu erzeugen
-    node werkzeuge/schema-gruppen.js sh test/08_shell.sh   # sh braucht eine Beispieldatei
-    node werkzeuge/schema-gruppen.js sh-posix datei         # Datei mit "#!/bin/sh"; sh-ksh: "#!/bin/ksh"
-    node werkzeuge/schema-gruppen.js make-bsd datei         # ebenso make-microsoft, diff-context
-    node werkzeuge/schema-gruppen.js tex-sty datei.sty      # ebenso tex-dtx mit einer ".dtx"
-    node werkzeuge/dateitypen.js                      # dateitypen.json (braucht VIMRUNTIME)
+    node werkzeuge/ohne-vim-messen.js auto file...    # with SCHEMA=blue BG=dark for another one
+    node werkzeuge/schema-gruppen.js cpp              # regenerate schemata/cpp.json
+    node werkzeuge/schema-gruppen.js sh test/08_shell.sh   # sh needs a sample file
+    node werkzeuge/schema-gruppen.js sh-posix file          # file with "#!/bin/sh"; sh-ksh: "#!/bin/ksh"
+    node werkzeuge/schema-gruppen.js make-bsd file          # likewise make-microsoft, diff-context
+    node werkzeuge/schema-gruppen.js tex-sty file.sty       # likewise tex-dtx with a ".dtx"
+    node werkzeuge/dateitypen.js                      # dateitypen.json (needs VIMRUNTIME)
 
-Kurzbefehle: [SPICKZETTEL.md](SPICKZETTEL.md).
+Short commands: [SPICKZETTEL.md](SPICKZETTEL.md) (in German).
 
-## Lizenz
+## License
 
-VimSem steht unter der Vim-Lizenz, siehe [LICENSE](LICENSE).
+VimSem is under the Vim license, see [LICENSE](LICENSE).
 
-Themes, Syntaxdaten und Dateityp-Erkennung sind aus Dateien von [Vim](https://github.com/vim/vim) abgeleitet und
-dabei veraendert. Die Angaben zu diesen Dateien, auch zu solchen mit eigener Lizenz, stehen in
-[LIZENZEN.md](LIZENZEN.md). Neu erzeugen: `werkzeuge/lizenzen.js`.
+Themes, syntax data and file type detection are derived from files of
+[Vim](https://github.com/vim/vim) and have been changed in the process. The notices of these
+files, including those with a license of their own, are in [LIZENZEN.md](LIZENZEN.md).
+Regenerate: `werkzeuge/lizenzen.js`.
 
-Kontakt (Abschnitt II 2a der Vim-Lizenz): <https://github.com/r11s/vim-semantic/issues>
+Contact (section II 2a of the Vim license): <https://github.com/r11s/vim-semantic/issues>

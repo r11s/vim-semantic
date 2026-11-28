@@ -108,7 +108,7 @@ async function main() {
     description: 'The color schemes of Vim, with syntax colors as in Vim. Vim does not need to be installed.',
     icon: 'icon.png',
     publisher: 'r11s',
-    version: '1.0.0',
+    version: '1.0.1',
     repository: { type: 'git', url: 'https://github.com/r11s/vim-semantic.git' },
     license: 'SEE LICENSE IN LICENSE',
     categories: ['Themes'],

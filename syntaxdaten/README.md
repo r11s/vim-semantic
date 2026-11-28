@@ -1,25 +1,25 @@
-# Syntaxdaten
+# Syntax data
 
-Erzeugt mit `node werkzeuge/syntaxdaten.js`, Gegenprobe mit `node werkzeuge/syntaxdaten-pruefen.js`.
-Nicht von Hand aendern. Abgeleitet aus den Syntaxdateien von Vim; Lizenzen in ../LIZENZEN.md.
+Generated with `node werkzeuge/syntaxdaten.js`, cross-check with `node werkzeuge/syntaxdaten-pruefen.js`.
+Do not edit by hand. Derived from the syntax files of Vim; licenses in ../LIZENZEN.md.
 
-Je Datei:
+In each file:
 
-- `befehle`: alle ausgefuehrten `syntax`-Befehle in ihrer Reihenfolge, als [Herkunft, Befehl]
-- `gruppen`: Gruppe und die Gruppe, auf die sie verweist (`null` = keine)
-- `liste`: Ausgabe von `:syntax list` (nach Gruppen sortiert, ohne Reihenfolge und Gross/Klein)
-- `iskeyword`, `syntaxIskeyword`: was als Wort gilt
-- `inhaltsabhaengig`: die Regeln sind anders als bei einer leeren Datei desselben Typs
+- `befehle`: all executed `syntax` commands in their order, as [origin, command]
+- `gruppen`: group and the group it links to (`null` = none)
+- `liste`: output of `:syntax list` (sorted by group, without order and upper/lower case)
+- `iskeyword`, `syntaxIskeyword`: what counts as a word
+- `inhaltsabhaengig`: the rules differ from those of an empty file of the same type
 
-`name~testdatei.json`: gleicher Dateityp, aber andere Regeln als in `name.json`.
-Aus einer leeren Datei erzeugt und von der Gegenprobe nicht erfasst: json, html, css, markdown, yaml.
-`sh.json` gilt fuer bash, `sh-posix.json` fuer `#!/bin/sh` und dash, `sh-ksh.json` fuer die Korn-Shell.
-`make.json` gilt fuer GNU make, daneben `make-bsd.json` und `make-microsoft.json`.
-`diff.json` gilt fuer unified diff, `diff-context.json` fuer die anderen Formate.
-`tex.json` gilt fuer LaTeX, `tex-sty.json` fuer Stildateien wie `.sty` und `.cls`, `tex-dtx.json` fuer `.dtx`.
-Zum Erzeugen ist ein Vim mit `werkzeuge/vim-synlog.patch` noetig.
+`name~testfile.json`: same file type, but other rules than in `name.json`.
+Generated from an empty file and not covered by the cross-check: json, html, css, markdown, yaml.
+`sh.json` is for bash, `sh-posix.json` for `#!/bin/sh` and dash, `sh-ksh.json` for the Korn shell.
+`make.json` is for GNU make, in addition there are `make-bsd.json` and `make-microsoft.json`.
+`diff.json` is for unified diff, `diff-context.json` for the other formats.
+`tex.json` is for LaTeX, `tex-sty.json` for style files such as `.sty` and `.cls`, `tex-dtx.json` for `.dtx`.
+Generating needs a Vim with `werkzeuge/vim-synlog.patch`.
 
-| Datei | keyword | match | region | cluster | include | inhaltsabhaengig | Testdateien |
+| File | keyword | match | region | cluster | include | content dependent | Test files |
 |---|--:|--:|--:|--:|--:|---|---|
 | abap | 33 | 81 | 5 | 0 | 0 |  | 62_abap.abap |
 | ada | 46 | 141 | 3 | 0 | 0 |  | 23_ada.adb |
@@ -38,8 +38,8 @@ Zum Erzeugen ist ein Vim mit `werkzeuge/vim-synlog.patch` noetig.
 | cuda | 130 | 31 | 8 | 0 | 0 |  | 50_cuda.cu |
 | d | 232 | 39 | 24 | 13 | 0 |  | 51_d.d |
 | dart | 14 | 8 | 3 | 0 | 0 |  | 19_dart.dart |
-| diff | 0 | 256 | 0 | 0 | 0 | ja | 112_diff.diff |
-| diff-context | 0 | 256 | 0 | 0 | 0 | ja |  |
+| diff | 0 | 256 | 0 | 0 | 0 | yes | 112_diff.diff |
+| diff-context | 0 | 256 | 0 | 0 | 0 | yes |  |
 | dockerfile | 8 | 120 | 96 | 33 | 2 |  | 111_docker.Dockerfile |
 | dosbatch | 14 | 40 | 1 | 2 | 0 |  | 29_batch.bat |
 | dosini | 0 | 6 | 2 | 0 | 0 |  | 109_ini.ini |
@@ -63,8 +63,8 @@ Zum Erzeugen ist ein Vim mit `werkzeuge/vim-synlog.patch` noetig.
 | lisp | 377 | 25 | 6 | 1 | 0 |  | 34_lisp.lisp, 57_emacslisp.el |
 | lua | 24 | 130 | 14 | 0 | 0 |  | 22_lua.lua |
 | make | 1 | 27 | 14 | 0 | 0 |  | 110_make.mk |
-| make-bsd | 1 | 23 | 14 | 0 | 0 | ja |  |
-| make-microsoft | 1 | 24 | 12 | 0 | 0 | ja |  |
+| make-bsd | 1 | 23 | 14 | 0 | 0 | yes |  |
+| make-microsoft | 1 | 24 | 12 | 0 | 0 | yes |  |
 | markdown | 484 | 315 | 145 | 13 | 6 |  | 104_markdown.md |
 | matlab | 13 | 18 | 3 | 0 | 0 |  | 27_matlab.m |
 | mojo | 53 | 24 | 6 | 0 | 0 |  | 86_mojo.mojo |
@@ -91,9 +91,9 @@ Zum Erzeugen ist ein Vim mit `werkzeuge/vim-synlog.patch` noetig.
 | scheme | 345 | 12 | 26 | 2 | 0 |  | 64_scheme.scm |
 | scilab | 10 | 20 | 2 | 0 | 0 |  | 78_scilab.sce |
 | scss | 126 | 210 | 35 | 2 | 0 |  | 107_scss.scss |
-| sh | 11 | 103 | 96 | 41 | 0 | ja | 08_shell.sh |
-| sh-ksh | 12 | 102 | 97 | 41 | 0 | ja |  |
-| sh-posix | 6 | 91 | 85 | 33 | 0 | ja |  |
+| sh | 11 | 103 | 96 | 41 | 0 | yes | 08_shell.sh |
+| sh-ksh | 12 | 102 | 97 | 41 | 0 | yes |  |
+| sh-posix | 6 | 91 | 85 | 33 | 0 | yes |  |
 | sml | 12 | 50 | 28 | 4 | 0 |  | 71_standardml.sml |
 | solidity | 82 | 20 | 13 | 0 | 0 |  | 42_solidity.sol |
 | sql | 66 | 3 | 9 | 0 | 0 |  | 03_sql.sql, 35_plpgsql.sql, 43_plsql.sql, 55_tsql.sql |
@@ -103,8 +103,8 @@ Zum Erzeugen ist ein Vim mit `werkzeuge/vim-synlog.patch` noetig.
 | systemverilog | 73 | 29 | 7 | 0 | 0 |  | 66_systemverilog.sv |
 | tcl | 61 | 15 | 34 | 2 | 0 |  | 49_tcl.tcl |
 | tex | 1 | 815 | 78 | 50 | 0 |  | 117_latex.tex |
-| tex-dtx | 1 | 608 | 77 | 50 | 0 | ja | 120_latexdoc.dtx |
-| tex-sty | 1 | 607 | 78 | 50 | 0 | ja | 118_latexstyle.sty |
+| tex-dtx | 1 | 608 | 77 | 50 | 0 | yes | 120_latexdoc.dtx |
+| tex-sty | 1 | 607 | 78 | 50 | 0 | yes | 118_latexstyle.sty |
 | toml | 1 | 20 | 10 | 1 | 0 |  | 116_toml.toml |
 | typescript | 912 | 104 | 56 | 126 | 0 |  | 05_typescript.ts |
 | typescriptreact | 912 | 116 | 62 | 128 | 0 |  | 114_react.tsx |

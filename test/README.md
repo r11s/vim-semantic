@@ -1,18 +1,18 @@
-# Testdateien
+# Test files
 
-75 Programme in verschiedenen Sprachen zum Vergleich der Farben in gVim und VS Code.
-Alle lösen dieselbe Aufgabe (Formen-Rechner) und enthalten alle Kommentararten und ein TODO.
+75 programs in various languages for comparing the colors in gVim and VS Code.
+All of them solve the same task (a shape calculator) and contain all kinds of comments and a TODO.
 
-Erwartete Ausgabe: `expected.txt` (Assembly: `expected_assembly.txt`, Batch: `expected_batch.txt`).
+Expected output: `expected.txt` (Assembly: `expected_assembly.txt`, Batch: `expected_batch.txt`).
 
-**\*** = nie ausgeführt (21 Dateien). Zum Vergleich der Farben genügt das.
+**\*** = never run (21 files). That is enough for comparing colors.
 
-**\*\*** = keine Programmiersprache und kein Formen-Rechner nach der Rangliste, nur zum Vergleich
-der Farben.
+**\*\*** = not a programming language and not a shape calculator from the ranking, only for
+comparing colors.
 
-Rangliste der Sprachen: [SPRACHEN.md](../SPRACHEN.md). Fortran und Vim Script sind nicht dabei.
+Ranking of the languages: [SPRACHEN.md](../SPRACHEN.md) (in German). Fortran and Vim script are not included.
 
-| Datei | Sprache |
+| File | Language |
 |---|---|
 | 01_python.py | Python |
 | 02_javascript.js | JavaScript |
@@ -103,10 +103,10 @@ Rangliste der Sprachen: [SPRACHEN.md](../SPRACHEN.md). Fortran und Vim Script si
 | 112_diff.diff | Diff \*\* |
 | 113_react.jsx | JSX \*\* |
 | 114_react.tsx | TSX \*\* |
-| 115_jsonc.jsonc | JSON mit Kommentaren \*\* |
+| 115_jsonc.jsonc | JSON with comments \*\* |
 | 116_toml.toml | TOML \*\* |
 | 117_latex.tex | LaTeX \*\* |
-| 118_latexstyle.sty | LaTeX-Stildatei \*\* |
+| 118_latexstyle.sty | LaTeX style file \*\* |
 | 119_plaintex.tex | Plain TeX \*\* |
-| 120_latexdoc.dtx | LaTeX, dokumentierter Quelltext \*\* |
+| 120_latexdoc.dtx | LaTeX, documented source \*\* |
 | 121_bibtex.bib | BibTeX \*\* |

@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.1
+
+- New README with preview images of the themes default and desert.
+- A German version of the README on GitHub.
+- No changes to themes or coloring.
+
 ## 1.0.0
 
 First release.
